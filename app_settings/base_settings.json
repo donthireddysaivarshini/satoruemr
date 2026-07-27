@@ -1,0 +1,42 @@
+{
+  "roles": {
+    "intern": {
+      "name": "usertype.intern",
+      "offline": true
+    },
+    "supervisor": {
+      "name": "usertype.supervisor",
+      "offline": true
+    }
+  },
+  "contact_types": [
+    {
+  "id": "screening_camp",
+  "name_key": "contact.type.screening_camp",
+  "group_key": "contact.type.screening_camp.plural",
+  "create_key": "contact.type.screening_camp.new",
+  "edit_key": "contact.type.place.edit",
+  "icon": "medic-clinic",
+
+  "create_form": "form:contact:screening_camp:create",
+  "edit_form": "form:contact:screening_camp:edit",
+
+  "parents": []
+},
+{
+  "id": "participant",
+  "name_key": "contact.type.participant",
+  "group_key": "contact.type.participant.plural",
+  "create_key": "contact.type.participant.new",
+  "edit_key": "contact.type.person.edit",
+  "icon": "medic-person",
+
+  "create_form": "form:contact:participant:create",
+  "edit_form": "form:contact:participant:edit",
+
+  "parents": ["screening_camp"],
+  "person": true,
+  "primary_contact": true
+}
+  ]
+}

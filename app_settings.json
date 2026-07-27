@@ -1,0 +1,52 @@
+{
+  "roles": {
+    "intern": {
+      "name": "usertype.intern",
+      "offline": true
+    },
+    "supervisor": {
+      "name": "usertype.supervisor",
+      "offline": true
+    }
+  },
+  "contact_types": [
+    {
+      "id": "screening_camp",
+      "name_key": "contact.type.screening_camp",
+      "group_key": "contact.type.screening_camp.plural",
+      "create_key": "contact.type.screening_camp.new",
+      "edit_key": "contact.type.place.edit",
+      "icon": "medic-clinic",
+      "create_form": "form:contact:screening_camp:create",
+      "edit_form": "form:contact:screening_camp:edit",
+      "parents": []
+    },
+    {
+      "id": "participant",
+      "name_key": "contact.type.participant",
+      "group_key": "contact.type.participant.plural",
+      "create_key": "contact.type.participant.new",
+      "edit_key": "contact.type.person.edit",
+      "icon": "medic-person",
+      "create_form": "form:contact:participant:create",
+      "edit_form": "form:contact:participant:edit",
+      "parents": [
+        "screening_camp"
+      ],
+      "person": true,
+      "primary_contact": true
+    }
+  ],
+  "forms": {},
+  "schedules": [],
+  "contact_summary": "var ContactSummary = {}; !function(e,t){if('object'==typeof exports&&'object'==typeof module)module.exports=t();else if('function'==typeof define&&define.amd)define([],t);else{var n=t();for(var r in n)('object'==typeof exports?exports:e)[r]=n[r]}}(ContactSummary,()=>(()=>{var e={784(e){function t(e){return e?Array.isArray(e)?e:[e]:[]}function n(e){return e&&!(e.errors&&e.errors.length)}function r(e,t){switch(typeof e){case'undefined':return!0;case'function':return e(t);default:return e}}function o(e,t,n){if(!r(e.appliesIf,n))return;function o(e,t,r){switch(typeof e[r]){case'undefined':return;case'function':t[r]=e[r](n);break;default:t[r]=e[r]}}var i='function'==typeof e.fields?e.fields(n):e.fields.filter(function(e){return r(e.appliesIf,n)}).map(function(e){var t={};return o(e,t,'label'),o(e,t,'value'),o(e,t,'translate'),o(e,t,'filter'),o(e,t,'width'),o(e,t,'icon'),e.context&&(t.context={},o(e.context,t.context,'count'),o(e.context,t.context,'total')),t});e.modifyContext&&e.modifyContext(t,n);const c={label:e.label,fields:i};return void 0!==e.collapsed&&(c.collapsed=e.collapsed),c}e.exports=function(e,r,i){var c=e.fields||[],s=e.context||{},f=e.cards||[],a=r&&('contact'===r.type?r.contact_type:r.type),l={cards:[],fields:c.filter(function(e){var n=t(e.appliesToType),r=n.filter(function(e){return e&&'!'===e.charAt(0)});if((0===n.length||n.includes(a)||r.length>0&&!r.includes('!'+a))&&(!e.appliesIf||e.appliesIf()))return delete e.appliesToType,delete e.appliesIf,!0})};return f.forEach(function(e){var r,c,f,p=t(e.appliesToType);if(p.includes('report')&&p.length>1)throw new Error('You cannot set appliesToType to an array which includes the type \\'report\\' and another type.');if(p.includes('report'))for(r=0;r<i.length;++r)n(c=i[r])&&(f=o(e,s,c))&&l.cards.push(f);else{if(!p.includes(a)&&p.length>0)return;(f=o(e,s))&&l.cards.push(f)}}),l.context=s,l}},873(e,t,n){var r=n(972),o=n(784);e.exports=o(r,contact,reports)},972(e){e.exports={fields:[],cards:[],context:{}}}};const t={};let n=function n(r){const o=t[r];if(void 0!==o)return o.exports;const i=t[r]={exports:{}};return e[r](i,i.exports,n),i.exports}(873);return n})()); return ContactSummary;",
+  "tasks": {
+    "rules": "(()=>{var t={805(t){function e(t,a){var o=Object.keys(t);for(var r in o){var n=o[r];switch(typeof t[n]){case'object':e(t[n],a);break;case'function':t[n]=t[n].bind(a)}}}function a(t){var e=Object.assign({},t),o=Object.keys(e);for(var r in o){var n=o[r];if(Array.isArray(e[n])){e[n]=e[n].slice(0);for(var i=0;i<e[n].length;++i)'object'==typeof e[n][i]&&(e[n][i]=a(e[n][i]))}else'object'==typeof e[n]&&(e[n]=a(e[n]))}return e}t.exports=function(t){var o={};e(t,o),o.definition=a(t)}},686(t,e,a){var o=a(805);function r(t,e,a,o,r,n){var i=!!n;if(r.contact){var c='contact'===r.contact.type?r.contact.contact_type:r.contact.type,s=i?n.form:c;if(!(t.appliesToType&&t.appliesToType.indexOf(s)<0)&&(!t.appliesIf||t.appliesIf(r,n)))for(var d=i?n:r.contact,p=function(t,e,a){var o;return o='function'==typeof t.idType?t.idType(e,a):'report'===t.idType?a&&a._id:e.contact&&e.contact._id,Array.isArray(o)||(o=[o]),o}(t,r,n),f=!t.passesIf||!!t.passesIf(r,n),l=function(t,e,a,o){if('function'==typeof t.date)return t.date(a,o)||e.now().getTime();if(void 0===t.date||null===t.date||'now'===t.date)return e.now().getTime();if('reported'===t.date)return o?o.reported_date:a.contact.reported_date;throw new Error('Unrecognised value for target.date: '+t.date)}(t,a,r,n),u=t.groupBy&&t.groupBy(r,n),v=0;v<p.length;++v){var y=new e({_id:p[v]+'~'+t.id,contact:r.contact,deleted:!!d.deleted,type:t.id,pass:f,groupBy:u,date:l});t.emitCustom?t.emitCustom(m,y,r,n):m(y)}}function m(t){o('target',t)}}t.exports=function(t,e,a,n,i){for(var c=0;c<t.length;++c){var s=t[c];switch(o(s),s.appliesTo){case'contacts':r(s,n,a,i,e);break;case'reports':for(var d=0;d<e.reports.length;++d){r(s,n,a,i,e,e.reports[d])}break;default:throw new Error('Unrecognised target.appliesTo: '+s.appliesTo)}}}},80(t){t.exports={defaultResolvedIf:function(t,e,a,o,r){var n,i;r||(r=Utils);var c=function(t){var e;if(!t||!t.actions)return;return(e=t.actions.find(function(t){return!t.type||'report'===t.type}))&&e.form}(this.definition);if(!c)throw new Error('Could not find the default resolving form!');return n=0,n=e?Math.max(r.addDate(o,-a.start).getTime(),e.reported_date+1):r.addDate(o,-a.start).getTime(),i=r.addDate(o,a.end+1).getTime(),r.isFormSubmittedInWindow(t.reports,c,n,i)}}},658(t,e,a){var o=a(805),r=a(80);function n(t,e,a,o,r,n){var i;if(t.appliesToType){var c;if('contacts'===t.appliesTo){if(!r.contact)return;c='contact'===r.contact.type?r.contact.contact_type:r.contact.type}else{if(!n)return;c=n.form}if(-1===t.appliesToType.indexOf(c))return}if('scheduled_tasks'===t.appliesTo||!t.appliesIf||t.appliesIf(r,n))if('scheduled_tasks'===t.appliesTo){if(n&&t.appliesIf){if(!n.scheduled_tasks)return;for(i=0;i<n.scheduled_tasks.length;i++)t.appliesIf(r,n,i)&&d(i)}}else d();function s(t,e,a){var o;return(o='function'==typeof t.contactLabel?t.contactLabel(e,a):t.contactLabel)?{name:o}:e.contact}function d(i){var c,d,f,l,u=null;for(c=0;c<t.events.length;c++){if((d=t.events[c]).dueDate)u=d.dueDate(d,r,n,i);else if(n)u=void 0!==i?new Date(e.addDate(new Date(n.scheduled_tasks[i].due),d.days)):new Date(e.addDate(new Date(n.reported_date),d.days));else if(d.dueDate)u=d.dueDate(d,r);else{var v=r.contact&&r.contact.reported_date?new Date(r.contact.reported_date):new Date;u=new Date(e.addDate(v,d.days))}e.isTimely(u,d)&&(l={_id:(n?n._id:r.contact&&r.contact._id)+'~'+(d.id||c)+'~'+t.name,deleted:!(!(r.contact&&r.contact.deleted||n)||!n.deleted),doc:r,contact:s(t,r,n),icon:t.icon,date:u,readyStart:d.start||0,readyEnd:d.end||0,title:t.title,resolved:t.resolvedIf(r,n,d,u,i),actions:p(t.actions,d)},void 0!==i&&(l._id+='-'+i),'function'==typeof(f=t.priority)&&(f=f(r,n,d,u,i)),f&&(l.priority=f.level,l.priorityLabel=f.label),o('task',new a(l)))}}function p(e,a){return t.actions.map(function(t){return function(t,e){var a={source:'task',source_id:n?n._id:r.contact&&r.contact._id,contact:r.contact};t.modifyContent&&t.modifyContent(a,r,n,e);return{type:t.type||'report',form:t.form,label:t.label||'Follow up',content:a}}(t,a)})}}t.exports=function(t,e,a,i,c){if(t)for(var s,d,p=0;p<t.length;++p)switch('function'!=typeof(s=Object.assign({},t[p],r)).resolvedIf&&(s.resolvedIf=function(t,e,o,r){return s.defaultResolvedIf(t,e,o,r,a)}),o(s),s.appliesTo){case'reports':case'scheduled_tasks':for(var f=0;f<e.reports.length;++f)d=e.reports[f],n(s,a,i,c,e,d);break;case'contacts':e.contact&&n(s,a,i,c,e);break;default:throw new Error('Unrecognised task.appliesTo: '+s.appliesTo)}}},931(t){t.exports=[]},991(t){t.exports=[]}};const e={};function a(o){const r=e[o];if(void 0!==r)return r.exports;const n=e[o]={exports:{}};return t[o](n,n.exports,a),n.exports}var o=a(991),r=a(931),n=a(658);a(686)(r,c,Utils,Target,emit),n(o,c,Utils,Task,emit),emit('_complete',{_id:!0})})();",
+    "isDeclarative": true,
+    "targets": {
+      "enabled": true,
+      "items": []
+    }
+  },
+  "purge": {}
+}
