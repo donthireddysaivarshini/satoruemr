@@ -1,0 +1,526 @@
+<form autocomplete="off" novalidate="novalidate" class="or clearfix pages" dir="ltr" data-form-id="stage2_assessment">
+<section class="form-logo"></section><h3 dir="auto" id="form-title">Stage 2 - Detailed Assessment</h3>
+<select id="form-languages" data-default-lang=""><option value="en">en</option> <option value="te">te</option> </select>
+  
+  
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/inputs" data-relevant="./source = 'user'"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/inputs:label">Participant</span><span lang="te" class="question-label " data-itext-id="/data/inputs:label">-</span>
+</h4>
+<section class="or-group or-appearance-field-list " name="/data/inputs/user"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/inputs/user:label">User</span><span lang="te" class="question-label " data-itext-id="/data/inputs/user:label">-</span>
+</h4>
+      </section><section class="or-group or-appearance-field-list " name="/data/inputs/contact"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/inputs/contact:label">Participant</span><span lang="te" class="question-label " data-itext-id="/data/inputs/contact:label">-</span>
+</h4>
+<label class="question non-select or-appearance-select-contact or-appearance-type-participant "><span lang="en" class="question-label active" data-itext-id="/data/inputs/contact/_id:label">Select participant</span><span lang="te" class="question-label " data-itext-id="/data/inputs/contact/_id:label">-</span><input type="text" name="/data/inputs/contact/_id" data-type-xml="person"></label>
+      </section>
+      </section>
+    <section class="or-group or-appearance-hidden " name="/data/protocol"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/protocol:label">Protocol constants</span><span lang="te" class="question-label " data-itext-id="/data/protocol:label">-</span>
+</h4>
+      </section>
+    <section class="or-group or-appearance-field-list " name="/data/g_link"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/g_link:label">Assessment context</span><span lang="te" class="question-label " data-itext-id="/data/g_link:label">-</span>
+</h4>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_link/assessment_date:label">Date of Stage 2 assessment</span><span lang="te" class="question-label " data-itext-id="/data/g_link/assessment_date:label">-</span><span class="required">*</span><input type="date" name="/data/g_link/assessment_date" data-required="true()" data-type-xml="date"><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_link/consent_reconfirmed:label">Consent re-confirmed for the detailed assessment?</span><span lang="te" class="question-label " data-itext-id="/data/g_link/consent_reconfirmed:label">వివరమైన పరీక్షకు మళ్లీ అంగీకారం తీసుకున్నారా?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_link/consent_reconfirmed" data-name="/data/g_link/consent_reconfirmed" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_link/education_confirm:label">Education level</span><span lang="te" class="question-label " data-itext-id="/data/g_link/education_confirm:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('edu')/root/item"><input type="radio" name="/data/g_link/education_confirm" data-name="/data/g_link/education_confirm" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="edu-0">No formal schooling</span><span lang="te" class="option-label " data-itext-id="edu-0">చదువు లేదు</span><span lang="en" class="option-label active" data-itext-id="edu-1">1-7 years</span><span lang="te" class="option-label " data-itext-id="edu-1">1-7 తరగతులు</span><span lang="en" class="option-label active" data-itext-id="edu-2">8 years or more</span><span lang="te" class="option-label " data-itext-id="edu-2">8వ తరగతి లేదా ఎక్కువ</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/g_ad8" data-relevant=" /data/g_link/consent_reconfirmed  = 'yes'"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ad8:label">AD8 Dementia Screening Interview</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8:label">-</span>
+</h4>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ad8/informant_available:label">Is a reliable informant available?</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/informant_available:label">సమాచారం ఇవ్వగలిగే కుటుంబ సభ్యుడు ఉన్నారా?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_ad8/informant_available" data-name="/data/g_ad8/informant_available" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ad8/informant_relationship:label">Relationship to participant</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/informant_relationship:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('informant_rel')/root/item"><input type="radio" name="/data/g_ad8/informant_relationship" data-name="/data/g_ad8/informant_relationship" data-required="true()" data-relevant=" /data/g_ad8/informant_available  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="informant_rel-0">Spouse</span><span lang="te" class="option-label " data-itext-id="informant_rel-0">భార్య / భర్త</span><span lang="en" class="option-label active" data-itext-id="informant_rel-1">Son / Daughter</span><span lang="te" class="option-label " data-itext-id="informant_rel-1">కొడుకు / కూతురు</span><span lang="en" class="option-label active" data-itext-id="informant_rel-2">Daughter-in-law / Son-in-law</span><span lang="te" class="option-label " data-itext-id="informant_rel-2">కోడలు / అల్లుడు</span><span lang="en" class="option-label active" data-itext-id="informant_rel-3">Sibling</span><span lang="te" class="option-label " data-itext-id="informant_rel-3">తోబుట్టువు</span><span lang="en" class="option-label active" data-itext-id="informant_rel-4">Other relative</span><span lang="te" class="option-label " data-itext-id="informant_rel-4">ఇతర బంధువు</span><span lang="en" class="option-label active" data-itext-id="informant_rel-5">Paid caregiver</span><span lang="te" class="option-label " data-itext-id="informant_rel-5">జీతానికి చూసుకునేవారు</span><span lang="en" class="option-label active" data-itext-id="informant_rel-6">Neighbour / friend</span><span lang="te" class="option-label " data-itext-id="informant_rel-6">పక్కింటివారు / స్నేహితులు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_ad8/informant_contact_years:label">Years the informant has known the participant</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/informant_contact_years:label">-</span><input type="number" name="/data/g_ad8/informant_contact_years" data-constraint=". &gt;= 0 and . &lt;= 100" data-relevant=" /data/g_ad8/informant_available  = 'yes'" data-type-xml="int"><span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_ad8/ad8_stem:label">Ask the informant: <em>Compared with a few years ago, has there been a CHANGE caused by thinking or memory problems?</em> Answer Yes only if the change is due to memory or thinking, not physical illness.</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/ad8_stem:label"><em>కొన్ని సంవత్సరాల క్రితంతో పోలిస్తే, ఆలోచన లేదా జ్ఞాపకశక్తి సమస్యల వల్ల ఏమైనా మార్పు వచ్చిందా?</em> శారీరక అనారోగ్యం వల్ల వచ్చిన మార్పులను లెక్కించవద్దు.</span><input type="text" name="/data/g_ad8/ad8_stem" data-relevant=" /data/g_ad8/informant_available  = 'yes'" data-type-xml="string" readonly></label><fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ad8/ad8_1:label">Problems with judgement (e.g. poor financial decisions)</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/ad8_1:label">నిర్ణయాలు తీసుకోవడంలో సమస్యలు (ఉదా: డబ్బు విషయంలో తప్పుడు నిర్ణయాలు)</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_ad8/ad8_1" data-name="/data/g_ad8/ad8_1" data-required="true()" data-relevant=" /data/g_ad8/informant_available  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ad8/ad8_2:label">Reduced interest in hobbies or usual activities</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/ad8_2:label">అలవాటైన పనులు, హాబీల మీద ఆసక్తి తగ్గడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_ad8/ad8_2" data-name="/data/g_ad8/ad8_2" data-required="true()" data-relevant=" /data/g_ad8/informant_available  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ad8/ad8_3:label">Repeats the same questions, stories or statements</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/ad8_3:label">ఒకే ప్రశ్న, మాట లేదా కథ మళ్లీ మళ్లీ చెప్పడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_ad8/ad8_3" data-name="/data/g_ad8/ad8_3" data-required="true()" data-relevant=" /data/g_ad8/informant_available  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ad8/ad8_4:label">Trouble learning to use a tool, appliance or gadget</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/ad8_4:label">కొత్త వస్తువు లేదా పరికరం ఎలా వాడాలో నేర్చుకోవడంలో ఇబ్బంది</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_ad8/ad8_4" data-name="/data/g_ad8/ad8_4" data-required="true()" data-relevant=" /data/g_ad8/informant_available  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ad8/ad8_5:label">Forgets the correct month or year</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/ad8_5:label">నెల లేదా సంవత్సరం మర్చిపోవడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_ad8/ad8_5" data-name="/data/g_ad8/ad8_5" data-required="true()" data-relevant=" /data/g_ad8/informant_available  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ad8/ad8_6:label">Difficulty handling complicated money matters</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/ad8_6:label">డబ్బు లెక్కలు, బ్యాంకు వ్యవహారాలు చూసుకోవడంలో ఇబ్బంది</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_ad8/ad8_6" data-name="/data/g_ad8/ad8_6" data-required="true()" data-relevant=" /data/g_ad8/informant_available  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ad8/ad8_7:label">Trouble remembering appointments</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/ad8_7:label">కుదుర్చుకున్న సమయాలు గుర్తుంచుకోలేకపోవడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_ad8/ad8_7" data-name="/data/g_ad8/ad8_7" data-required="true()" data-relevant=" /data/g_ad8/informant_available  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ad8/ad8_8:label">Daily problems with thinking and/or memory</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/ad8_8:label">రోజువారీగా ఆలోచన లేదా జ్ఞాపకశక్తి సమస్యలు</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_ad8/ad8_8" data-name="/data/g_ad8/ad8_8" data-required="true()" data-relevant=" /data/g_ad8/informant_available  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_ad8/ad8_result:label"> AD8 total: <strong><span class="or-output" data-value=" /data/g_ad8/ad8_total "> </span></strong> / 8</span><span lang="te" class="question-label " data-itext-id="/data/g_ad8/ad8_result:label">-</span><input type="text" name="/data/g_ad8/ad8_result" data-relevant=" /data/g_ad8/informant_available  = 'yes'" data-type-xml="string" readonly></label>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/g_hmse" data-relevant=" /data/g_link/consent_reconfirmed  = 'yes'"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/g_hmse:label">Hindi Mental State Examination</span><span lang="te" class="question-label " data-itext-id="/data/g_hmse:label">-</span>
+</h4>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_hmse/hmse_note:label">Administer the HMSE on the printed Telugu record sheet, then enter the scores here. Domain subscores are optional but recommended for research use.</span><span lang="te" class="question-label " data-itext-id="/data/g_hmse/hmse_note:label">-</span><input type="text" name="/data/g_hmse/hmse_note" data-type-xml="string" readonly></label><label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_hmse/hmse_total:label">HMSE TOTAL score (0-31)</span><span lang="te" class="question-label " data-itext-id="/data/g_hmse/hmse_total:label">-</span><span class="required">*</span><input type="number" name="/data/g_hmse/hmse_total" data-required="true()" data-constraint=". &gt;= 0 and . &lt;= 31" data-type-xml="int"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/g_hmse/hmse_total:jr:constraintMsg">HMSE total must be 0-31.</span><span lang="te" class="or-constraint-msg " data-itext-id="/data/g_hmse/hmse_total:jr:constraintMsg">-</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_hmse/hmse_subscores_entered:label">Enter domain subscores?</span><span lang="te" class="question-label " data-itext-id="/data/g_hmse/hmse_subscores_entered:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_hmse/hmse_subscores_entered" data-name="/data/g_hmse/hmse_subscores_entered" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_hmse/hmse_orientation:label">Orientation subscore</span><span lang="te" class="question-label " data-itext-id="/data/g_hmse/hmse_orientation:label">-</span><input type="number" name="/data/g_hmse/hmse_orientation" data-constraint=". &gt;= 0 and . &lt;= 31" data-relevant=" /data/g_hmse/hmse_subscores_entered  = 'yes'" data-type-xml="int"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/g_hmse/hmse_orientation:jr:constraintMsg">Enter 0-31.</span><span lang="te" class="or-constraint-msg " data-itext-id="/data/g_hmse/hmse_orientation:jr:constraintMsg">-</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_hmse/hmse_registration:label">Registration subscore</span><span lang="te" class="question-label " data-itext-id="/data/g_hmse/hmse_registration:label">-</span><input type="number" name="/data/g_hmse/hmse_registration" data-constraint=". &gt;= 0 and . &lt;= 31" data-relevant=" /data/g_hmse/hmse_subscores_entered  = 'yes'" data-type-xml="int"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/g_hmse/hmse_registration:jr:constraintMsg">Enter 0-31.</span><span lang="te" class="or-constraint-msg " data-itext-id="/data/g_hmse/hmse_registration:jr:constraintMsg">-</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_hmse/hmse_attention:label">Attention / calculation subscore</span><span lang="te" class="question-label " data-itext-id="/data/g_hmse/hmse_attention:label">-</span><input type="number" name="/data/g_hmse/hmse_attention" data-constraint=". &gt;= 0 and . &lt;= 31" data-relevant=" /data/g_hmse/hmse_subscores_entered  = 'yes'" data-type-xml="int"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/g_hmse/hmse_attention:jr:constraintMsg">Enter 0-31.</span><span lang="te" class="or-constraint-msg " data-itext-id="/data/g_hmse/hmse_attention:jr:constraintMsg">-</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_hmse/hmse_recall:label">Delayed recall subscore</span><span lang="te" class="question-label " data-itext-id="/data/g_hmse/hmse_recall:label">-</span><input type="number" name="/data/g_hmse/hmse_recall" data-constraint=". &gt;= 0 and . &lt;= 31" data-relevant=" /data/g_hmse/hmse_subscores_entered  = 'yes'" data-type-xml="int"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/g_hmse/hmse_recall:jr:constraintMsg">Enter 0-31.</span><span lang="te" class="or-constraint-msg " data-itext-id="/data/g_hmse/hmse_recall:jr:constraintMsg">-</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_hmse/hmse_language:label">Language, comprehension and praxis subscore</span><span lang="te" class="question-label " data-itext-id="/data/g_hmse/hmse_language:label">-</span><input type="number" name="/data/g_hmse/hmse_language" data-constraint=". &gt;= 0 and . &lt;= 31" data-relevant=" /data/g_hmse/hmse_subscores_entered  = 'yes'" data-type-xml="int"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/g_hmse/hmse_language:jr:constraintMsg">Enter 0-31.</span><span lang="te" class="or-constraint-msg " data-itext-id="/data/g_hmse/hmse_language:jr:constraintMsg">-</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_hmse/hmse_mismatch:label"> <strong>Check:</strong> subscores add to <span class="or-output" data-value=" /data/g_hmse/hmse_subtotal "> </span> but the total entered is <span class="or-output" data-value=" /data/g_hmse/hmse_total "> </span>. Reconcile before submitting.</span><span lang="te" class="question-label " data-itext-id="/data/g_hmse/hmse_mismatch:label">-</span><input type="text" name="/data/g_hmse/hmse_mismatch" data-relevant=" /data/g_hmse/hmse_subscores_entered  = 'yes' and  /data/g_hmse/hmse_subtotal  !=  /data/g_hmse/hmse_total " data-type-xml="string" readonly></label>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/g_phq" data-relevant=" /data/g_link/consent_reconfirmed  = 'yes'"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/g_phq:label">PHQ-9 Depression Screen</span><span lang="te" class="question-label " data-itext-id="/data/g_phq:label">-</span>
+</h4>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_stem:label">Over the LAST TWO WEEKS, how often have you been bothered by any of the following?</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_stem:label">గత రెండు వారాల్లో, ఈ కింది సమస్యలు మిమ్మల్ని ఎంత తరచుగా ఇబ్బంది పెట్టాయి?</span><input type="text" name="/data/g_phq/phq_stem" data-type-xml="string" readonly></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_1:label">Little interest or pleasure in doing things</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_1:label">ఏ పని చేయాలన్నా ఆసక్తి లేకపోవడం లేదా సంతోషం అనిపించకపోవడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('phq')/root/item"><input type="radio" name="/data/g_phq/phq_1" data-name="/data/g_phq/phq_1" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="phq-0">Not at all</span><span lang="te" class="option-label " data-itext-id="phq-0">అస్సలు లేదు</span><span lang="en" class="option-label active" data-itext-id="phq-1">Several days</span><span lang="te" class="option-label " data-itext-id="phq-1">కొన్ని రోజులు</span><span lang="en" class="option-label active" data-itext-id="phq-2">More than half the days</span><span lang="te" class="option-label " data-itext-id="phq-2">సగం రోజులకు మించి</span><span lang="en" class="option-label active" data-itext-id="phq-3">Nearly every day</span><span lang="te" class="option-label " data-itext-id="phq-3">దాదాపు ప్రతిరోజూ</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_2:label">Feeling down, depressed or hopeless</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_2:label">నిరాశగా, దిగులుగా లేదా ఏమీ ఆశ లేదన్నట్టు అనిపించడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('phq')/root/item"><input type="radio" name="/data/g_phq/phq_2" data-name="/data/g_phq/phq_2" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="phq-0">Not at all</span><span lang="te" class="option-label " data-itext-id="phq-0">అస్సలు లేదు</span><span lang="en" class="option-label active" data-itext-id="phq-1">Several days</span><span lang="te" class="option-label " data-itext-id="phq-1">కొన్ని రోజులు</span><span lang="en" class="option-label active" data-itext-id="phq-2">More than half the days</span><span lang="te" class="option-label " data-itext-id="phq-2">సగం రోజులకు మించి</span><span lang="en" class="option-label active" data-itext-id="phq-3">Nearly every day</span><span lang="te" class="option-label " data-itext-id="phq-3">దాదాపు ప్రతిరోజూ</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_3:label">Trouble falling asleep, staying asleep, or sleeping too much</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_3:label">నిద్ర పట్టకపోవడం, మధ్యలో మెలకువ రావడం, లేదా మరీ ఎక్కువ నిద్రపోవడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('phq')/root/item"><input type="radio" name="/data/g_phq/phq_3" data-name="/data/g_phq/phq_3" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="phq-0">Not at all</span><span lang="te" class="option-label " data-itext-id="phq-0">అస్సలు లేదు</span><span lang="en" class="option-label active" data-itext-id="phq-1">Several days</span><span lang="te" class="option-label " data-itext-id="phq-1">కొన్ని రోజులు</span><span lang="en" class="option-label active" data-itext-id="phq-2">More than half the days</span><span lang="te" class="option-label " data-itext-id="phq-2">సగం రోజులకు మించి</span><span lang="en" class="option-label active" data-itext-id="phq-3">Nearly every day</span><span lang="te" class="option-label " data-itext-id="phq-3">దాదాపు ప్రతిరోజూ</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_4:label">Feeling tired or having little energy</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_4:label">అలసటగా ఉండటం లేదా ఓపిక లేకపోవడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('phq')/root/item"><input type="radio" name="/data/g_phq/phq_4" data-name="/data/g_phq/phq_4" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="phq-0">Not at all</span><span lang="te" class="option-label " data-itext-id="phq-0">అస్సలు లేదు</span><span lang="en" class="option-label active" data-itext-id="phq-1">Several days</span><span lang="te" class="option-label " data-itext-id="phq-1">కొన్ని రోజులు</span><span lang="en" class="option-label active" data-itext-id="phq-2">More than half the days</span><span lang="te" class="option-label " data-itext-id="phq-2">సగం రోజులకు మించి</span><span lang="en" class="option-label active" data-itext-id="phq-3">Nearly every day</span><span lang="te" class="option-label " data-itext-id="phq-3">దాదాపు ప్రతిరోజూ</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_5:label">Poor appetite or overeating</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_5:label">ఆకలి లేకపోవడం లేదా మరీ ఎక్కువ తినడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('phq')/root/item"><input type="radio" name="/data/g_phq/phq_5" data-name="/data/g_phq/phq_5" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="phq-0">Not at all</span><span lang="te" class="option-label " data-itext-id="phq-0">అస్సలు లేదు</span><span lang="en" class="option-label active" data-itext-id="phq-1">Several days</span><span lang="te" class="option-label " data-itext-id="phq-1">కొన్ని రోజులు</span><span lang="en" class="option-label active" data-itext-id="phq-2">More than half the days</span><span lang="te" class="option-label " data-itext-id="phq-2">సగం రోజులకు మించి</span><span lang="en" class="option-label active" data-itext-id="phq-3">Nearly every day</span><span lang="te" class="option-label " data-itext-id="phq-3">దాదాపు ప్రతిరోజూ</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_6:label">Feeling bad about yourself, or that you are a failure, or that you have let yourself or your family down</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_6:label">మీ గురించి మీకే చెడుగా అనిపించడం - మీరు విఫలమయ్యారని, లేదా కుటుంబాన్ని నిరాశపరిచారని అనిపించడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('phq')/root/item"><input type="radio" name="/data/g_phq/phq_6" data-name="/data/g_phq/phq_6" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="phq-0">Not at all</span><span lang="te" class="option-label " data-itext-id="phq-0">అస్సలు లేదు</span><span lang="en" class="option-label active" data-itext-id="phq-1">Several days</span><span lang="te" class="option-label " data-itext-id="phq-1">కొన్ని రోజులు</span><span lang="en" class="option-label active" data-itext-id="phq-2">More than half the days</span><span lang="te" class="option-label " data-itext-id="phq-2">సగం రోజులకు మించి</span><span lang="en" class="option-label active" data-itext-id="phq-3">Nearly every day</span><span lang="te" class="option-label " data-itext-id="phq-3">దాదాపు ప్రతిరోజూ</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_7:label">Trouble concentrating on things such as reading or watching television</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_7:label">చదవడం, టీవీ చూడటం లాంటి వాటిపై ధ్యాస నిలపలేకపోవడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('phq')/root/item"><input type="radio" name="/data/g_phq/phq_7" data-name="/data/g_phq/phq_7" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="phq-0">Not at all</span><span lang="te" class="option-label " data-itext-id="phq-0">అస్సలు లేదు</span><span lang="en" class="option-label active" data-itext-id="phq-1">Several days</span><span lang="te" class="option-label " data-itext-id="phq-1">కొన్ని రోజులు</span><span lang="en" class="option-label active" data-itext-id="phq-2">More than half the days</span><span lang="te" class="option-label " data-itext-id="phq-2">సగం రోజులకు మించి</span><span lang="en" class="option-label active" data-itext-id="phq-3">Nearly every day</span><span lang="te" class="option-label " data-itext-id="phq-3">దాదాపు ప్రతిరోజూ</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_8:label">Moving or speaking so slowly that others noticed - or being so fidgety or restless that you moved around much more than usual</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_8:label">ఇతరులు గమనించేంత నెమ్మదిగా కదలడం లేదా మాట్లాడటం; లేదా కుదురు లేక మామూలు కన్నా ఎక్కువగా అటూఇటూ తిరగడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('phq')/root/item"><input type="radio" name="/data/g_phq/phq_8" data-name="/data/g_phq/phq_8" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="phq-0">Not at all</span><span lang="te" class="option-label " data-itext-id="phq-0">అస్సలు లేదు</span><span lang="en" class="option-label active" data-itext-id="phq-1">Several days</span><span lang="te" class="option-label " data-itext-id="phq-1">కొన్ని రోజులు</span><span lang="en" class="option-label active" data-itext-id="phq-2">More than half the days</span><span lang="te" class="option-label " data-itext-id="phq-2">సగం రోజులకు మించి</span><span lang="en" class="option-label active" data-itext-id="phq-3">Nearly every day</span><span lang="te" class="option-label " data-itext-id="phq-3">దాదాపు ప్రతిరోజూ</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_9:label">Thoughts that you would be better off dead, or of hurting yourself in some way</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_9:label">మీరు చనిపోతే బాగుండనే ఆలోచనలు, లేదా మిమ్మల్ని మీరు హాని చేసుకోవాలనే ఆలోచనలు</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('phq')/root/item"><input type="radio" name="/data/g_phq/phq_9" data-name="/data/g_phq/phq_9" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="phq-0">Not at all</span><span lang="te" class="option-label " data-itext-id="phq-0">అస్సలు లేదు</span><span lang="en" class="option-label active" data-itext-id="phq-1">Several days</span><span lang="te" class="option-label " data-itext-id="phq-1">కొన్ని రోజులు</span><span lang="en" class="option-label active" data-itext-id="phq-2">More than half the days</span><span lang="te" class="option-label " data-itext-id="phq-2">సగం రోజులకు మించి</span><span lang="en" class="option-label active" data-itext-id="phq-3">Nearly every day</span><span lang="te" class="option-label " data-itext-id="phq-3">దాదాపు ప్రతిరోజూ</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_safety_alert:label"><strong>SAFETY PROTOCOL - ACT NOW.</strong> The participant has endorsed thoughts of death or self-harm. Do not leave them alone. Follow SOP-SAFE-01: ask directly about current intent and plan, involve the accompanying family member with the participant's permission, call the Satoru clinical supervisor immediately, and give the Tele-MANAS number 14416. Record what you did below.</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_safety_alert:label"><strong>భద్రతా విధానం - వెంటనే చర్య తీసుకోండి.</strong> వారిని ఒంటరిగా వదలవద్దు. క్లినికల్ సూపర్‌వైజర్‌కు వెంటనే ఫోన్ చేయండి. టెలి-మానస్: 14416.</span><input type="text" name="/data/g_phq/phq_safety_alert" data-relevant=" /data/g_phq/phq9_item9_positive  = 1" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_safety_action_taken:label">Describe the safety action taken (mandatory)</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_safety_action_taken:label">-</span><span class="required">*</span><input type="text" name="/data/g_phq/phq_safety_action_taken" data-required="true()" data-relevant=" /data/g_phq/phq9_item9_positive  = 1" data-type-xml="string"><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_phq/phq_supervisor_informed:label">Clinical supervisor informed?</span><span lang="te" class="question-label " data-itext-id="/data/g_phq/phq_supervisor_informed:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_phq/phq_supervisor_informed" data-name="/data/g_phq/phq_supervisor_informed" data-required="true()" data-relevant=" /data/g_phq/phq9_item9_positive  = 1" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/g_easi" data-relevant=" /data/g_link/consent_reconfirmed  = 'yes'"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/g_easi:label">Elder Abuse Suspicion Index</span><span lang="te" class="question-label " data-itext-id="/data/g_easi:label">-</span>
+</h4>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_easi/easi_intro:label">Ask Q1-Q5 privately, with no family member in earshot. Q6 is your own observation.</span><span lang="te" class="question-label " data-itext-id="/data/g_easi/easi_intro:label">Q1-Q5 ప్రశ్నలను ఏకాంతంగా అడగండి - కుటుంబ సభ్యులు వినకుండా చూసుకోండి.</span><input type="text" name="/data/g_easi/easi_intro" data-type-xml="string" readonly></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_easi/easi_private:label">Were Q1-Q5 asked in private?</span><span lang="te" class="question-label " data-itext-id="/data/g_easi/easi_private:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_easi/easi_private" data-name="/data/g_easi/easi_private" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_easi/easi_1:label">Have you relied on people for bathing, dressing, shopping, banking or meals?</span><span lang="te" class="question-label " data-itext-id="/data/g_easi/easi_1:label">స్నానం, బట్టలు, షాపింగ్, బ్యాంకు పని, భోజనం - వీటిలో దేనికైనా ఇతరులపై ఆధారపడుతున్నారా?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesnodk')/root/item"><input type="radio" name="/data/g_easi/easi_1" data-name="/data/g_easi/easi_1" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesnodk-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesnodk-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesnodk-1">No</span><span lang="te" class="option-label " data-itext-id="yesnodk-1">కాదు</span><span lang="en" class="option-label active" data-itext-id="yesnodk-2">Don't know / Not assessed</span><span lang="te" class="option-label " data-itext-id="yesnodk-2">తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_easi/easi_2:label">Has anyone prevented you from getting food, clothes, medication, glasses, hearing aids or medical care, or from being with people you wanted to be with?</span><span lang="te" class="question-label " data-itext-id="/data/g_easi/easi_2:label">తిండి, బట్టలు, మందులు, కళ్లద్దాలు, వినికిడి యంత్రం లేదా వైద్యం అందకుండా ఎవరైనా అడ్డుకున్నారా? మీరు కలవాలనుకున్నవారిని కలవనివ్వకుండా చేశారా?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesnodk')/root/item"><input type="radio" name="/data/g_easi/easi_2" data-name="/data/g_easi/easi_2" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesnodk-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesnodk-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesnodk-1">No</span><span lang="te" class="option-label " data-itext-id="yesnodk-1">కాదు</span><span lang="en" class="option-label active" data-itext-id="yesnodk-2">Don't know / Not assessed</span><span lang="te" class="option-label " data-itext-id="yesnodk-2">తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_easi/easi_3:label">Have you been upset because someone talked to you in a way that made you feel shamed or threatened?</span><span lang="te" class="question-label " data-itext-id="/data/g_easi/easi_3:label">ఎవరైనా మిమ్మల్ని అవమానించేలా లేదా భయపెట్టేలా మాట్లాడి బాధ పెట్టారా?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesnodk')/root/item"><input type="radio" name="/data/g_easi/easi_3" data-name="/data/g_easi/easi_3" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesnodk-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesnodk-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesnodk-1">No</span><span lang="te" class="option-label " data-itext-id="yesnodk-1">కాదు</span><span lang="en" class="option-label active" data-itext-id="yesnodk-2">Don't know / Not assessed</span><span lang="te" class="option-label " data-itext-id="yesnodk-2">తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_easi/easi_4:label">Has anyone tried to force you to sign papers or to use your money against your will?</span><span lang="te" class="question-label " data-itext-id="/data/g_easi/easi_4:label">మీ ఇష్టం లేకుండా కాగితాలపై సంతకం పెట్టమని, లేదా మీ డబ్బు వాడుకోవడానికి ఎవరైనా బలవంతం చేశారా?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesnodk')/root/item"><input type="radio" name="/data/g_easi/easi_4" data-name="/data/g_easi/easi_4" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesnodk-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesnodk-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesnodk-1">No</span><span lang="te" class="option-label " data-itext-id="yesnodk-1">కాదు</span><span lang="en" class="option-label active" data-itext-id="yesnodk-2">Don't know / Not assessed</span><span lang="te" class="option-label " data-itext-id="yesnodk-2">తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_easi/easi_5:label">Has anyone made you afraid, touched you in ways you did not want, or hurt you physically?</span><span lang="te" class="question-label " data-itext-id="/data/g_easi/easi_5:label">ఎవరైనా మిమ్మల్ని భయపెట్టారా, మీకు ఇష్టం లేని విధంగా తాకారా, లేదా శారీరకంగా హాని చేశారా?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesnodk')/root/item"><input type="radio" name="/data/g_easi/easi_5" data-name="/data/g_easi/easi_5" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesnodk-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesnodk-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesnodk-1">No</span><span lang="te" class="option-label " data-itext-id="yesnodk-1">కాదు</span><span lang="en" class="option-label active" data-itext-id="yesnodk-2">Don't know / Not assessed</span><span lang="te" class="option-label " data-itext-id="yesnodk-2">తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_easi/easi_6:label">ASSESSOR OBSERVATION: any of poor eye contact, withdrawn manner, malnourishment, hygiene neglect, cuts, bruises, inappropriate clothing, or medication non-adherence?</span><span lang="te" class="question-label " data-itext-id="/data/g_easi/easi_6:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesnodk')/root/item"><input type="radio" name="/data/g_easi/easi_6" data-name="/data/g_easi/easi_6" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesnodk-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesnodk-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesnodk-1">No</span><span lang="te" class="option-label " data-itext-id="yesnodk-1">కాదు</span><span lang="en" class="option-label active" data-itext-id="yesnodk-2">Don't know / Not assessed</span><span lang="te" class="option-label " data-itext-id="yesnodk-2">తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_easi/easi_alert:label"><strong>SAFEGUARDING FLAG.</strong> Do not confront the suspected person. Follow SOP-SAFE-02: report to the Satoru safeguarding lead within 24 hours. Elderline 14567 is available, as is the Maintenance and Welfare of Parents and Senior Citizens Act 2007 tribunal route.</span><span lang="te" class="question-label " data-itext-id="/data/g_easi/easi_alert:label">-</span><input type="text" name="/data/g_easi/easi_alert" data-relevant=" /data/g_easi/easi_positive  = 1" data-type-xml="string" readonly></label><fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_easi/easi_lead_informed:label">Safeguarding lead informed within 24 hours?</span><span lang="te" class="question-label " data-itext-id="/data/g_easi/easi_lead_informed:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_easi/easi_lead_informed" data-name="/data/g_easi/easi_lead_informed" data-required="true()" data-relevant=" /data/g_easi/easi_positive  = 1" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/g_sppb" data-relevant=" /data/g_link/consent_reconfirmed  = 'yes'"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/g_sppb:label">Short Physical Performance Battery</span><span lang="te" class="question-label " data-itext-id="/data/g_sppb:label">-</span>
+</h4>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_sppb/sppb_intro:label">Stop any test if the participant reports pain or feels unsafe.</span><span lang="te" class="question-label " data-itext-id="/data/g_sppb/sppb_intro:label">-</span><input type="text" name="/data/g_sppb/sppb_intro" data-type-xml="string" readonly></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_sppb/sppb_attempted:label">Was SPPB attempted?</span><span lang="te" class="question-label " data-itext-id="/data/g_sppb/sppb_attempted:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_sppb/sppb_attempted" data-name="/data/g_sppb/sppb_attempted" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_sppb/sppb_side_by_side_sec:label">Side-by-side stand (seconds held, max 10)</span><span lang="te" class="question-label " data-itext-id="/data/g_sppb/sppb_side_by_side_sec:label">-</span><span class="required">*</span><input type="number" name="/data/g_sppb/sppb_side_by_side_sec" data-required="true()" data-constraint=". &gt;= 0 and . &lt;= 10" data-relevant=" /data/g_sppb/sppb_attempted  = 'yes'" data-type-xml="decimal" step="any"><span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_sppb/sppb_semi_tandem_sec:label">Semi-tandem stand (seconds held, max 10)</span><span lang="te" class="question-label " data-itext-id="/data/g_sppb/sppb_semi_tandem_sec:label">-</span><span class="required">*</span><input type="number" name="/data/g_sppb/sppb_semi_tandem_sec" data-required="true()" data-constraint=". &gt;= 0 and . &lt;= 10" data-relevant=" /data/g_sppb/sppb_attempted  = 'yes'" data-type-xml="decimal" step="any"><span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_sppb/sppb_tandem_sec:label">Full tandem stand (seconds held, max 10)</span><span lang="te" class="question-label " data-itext-id="/data/g_sppb/sppb_tandem_sec:label">-</span><span class="required">*</span><input type="number" name="/data/g_sppb/sppb_tandem_sec" data-required="true()" data-constraint=". &gt;= 0 and . &lt;= 10" data-relevant=" /data/g_sppb/sppb_attempted  = 'yes'" data-type-xml="decimal" step="any"><span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_sppb/sppb_gait_unable:label">Unable to complete the 4 m walk?</span><span lang="te" class="question-label " data-itext-id="/data/g_sppb/sppb_gait_unable:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_sppb/sppb_gait_unable" data-name="/data/g_sppb/sppb_gait_unable" data-required="true()" data-relevant=" /data/g_sppb/sppb_attempted  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_sppb/sppb_gait_sec:label">4 m walk time (seconds, best of 2)</span><span lang="te" class="question-label " data-itext-id="/data/g_sppb/sppb_gait_sec:label">-</span><span class="required">*</span><input type="number" name="/data/g_sppb/sppb_gait_sec" data-required="true()" data-constraint=". &gt; 0 and . &lt; 120" data-relevant=" /data/g_sppb/sppb_attempted  = 'yes' and  /data/g_sppb/sppb_gait_unable  = 'no'" data-type-xml="decimal" step="any"><span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_sppb/sppb_chair_unable:label">Unable to complete 5 chair stands without using arms?</span><span lang="te" class="question-label " data-itext-id="/data/g_sppb/sppb_chair_unable:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_sppb/sppb_chair_unable" data-name="/data/g_sppb/sppb_chair_unable" data-required="true()" data-relevant=" /data/g_sppb/sppb_attempted  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_sppb/sppb_chair_sec:label">Time for 5 chair stands (seconds)</span><span lang="te" class="question-label " data-itext-id="/data/g_sppb/sppb_chair_sec:label">-</span><span class="required">*</span><input type="number" name="/data/g_sppb/sppb_chair_sec" data-required="true()" data-constraint=". &gt; 0 and . &lt;= 120" data-relevant=" /data/g_sppb/sppb_attempted  = 'yes' and  /data/g_sppb/sppb_chair_unable  = 'no'" data-type-xml="decimal" step="any"><span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_sppb/sppb_result:label"> SPPB total: <strong><span class="or-output" data-value=" /data/g_sppb/sppb_total "> </span></strong> / 12</span><span lang="te" class="question-label " data-itext-id="/data/g_sppb/sppb_result:label">-</span><input type="text" name="/data/g_sppb/sppb_result" data-relevant=" /data/g_sppb/sppb_attempted  = 'yes'" data-type-xml="string" readonly></label>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/g_grip" data-relevant=" /data/g_link/consent_reconfirmed  = 'yes'"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/g_grip:label">Handgrip dynamometry (AWGS 2019)</span><span lang="te" class="question-label " data-itext-id="/data/g_grip:label">-</span>
+</h4>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_grip/grip_attempted:label">Was handgrip measured?</span><span lang="te" class="question-label " data-itext-id="/data/g_grip/grip_attempted:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_grip/grip_attempted" data-name="/data/g_grip/grip_attempted" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_grip/grip_right_1:label">Right hand, trial 1 (kg)</span><span lang="te" class="question-label " data-itext-id="/data/g_grip/grip_right_1:label">-</span><span class="required">*</span><input type="number" name="/data/g_grip/grip_right_1" data-required="true()" data-constraint=". &gt;= 0 and . &lt;= 100" data-relevant=" /data/g_grip/grip_attempted  = 'yes'" data-type-xml="decimal" step="any"><span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_grip/grip_right_2:label">Right hand, trial 2 (kg)</span><span lang="te" class="question-label " data-itext-id="/data/g_grip/grip_right_2:label">-</span><span class="required">*</span><input type="number" name="/data/g_grip/grip_right_2" data-required="true()" data-constraint=". &gt;= 0 and . &lt;= 100" data-relevant=" /data/g_grip/grip_attempted  = 'yes'" data-type-xml="decimal" step="any"><span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_grip/grip_left_1:label">Left hand, trial 1 (kg)</span><span lang="te" class="question-label " data-itext-id="/data/g_grip/grip_left_1:label">-</span><span class="required">*</span><input type="number" name="/data/g_grip/grip_left_1" data-required="true()" data-constraint=". &gt;= 0 and . &lt;= 100" data-relevant=" /data/g_grip/grip_attempted  = 'yes'" data-type-xml="decimal" step="any"><span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_grip/grip_left_2:label">Left hand, trial 2 (kg)</span><span lang="te" class="question-label " data-itext-id="/data/g_grip/grip_left_2:label">-</span><span class="required">*</span><input type="number" name="/data/g_grip/grip_left_2" data-required="true()" data-constraint=". &gt;= 0 and . &lt;= 100" data-relevant=" /data/g_grip/grip_attempted  = 'yes'" data-type-xml="decimal" step="any"><span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_grip/grip_result:label"> Maximum grip: <strong><span class="or-output" data-value=" /data/g_grip/grip_max "> </span> kg</strong> (low-strength cut-off <span class="or-output" data-value=" /data/g_grip/grip_cutoff "> </span> kg)</span><span lang="te" class="question-label " data-itext-id="/data/g_grip/grip_result:label">-</span><input type="text" name="/data/g_grip/grip_result" data-relevant=" /data/g_grip/grip_attempted  = 'yes'" data-type-xml="string" readonly></label>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/g_glucose" data-relevant=" /data/g_link/consent_reconfirmed  = 'yes'"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/g_glucose:label">Capillary blood glucose</span><span lang="te" class="question-label " data-itext-id="/data/g_glucose:label">-</span>
+</h4>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_glucose/glucose_type:label">Sample type</span><span lang="te" class="question-label " data-itext-id="/data/g_glucose/glucose_type:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('glucose_type')/root/item"><input type="radio" name="/data/g_glucose/glucose_type" data-name="/data/g_glucose/glucose_type" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="glucose_type-0">Fasting</span><span lang="te" class="option-label " data-itext-id="glucose_type-0">పరగడుపున</span><span lang="en" class="option-label active" data-itext-id="glucose_type-1">Random / post-meal</span><span lang="te" class="option-label " data-itext-id="glucose_type-1">ఏ సమయంలోనైనా</span><span lang="en" class="option-label active" data-itext-id="glucose_type-2">Not done</span><span lang="te" class="option-label " data-itext-id="glucose_type-2">చేయలేదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_glucose/glucose_mgdl:label">Blood glucose (mg/dL)</span><span lang="te" class="question-label " data-itext-id="/data/g_glucose/glucose_mgdl:label">-</span><span class="required">*</span><input type="number" name="/data/g_glucose/glucose_mgdl" data-required="true()" data-constraint=". &gt;= 20 and . &lt;= 700" data-relevant=" /data/g_glucose/glucose_type  != 'not_done'" data-type-xml="int"><span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_glucose/known_diabetes:label">Known diabetes on treatment?</span><span lang="te" class="question-label " data-itext-id="/data/g_glucose/known_diabetes:label">ఇప్పటికే షుగర్ వ్యాధికి మందులు వాడుతున్నారా?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_glucose/known_diabetes" data-name="/data/g_glucose/known_diabetes" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_glucose/glucose_critical:label"><strong>CRITICAL VALUE.</strong> Arrange same-day medical review. If below 70 mg/dL and the participant is conscious, give oral glucose now and re-test in 15 minutes.</span><span lang="te" class="question-label " data-itext-id="/data/g_glucose/glucose_critical:label"><strong>ప్రమాదకర స్థాయి.</strong> ఈరోజే వైద్యుడిని కలిపించండి.</span><input type="text" name="/data/g_glucose/glucose_critical" data-relevant=" /data/g_glucose/glucose_flag  = 2" data-type-xml="string" readonly></label>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/g_disposition" data-relevant=" /data/g_link/consent_reconfirmed  = 'yes'"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/g_disposition:label">Composite result and disposition</span><span lang="te" class="question-label " data-itext-id="/data/g_disposition:label">-</span>
+</h4>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_disposition/disposition_summary:label"> <strong>Disposition:</strong> <span class="or-output" data-value=" /data/g_disposition/disposition "> </span> <br>AD8 <span class="or-output" data-value=" /data/g_ad8/ad8_total "> </span>/8 | HMSE <span class="or-output" data-value=" /data/g_hmse/hmse_total "> </span>/31 | PHQ-9 <span class="or-output" data-value=" /data/g_phq/phq_total "> </span>/27 | SPPB <span class="or-output" data-value=" /data/g_sppb/sppb_total "> </span>/12 | Grip <span class="or-output" data-value=" /data/g_grip/grip_max "> </span> kg</span><span lang="te" class="question-label " data-itext-id="/data/g_disposition/disposition_summary:label">-</span><input type="text" name="/data/g_disposition/disposition_summary" data-type-xml="string" readonly></label><fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_disposition/referral_letter_issued:label">Referral letter issued to the family?</span><span lang="te" class="question-label " data-itext-id="/data/g_disposition/referral_letter_issued:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_disposition/referral_letter_issued" data-name="/data/g_disposition/referral_letter_issued" data-required="true()" data-relevant=" /data/g_disposition/referral_needed  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_disposition/referral_facility:label">Referral facility</span><span lang="te" class="question-label " data-itext-id="/data/g_disposition/referral_facility:label">-</span><span class="required">*</span><span lang="en" class="or-hint active" data-itext-id="/data/g_disposition/referral_facility:hint">e.g. NIMS Memory Clinic, Punjagutta</span><span lang="te" class="or-hint " data-itext-id="/data/g_disposition/referral_facility:hint">-</span><input type="text" name="/data/g_disposition/referral_facility" data-required="true()" data-relevant=" /data/g_disposition/referral_needed  = 'yes'" data-type-xml="string"><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_disposition/referral_appointment_date:label">Appointment date given</span><span lang="te" class="question-label " data-itext-id="/data/g_disposition/referral_appointment_date:label">-</span><input type="date" name="/data/g_disposition/referral_appointment_date" data-relevant=" /data/g_disposition/referral_needed  = 'yes'" data-type-xml="date"></label><label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_disposition/assessor_notes:label">Assessor notes</span><span lang="te" class="question-label " data-itext-id="/data/g_disposition/assessor_notes:label">-</span><input type="text" name="/data/g_disposition/assessor_notes" data-type-xml="string"></label>
+      </section>
+  
+<fieldset id="or-preload-items" style="display:none;"><label class="calculation non-select "><input type="hidden" name="/data/meta/instanceID" data-preload="uid" data-preload-params="" data-type-xml="string"></label></fieldset>
+<fieldset id="or-calculated-items" style="display:none;">
+<label class="calculation non-select "><input type="hidden" name="/data/patient_uuid" data-calculate="../inputs/contact/_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_id" data-calculate="../inputs/contact/patient_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_name" data-calculate="../inputs/contact/name" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_sex" data-calculate="../inputs/contact/gender" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_age" data-calculate="../inputs/contact/age" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_phone" data-calculate="../inputs/contact/phone" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_education" data-calculate="../inputs/contact/education_level" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/screened_by" data-calculate="../inputs/user/contact_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/screened_by_name" data-calculate="../inputs/user/name" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/protocol/k_ad8_cutoff" data-calculate="2" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/protocol/k_hmse_cut_illiterate" data-calculate="19" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/protocol/k_hmse_cut_primary" data-calculate="21" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/protocol/k_hmse_cut_secondary" data-calculate="23" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/protocol/k_phq_cutoff" data-calculate="10" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/protocol/k_grip_cut_male" data-calculate="28" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/protocol/k_grip_cut_female" data-calculate="18" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/protocol/k_sppb_cutoff" data-calculate="8" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_ad8/ad8_total" data-calculate="if( /data/g_ad8/informant_available  = 'no', -1, number( /data/g_ad8/ad8_1 ) + number( /data/g_ad8/ad8_2 ) + number( /data/g_ad8/ad8_3 ) + number( /data/g_ad8/ad8_4 ) + number( /data/g_ad8/ad8_5 ) + number( /data/g_ad8/ad8_6 ) + number( /data/g_ad8/ad8_7 ) + number( /data/g_ad8/ad8_8 ))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_ad8/ad8_flag" data-calculate="if( /data/g_ad8/ad8_total  &gt;=  /data/protocol/k_ad8_cutoff , 1, 0)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_hmse/hmse_subtotal" data-calculate=" /data/g_hmse/hmse_orientation  +  /data/g_hmse/hmse_registration  +  /data/g_hmse/hmse_attention  +  /data/g_hmse/hmse_recall  +  /data/g_hmse/hmse_language " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_hmse/hmse_cutoff" data-calculate="if( /data/g_link/education_confirm  = 'illiterate',  /data/protocol/k_hmse_cut_illiterate , if( /data/g_link/education_confirm  = 'primary',  /data/protocol/k_hmse_cut_primary ,  /data/protocol/k_hmse_cut_secondary ))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_hmse/hmse_flag" data-calculate="if( /data/g_hmse/hmse_total  &lt;=  /data/g_hmse/hmse_cutoff , 1, 0)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_phq/phq_total" data-calculate="number( /data/g_phq/phq_1 ) + number( /data/g_phq/phq_2 ) + number( /data/g_phq/phq_3 ) + number( /data/g_phq/phq_4 ) + number( /data/g_phq/phq_5 ) + number( /data/g_phq/phq_6 ) + number( /data/g_phq/phq_7 ) + number( /data/g_phq/phq_8 ) + number( /data/g_phq/phq_9 )" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_phq/phq_severity" data-calculate="if( /data/g_phq/phq_total  &gt;= 20, 'severe', if( /data/g_phq/phq_total  &gt;= 15, 'moderately_severe', if( /data/g_phq/phq_total  &gt;= 10, 'moderate', if( /data/g_phq/phq_total  &gt;= 5, 'mild', 'minimal'))))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_phq/phq_flag" data-calculate="if( /data/g_phq/phq_total  &gt;=  /data/protocol/k_phq_cutoff , 1, 0)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_phq/phq9_item9_positive" data-calculate="if(number( /data/g_phq/phq_9 ) &gt; 0, 1, 0)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_easi/easi_positive" data-calculate="if( /data/g_easi/easi_2  = 'yes' or  /data/g_easi/easi_3  = 'yes' or  /data/g_easi/easi_4  = 'yes' or  /data/g_easi/easi_5  = 'yes' or  /data/g_easi/easi_6  = 'yes', 1, 0)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_sppb/sppb_bal_a" data-calculate="if( /data/g_sppb/sppb_side_by_side_sec  &gt;= 10, 1, 0)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_sppb/sppb_bal_b" data-calculate="if( /data/g_sppb/sppb_bal_a  = 1 and  /data/g_sppb/sppb_semi_tandem_sec  &gt;= 10, 1, 0)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_sppb/sppb_bal_c" data-calculate="if( /data/g_sppb/sppb_bal_b  = 1 and  /data/g_sppb/sppb_tandem_sec  &gt;= 10, 2, if( /data/g_sppb/sppb_bal_b  = 1 and  /data/g_sppb/sppb_tandem_sec  &gt;= 3, 1, 0))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_sppb/sppb_balance_score" data-calculate=" /data/g_sppb/sppb_bal_a  +  /data/g_sppb/sppb_bal_b  +  /data/g_sppb/sppb_bal_c " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_sppb/sppb_gait_score" data-calculate="if( /data/g_sppb/sppb_gait_unable  = 'yes', 0, if( /data/g_sppb/sppb_gait_sec  &gt; 8.70, 1, if( /data/g_sppb/sppb_gait_sec  &gt;= 6.21, 2, if( /data/g_sppb/sppb_gait_sec  &gt;= 4.82, 3, 4))))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_sppb/sppb_chair_score" data-calculate="if( /data/g_sppb/sppb_chair_unable  = 'yes', 0, if( /data/g_sppb/sppb_chair_sec  &gt; 60, 0, if( /data/g_sppb/sppb_chair_sec  &gt;= 16.70, 1, if( /data/g_sppb/sppb_chair_sec  &gt;= 13.70, 2, if( /data/g_sppb/sppb_chair_sec  &gt;= 11.20, 3, 4)))))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_sppb/sppb_total" data-calculate="if( /data/g_sppb/sppb_attempted  = 'no', -1,  /data/g_sppb/sppb_balance_score  +  /data/g_sppb/sppb_gait_score  +  /data/g_sppb/sppb_chair_score )" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_sppb/sppb_flag" data-calculate="if( /data/g_sppb/sppb_total  &gt;= 0 and  /data/g_sppb/sppb_total  &lt;=  /data/protocol/k_sppb_cutoff , 1, 0)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_grip/grip_max" data-calculate="if( /data/g_grip/grip_attempted  = 'no', -1, max( /data/g_grip/grip_right_1 ,  /data/g_grip/grip_right_2 ,  /data/g_grip/grip_left_1 ,  /data/g_grip/grip_left_2 ))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_grip/grip_cutoff" data-calculate="if( /data/patient_sex  = 'female',  /data/protocol/k_grip_cut_female ,  /data/protocol/k_grip_cut_male )" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_grip/grip_flag" data-calculate="if( /data/g_grip/grip_max  &gt;= 0 and  /data/g_grip/grip_max  &lt;  /data/g_grip/grip_cutoff , 1, 0)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_glucose/glucose_flag" data-calculate="if( /data/g_glucose/glucose_type  = 'not_done', 0, if( /data/g_glucose/glucose_mgdl  &lt; 70 or  /data/g_glucose/glucose_mgdl  &gt;= 300, 2, if(( /data/g_glucose/glucose_type  = 'fasting' and  /data/g_glucose/glucose_mgdl  &gt;= 126) or ( /data/g_glucose/glucose_type  = 'random' and  /data/g_glucose/glucose_mgdl  &gt;= 200), 1, 0)))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_disposition/cognitive_flag" data-calculate="if( /data/g_ad8/ad8_flag  = 1 or  /data/g_hmse/hmse_flag  = 1, 1, 0)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_disposition/physical_flag" data-calculate="if( /data/g_sppb/sppb_flag  = 1 or  /data/g_grip/grip_flag  = 1, 1, 0)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_disposition/risk_total" data-calculate=" /data/g_disposition/cognitive_flag  +  /data/g_phq/phq_flag  +  /data/g_easi/easi_positive  +  /data/g_disposition/physical_flag  + if( /data/g_glucose/glucose_flag  &gt; 0, 1, 0)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_disposition/disposition" data-calculate="if( /data/g_phq/phq9_item9_positive  = 1 or  /data/g_glucose/glucose_flag  = 2, 'urgent_same_day', if( /data/g_easi/easi_positive  = 1, 'safeguarding', if( /data/g_disposition/cognitive_flag  = 1, 'memory_clinic_referral', if( /data/g_phq/phq_flag  = 1, 'mental_health_referral', if( /data/g_disposition/physical_flag  = 1, 'rehab_nutrition_referral', if( /data/g_glucose/glucose_flag  = 1, 'primary_care_referral', 'routine_followup'))))))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_disposition/referral_needed" data-calculate="if( /data/g_disposition/disposition  = 'routine_followup', 'no', 'yes')" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/meta/instanceName" data-calculate="concat( /data/patient_name , ' - Stage 2 - ',  /data/g_disposition/disposition )" data-type-xml="string"></label>
+</fieldset>
+<fieldset id="or-setvalue-items" style="display:none;"><label class="setvalue non-select "><input name="/data/g_link/assessment_date" data-type-xml="date" data-event="odk-instance-first-load" data-setvalue="today()" type="hidden"></label></fieldset>
+</form>

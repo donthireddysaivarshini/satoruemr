@@ -1,0 +1,14 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Stage 2 - Detailed Assessment"
+    }
+  ],
+  "icon": "icon-healthcare-assessment",
+  "context": {
+    "person": true,
+    "place": false,
+    "expression": "summary.context.is_participant && summary.context.pending_stage2"
+  }
+}

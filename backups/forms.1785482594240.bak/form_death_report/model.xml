@@ -1,0 +1,108 @@
+
+  <model xmlns:odk="http://www.opendatakit.org/xforms" odk:xforms-version="1.0.0">
+    <instance>
+        <data xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" id="death_report" version="2025-05-01 22:11:44.570000" prefix="J1!death_report!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source>user</source>
+            <source_id/>
+            <contact>
+              <_id/>
+              <name/>
+              <short_name/>
+              <patient_id/>
+              <date_of_birth>0</date_of_birth>
+              <sex/>
+              <parent>
+                <_id/>
+                <parent>
+                  <contact>
+                    <name/>
+                    <phone/>
+                  </contact>
+                </parent>
+              </parent>
+            </contact>
+          </inputs>
+          <patient_age_in_years tag="hidden">0</patient_age_in_years>
+          <patient_age_in_months tag="hidden">0</patient_age_in_months>
+          <patient_age_in_days tag="hidden"/>
+          <patient_uuid tag="hidden"/>
+          <patient_id tag="hidden"/>
+          <patient_name tag="hidden"/>
+          <patient_short_name tag="hidden"/>
+          <patient_display_name tag="hidden"/>
+          <death_details>
+            <date_of_death/>
+            <place_of_death/>
+            <place_of_death_other/>
+            <death_information/>
+          </death_details>
+          <group_review tag="hidden">
+            <submit/>
+            <r_summary_details/>
+            <c_patient_age/>
+            <r_patient_details/>
+            <r_death_info/>
+            <r_key_instruction/>
+            <blank_note/>
+            <r_referral/>
+            <r_undo/>
+          </group_review>
+          <data tag="hidden">
+            <__date_of_death/>
+            <__place_of_death/>
+            <__place_of_death_other/>
+            <__death_information/>
+            <meta tag="hidden">
+              <__patient_uuid/>
+              <__patient_id/>
+              <__household_uuid/>
+              <__source/>
+              <__source_id/>
+            </meta>
+          </data>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+    <instance id="contact-summary"/>
+    <instance id="user-contact-summary"/>
+    <instance id="yes_no">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <name>yes</name>
+            <label>Yes</label>
+          </item>
+          <item>
+            <name>no</name>
+            <label>No</label>
+          </item>
+        </root>
+      </instance>
+    <instance id="places_of_death">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <name>health_facility</name>
+            <label>Health facility</label>
+          </item>
+          <item>
+            <name>home</name>
+            <label>Home</label>
+          </item>
+          <item>
+            <name>other</name>
+            <label>Other</label>
+          </item>
+        </root>
+      </instance>
+  </model>
+

@@ -1,0 +1,49 @@
+<form autocomplete="off" novalidate="novalidate" class="or clearfix" dir="ltr" data-form-id="contact:participant:edit">
+<section class="form-logo"></section><h3 dir="auto" id="form-title">Edit Participant</h3>
+  
+  
+    <section class="or-group or-appearance-field-list " name="/data/participant"><h4><span lang="" class="question-label active">NO_LABEL</span></h4>
+<label class="question non-select "><span lang="" class="question-label active">Full Name</span><span class="required">*</span><input type="text" name="/data/participant/name" data-required="true()" data-type-xml="string"><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><label class="question non-select "><span lang="" class="question-label active">Age</span><span class="required">*</span><input type="number" name="/data/participant/age" data-required="true()" data-constraint=". &gt;= 0 and . &lt;= 130" data-type-xml="int"><span lang="" class="or-constraint-msg active">Age must be between 0 and 130</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="" class="question-label active">Gender</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('gender_list')/root/item"><input type="radio" name="/data/participant/gender" data-name="/data/participant/gender" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-ref="label">
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question non-select "><span lang="" class="question-label active">Phone Number</span><input type="tel" name="/data/participant/phone" data-constraint="true()" data-type-xml="tel"><span lang="" class="or-constraint-msg active">Please enter a valid phone number.</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="" class="question-label active">Education level</span><span class="required">*</span><span lang="" class="or-hint active">Used to select the correct HMSE cut-off in Stage 2.</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('education_list')/root/item"><input type="radio" name="/data/participant/education_level" data-name="/data/participant/education_level" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-ref="label">
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question non-select "><span lang="" class="question-label active">Family member / informant name</span><span lang="" class="or-hint active">The person who can answer the AD8 in Stage 2.</span><input type="text" name="/data/participant/informant_name" data-type-xml="string"></label><label class="question non-select "><span lang="" class="question-label active">Informant phone number</span><input type="tel" name="/data/participant/informant_phone" data-constraint="true()" data-type-xml="tel"><span lang="" class="or-constraint-msg active">Please enter a valid phone number.</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="" class="question-label active">Consent given for screening and data storage?</span><span class="required">*</span><span lang="" class="or-hint active">Explain purpose, confidentiality and the right to stop at any time before recording this.</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/participant/consent_given" data-name="/data/participant/consent_given" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-ref="label">
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question non-select or-appearance-multiline "><span lang="" class="question-label active">Notes</span><textarea name="/data/participant/notes" data-type-xml="string"></textarea></label>
+      </section>
+  
+<fieldset id="or-preload-items" style="display:none;"><label class="calculation non-select "><input type="hidden" name="/data/meta/instanceID" data-preload="uid" data-preload-params="" data-type-xml="string"></label></fieldset>
+<fieldset id="or-calculated-items" style="display:none;">
+<label class="calculation non-select "><input type="hidden" name="/data/participant/consent_recorded_at" data-calculate="now()" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/participant/consent_version" data-calculate="'SATORU-CONSENT-v1.0-2026'" data-type-xml="string"></label>
+</fieldset>
+</form>

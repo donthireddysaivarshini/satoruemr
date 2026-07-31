@@ -1,0 +1,81 @@
+
+  <model xmlns:odk="http://www.opendatakit.org/xforms" odk:xforms-version="1.0.0">
+    <instance>
+        <data xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" id="contact:participant:create" version="2026-07-29 00-00" prefix="J1!contact:participant:create!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+          </inputs>
+          <participant>
+            <parent>PARENT</parent>
+            <type>participant</type>
+            <name/>
+            <age/>
+            <gender/>
+            <phone/>
+            <education_level/>
+            <informant_name/>
+            <informant_phone/>
+            <consent_given/>
+            <consent_recorded_at/>
+            <consent_version/>
+            <notes/>
+          </participant>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+    <instance id="gender_list">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <name>male</name>
+            <label>Male</label>
+          </item>
+          <item>
+            <name>female</name>
+            <label>Female</label>
+          </item>
+        </root>
+      </instance>
+    <instance id="education_list">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <name>illiterate</name>
+            <label>No formal schooling / cannot read</label>
+          </item>
+          <item>
+            <name>primary</name>
+            <label>1-7 years of schooling</label>
+          </item>
+          <item>
+            <name>secondary_plus</name>
+            <label>8 years or more</label>
+          </item>
+        </root>
+      </instance>
+    <instance id="yes_no">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <name>yes</name>
+            <label>Yes</label>
+          </item>
+          <item>
+            <name>no</name>
+            <label>No</label>
+          </item>
+        </root>
+      </instance>
+  </model>
+

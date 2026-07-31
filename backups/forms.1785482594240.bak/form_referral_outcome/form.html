@@ -1,0 +1,80 @@
+<form autocomplete="off" novalidate="novalidate" class="or clearfix pages" dir="ltr" data-form-id="referral_outcome">
+<section class="form-logo"></section><h3 dir="auto" id="form-title">Referral Outcome</h3>
+<select id="form-languages" data-default-lang=""><option value="en">en</option> <option value="te">te</option> </select>
+  
+  
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/inputs" data-relevant="./source = 'user'"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/inputs:label">Participant</span><span lang="te" class="question-label " data-itext-id="/data/inputs:label">-</span>
+</h4>
+<section class="or-group or-appearance-field-list " name="/data/inputs/user"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/inputs/user:label">User</span><span lang="te" class="question-label " data-itext-id="/data/inputs/user:label">-</span>
+</h4>
+      </section><section class="or-group or-appearance-field-list " name="/data/inputs/contact"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/inputs/contact:label">Participant</span><span lang="te" class="question-label " data-itext-id="/data/inputs/contact:label">-</span>
+</h4>
+<label class="question non-select or-appearance-select-contact or-appearance-type-participant "><span lang="en" class="question-label active" data-itext-id="/data/inputs/contact/_id:label">Select participant</span><span lang="te" class="question-label " data-itext-id="/data/inputs/contact/_id:label">-</span><input type="text" name="/data/inputs/contact/_id" data-type-xml="person"></label>
+      </section>
+      </section>
+    <section class="or-group or-appearance-field-list " name="/data/g_ref"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ref:label">Referral outcome</span><span lang="te" class="question-label " data-itext-id="/data/g_ref:label">-</span>
+</h4>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_ref/outcome_date:label">Date this outcome was recorded</span><span lang="te" class="question-label " data-itext-id="/data/g_ref/outcome_date:label">-</span><span class="required">*</span><input type="date" name="/data/g_ref/outcome_date" data-required="true()" data-type-xml="date"><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_ref/facility:label">Facility referred to</span><span lang="te" class="question-label " data-itext-id="/data/g_ref/facility:label">-</span><span class="required">*</span><input type="text" name="/data/g_ref/facility" data-required="true()" data-type-xml="string"><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ref/attended:label">Did the participant attend?</span><span lang="te" class="question-label " data-itext-id="/data/g_ref/attended:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('attended')/root/item"><input type="radio" name="/data/g_ref/attended" data-name="/data/g_ref/attended" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="attended-0">Attended the referral</span><span lang="te" class="option-label " data-itext-id="attended-0">వెళ్లారు</span><span lang="en" class="option-label active" data-itext-id="attended-1">Not yet - appointment still ahead</span><span lang="te" class="option-label " data-itext-id="attended-1">ఇంకా వెళ్లలేదు - తేదీ రావాలి</span><span lang="en" class="option-label active" data-itext-id="attended-2">Missed the appointment</span><span lang="te" class="option-label " data-itext-id="attended-2">అపాయింట్‌మెంట్ మిస్ అయ్యారు</span><span lang="en" class="option-label active" data-itext-id="attended-3">Declined to go</span><span lang="te" class="option-label " data-itext-id="attended-3">వెళ్లడానికి ఒప్పుకోలేదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ref/diagnosis:label">Diagnosis communicated</span><span lang="te" class="question-label " data-itext-id="/data/g_ref/diagnosis:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('dx')/root/item"><input type="radio" name="/data/g_ref/diagnosis" data-name="/data/g_ref/diagnosis" data-required="true()" data-relevant=" /data/g_ref/attended  = 'attended'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="dx-0">No cognitive impairment</span><span lang="te" class="option-label " data-itext-id="dx-0">ఇబ్బంది లేదు</span><span lang="en" class="option-label active" data-itext-id="dx-1">Mild cognitive impairment</span><span lang="te" class="option-label " data-itext-id="dx-1">తేలికపాటి జ్ఞాపకశక్తి సమస్య</span><span lang="en" class="option-label active" data-itext-id="dx-2">Dementia - Alzheimer type</span><span lang="te" class="option-label " data-itext-id="dx-2">డిమెన్షియా - అల్జీమర్స్</span><span lang="en" class="option-label active" data-itext-id="dx-3">Dementia - vascular</span><span lang="te" class="option-label " data-itext-id="dx-3">డిమెన్షియా - వాస్క్యులర్</span><span lang="en" class="option-label active" data-itext-id="dx-4">Dementia - other or mixed</span><span lang="te" class="option-label " data-itext-id="dx-4">డిమెన్షియా - ఇతర</span><span lang="en" class="option-label active" data-itext-id="dx-5">Depression</span><span lang="te" class="option-label " data-itext-id="dx-5">డిప్రెషన్</span><span lang="en" class="option-label active" data-itext-id="dx-6">Reversible cause identified</span><span lang="te" class="option-label " data-itext-id="dx-6">తగ్గించగలిగే కారణం</span><span lang="en" class="option-label active" data-itext-id="dx-7">Diagnosis pending</span><span lang="te" class="option-label " data-itext-id="dx-7">నిర్ధారణ కావాల్సి ఉంది</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init "><fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ref/medication_started:label">Medication started?</span><span lang="te" class="question-label " data-itext-id="/data/g_ref/medication_started:label">-</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_ref/medication_started" data-name="/data/g_ref/medication_started" data-relevant=" /data/g_ref/attended  = 'attended'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset></fieldset>
+<fieldset class="question simple-select or-branch pre-init "><fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ref/care_plan_shared:label">Care plan shared with the family?</span><span lang="te" class="question-label " data-itext-id="/data/g_ref/care_plan_shared:label">-</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_ref/care_plan_shared" data-name="/data/g_ref/care_plan_shared" data-relevant=" /data/g_ref/attended  = 'attended'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset></fieldset>
+<fieldset class="question simple-select or-branch pre-init "><fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_ref/caregiver_training_offered:label">Caregiver training offered by Satoru?</span><span lang="te" class="question-label " data-itext-id="/data/g_ref/caregiver_training_offered:label">-</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_ref/caregiver_training_offered" data-name="/data/g_ref/caregiver_training_offered" data-relevant=" /data/g_ref/attended  = 'attended'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset></fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_ref/clinician_summary:label">Summary of the clinician's advice</span><span lang="te" class="question-label " data-itext-id="/data/g_ref/clinician_summary:label">-</span><input type="text" name="/data/g_ref/clinician_summary" data-relevant=" /data/g_ref/attended  = 'attended'" data-type-xml="string"></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_ref/non_attendance_reason:label">Why not attended</span><span lang="te" class="question-label " data-itext-id="/data/g_ref/non_attendance_reason:label">-</span><span class="required">*</span><input type="text" name="/data/g_ref/non_attendance_reason" data-required="true()" data-relevant=" /data/g_ref/attended  = 'missed' or  /data/g_ref/attended  = 'declined'" data-type-xml="string"><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label>
+      </section>
+  
+<fieldset id="or-preload-items" style="display:none;"><label class="calculation non-select "><input type="hidden" name="/data/meta/instanceID" data-preload="uid" data-preload-params="" data-type-xml="string"></label></fieldset>
+<fieldset id="or-calculated-items" style="display:none;">
+<label class="calculation non-select "><input type="hidden" name="/data/patient_uuid" data-calculate="../inputs/contact/_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_id" data-calculate="../inputs/contact/patient_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_name" data-calculate="../inputs/contact/name" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_sex" data-calculate="../inputs/contact/gender" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_age" data-calculate="../inputs/contact/age" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_phone" data-calculate="../inputs/contact/phone" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_education" data-calculate="../inputs/contact/education_level" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/screened_by" data-calculate="../inputs/user/contact_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/screened_by_name" data-calculate="../inputs/user/name" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_ref/referral_closed" data-calculate="if( /data/g_ref/attended  = 'attended' or  /data/g_ref/attended  = 'declined', 'yes', 'no')" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/meta/instanceName" data-calculate="concat( /data/patient_name , ' - Referral - ',  /data/g_ref/attended )" data-type-xml="string"></label>
+</fieldset>
+<fieldset id="or-setvalue-items" style="display:none;"><label class="setvalue non-select "><input name="/data/g_ref/outcome_date" data-type-xml="date" data-event="odk-instance-first-load" data-setvalue="today()" type="hidden"></label></fieldset>
+</form>

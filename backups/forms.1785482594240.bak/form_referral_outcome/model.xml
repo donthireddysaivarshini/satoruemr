@@ -1,0 +1,131 @@
+
+  <model xmlns:odk="http://www.opendatakit.org/xforms" odk:xforms-version="1.0.0">
+    <instance>
+        <data xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" id="referral_outcome" version="2026-07-29 00-00" prefix="J1!referral_outcome!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <user>
+              <contact_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <name/>
+              <age/>
+              <gender/>
+              <phone/>
+              <education_level/>
+              <consent_given/>
+              <informant_name/>
+              <informant_phone/>
+            </contact>
+          </inputs>
+          <patient_uuid/>
+          <patient_id/>
+          <patient_name/>
+          <patient_sex/>
+          <patient_age/>
+          <patient_phone/>
+          <patient_education/>
+          <screened_by/>
+          <screened_by_name/>
+          <g_ref>
+            <outcome_date/>
+            <facility/>
+            <attended/>
+            <diagnosis/>
+            <medication_started/>
+            <care_plan_shared/>
+            <caregiver_training_offered/>
+            <clinician_summary/>
+            <non_attendance_reason/>
+            <referral_closed/>
+          </g_ref>
+          <meta tag="hidden">
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </data>
+      </instance>
+    <instance id="contact-summary"/>
+    <instance id="user-contact-summary"/>
+    <instance id="yesno">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>yesno-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>yesno-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="attended">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>attended-0</itextId>
+            <name>attended</name>
+          </item>
+          <item>
+            <itextId>attended-1</itextId>
+            <name>pending</name>
+          </item>
+          <item>
+            <itextId>attended-2</itextId>
+            <name>missed</name>
+          </item>
+          <item>
+            <itextId>attended-3</itextId>
+            <name>declined</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="dx">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>dx-0</itextId>
+            <name>no_impairment</name>
+          </item>
+          <item>
+            <itextId>dx-1</itextId>
+            <name>mci</name>
+          </item>
+          <item>
+            <itextId>dx-2</itextId>
+            <name>dementia_ad</name>
+          </item>
+          <item>
+            <itextId>dx-3</itextId>
+            <name>dementia_vascular</name>
+          </item>
+          <item>
+            <itextId>dx-4</itextId>
+            <name>dementia_other</name>
+          </item>
+          <item>
+            <itextId>dx-5</itextId>
+            <name>depression</name>
+          </item>
+          <item>
+            <itextId>dx-6</itextId>
+            <name>reversible</name>
+          </item>
+          <item>
+            <itextId>dx-7</itextId>
+            <name>pending_dx</name>
+          </item>
+        </root>
+      </instance>
+  </model>
+

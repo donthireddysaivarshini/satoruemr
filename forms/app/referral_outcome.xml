@@ -1,0 +1,410 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>Referral Outcome</h:title>
+    <model odk:xforms-version="1.0.0">
+      <itext>
+        <translation lang="en">
+          <text id="yesno-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesno-1">
+            <value>No</value>
+          </text>
+          <text id="attended-0">
+            <value>Attended the referral</value>
+          </text>
+          <text id="attended-1">
+            <value>Not yet - appointment still ahead</value>
+          </text>
+          <text id="attended-2">
+            <value>Missed the appointment</value>
+          </text>
+          <text id="attended-3">
+            <value>Declined to go</value>
+          </text>
+          <text id="dx-0">
+            <value>No cognitive impairment</value>
+          </text>
+          <text id="dx-1">
+            <value>Mild cognitive impairment</value>
+          </text>
+          <text id="dx-2">
+            <value>Dementia - Alzheimer type</value>
+          </text>
+          <text id="dx-3">
+            <value>Dementia - vascular</value>
+          </text>
+          <text id="dx-4">
+            <value>Dementia - other or mixed</value>
+          </text>
+          <text id="dx-5">
+            <value>Depression</value>
+          </text>
+          <text id="dx-6">
+            <value>Reversible cause identified</value>
+          </text>
+          <text id="dx-7">
+            <value>Diagnosis pending</value>
+          </text>
+          <text id="/data/inputs:label">
+            <value>Participant</value>
+          </text>
+          <text id="/data/inputs/user:label">
+            <value>User</value>
+          </text>
+          <text id="/data/inputs/contact:label">
+            <value>Participant</value>
+          </text>
+          <text id="/data/inputs/contact/_id:label">
+            <value>Select participant</value>
+          </text>
+          <text id="/data/g_ref:label">
+            <value>Referral outcome</value>
+          </text>
+          <text id="/data/g_ref/outcome_date:label">
+            <value>Date this outcome was recorded</value>
+          </text>
+          <text id="/data/g_ref/facility:label">
+            <value>Facility referred to</value>
+          </text>
+          <text id="/data/g_ref/attended:label">
+            <value>Did the participant attend?</value>
+          </text>
+          <text id="/data/g_ref/diagnosis:label">
+            <value>Diagnosis communicated</value>
+          </text>
+          <text id="/data/g_ref/medication_started:label">
+            <value>Medication started?</value>
+          </text>
+          <text id="/data/g_ref/care_plan_shared:label">
+            <value>Care plan shared with the family?</value>
+          </text>
+          <text id="/data/g_ref/caregiver_training_offered:label">
+            <value>Caregiver training offered by Satoru?</value>
+          </text>
+          <text id="/data/g_ref/clinician_summary:label">
+            <value>Summary of the clinician's advice</value>
+          </text>
+          <text id="/data/g_ref/non_attendance_reason:label">
+            <value>Why not attended</value>
+          </text>
+        </translation>
+        <translation lang="te">
+          <text id="yesno-0">
+            <value>అవును</value>
+          </text>
+          <text id="yesno-1">
+            <value>కాదు</value>
+          </text>
+          <text id="attended-0">
+            <value>వెళ్లారు</value>
+          </text>
+          <text id="attended-1">
+            <value>ఇంకా వెళ్లలేదు - తేదీ రావాలి</value>
+          </text>
+          <text id="attended-2">
+            <value>అపాయింట్‌మెంట్ మిస్ అయ్యారు</value>
+          </text>
+          <text id="attended-3">
+            <value>వెళ్లడానికి ఒప్పుకోలేదు</value>
+          </text>
+          <text id="dx-0">
+            <value>ఇబ్బంది లేదు</value>
+          </text>
+          <text id="dx-1">
+            <value>తేలికపాటి జ్ఞాపకశక్తి సమస్య</value>
+          </text>
+          <text id="dx-2">
+            <value>డిమెన్షియా - అల్జీమర్స్</value>
+          </text>
+          <text id="dx-3">
+            <value>డిమెన్షియా - వాస్క్యులర్</value>
+          </text>
+          <text id="dx-4">
+            <value>డిమెన్షియా - ఇతర</value>
+          </text>
+          <text id="dx-5">
+            <value>డిప్రెషన్</value>
+          </text>
+          <text id="dx-6">
+            <value>తగ్గించగలిగే కారణం</value>
+          </text>
+          <text id="dx-7">
+            <value>నిర్ధారణ కావాల్సి ఉంది</value>
+          </text>
+          <text id="/data/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ref:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ref/outcome_date:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ref/facility:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ref/attended:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ref/diagnosis:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ref/medication_started:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ref/care_plan_shared:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ref/caregiver_training_offered:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ref/clinician_summary:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ref/non_attendance_reason:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <data id="referral_outcome" version="2026-07-29 00-00" prefix="J1!referral_outcome!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <user>
+              <contact_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <name/>
+              <age/>
+              <gender/>
+              <phone/>
+              <education_level/>
+              <consent_given/>
+              <informant_name/>
+              <informant_phone/>
+            </contact>
+          </inputs>
+          <patient_uuid/>
+          <patient_id/>
+          <patient_name/>
+          <patient_sex/>
+          <patient_age/>
+          <patient_phone/>
+          <patient_education/>
+          <screened_by/>
+          <screened_by_name/>
+          <g_ref>
+            <outcome_date/>
+            <facility/>
+            <attended/>
+            <diagnosis/>
+            <medication_started/>
+            <care_plan_shared/>
+            <caregiver_training_offered/>
+            <clinician_summary/>
+            <non_attendance_reason/>
+            <referral_closed/>
+          </g_ref>
+          <meta tag="hidden">
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="user-contact-summary"/>
+      <instance id="yesno">
+        <root>
+          <item>
+            <itextId>yesno-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>yesno-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="attended">
+        <root>
+          <item>
+            <itextId>attended-0</itextId>
+            <name>attended</name>
+          </item>
+          <item>
+            <itextId>attended-1</itextId>
+            <name>pending</name>
+          </item>
+          <item>
+            <itextId>attended-2</itextId>
+            <name>missed</name>
+          </item>
+          <item>
+            <itextId>attended-3</itextId>
+            <name>declined</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="dx">
+        <root>
+          <item>
+            <itextId>dx-0</itextId>
+            <name>no_impairment</name>
+          </item>
+          <item>
+            <itextId>dx-1</itextId>
+            <name>mci</name>
+          </item>
+          <item>
+            <itextId>dx-2</itextId>
+            <name>dementia_ad</name>
+          </item>
+          <item>
+            <itextId>dx-3</itextId>
+            <name>dementia_vascular</name>
+          </item>
+          <item>
+            <itextId>dx-4</itextId>
+            <name>dementia_other</name>
+          </item>
+          <item>
+            <itextId>dx-5</itextId>
+            <name>depression</name>
+          </item>
+          <item>
+            <itextId>dx-6</itextId>
+            <name>reversible</name>
+          </item>
+          <item>
+            <itextId>dx-7</itextId>
+            <name>pending_dx</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/data/inputs/source" type="string"/>
+      <bind nodeset="/data/inputs/source_id" type="string"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/data/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/data/inputs/contact/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/age" type="string"/>
+      <bind nodeset="/data/inputs/contact/gender" type="string"/>
+      <bind nodeset="/data/inputs/contact/phone" type="string"/>
+      <bind nodeset="/data/inputs/contact/education_level" type="string"/>
+      <bind nodeset="/data/inputs/contact/consent_given" type="string"/>
+      <bind nodeset="/data/inputs/contact/informant_name" type="string"/>
+      <bind nodeset="/data/inputs/contact/informant_phone" type="string"/>
+      <bind nodeset="/data/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/data/patient_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/data/patient_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/data/patient_sex" type="string" calculate="../inputs/contact/gender"/>
+      <bind nodeset="/data/patient_age" type="string" calculate="../inputs/contact/age"/>
+      <bind nodeset="/data/patient_phone" type="string" calculate="../inputs/contact/phone"/>
+      <bind nodeset="/data/patient_education" type="string" calculate="../inputs/contact/education_level"/>
+      <bind nodeset="/data/screened_by" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/data/screened_by_name" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/data/g_ref/outcome_date" type="date" required="true()"/>
+      <setvalue ref="/data/g_ref/outcome_date" value="today()" event="odk-instance-first-load"/>
+      <bind nodeset="/data/g_ref/facility" type="string" required="true()"/>
+      <bind nodeset="/data/g_ref/attended" type="string" required="true()"/>
+      <bind nodeset="/data/g_ref/diagnosis" type="string" relevant=" /data/g_ref/attended  = 'attended'" required="true()"/>
+      <bind nodeset="/data/g_ref/medication_started" type="string" relevant=" /data/g_ref/attended  = 'attended'"/>
+      <bind nodeset="/data/g_ref/care_plan_shared" type="string" relevant=" /data/g_ref/attended  = 'attended'"/>
+      <bind nodeset="/data/g_ref/caregiver_training_offered" type="string" relevant=" /data/g_ref/attended  = 'attended'"/>
+      <bind nodeset="/data/g_ref/clinician_summary" type="string" relevant=" /data/g_ref/attended  = 'attended'"/>
+      <bind nodeset="/data/g_ref/non_attendance_reason" type="string" relevant=" /data/g_ref/attended  = 'missed' or  /data/g_ref/attended  = 'declined'" required="true()"/>
+      <bind nodeset="/data/g_ref/referral_closed" type="string" calculate="if( /data/g_ref/attended  = 'attended' or  /data/g_ref/attended  = 'declined', 'yes', 'no')"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+      <bind nodeset="/data/meta/instanceName" type="string" calculate="concat( /data/patient_name , ' - Referral - ',  /data/g_ref/attended )"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="field-list" ref="/data/inputs">
+      <label ref="jr:itext('/data/inputs:label')"/>
+      <group appearance="field-list" ref="/data/inputs/user">
+        <label ref="jr:itext('/data/inputs/user:label')"/>
+      </group>
+      <group appearance="field-list" ref="/data/inputs/contact">
+        <label ref="jr:itext('/data/inputs/contact:label')"/>
+        <input ref="/data/inputs/contact/_id" appearance="select-contact type-participant">
+          <label ref="jr:itext('/data/inputs/contact/_id:label')"/>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/data/g_ref">
+      <label ref="jr:itext('/data/g_ref:label')"/>
+      <input ref="/data/g_ref/outcome_date">
+        <label ref="jr:itext('/data/g_ref/outcome_date:label')"/>
+      </input>
+      <input ref="/data/g_ref/facility">
+        <label ref="jr:itext('/data/g_ref/facility:label')"/>
+      </input>
+      <select1 ref="/data/g_ref/attended">
+        <label ref="jr:itext('/data/g_ref/attended:label')"/>
+        <itemset nodeset="instance('attended')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_ref/diagnosis">
+        <label ref="jr:itext('/data/g_ref/diagnosis:label')"/>
+        <itemset nodeset="instance('dx')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_ref/medication_started">
+        <label ref="jr:itext('/data/g_ref/medication_started:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_ref/care_plan_shared">
+        <label ref="jr:itext('/data/g_ref/care_plan_shared:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_ref/caregiver_training_offered">
+        <label ref="jr:itext('/data/g_ref/caregiver_training_offered:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_ref/clinician_summary">
+        <label ref="jr:itext('/data/g_ref/clinician_summary:label')"/>
+      </input>
+      <input ref="/data/g_ref/non_attendance_reason">
+        <label ref="jr:itext('/data/g_ref/non_attendance_reason:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

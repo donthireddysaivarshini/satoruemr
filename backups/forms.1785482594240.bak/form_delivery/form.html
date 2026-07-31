@@ -1,0 +1,508 @@
+<form autocomplete="off" novalidate="novalidate" class="or clearfix pages" dir="ltr" data-form-id="delivery">
+<section class="form-logo"></section><h3 dir="auto" id="form-title">Delivery</h3>
+<select id="form-languages" style="display:none;" data-default-lang=""><option value="en">en</option> </select>
+  
+  
+    <section class="or-group-data or-branch pre-init or-appearance-field-list " name="/data/inputs" data-relevant="./source = 'user'"><section class="or-group " name="/data/inputs/user"><h4><span lang="en" class="question-label active" data-itext-id="/data/inputs/user:label">User</span></h4>
+<label class="question non-select or-appearance-select-contact or-appearance-type-person "><span lang="en" class="question-label active" data-itext-id="/data/inputs/user/contact_id:label">Contact ID</span><input type="text" name="/data/inputs/user/contact_id" data-type-xml="string"></label>
+      </section><section class="or-group-data " name="/data/inputs/contact"><label class="question non-select or-appearance-select-contact or-appearance-type-person "><span lang="en" class="question-label active" data-itext-id="/data/inputs/contact/_id:label">What is the patient's name?</span><input type="text" name="/data/inputs/contact/_id" data-type-xml="string"></label><section class="or-group-data " name="/data/inputs/contact/parent"><label class="question non-select or-appearance-hidden "><span lang="en" class="question-label active" data-itext-id="/data/inputs/contact/parent/_id:label">Household ID</span><input type="text" name="/data/inputs/contact/parent/_id" data-type-xml="string"></label><section class="or-group-data " name="/data/inputs/contact/parent/parent"><label class="question non-select or-appearance-hidden "><span lang="en" class="question-label active" data-itext-id="/data/inputs/contact/parent/parent/_id:label">Area ID</span><input type="text" name="/data/inputs/contact/parent/parent/_id" data-type-xml="string"></label><section class="or-group-data " name="/data/inputs/contact/parent/parent/parent"><label class="question non-select or-appearance-hidden "><span lang="en" class="question-label active" data-itext-id="/data/inputs/contact/parent/parent/parent/_id:label">Health Facility ID</span><input type="text" name="/data/inputs/contact/parent/parent/parent/_id" data-type-xml="string"></label>
+      </section><section class="or-group-data " name="/data/inputs/contact/parent/parent/contact">
+      </section>
+      </section>
+      </section>
+      </section>
+      </section>
+    <section class="or-group " name="/data/condition"><h4><span lang="en" class="question-label active" data-itext-id="/data/condition:label"><span class="or-output" data-value=" /data/patient_short_name_start "> </span>'s Condition</span></h4>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/condition/woman_outcome:label">What is the outcome for the woman?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('life_conditions_woman')/root/item"><input type="radio" name="/data/condition/woman_outcome" data-name="/data/condition/woman_outcome" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="life_conditions_woman-0">Alive and well</span><span lang="en" class="option-label active" data-itext-id="life_conditions_woman-1">Alive and unwell</span><span lang="en" class="option-label active" data-itext-id="life_conditions_woman-2">Deceased</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/pnc_danger_sign_check" data-relevant="selected(../condition/woman_outcome, 'alive_well') or
+selected(../condition/woman_outcome, 'alive_unwell')"><h4><span lang="en" class="question-label active" data-itext-id="/data/pnc_danger_sign_check:label">Postnatal Danger Sign Check - Woman</span></h4>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/pnc_danger_sign_check/pnc_danger_sign_note:label">Does the woman have any of the following danger signs?</span><input type="text" name="/data/pnc_danger_sign_check/pnc_danger_sign_note" data-type-xml="string" readonly></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/pnc_danger_sign_check/fever:label">Fever</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/pnc_danger_sign_check/fever" data-name="/data/pnc_danger_sign_check/fever" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/pnc_danger_sign_check/severe_headache:label">Severe headache</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/pnc_danger_sign_check/severe_headache" data-name="/data/pnc_danger_sign_check/severe_headache" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/pnc_danger_sign_check/vaginal_bleeding:label">Vaginal bleeding</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/pnc_danger_sign_check/vaginal_bleeding" data-name="/data/pnc_danger_sign_check/vaginal_bleeding" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/pnc_danger_sign_check/vaginal_discharge:label">Foul smelling vaginal discharge</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/pnc_danger_sign_check/vaginal_discharge" data-name="/data/pnc_danger_sign_check/vaginal_discharge" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/pnc_danger_sign_check/convulsion:label">Convulsions</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/pnc_danger_sign_check/convulsion" data-name="/data/pnc_danger_sign_check/convulsion" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/death_info_woman" data-relevant="selected(../condition/woman_outcome, 'deceased')"><h4><span lang="en" class="question-label active" data-itext-id="/data/death_info_woman:label">Death Information - Woman</span></h4>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/death_info_woman/woman_death_date:label">Date of death</span><span class="required">*</span><input type="date" name="/data/death_info_woman/woman_death_date" data-required="true()" data-constraint=". &lt;= now() and difference-in-months( ., today() ) &lt; 1" data-type-xml="date"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/death_info_woman/woman_death_date:jr:constraintMsg">Date cannot be in the future and older than a month from today.</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/death_info_woman/woman_death_place:label">What was the place of death?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('places')/root/item"><input type="radio" name="/data/death_info_woman/woman_death_place" data-name="/data/death_info_woman/woman_death_place" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="places-0">Health facility</span><span lang="en" class="option-label active" data-itext-id="places-1">Home</span><span lang="en" class="option-label active" data-itext-id="places-2">Other</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/death_info_woman/woman_death_birth:label">Did the woman deliver any babies before she died?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/death_info_woman/woman_death_birth" data-name="/data/death_info_woman/woman_death_birth" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/death_info_woman/woman_death_add_notes:label">Additional notes</span><input type="text" name="/data/death_info_woman/woman_death_add_notes" data-constraint="string-length(.) &lt;= 300" data-type-xml="string"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/death_info_woman/woman_death_add_notes:jr:constraintMsg">300 characters</span></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/death_info_woman/death_profile_note:label">After reporting a death, the person's profile will be locked. If reported in error, you may undo the death report from the profile.</span><input type="text" name="/data/death_info_woman/death_profile_note" data-relevant="../woman_death_date != '' and ../woman_death_place != ''" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/death_info_woman/death_baby_note:label">If babies were delivered, you will have the chance to report on them Next &gt;.</span><input type="text" name="/data/death_info_woman/death_baby_note" data-relevant="../woman_death_date != '' and ../woman_death_place != '' and ../woman_death_birth = 'yes'" data-type-xml="string" readonly></label><section class="or-group-data " name="/data/death_info_woman/death_report"><section class="or-group-data " name="/data/death_info_woman/death_report/fields"><section class="or-group-data " name="/data/death_info_woman/death_report/fields/death_details">
+      </section>
+      </section>
+      </section>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/delivery_outcome" data-relevant="not(selected(../condition/woman_outcome, 'deceased')) or selected(../death_info_woman/woman_death_birth, 'yes')"><h4><span lang="en" class="question-label active" data-itext-id="/data/delivery_outcome:label">Delivery Outcome</span></h4>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/delivery_outcome/babies_delivered:label">How many babies were delivered?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('babies_delivered')/root/item"><input type="radio" name="/data/delivery_outcome/babies_delivered" data-name="/data/delivery_outcome/babies_delivered" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="babies_delivered-0">1</span><span lang="en" class="option-label active" data-itext-id="babies_delivered-1">2</span><span lang="en" class="option-label active" data-itext-id="babies_delivered-2">3</span><span lang="en" class="option-label active" data-itext-id="babies_delivered-3">Other</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span class="required">*</span><input type="number" name="/data/delivery_outcome/babies_delivered_other" data-required="true()" data-constraint=". &gt; 3" data-relevant="selected(../babies_delivered, 'other')" data-type-xml="int"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/delivery_outcome/babies_delivered_other:jr:constraintMsg">Select this only if more than 3 babies were delivered.</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/delivery_outcome/babies_alive:label">How many babies are alive?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('babies_alive')/root/item[count &lt;=  /data/delivery_outcome/babies_delivered_num ]"><input type="radio" name="/data/delivery_outcome/babies_alive" data-name="/data/delivery_outcome/babies_alive" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="babies_alive-0">0</span><span lang="en" class="option-label active" data-itext-id="babies_alive-1">1</span><span lang="en" class="option-label active" data-itext-id="babies_alive-2">2</span><span lang="en" class="option-label active" data-itext-id="babies_alive-3">3</span><span lang="en" class="option-label active" data-itext-id="babies_alive-4">Other</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span class="required">*</span><input type="number" name="/data/delivery_outcome/babies_alive_other" data-required="true()" data-constraint=". &lt;= ../babies_delivered_other" data-relevant="selected(../babies_alive, 'other')" data-type-xml="int"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/delivery_outcome/babies_alive_other:jr:constraintMsg">Can not be more than babies delivered.</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/delivery_outcome/delivery_date:label">Date of delivery</span><span class="required">*</span><input type="date" name="/data/delivery_outcome/delivery_date" data-required="true()" data-constraint=". &lt;= now() and difference-in-months( ., today() ) &lt; 1" data-type-xml="date"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/delivery_outcome/delivery_date:jr:constraintMsg">Date cannot be in the future and older than a month from today.</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/delivery_outcome/delivery_place:label">Where did delivery take place?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('places')/root/item"><input type="radio" name="/data/delivery_outcome/delivery_place" data-name="/data/delivery_outcome/delivery_place" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="places-0">Health facility</span><span lang="en" class="option-label active" data-itext-id="places-1">Home</span><span lang="en" class="option-label active" data-itext-id="places-2">Other</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/delivery_outcome/delivery_place_other:label">Please specify other</span><span class="required">*</span><input type="text" name="/data/delivery_outcome/delivery_place_other" data-required="true()" data-constraint="string-length(.) &lt;= 100" data-relevant="../delivery_place = 'other'" data-type-xml="string"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/delivery_outcome/delivery_place_other:jr:constraintMsg">Maximum 100 characters allowed.</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/delivery_outcome/delivery_mode:label">How did she deliver?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('modes')/root/item"><input type="radio" name="/data/delivery_outcome/delivery_mode" data-name="/data/delivery_outcome/delivery_mode" data-required="true()" data-relevant="../delivery_place = 'health_facility'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="modes-0">Vaginal</span><span lang="en" class="option-label active" data-itext-id="modes-1">Cesarean</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/delivery_outcome/delivery_conductor:label">Who conducted the delivery?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('conductors')/root/item"><input type="radio" name="/data/delivery_outcome/delivery_conductor" data-name="/data/delivery_outcome/delivery_conductor" data-required="true()" data-relevant="../delivery_place = 'home' or ../delivery_place = 'other'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="conductors-0">Skilled health care provider</span><span lang="en" class="option-label active" data-itext-id="conductors-1">Traditional birth attendant</span><span lang="en" class="option-label active" data-itext-id="conductors-2">Other</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/delivery_outcome/delivery_conductor_other:label">Please specify other</span><span class="required">*</span><input type="text" name="/data/delivery_outcome/delivery_conductor_other" data-required="true()" data-constraint="string-length(.) &lt;= 100" data-relevant="../delivery_conductor = 'other'" data-type-xml="string"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/delivery_outcome/delivery_conductor_other:jr:constraintMsg">Maximum 100 characters allowed.</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/baby_death" data-relevant="../delivery_outcome/babies_deceased_num &gt; 0"><h4><span lang="en" class="question-label active" data-itext-id="/data/baby_death:label">Death Information - Baby</span></h4>
+<section class="or-group-data " name="/data/baby_death/baby_death_repeat"><section class="or-repeat " name="/data/baby_death/baby_death_repeat"><label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/baby_death/baby_death_repeat/baby_death_date:label">Date of death</span><span class="required">*</span><input type="date" name="/data/baby_death/baby_death_repeat/baby_death_date" data-required="true()" data-constraint=". &lt;= now() and difference-in-months( ., today() ) &lt; 1" data-type-xml="date"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/baby_death/baby_death_repeat/baby_death_date:jr:constraintMsg">Date cannot be in the future and older than a month from today.</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/baby_death/baby_death_repeat/baby_death_place:label">Place of death</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('places')/root/item"><input type="radio" name="/data/baby_death/baby_death_repeat/baby_death_place" data-name="/data/baby_death/baby_death_repeat/baby_death_place" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="places-0">Health facility</span><span lang="en" class="option-label active" data-itext-id="places-1">Home</span><span lang="en" class="option-label active" data-itext-id="places-2">Other</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/baby_death/baby_death_repeat/stillbirth:label">Was this a stillbirth?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/baby_death/baby_death_repeat/stillbirth" data-name="/data/baby_death/baby_death_repeat/stillbirth" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/baby_death/baby_death_repeat/baby_death_add_notes:label">Additional notes about baby's death</span><input type="text" name="/data/baby_death/baby_death_repeat/baby_death_add_notes" data-constraint="string-length(.) &lt;= 300" data-type-xml="string"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/baby_death/baby_death_repeat/baby_death_add_notes:jr:constraintMsg">Maximum 300 characters allowed.</span></label><section class="or-group-data " name="/data/baby_death/baby_death_repeat/baby_death_profile"><section class="or-group-data " name="/data/baby_death/baby_death_repeat/baby_death_profile/parent"><section class="or-group-data " name="/data/baby_death/baby_death_repeat/baby_death_profile/parent/parent"><section class="or-group-data " name="/data/baby_death/baby_death_repeat/baby_death_profile/parent/parent/parent">
+      </section>
+      </section>
+      </section>
+      </section>
+      </section><div class="or-repeat-info" data-name="/data/baby_death/baby_death_repeat" data-repeat-count="/data/baby_death/baby_death_repeat_count"></div>
+      </section>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/babys_condition" data-relevant="../delivery_outcome/babies_alive_num &gt; 0"><h4><span lang="en" class="question-label active" data-itext-id="/data/babys_condition:label">Baby's Condition</span></h4>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat_note:label">Sections will repeat if multiple babies were delivered. Please fill out one section per baby.</span><input type="text" name="/data/babys_condition/baby_repeat_note" data-relevant="../../delivery_outcome/babies_alive_num &gt; 1" data-type-xml="string" readonly></label><section class="or-group-data " name="/data/babys_condition/baby_repeat"><section class="or-repeat " name="/data/babys_condition/baby_repeat"><section class="or-group-data " name="/data/babys_condition/baby_repeat/baby_details"><label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/baby_n:label">Baby</span><span lang="en" class="or-hint active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/baby_n:hint">Each baby will be asked about individually.</span><input type="text" name="/data/babys_condition/baby_repeat/baby_details/baby_n" data-type-xml="string" readonly></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/baby_condition:label">What is the condition of baby?</span><span class="required">*</span><span lang="en" class="or-hint active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/baby_condition:hint">Select one.</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('life_conditions_baby')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/baby_condition" data-name="/data/babys_condition/baby_repeat/baby_details/baby_condition" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="life_conditions_baby-0">Alive and well</span><span lang="en" class="option-label active" data-itext-id="life_conditions_baby-1">Alive and unwell</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/baby_name:label">Name</span><span class="required">*</span><span lang="en" class="or-hint active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/baby_name:hint">Please enter a name for the baby to identify them in the app. You can change it later.</span><input type="text" name="/data/babys_condition/baby_repeat/baby_details/baby_name" data-required="true()" data-type-xml="string"><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/baby_sex:label">Sex</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('male_female')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/baby_sex" data-name="/data/babys_condition/baby_repeat/baby_details/baby_sex" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="male_female-0">Male</span><span lang="en" class="option-label active" data-itext-id="male_female-1">Female</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/birth_weight_know:label">Birth weight</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('knows_weight')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/birth_weight_know" data-name="/data/babys_condition/baby_repeat/baby_details/birth_weight_know" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="knows_weight-0">I don't know</span><span lang="en" class="option-label active" data-itext-id="knows_weight-1">Weight in grams</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span class="required">*</span><input type="number" name="/data/babys_condition/baby_repeat/baby_details/birth_weight" data-required="true()" data-constraint=". &gt;= 1500 and . &lt;= 5000" data-relevant="selected(../birth_weight_know, 'yes')" data-type-xml="decimal" step="any"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/birth_weight:jr:constraintMsg">Should be between 1500 grams and 5000 grams.</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/birth_length_know:label">Birth length</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('knows_length')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/birth_length_know" data-name="/data/babys_condition/baby_repeat/baby_details/birth_length_know" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="knows_length-0">I don't know</span><span lang="en" class="option-label active" data-itext-id="knows_length-1">Length in cm</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span class="required">*</span><input type="number" name="/data/babys_condition/baby_repeat/baby_details/birth_length" data-required="true()" data-constraint=". &gt;= 35.6 and . &lt;= 70" data-relevant="selected(../birth_length_know, 'yes')" data-type-xml="decimal" step="any"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/birth_length:jr:constraintMsg">Should be between 35.6 cms and 70 cms.</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/vaccines_received:label">What vaccines have they received?</span><span class="required">*</span><span lang="en" class="or-hint active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/vaccines_received:hint">Select one.</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('vaccines')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/vaccines_received" data-name="/data/babys_condition/baby_repeat/baby_details/vaccines_received" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="vaccines-0">BCG only</span><span lang="en" class="option-label active" data-itext-id="vaccines-1">Birth Polio only</span><span lang="en" class="option-label active" data-itext-id="vaccines-2">BCG and Birth Polio</span><span lang="en" class="option-label active" data-itext-id="vaccines-3">None</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/imm_counsel_note:label">Please counsel the family and refer the child to the nearest health center where the baby can be immunized.</span><input type="text" name="/data/babys_condition/baby_repeat/baby_details/imm_counsel_note" data-relevant="selected(../vaccines_received, 'none')" data-type-xml="string" readonly></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/breastfeeding:label">Is the child exclusively breastfeeding?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/breastfeeding" data-name="/data/babys_condition/baby_repeat/baby_details/breastfeeding" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/breastfed_within_1_hour:label">Were they initiated on breastfeeding within on hour of delivery?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/breastfed_within_1_hour" data-name="/data/babys_condition/baby_repeat/baby_details/breastfed_within_1_hour" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/baby_danger_sign_note:label">Does the baby have any of the following danger signs?</span><input type="text" name="/data/babys_condition/baby_repeat/baby_details/baby_danger_sign_note" data-type-xml="string" readonly></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/infected_umbilical_cord:label">Infected umbilical cord</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/infected_umbilical_cord" data-name="/data/babys_condition/baby_repeat/baby_details/infected_umbilical_cord" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/convulsion:label">Convulsions</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/convulsion" data-name="/data/babys_condition/baby_repeat/baby_details/convulsion" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/difficulty_feeding:label">Difficulty feeding or drinking</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/difficulty_feeding" data-name="/data/babys_condition/baby_repeat/baby_details/difficulty_feeding" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/vomit:label">Vomits everything</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/vomit" data-name="/data/babys_condition/baby_repeat/baby_details/vomit" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/drowsy:label">Drowsy or unconscious</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/drowsy" data-name="/data/babys_condition/baby_repeat/baby_details/drowsy" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/stiff:label">Body stiffness</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/stiff" data-name="/data/babys_condition/baby_repeat/baby_details/stiff" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/yellow_skin:label">Yellow skin color</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/yellow_skin" data-name="/data/babys_condition/baby_repeat/baby_details/yellow_skin" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/fever:label">Fever</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/fever" data-name="/data/babys_condition/baby_repeat/baby_details/fever" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/babys_condition/baby_repeat/baby_details/blue_skin:label">Blue skin color (hypothermia)</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yes_no')/root/item"><input type="radio" name="/data/babys_condition/baby_repeat/baby_details/blue_skin" data-name="/data/babys_condition/baby_repeat/baby_details/blue_skin" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yes_no-0">Yes</span><span lang="en" class="option-label active" data-itext-id="yes_no-1">No</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<section class="or-group-data " name="/data/babys_condition/baby_repeat/baby_details/baby_profile"><section class="or-group-data " name="/data/babys_condition/baby_repeat/baby_details/baby_profile/measurements">
+      </section><section class="or-group-data " name="/data/babys_condition/baby_repeat/baby_details/baby_profile/danger_signs">
+      </section><section class="or-group-data or-appearance-hidden " name="/data/babys_condition/baby_repeat/baby_details/baby_profile/parent"><section class="or-group-data or-appearance-hidden " name="/data/babys_condition/baby_repeat/baby_details/baby_profile/parent/parent"><section class="or-group-data or-appearance-hidden " name="/data/babys_condition/baby_repeat/baby_details/baby_profile/parent/parent/parent">
+      </section>
+      </section>
+      </section>
+      </section>
+      </section>
+      </section><div class="or-repeat-info" data-name="/data/babys_condition/baby_repeat" data-repeat-count="/data/babys_condition/baby_repeat_count"></div>
+      </section>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list or-appearance-summary " name="/data/safe_postnatal_practices" data-relevant="../delivery_outcome/babies_alive_num &gt; 0"><h4><span lang="en" class="question-label active" data-itext-id="/data/safe_postnatal_practices:label">Safe Postnatal Practices</span></h4>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/safe_postnatal_practices/safe_postnatal_practice_1:label">Lactating mothers need to eat more than usual to feed their baby well. Ask the woman to eat a variety of foods, especially extra fluids, fruits, and vegetables.</span><input type="text" name="/data/safe_postnatal_practices/safe_postnatal_practice_1" data-type-xml="string" readonly></label><label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/safe_postnatal_practices/safe_postnatal_practice_2:label">For the first 6 months, give the baby breastmilk only.</span><input type="text" name="/data/safe_postnatal_practices/safe_postnatal_practice_2" data-type-xml="string" readonly></label><label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/safe_postnatal_practices/safe_postnatal_practice_3:label">To keep the baby warm, use kangaroo mother care, wrap the baby with clothes and cover the head, and keep the baby in a warm room.</span><input type="text" name="/data/safe_postnatal_practices/safe_postnatal_practice_3" data-type-xml="string" readonly></label><label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/safe_postnatal_practices/safe_postnatal_practice_4:label">Always sleep with the baby under a long-lasting insecticide treated net (LLIN).</span><input type="text" name="/data/safe_postnatal_practices/safe_postnatal_practice_4" data-type-xml="string" readonly></label><label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/safe_postnatal_practices/safe_postnatal_practice_5:label">Keep the baby's umbilical cord clean and dry.</span><input type="text" name="/data/safe_postnatal_practices/safe_postnatal_practice_5" data-type-xml="string" readonly></label>
+      </section>
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/pnc_visits" data-relevant="selected(../condition/woman_outcome, 'alive_well') or
+selected(../condition/woman_outcome, 'alive_unwell') or
+../delivery_outcome/babies_alive_num &gt; 0"><h4><span lang="en" class="question-label active" data-itext-id="/data/pnc_visits:label">PNC Visits</span></h4>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/pnc_visits/who_note:label">The WHO recommends PNC visits within 24 hours and on 3 days, 7 days, and 6 weeks from date of delivery.</span><input type="text" name="/data/pnc_visits/who_note" data-type-xml="string" readonly></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/pnc_visits/pnc_visits_attended:label">Which PNC visits have taken place so far?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('pnc_visits')/root/item[count &lt;=  /data/pnc_visits/days ]"><input type="checkbox" name="/data/pnc_visits/pnc_visits_attended" data-required="true()" data-constraint="not(selected(.,'none')) or count-selected(.) &lt; 2" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="pnc_visits-0">Within 24 hours (check this box if facility delivery)</span><span lang="en" class="option-label active" data-itext-id="pnc_visits-1">3 days</span><span lang="en" class="option-label active" data-itext-id="pnc_visits-2">7 days</span><span lang="en" class="option-label active" data-itext-id="pnc_visits-3">6 weeks</span><span lang="en" class="option-label active" data-itext-id="pnc_visits-4">None of the above</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-constraint-msg active" lang="" data-i18n="constraint.invalid">Value not allowed</span><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/pnc_visits/pnc_visits_additional:label">Any additional PNC visits, please report the number of visits below to be counted in the total.</span><input type="number" name="/data/pnc_visits/pnc_visits_additional" data-constraint=". &gt;=0 and . &lt;= 6" data-type-xml="int"><span lang="en" class="or-constraint-msg active" data-itext-id="/data/pnc_visits/pnc_visits_additional:jr:constraintMsg">Must be between 0 and 6.</span></label>
+      </section>
+    <section class="or-group-data or-appearance-field-list or-appearance-summary " name="/data/summary"><label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_submit_note:label"><h4 style="text-align:center;">To finish, be sure to click the Submit button.</h4></span><input type="text" name="/data/summary/r_submit_note" data-type-xml="string" readonly></label><label class="question non-select or-appearance-h1 or-appearance-yellow "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_summary_details:label">Patient<i class="fa fa-user"></i></span><input type="text" name="/data/summary/r_summary_details" data-type-xml="string" readonly></label><label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_patient_details:label"> <h2 style="text-align:center;margin-bottom:0px;"><span class="or-output" data-value=" /data/patient_name "> </span></h2> <p style="text-align:center;"><span class="or-output" data-value=" /data/patient_age_in_years "> </span> years old</p></span><input type="text" name="/data/summary/r_patient_details" data-type-xml="string" readonly></label><label class="question non-select or-appearance-h1 or-appearance-yellow "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_pregnancy_outcome:label">Pregnancy Outcome<i class="fa fa-user"></i></span><input type="text" name="/data/summary/r_pregnancy_outcome" data-type-xml="string" readonly></label><label class="question non-select or-appearance-h3 or-appearance-blue or-appearance-center or-appearance-underline "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_woman_condition:label">Woman's Condition</span><input type="text" name="/data/summary/r_woman_condition" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_condition_well:label">Alive and well</span><input type="text" name="/data/summary/r_condition_well" data-relevant="selected(../../condition/woman_outcome, 'alive_well')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_condition_unwell:label">Alive and unwell</span><input type="text" name="/data/summary/r_condition_unwell" data-relevant="selected(../../condition/woman_outcome, 'alive_unwell')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_condition_deceased:label">Deceased</span><input type="text" name="/data/summary/r_condition_deceased" data-relevant="selected(../../condition/woman_outcome, 'deceased')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-h3 or-appearance-blue or-appearance-center or-appearance-underline "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_woman_death:label">Death</span><input type="text" name="/data/summary/r_woman_death" data-relevant="selected(../../condition/woman_outcome, 'deceased')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_death_date:label"> Date of Death: <span class="or-output" data-value=" /data/death_info_woman/woman_death_date "> </span></span><input type="text" name="/data/summary/r_death_date" data-relevant="selected(../../condition/woman_outcome, 'deceased')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_death_place:label"> Place of Death: <span class="or-output" data-value=" /data/summary/custom_translations/woman_death_place_label "> </span></span><input type="text" name="/data/summary/r_death_place" data-relevant="selected(../../condition/woman_outcome, 'deceased')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-h3 or-appearance-blue or-appearance-center or-appearance-underline "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_delivery_details:label">Delivery Details</span><input type="text" name="/data/summary/r_delivery_details" data-relevant="not(selected(../../condition/woman_outcome, 'deceased')) or
+selected(../../death_info_woman/woman_death_birth, 'yes')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_delivery_date:label"> Date of Delivery: <span class="or-output" data-value=" /data/delivery_outcome/delivery_date "> </span></span><input type="text" name="/data/summary/r_delivery_date" data-relevant=" /data/delivery_outcome/delivery_date  != ''" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_delivery_place:label"> Place of Delivery: <span class="or-output" data-value=" /data/summary/custom_translations/delivery_place_label "> </span></span><input type="text" name="/data/summary/r_delivery_place" data-relevant=" /data/delivery_outcome/delivery_place  != ''" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_babies_delivered_num:label"> Number of babies delivered: <span class="or-output" data-value=" /data/delivery_outcome/babies_delivered_num "> </span></span><input type="text" name="/data/summary/r_babies_delivered_num" data-relevant=" /data/delivery_outcome/babies_delivered_num  != ''" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_babies_deceased_num:label"> Number of babies deceased: <span class="or-output" data-value=" /data/delivery_outcome/babies_deceased_num "> </span></span><input type="text" name="/data/summary/r_babies_deceased_num" data-relevant=" /data/delivery_outcome/babies_deceased_num  != ''" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-h3 or-appearance-blue or-appearance-center or-appearance-underline "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_danger_signs:label">Danger signs</span><input type="text" name="/data/summary/r_danger_signs" data-relevant="../../pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes'" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_mom_fever:label">Fever</span><input type="text" name="/data/summary/r_mom_fever" data-relevant="selected(../../pnc_danger_sign_check/fever, 'yes')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_mom_severe_headache:label">Severe headache</span><input type="text" name="/data/summary/r_mom_severe_headache" data-relevant="selected(../../pnc_danger_sign_check/severe_headache, 'yes')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_mom_vaginal_bleeding:label">Vaginal bleeding</span><input type="text" name="/data/summary/r_mom_vaginal_bleeding" data-relevant="selected(../../pnc_danger_sign_check/vaginal_bleeding, 'yes')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_mom_vaginal_discharge:label">Foul smelling vaginal discharge</span><input type="text" name="/data/summary/r_mom_vaginal_discharge" data-relevant="selected(../../pnc_danger_sign_check/vaginal_discharge, 'yes')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_mom_convulsion:label">Convulsions</span><input type="text" name="/data/summary/r_mom_convulsion" data-relevant="selected(../../pnc_danger_sign_check/convulsion, 'yes')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-h3 or-appearance-blue or-appearance-center or-appearance-underline "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_pnc_visits:label">PNC Visits</span><input type="text" name="/data/summary/r_pnc_visits" data-relevant="selected(../../condition/woman_outcome, 'alive_well') or
+selected(../../condition/woman_outcome, 'alive_unwell') or
+../../delivery_outcome/babies_alive_num &gt; 0" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_pnc_visits_completed:label">PNC visits completed so far:</span><input type="text" name="/data/summary/r_pnc_visits_completed" data-relevant="selected(../../condition/woman_outcome, 'alive_well') or
+selected(../../condition/woman_outcome, 'alive_unwell') or
+../../delivery_outcome/babies_alive_num &gt; 0" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_pnc_visit_24hrs:label">24 hours</span><input type="text" name="/data/summary/r_pnc_visit_24hrs" data-relevant="selected(../../pnc_visits/pnc_visits_attended, 'within_24_hrs')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_pnc_visit_3days:label">3 days</span><input type="text" name="/data/summary/r_pnc_visit_3days" data-relevant="selected(../../pnc_visits/pnc_visits_attended, '3_days')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_pnc_visit_7days:label">7 days</span><input type="text" name="/data/summary/r_pnc_visit_7days" data-relevant="selected(../../pnc_visits/pnc_visits_attended, '7_days')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_pnc_visit_6weeks:label">6 weeks</span><input type="text" name="/data/summary/r_pnc_visit_6weeks" data-relevant="selected(../../pnc_visits/pnc_visits_attended, '6_weeks')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_pnc_visit_none:label">None</span><input type="text" name="/data/summary/r_pnc_visit_none" data-relevant="selected(../../pnc_visits/pnc_visits_attended, 'none')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_pnc_visits_add:label"> Additional PNC visits completed: <span class="or-output" data-value=" /data/pnc_visits/pnc_visits_additional "> </span></span><input type="text" name="/data/summary/r_pnc_visits_add" data-relevant="../../pnc_visits/pnc_visits_additional != ''" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-h1 or-appearance-lime "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_referrals:label">Referrals<I class="fa fa-hospital-o"></i></span><input type="text" name="/data/summary/r_referrals" data-relevant="not(selected(../../condition/woman_outcome, 'deceased')) or
+../../delivery_outcome/babies_alive_num &gt; 0" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_refer_clinic_immediately:label">Refer to clinic immediately for:</span><input type="text" name="/data/summary/r_refer_clinic_immediately" data-relevant="../../pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes' or
+selected(../../condition/woman_outcome, 'alive_unwell')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_refer_danger_sign:label">Danger signs</span><input type="text" name="/data/summary/r_refer_danger_sign" data-relevant="../../pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes'" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-li "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_mom_alive_unwell:label">Mom is alive and unwell</span><input type="text" name="/data/summary/r_mom_alive_unwell" data-relevant="selected(../../condition/woman_outcome, 'alive_unwell')" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_who_schedule_note:label">The WHO recommends routine PNC visits at 24 hours, 3 days, 7 days, and 6 weeks from the date of delivery.</span><input type="text" name="/data/summary/r_who_schedule_note" data-relevant="not(selected(../../condition/woman_outcome, 'deceased')) or
+../../delivery_outcome/babies_alive_num &gt; 0" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_pnc_schedule_note:label">Please continue to refer the woman to the health facility at the appropriate time.</span><input type="text" name="/data/summary/r_pnc_schedule_note" data-relevant="not(selected(../../condition/woman_outcome, 'deceased')) or
+../../delivery_outcome/babies_alive_num &gt; 0" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select or-appearance-h1 or-appearance-green "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_follow_up_tasks:label">Follow-up Tasks<I class="fa fa-flag"></i></span><input type="text" name="/data/summary/r_follow_up_tasks" data-relevant="../../pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes'" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_following_tasks:label">The following tasks will appear:</span><input type="text" name="/data/summary/r_following_tasks" data-relevant="../../pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes'" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_fup_danger_sign:label">Please conduct a danger sign follow-up for the mother in 3 days.</span><input type="text" name="/data/summary/r_fup_danger_sign" data-relevant="../../pnc_danger_sign_check/r_pnc_danger_sign_present = 'yes'" data-type-xml="string" readonly></label><label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/summary/r_fup_danger_sign_baby:label">Please conduct a danger sign follow-up for the baby in 3 days.</span><input type="text" name="/data/summary/r_fup_danger_sign_baby" data-relevant="../../babys_condition/r_baby_danger_sign_present_any = 'yes'" data-type-xml="string" readonly></label><section class="or-group-data or-appearance-hidden " name="/data/summary/custom_translations"><fieldset class="question simple-select "><fieldset>
+<legend>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('translate_woman_label')/root/item"><input type="radio" name="/data/summary/custom_translations/custom_woman_label_translator" data-name="/data/summary/custom_translations/custom_woman_label_translator" data-calculate='"woman"' data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="translate_woman_label-0">the woman</span>
+      </span>
+</div>
+</fieldset></fieldset>
+<fieldset class="question simple-select "><fieldset>
+<legend>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('translate_woman_start_label')/root/item"><input type="radio" name="/data/summary/custom_translations/custom_woman_start_label_translator" data-name="/data/summary/custom_translations/custom_woman_start_label_translator" data-calculate='"woman-start"' data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="translate_woman_start_label-0">Woman</span>
+      </span>
+</div>
+</fieldset></fieldset>
+<fieldset class="question simple-select "><fieldset>
+<legend>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('places')/root/item"><input type="radio" name="/data/summary/custom_translations/delivery_place_label_translator" data-name="/data/summary/custom_translations/delivery_place_label_translator" data-calculate=" /data/delivery_outcome/delivery_place " data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="places-0">Health facility</span><span lang="en" class="option-label active" data-itext-id="places-1">Home</span><span lang="en" class="option-label active" data-itext-id="places-2">Other</span>
+      </span>
+</div>
+</fieldset></fieldset>
+<fieldset class="question simple-select "><fieldset>
+<legend>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('places')/root/item"><input type="radio" name="/data/summary/custom_translations/woman_death_place_label_translator" data-name="/data/summary/custom_translations/woman_death_place_label_translator" data-calculate=" /data/death_info_woman/woman_death_place " data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="places-0">Health facility</span><span lang="en" class="option-label active" data-itext-id="places-1">Home</span><span lang="en" class="option-label active" data-itext-id="places-2">Other</span>
+      </span>
+</div>
+</fieldset></fieldset>
+      </section>
+      </section>
+    <section class="or-group-data or-appearance-hidden " name="/data/data"><section class="or-group-data " name="/data/data/meta">
+      </section>
+      </section>
+  
+<fieldset id="or-preload-items" style="display:none;"><label class="calculation non-select "><input type="hidden" name="/data/meta/instanceID" data-preload="uid" data-preload-params="" data-type-xml="string"></label></fieldset>
+<fieldset id="or-calculated-items" style="display:none;">
+<label class="calculation non-select "><input type="hidden" name="/data/household_id" data-calculate="../inputs/contact/parent/_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/area_id" data-calculate="../inputs/contact/parent/parent/_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/facility_id" data-calculate="../inputs/contact/parent/parent/parent/_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_age_in_years" data-calculate="floor( difference-in-months( ../inputs/contact/date_of_birth, today() ) div 12 )" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_uuid" data-calculate="../inputs/contact/_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_id" data-calculate="../inputs/contact/patient_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_name" data-calculate="../inputs/contact/name" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_short_name" data-calculate="coalesce(../inputs/contact/short_name, ../summary/custom_translations/custom_woman_label)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_short_name_start" data-calculate="coalesce(../inputs/contact/short_name, ../summary/custom_translations/custom_woman_start_label)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/t_danger_signs_referral_follow_up" data-calculate="../pnc_danger_sign_check/r_pnc_danger_sign_present" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/t_danger_signs_referral_follow_up_date" data-calculate="date-time(decimal-date-time(today()) + 3)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/pnc_danger_sign_check/r_pnc_danger_sign_present" data-calculate="if(selected(../fever, 'yes') or
+selected(../severe_headache, 'yes') or
+selected(../vaginal_bleeding, 'yes') or
+selected(../vaginal_discharge, 'yes') or
+selected(../convulsion, 'yes'), 'yes', 'no')" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/death_info_woman/death_report/form" data-calculate='"death_report"' data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/death_info_woman/death_report/type" data-calculate='"data_record"' data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/death_info_woman/death_report/content_type" data-calculate='"xml"' data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/death_info_woman/death_report/from" data-calculate="../../../inputs/user/phone" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/death_info_woman/death_report/fields/patient_id" data-calculate="../../../../inputs/contact/patient_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/death_info_woman/death_report/fields/patient_uuid" data-calculate="../../../../inputs/contact/_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/death_info_woman/death_report/fields/death_details/date_of_death" data-calculate="../../../../../death_info_woman/woman_death_date" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/death_info_woman/death_report/fields/death_details/place_of_death" data-calculate="../../../../../death_info_woman/woman_death_place" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/death_info_woman/death_report/fields/death_details/place_of_death_other" data-calculate='""' data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/death_info_woman/death_report/fields/death_details/death_information" data-calculate="../../../../../death_info_woman/woman_death_add_notes" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/death_info_woman/death_report/created_by_doc" data-calculate="." data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/death_info_woman/woman_death_report_doc" data-calculate=" /data/death_info_woman/death_report " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/delivery_outcome/babies_delivered_num" data-calculate="if(selected(../babies_delivered, '1'), 1, if(selected(../babies_delivered, '2'), 2, if(selected(../babies_delivered, '3'), 3, if(selected(../babies_delivered, 'other'), ../babies_delivered_other, 0))))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/delivery_outcome/babies_alive_num" data-calculate="if(selected(../babies_alive, 'other'), ../babies_alive_other,  /data/delivery_outcome/babies_alive )" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/delivery_outcome/babies_deceased_num" data-calculate="../babies_delivered_num - ../babies_alive_num" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/baby_death/baby_death_repeat/baby_death_profile/type" data-calculate='"person"' data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/baby_death/baby_death_repeat/baby_death_profile/name" data-calculate='"Deceased baby"' data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/baby_death/baby_death_repeat/baby_death_profile/sex" data-calculate='"undefined"' data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/baby_death/baby_death_repeat/baby_death_profile/date_of_birth" data-calculate="../../../../delivery_outcome/delivery_date" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/baby_death/baby_death_repeat/baby_death_profile/date_of_death" data-calculate="../../baby_death_date" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/baby_death/baby_death_repeat/baby_death_profile/parent/_id" data-calculate=" /data/household_id " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/baby_death/baby_death_repeat/baby_death_profile/parent/parent/_id" data-calculate=" /data/area_id " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/baby_death/baby_death_repeat/baby_death_profile/parent/parent/parent/_id" data-calculate=" /data/facility_id " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/baby_death/baby_death_repeat/baby_death_profile/created_by_doc" data-calculate="." data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/baby_death/baby_death_repeat/baby_death_profile_doc" data-calculate="." data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/r_baby_danger_sign_present" data-calculate="if(selected(../infected_umbilical_cord, 'yes') or
+selected(../convulsion, 'yes') or
+selected(../difficulty_feeding, 'yes') or
+selected(../vomit, 'yes') or
+selected(../drowsy, 'yes') or
+selected(../stiff, 'yes') or
+selected(../yellow_skin, 'yes') or
+selected(../fever, 'yes') or
+selected(../blue_skin, 'yes'), 'yes', 'no')" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/name" data-calculate="../../baby_name" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/sex" data-calculate="../../baby_sex" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/date_of_birth" data-calculate="../../../../../delivery_outcome/delivery_date" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/vaccines_received" data-calculate="../../vaccines_received" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/t_danger_signs_referral_follow_up" data-calculate="../../r_baby_danger_sign_present" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/t_danger_signs_referral_follow_up_date" data-calculate="date-time(decimal-date-time(today()) + 3)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/measurements/weight" data-calculate="../../../birth_weight" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/measurements/length" data-calculate="../../../birth_length" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/danger_signs/infected_umbilical_cord" data-calculate="../../../infected_umbilical_cord" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/danger_signs/convulsion" data-calculate="../../../convulsion" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/danger_signs/difficulty_feeding" data-calculate="../../../difficulty_feeding" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/danger_signs/vomit" data-calculate="../../../vomit" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/danger_signs/drowsy" data-calculate="../../../drowsy" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/danger_signs/stiff" data-calculate="../../../stiff" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/danger_signs/yellow_skin" data-calculate="../../../yellow_skin" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/danger_signs/fever" data-calculate="../../../fever" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/danger_signs/blue_skin" data-calculate="../../../blue_skin" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/parent/_id" data-calculate=" /data/household_id " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/parent/parent/_id" data-calculate=" /data/area_id " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/parent/parent/parent/_id" data-calculate=" /data/facility_id " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/type" data-calculate='"person"' data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/baby_profile/created_by_doc" data-calculate="." data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat/baby_details/child_doc" data-calculate=" ../baby_profile " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/r_baby_danger_sign_present_joined" data-calculate="join(', ',  /data/babys_condition/baby_repeat/baby_details/r_baby_danger_sign_present )" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/r_baby_danger_sign_present_any" data-calculate="if(contains(../r_baby_danger_sign_present_joined, 'yes'), 'yes', 'no')" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/pnc_visits/days" data-calculate="floor(decimal-date-time(today()) - decimal-date-time( /data/delivery_outcome/delivery_date ))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/summary/custom_translations/custom_woman_label" data-calculate="jr:choice-name( /data/summary/custom_translations/custom_woman_label_translator ,' /data/summary/custom_translations/custom_woman_label_translator ')" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/summary/custom_translations/custom_woman_start_label" data-calculate="jr:choice-name( /data/summary/custom_translations/custom_woman_start_label_translator ,' /data/summary/custom_translations/custom_woman_start_label_translator ')" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/summary/custom_translations/delivery_place_label" data-calculate="jr:choice-name( /data/summary/custom_translations/delivery_place_label_translator ,' /data/summary/custom_translations/delivery_place_label_translator ')" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/summary/custom_translations/woman_death_place_label" data-calculate="jr:choice-name( /data/summary/custom_translations/woman_death_place_label_translator ,' /data/summary/custom_translations/woman_death_place_label_translator ')" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__woman_condition" data-calculate=" /data/condition/woman_outcome " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__fever" data-calculate="../../pnc_danger_sign_check/fever" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__severe_headache" data-calculate="../../pnc_danger_sign_check/severe_headache" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__vaginal_bleeding" data-calculate="../../pnc_danger_sign_check/vaginal_bleeding" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__vaginal_discharge" data-calculate="../../pnc_danger_sign_check/vaginal_discharge" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__convulsions" data-calculate="../../pnc_danger_sign_check/convulsion" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__has_danger_sign" data-calculate=" /data/pnc_danger_sign_check/r_pnc_danger_sign_present " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__woman_death_date" data-calculate=" /data/death_info_woman/woman_death_date " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__woman_death_place" data-calculate=" /data/death_info_woman/woman_death_place " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__delivered_before_death" data-calculate=" /data/death_info_woman/woman_death_birth " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__woman_death_notes" data-calculate=" /data/death_info_woman/woman_death_add_notes " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__babies_delivered" data-calculate=" /data/delivery_outcome/babies_delivered_num " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__babies_deceased" data-calculate=" /data/delivery_outcome/babies_deceased_num " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__babies_alive" data-calculate=" /data/delivery_outcome/babies_alive_num " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__delivery_date" data-calculate=" /data/delivery_outcome/delivery_date " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__delivery_place" data-calculate=" /data/delivery_outcome/delivery_place " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__delivery_place_other" data-calculate=" /data/delivery_outcome/delivery_place_other " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__delivery_mode" data-calculate=" /data/delivery_outcome/delivery_mode " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__delivery_conductor" data-calculate=" /data/delivery_outcome/delivery_conductor " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__delivery_conductor_other" data-calculate=" /data/delivery_outcome/delivery_conductor_other " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__pnc_visit_within_24_hrs" data-calculate="if(selected( /data/pnc_visits/pnc_visits_attended , 'within_24_hrs'), &quot;yes&quot;, &quot;no&quot;)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__pnc_visit_3_days" data-calculate="if(selected( /data/pnc_visits/pnc_visits_attended , '3_days'), &quot;yes&quot;, &quot;no&quot;)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__pnc_visit_7_days" data-calculate="if(selected( /data/pnc_visits/pnc_visits_attended , '7_days'), &quot;yes&quot;, &quot;no&quot;)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__pnc_visit_6_weeks" data-calculate="if(selected( /data/pnc_visits/pnc_visits_attended , '6_weeks'), &quot;yes&quot;, &quot;no&quot;)" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__pnc_visits_num_selected" data-calculate="if(selected( /data/pnc_visits/pnc_visits_attended , 'none'), 0, if(selected( /data/pnc_visits/pnc_visits_attended , 'within_24_hrs'), 1, 0) +
+if(selected( /data/pnc_visits/pnc_visits_attended , '3_days'), 1, 0) +
+if(selected( /data/pnc_visits/pnc_visits_attended , '7_days'), 1, 0) +
+if(selected( /data/pnc_visits/pnc_visits_attended , '6_weeks'), 1, 0))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/__pnc_visits_additional" data-calculate=" /data/pnc_visits/pnc_visits_additional " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/meta/__patient_uuid" data-calculate="../../../inputs/contact/_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/meta/__patient_id" data-calculate="../../../inputs/contact/patient_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/meta/__household_uuid" data-calculate="../../../inputs/contact/parent/_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/meta/__source" data-calculate="../../../inputs/source" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/meta/__source_id" data-calculate="../../../inputs/source_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/data/meta/__pregnancy_uuid" data-calculate="instance('contact-summary')/context/pregnancy_uuid" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/baby_death/baby_death_repeat_count" data-calculate=" /data/delivery_outcome/babies_deceased_num " data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/babys_condition/baby_repeat_count" data-calculate=" /data/delivery_outcome/babies_alive_num " data-type-xml="string"></label>
+</fieldset>
+</form>

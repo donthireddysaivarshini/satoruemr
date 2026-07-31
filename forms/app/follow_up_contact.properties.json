@@ -1,0 +1,14 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Follow-up Contact"
+    }
+  ],
+  "icon": "icon-followup-general",
+  "context": {
+    "person": true,
+    "place": false,
+    "expression": "summary.context.is_participant && summary.context.pending_stage2 && summary.context.follow_up_attempts < 3"
+  }
+}

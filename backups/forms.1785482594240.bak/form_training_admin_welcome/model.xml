@@ -1,0 +1,25 @@
+
+  <model xmlns:odk="http://www.opendatakit.org/xforms" odk:xforms-version="1.0.0">
+    <instance>
+        <data xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:cht="https://communityhealthtoolkit.org" id="training:admin_welcome" version="20250926152620" prefix="J1!training:admin_welcome!" delimiter="#">
+          <welcome>
+            <img/>
+            <instance_info/>
+            <docs/>
+          </welcome>
+          <contacts>
+            <img/>
+            <add_contacts/>
+          </contacts>
+          <community>
+            <img/>
+            <intro/>
+            <forum/>
+          </community>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+  </model>
+

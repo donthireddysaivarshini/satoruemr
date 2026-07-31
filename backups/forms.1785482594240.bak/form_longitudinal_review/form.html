@@ -1,0 +1,206 @@
+<form autocomplete="off" novalidate="novalidate" class="or clearfix pages" dir="ltr" data-form-id="longitudinal_review">
+<section class="form-logo"></section><h3 dir="auto" id="form-title">Longitudinal Review</h3>
+<select id="form-languages" data-default-lang=""><option value="en">en</option> <option value="te">te</option> </select>
+  
+  
+    <section class="or-group or-branch pre-init or-appearance-field-list " name="/data/inputs" data-relevant="./source = 'user'"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/inputs:label">Participant</span><span lang="te" class="question-label " data-itext-id="/data/inputs:label">-</span>
+</h4>
+<section class="or-group or-appearance-field-list " name="/data/inputs/user"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/inputs/user:label">User</span><span lang="te" class="question-label " data-itext-id="/data/inputs/user:label">-</span>
+</h4>
+      </section><section class="or-group or-appearance-field-list " name="/data/inputs/contact"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/inputs/contact:label">Participant</span><span lang="te" class="question-label " data-itext-id="/data/inputs/contact:label">-</span>
+</h4>
+<label class="question non-select or-appearance-select-contact or-appearance-type-participant "><span lang="en" class="question-label active" data-itext-id="/data/inputs/contact/_id:label">Select participant</span><span lang="te" class="question-label " data-itext-id="/data/inputs/contact/_id:label">-</span><input type="text" name="/data/inputs/contact/_id" data-type-xml="person"></label>
+      </section>
+      </section>
+    <section class="or-group or-appearance-field-list " name="/data/g_rev"><h4>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev:label">Periodic review</span><span lang="te" class="question-label " data-itext-id="/data/g_rev:label">-</span>
+</h4>
+<label class="question non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_rev/review_date:label">Review date</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/review_date:label">-</span><span class="required">*</span><input type="date" name="/data/g_rev/review_date" data-required="true()" data-type-xml="date"><span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span></label><fieldset class="question simple-select ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/alive:label">Is the participant alive and contactable?</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/alive:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_rev/alive" data-name="/data/g_rev/alive" data-required="true()" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/caregiver_reported_trend:label">Family's view of memory since the last visit</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/caregiver_reported_trend:label">-</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('trend')/root/item"><input type="radio" name="/data/g_rev/caregiver_reported_trend" data-name="/data/g_rev/caregiver_reported_trend" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="trend-0">Better than last time</span><span lang="te" class="option-label " data-itext-id="trend-0">గతంలో కంటే బాగుంది</span><span lang="en" class="option-label active" data-itext-id="trend-1">About the same</span><span lang="te" class="option-label " data-itext-id="trend-1">అలాగే ఉంది</span><span lang="en" class="option-label active" data-itext-id="trend-2">Worse than last time</span><span lang="te" class="option-label " data-itext-id="trend-2">గతంలో కంటే తగ్గింది</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/ad8_1:label">Problems with judgement</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/ad8_1:label">నిర్ణయాలలో సమస్యలు</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_rev/ad8_1" data-name="/data/g_rev/ad8_1" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/ad8_2:label">Reduced interest in activities</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/ad8_2:label">పనుల మీద ఆసక్తి తగ్గడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_rev/ad8_2" data-name="/data/g_rev/ad8_2" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/ad8_3:label">Repeats questions or stories</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/ad8_3:label">మళ్లీ మళ్లీ చెప్పడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_rev/ad8_3" data-name="/data/g_rev/ad8_3" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/ad8_4:label">Trouble learning to use things</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/ad8_4:label">కొత్తవి నేర్చుకోవడంలో ఇబ్బంది</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_rev/ad8_4" data-name="/data/g_rev/ad8_4" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/ad8_5:label">Forgets month or year</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/ad8_5:label">నెల / సంవత్సరం మర్చిపోవడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_rev/ad8_5" data-name="/data/g_rev/ad8_5" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/ad8_6:label">Trouble with money matters</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/ad8_6:label">డబ్బు వ్యవహారాలలో ఇబ్బంది</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_rev/ad8_6" data-name="/data/g_rev/ad8_6" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/ad8_7:label">Trouble remembering appointments</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/ad8_7:label">అపాయింట్‌మెంట్లు గుర్తు లేకపోవడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_rev/ad8_7" data-name="/data/g_rev/ad8_7" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/ad8_8:label">Daily thinking or memory problems</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/ad8_8:label">రోజువారీ జ్ఞాపకశక్తి సమస్యలు</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('ad8')/root/item"><input type="radio" name="/data/g_rev/ad8_8" data-name="/data/g_rev/ad8_8" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="ad8-0">Yes, a change</span><span lang="te" class="option-label " data-itext-id="ad8-0">అవును, మార్పు ఉంది</span><span lang="en" class="option-label active" data-itext-id="ad8-1">No change / Don't know</span><span lang="te" class="option-label " data-itext-id="ad8-1">మార్పు లేదు / తెలియదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/phq2_1:label">Little interest or pleasure in doing things</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/phq2_1:label">ఏ పని మీదా ఆసక్తి లేకపోవడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('phq')/root/item"><input type="radio" name="/data/g_rev/phq2_1" data-name="/data/g_rev/phq2_1" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="phq-0">Not at all</span><span lang="te" class="option-label " data-itext-id="phq-0">అస్సలు లేదు</span><span lang="en" class="option-label active" data-itext-id="phq-1">Several days</span><span lang="te" class="option-label " data-itext-id="phq-1">కొన్ని రోజులు</span><span lang="en" class="option-label active" data-itext-id="phq-2">More than half the days</span><span lang="te" class="option-label " data-itext-id="phq-2">సగం రోజులకు మించి</span><span lang="en" class="option-label active" data-itext-id="phq-3">Nearly every day</span><span lang="te" class="option-label " data-itext-id="phq-3">దాదాపు ప్రతిరోజూ</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/phq2_2:label">Feeling down, depressed or hopeless</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/phq2_2:label">నిరాశగా, దిగులుగా అనిపించడం</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('phq')/root/item"><input type="radio" name="/data/g_rev/phq2_2" data-name="/data/g_rev/phq2_2" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="phq-0">Not at all</span><span lang="te" class="option-label " data-itext-id="phq-0">అస్సలు లేదు</span><span lang="en" class="option-label active" data-itext-id="phq-1">Several days</span><span lang="te" class="option-label " data-itext-id="phq-1">కొన్ని రోజులు</span><span lang="en" class="option-label active" data-itext-id="phq-2">More than half the days</span><span lang="te" class="option-label " data-itext-id="phq-2">సగం రోజులకు మించి</span><span lang="en" class="option-label active" data-itext-id="phq-3">Nearly every day</span><span lang="te" class="option-label " data-itext-id="phq-3">దాదాపు ప్రతిరోజూ</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/new_falls:label">Any fall in the last 6 months?</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/new_falls:label">గత ఆరు నెలల్లో పడిపోయారా?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_rev/new_falls" data-name="/data/g_rev/new_falls" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<fieldset class="question simple-select or-branch pre-init "><fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/medication_adherent:label">Taking prescribed medicines regularly?</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/medication_adherent:label">-</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_rev/medication_adherent" data-name="/data/g_rev/medication_adherent" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset></fieldset>
+<fieldset class="question simple-select or-branch pre-init ">
+<fieldset>
+<legend>
+<span lang="en" class="question-label active" data-itext-id="/data/g_rev/caregiver_strain:label">Does the main caregiver report feeling overwhelmed?</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/caregiver_strain:label">చూసుకునేవారు ఒత్తిడిలో ఉన్నామని చెబుతున్నారా?</span><span class="required">*</span>
+          </legend>
+<div class="option-wrapper">
+<label class="itemset-template" data-items-path="instance('yesno')/root/item"><input type="radio" name="/data/g_rev/caregiver_strain" data-name="/data/g_rev/caregiver_strain" data-required="true()" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string" value=""></label><span class="itemset-labels" data-value-ref="name" data-label-type="itext" data-label-ref="itextId"><span lang="en" class="option-label active" data-itext-id="yesno-0">Yes</span><span lang="te" class="option-label " data-itext-id="yesno-0">అవును</span><span lang="en" class="option-label active" data-itext-id="yesno-1">No</span><span lang="te" class="option-label " data-itext-id="yesno-1">కాదు</span>
+      </span>
+</div>
+</fieldset>
+<span class="or-required-msg active" lang="" data-i18n="constraint.required">This field is required</span>
+</fieldset>
+<label class="question or-branch pre-init non-select "><span lang="en" class="question-label active" data-itext-id="/data/g_rev/review_notes:label">Notes</span><span lang="te" class="question-label " data-itext-id="/data/g_rev/review_notes:label">-</span><input type="text" name="/data/g_rev/review_notes" data-relevant=" /data/g_rev/alive  = 'yes'" data-type-xml="string"></label>
+      </section>
+  
+<fieldset id="or-preload-items" style="display:none;"><label class="calculation non-select "><input type="hidden" name="/data/meta/instanceID" data-preload="uid" data-preload-params="" data-type-xml="string"></label></fieldset>
+<fieldset id="or-calculated-items" style="display:none;">
+<label class="calculation non-select "><input type="hidden" name="/data/patient_uuid" data-calculate="../inputs/contact/_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_id" data-calculate="../inputs/contact/patient_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_name" data-calculate="../inputs/contact/name" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_sex" data-calculate="../inputs/contact/gender" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_age" data-calculate="../inputs/contact/age" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_phone" data-calculate="../inputs/contact/phone" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/patient_education" data-calculate="../inputs/contact/education_level" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/screened_by" data-calculate="../inputs/user/contact_id" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/screened_by_name" data-calculate="../inputs/user/name" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_rev/ad8_total" data-calculate="number( /data/g_rev/ad8_1 ) + number( /data/g_rev/ad8_2 ) + number( /data/g_rev/ad8_3 ) + number( /data/g_rev/ad8_4 ) + number( /data/g_rev/ad8_5 ) + number( /data/g_rev/ad8_6 ) + number( /data/g_rev/ad8_7 ) + number( /data/g_rev/ad8_8 )" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_rev/phq2_total" data-calculate="number( /data/g_rev/phq2_1 ) + number( /data/g_rev/phq2_2 )" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/g_rev/review_result" data-calculate="if( /data/g_rev/alive  = 'no', 'deceased', if( /data/g_rev/ad8_total  &gt;= 2 or  /data/g_rev/phq2_total  &gt;= 3 or  /data/g_rev/caregiver_reported_trend  = 'worse', 're_refer', 'stable'))" data-type-xml="string"></label><label class="calculation non-select "><input type="hidden" name="/data/meta/instanceName" data-calculate="concat( /data/patient_name , ' - Review - ',  /data/g_rev/review_result )" data-type-xml="string"></label>
+</fieldset>
+<fieldset id="or-setvalue-items" style="display:none;"><label class="setvalue non-select "><input name="/data/g_rev/review_date" data-type-xml="date" data-event="odk-instance-first-load" data-setvalue="today()" type="hidden"></label></fieldset>
+</form>

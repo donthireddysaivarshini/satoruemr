@@ -1,0 +1,705 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>Stage 1 - Memory Screening</h:title>
+    <model odk:xforms-version="1.0.0">
+      <itext>
+        <translation lang="en">
+          <text id="yesno-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesno-1">
+            <value>No</value>
+          </text>
+          <text id="edu-0">
+            <value>No formal schooling</value>
+          </text>
+          <text id="edu-1">
+            <value>1-7 years</value>
+          </text>
+          <text id="edu-2">
+            <value>8 years or more</value>
+          </text>
+          <text id="setting-0">
+            <value>Community screening camp</value>
+          </text>
+          <text id="setting-1">
+            <value>Old age home</value>
+          </text>
+          <text id="setting-2">
+            <value>Household visit</value>
+          </text>
+          <text id="setting-3">
+            <value>Hospital OPD</value>
+          </text>
+          <text id="/data/inputs:label">
+            <value>Participant</value>
+          </text>
+          <text id="/data/inputs/user:label">
+            <value>User</value>
+          </text>
+          <text id="/data/inputs/contact:label">
+            <value>Participant</value>
+          </text>
+          <text id="/data/inputs/contact/_id:label">
+            <value>Select participant</value>
+          </text>
+          <text id="/data/protocol:label">
+            <value>Protocol constants</value>
+          </text>
+          <text id="/data/g_consent:label">
+            <value>Consent</value>
+          </text>
+          <text id="/data/g_consent/consent_script:label">
+            <value>**Read aloud:** We are from Satoru Foundation. We would like to do a short memory and walking check that takes about 10 minutes. Your answers stay confidential and are used only for your care and our programme reports. You may stop at any time. Nothing changes for you if you say no.</value>
+          </text>
+          <text id="/data/g_consent/consent_confirmed:label">
+            <value>Does the participant consent to screening today?</value>
+          </text>
+          <text id="/data/g_consent/consent_declined:label">
+            <value>Screening stopped. Thank the participant and record the encounter.</value>
+          </text>
+          <text id="/data/g_context:label">
+            <value>Screening context</value>
+          </text>
+          <text id="/data/g_context/screening_date:label">
+            <value>Date of screening</value>
+          </text>
+          <text id="/data/g_context/setting:label">
+            <value>Where is this screening happening?</value>
+          </text>
+          <text id="/data/g_context/camp_code:label">
+            <value>Camp session code</value>
+          </text>
+          <text id="/data/g_context/camp_code:hint">
+            <value>Optional. e.g. SAH-RR-2026-014</value>
+          </text>
+          <text id="/data/g_context/education_confirm:label">
+            <value>Confirm education level</value>
+          </text>
+          <text id="/data/g_context/education_confirm:hint">
+            <value>Pre-filled value is shown on the participant profile.</value>
+          </text>
+          <text id="/data/g_context/age_confirm:jr:constraintMsg">
+            <value>Satoru screens adults aged 40 and above.</value>
+          </text>
+          <text id="/data/g_context/age_confirm:label">
+            <value>Confirm age in completed years</value>
+          </text>
+          <text id="/data/g_pmis:label">
+            <value>1. Picture-based Memory Impairment Screen</value>
+          </text>
+          <text id="/data/g_pmis/pmis_instructions:label">
+            <value>Present the 4 picture items with a category cue for each, then a 2-3 minute delay (Symbol Match can serve as the delay). Free recall first, then category-cued recall for items not freely recalled.</value>
+          </text>
+          <text id="/data/g_pmis/pmis_free_recall:jr:constraintMsg">
+            <value>Free recall must be 0-4.</value>
+          </text>
+          <text id="/data/g_pmis/pmis_free_recall:label">
+            <value>Items recalled FREELY (0-4)</value>
+          </text>
+          <text id="/data/g_pmis/pmis_cued_recall:jr:constraintMsg">
+            <value>Free + cued recall cannot exceed 4 items.</value>
+          </text>
+          <text id="/data/g_pmis/pmis_cued_recall:label">
+            <value>Additional items recalled WITH CATEGORY CUE (0-4)</value>
+          </text>
+          <text id="/data/g_pmis/pmis_cued_recall:hint">
+            <value>Only items that were NOT freely recalled.</value>
+          </text>
+          <text id="/data/g_pmis/pmis_result:label">
+            <value> PMIS score: **<output value=" /data/g_pmis/pmis_score "/>** / 8</value>
+          </text>
+          <text id="/data/g_symbol:label">
+            <value>2. Symbol Match</value>
+          </text>
+          <text id="/data/g_symbol/symbol_instructions:label">
+            <value>Timed symbol-to-number matching. Give the practice row first. Time strictly, stop at the protocol time limit, count correct matches only.</value>
+          </text>
+          <text id="/data/g_symbol/symbol_correct:jr:constraintMsg">
+            <value>Enter 0-100.</value>
+          </text>
+          <text id="/data/g_symbol/symbol_correct:label">
+            <value>Number of CORRECT matches</value>
+          </text>
+          <text id="/data/g_symbol/symbol_completed:label">
+            <value>Was the test completed as per protocol?</value>
+          </text>
+          <text id="/data/g_mcr:label">
+            <value>3. Motoric Cognitive Risk</value>
+          </text>
+          <text id="/data/g_mcr/scc_memory_complaint:label">
+            <value>Do you feel your memory has become worse than before?</value>
+          </text>
+          <text id="/data/g_mcr/existing_dementia_dx:label">
+            <value>Already diagnosed with dementia by a doctor?</value>
+          </text>
+          <text id="/data/g_mcr/mobility_disability:label">
+            <value>Unable to walk independently (needs another person)?</value>
+          </text>
+          <text id="/data/g_mcr/gait_time_sec:jr:constraintMsg">
+            <value>Enter 0-120 seconds.</value>
+          </text>
+          <text id="/data/g_mcr/gait_time_sec:label">
+            <value>Time to walk 4 metres at usual pace (seconds, best of 2)</value>
+          </text>
+          <text id="/data/g_mcr/gait_time_sec:hint">
+            <value>Standing start, usual pace, no run-in.</value>
+          </text>
+          <text id="/data/g_mcr/mcr_result:label">
+            <value> Gait speed: **<output value=" /data/g_mcr/gait_speed_mps "/> m/s**</value>
+          </text>
+          <text id="/data/g_outcome:label">
+            <value>Screening outcome</value>
+          </text>
+          <text id="/data/g_outcome/stage2_same_day:label">
+            <value>Is Stage 2 being done today at the same camp?</value>
+          </text>
+          <text id="/data/g_outcome/informant_available:label">
+            <value>Is a family member available for Stage 2 (AD8 needs one)?</value>
+          </text>
+          <text id="/data/g_outcome/result_normal:label">
+            <value>**No red flags today.** Explain brain-health advice and the annual re-check.</value>
+          </text>
+          <text id="/data/g_outcome/result_refer:label">
+            <value>**Detailed (Stage 2) assessment recommended.** Explain that this is not a diagnosis - it means a longer check is useful.</value>
+          </text>
+          <text id="/data/g_outcome/screener_notes:label">
+            <value>Screener notes</value>
+          </text>
+        </translation>
+        <translation lang="te">
+          <text id="yesno-0">
+            <value>అవును</value>
+          </text>
+          <text id="yesno-1">
+            <value>కాదు</value>
+          </text>
+          <text id="edu-0">
+            <value>చదువు లేదు</value>
+          </text>
+          <text id="edu-1">
+            <value>1-7 తరగతులు</value>
+          </text>
+          <text id="edu-2">
+            <value>8వ తరగతి లేదా ఎక్కువ</value>
+          </text>
+          <text id="setting-0">
+            <value>కమ్యూనిటీ క్యాంప్</value>
+          </text>
+          <text id="setting-1">
+            <value>వృద్ధాశ్రమం</value>
+          </text>
+          <text id="setting-2">
+            <value>ఇంటి సందర్శన</value>
+          </text>
+          <text id="setting-3">
+            <value>ఆసుపత్రి OPD</value>
+          </text>
+          <text id="/data/g_consent/consent_script:label">
+            <value>**బిగ్గరగా చదవండి:** మేము సతోరు ఫౌండేషన్ నుంచి వచ్చాం. దాదాపు 10 నిమిషాలు పట్టే చిన్న జ్ఞాపకశక్తి, నడక పరీక్ష చేయాలనుకుంటున్నాం. మీ సమాచారం గోప్యంగా ఉంచుతాం. మీరు ఎప్పుడైనా ఆపమని చెప్పవచ్చు. వద్దన్నా మీకు ఎలాంటి నష్టం ఉండదు.</value>
+          </text>
+          <text id="/data/g_consent/consent_confirmed:label">
+            <value>ఈరోజు స్క్రీనింగ్‌కు అంగీకరిస్తున్నారా?</value>
+          </text>
+          <text id="/data/g_consent/consent_declined:label">
+            <value>స్క్రీనింగ్ ఆపివేయబడింది. వచ్చినందుకు ధన్యవాదాలు చెప్పండి.</value>
+          </text>
+          <text id="/data/g_context/screening_date:label">
+            <value>తేదీ</value>
+          </text>
+          <text id="/data/g_context/education_confirm:label">
+            <value>చదువు ఎంతవరకు?</value>
+          </text>
+          <text id="/data/g_context/age_confirm:label">
+            <value>వయసు (సంవత్సరాలు)</value>
+          </text>
+          <text id="/data/g_pmis/pmis_free_recall:label">
+            <value>సొంతంగా గుర్తుకు వచ్చినవి (0-4)</value>
+          </text>
+          <text id="/data/g_pmis/pmis_cued_recall:label">
+            <value>సూచన ఇచ్చాక గుర్తుకు వచ్చినవి (0-4)</value>
+          </text>
+          <text id="/data/g_symbol/symbol_correct:label">
+            <value>సరైన జతలు ఎన్ని</value>
+          </text>
+          <text id="/data/g_mcr/scc_memory_complaint:label">
+            <value>మీ జ్ఞాపకశక్తి ఇంతకుముందుకంటే తగ్గిందని అనిపిస్తోందా?</value>
+          </text>
+          <text id="/data/g_mcr/existing_dementia_dx:label">
+            <value>డాక్టర్ ఇప్పటికే డిమెన్షియా ఉందని చెప్పారా?</value>
+          </text>
+          <text id="/data/g_mcr/mobility_disability:label">
+            <value>ఇంకొకరి సాయం లేకుండా నడవలేరా?</value>
+          </text>
+          <text id="/data/g_mcr/gait_time_sec:label">
+            <value>4 మీటర్లు నడవడానికి పట్టిన సమయం (సెకన్లు)</value>
+          </text>
+          <text id="/data/g_outcome/informant_available:label">
+            <value>రెండో దశకు కుటుంబ సభ్యుడు అందుబాటులో ఉన్నారా?</value>
+          </text>
+          <text id="/data/g_outcome/result_normal:label">
+            <value>**ఈరోజు ఎలాంటి ఇబ్బంది కనిపించలేదు.** బ్రెయిన్ హెల్త్ సలహాలు చెప్పండి, సంవత్సరానికి ఒకసారి మళ్లీ చెక్ చేయించుకోమని చెప్పండి.</value>
+          </text>
+          <text id="/data/g_outcome/result_refer:label">
+            <value>**వివరమైన రెండో దశ పరీక్ష అవసరం.** ఇది రోగ నిర్ధారణ కాదని, ఇంకాస్త వివరమైన పరీక్ష చేయాలని మాత్రమే అర్థమని వివరించండి.</value>
+          </text>
+          <text id="/data/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/data/protocol:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_consent:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_context:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_context/setting:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_context/camp_code:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_context/camp_code:hint">
+            <value>-</value>
+          </text>
+          <text id="/data/g_context/education_confirm:hint">
+            <value>-</value>
+          </text>
+          <text id="/data/g_context/age_confirm:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_pmis:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_pmis/pmis_instructions:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_pmis/pmis_free_recall:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_pmis/pmis_cued_recall:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_pmis/pmis_cued_recall:hint">
+            <value>-</value>
+          </text>
+          <text id="/data/g_pmis/pmis_result:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_symbol:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_symbol/symbol_instructions:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_symbol/symbol_correct:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_symbol/symbol_completed:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_mcr:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_mcr/gait_time_sec:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_mcr/gait_time_sec:hint">
+            <value>-</value>
+          </text>
+          <text id="/data/g_mcr/mcr_result:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_outcome:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_outcome/stage2_same_day:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_outcome/screener_notes:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <data id="stage1_screening" version="2026-07-29 00-00" prefix="J1!stage1_screening!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <user>
+              <contact_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <name/>
+              <age/>
+              <gender/>
+              <phone/>
+              <education_level/>
+              <consent_given/>
+              <informant_name/>
+              <informant_phone/>
+            </contact>
+          </inputs>
+          <patient_uuid/>
+          <patient_id/>
+          <patient_name/>
+          <patient_sex/>
+          <patient_age/>
+          <patient_phone/>
+          <patient_education/>
+          <screened_by/>
+          <screened_by_name/>
+          <protocol>
+            <k_pmis_cutoff/>
+            <k_symbol_cutoff/>
+            <k_slow_gait_mps/>
+            <k_gait_distance_m/>
+          </protocol>
+          <g_consent>
+            <consent_script/>
+            <consent_confirmed/>
+            <consent_datetime/>
+            <consent_declined/>
+          </g_consent>
+          <g_context>
+            <screening_date/>
+            <setting/>
+            <camp_code/>
+            <education_confirm/>
+            <age_confirm/>
+          </g_context>
+          <g_pmis>
+            <pmis_instructions/>
+            <pmis_free_recall/>
+            <pmis_cued_recall/>
+            <pmis_score/>
+            <pmis_flag/>
+            <pmis_result/>
+          </g_pmis>
+          <g_symbol>
+            <symbol_instructions/>
+            <symbol_correct/>
+            <symbol_completed/>
+            <symbol_flag/>
+          </g_symbol>
+          <g_mcr>
+            <scc_memory_complaint/>
+            <existing_dementia_dx/>
+            <mobility_disability/>
+            <gait_time_sec/>
+            <gait_speed_mps/>
+            <slow_gait_flag/>
+            <mcr_positive/>
+            <mcr_result/>
+          </g_mcr>
+          <g_outcome>
+            <stage1_flag_count/>
+            <stage1_result/>
+            <stage2_same_day/>
+            <informant_available/>
+            <result_normal/>
+            <result_refer/>
+            <screener_notes/>
+          </g_outcome>
+          <meta tag="hidden">
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="user-contact-summary"/>
+      <instance id="yesno">
+        <root>
+          <item>
+            <itextId>yesno-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>yesno-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="edu">
+        <root>
+          <item>
+            <itextId>edu-0</itextId>
+            <name>illiterate</name>
+          </item>
+          <item>
+            <itextId>edu-1</itextId>
+            <name>primary</name>
+          </item>
+          <item>
+            <itextId>edu-2</itextId>
+            <name>secondary_plus</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="setting">
+        <root>
+          <item>
+            <itextId>setting-0</itextId>
+            <name>community_camp</name>
+          </item>
+          <item>
+            <itextId>setting-1</itextId>
+            <name>old_age_home</name>
+          </item>
+          <item>
+            <itextId>setting-2</itextId>
+            <name>household</name>
+          </item>
+          <item>
+            <itextId>setting-3</itextId>
+            <name>hospital_opd</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/data/inputs/source" type="string"/>
+      <bind nodeset="/data/inputs/source_id" type="string"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/data/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/data/inputs/contact/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/age" type="string"/>
+      <bind nodeset="/data/inputs/contact/gender" type="string"/>
+      <bind nodeset="/data/inputs/contact/phone" type="string"/>
+      <bind nodeset="/data/inputs/contact/education_level" type="string"/>
+      <bind nodeset="/data/inputs/contact/consent_given" type="string"/>
+      <bind nodeset="/data/inputs/contact/informant_name" type="string"/>
+      <bind nodeset="/data/inputs/contact/informant_phone" type="string"/>
+      <bind nodeset="/data/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/data/patient_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/data/patient_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/data/patient_sex" type="string" calculate="../inputs/contact/gender"/>
+      <bind nodeset="/data/patient_age" type="string" calculate="../inputs/contact/age"/>
+      <bind nodeset="/data/patient_phone" type="string" calculate="../inputs/contact/phone"/>
+      <bind nodeset="/data/patient_education" type="string" calculate="../inputs/contact/education_level"/>
+      <bind nodeset="/data/screened_by" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/data/screened_by_name" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/data/protocol/k_pmis_cutoff" type="string" calculate="4"/>
+      <bind nodeset="/data/protocol/k_symbol_cutoff" type="string" calculate="10"/>
+      <bind nodeset="/data/protocol/k_slow_gait_mps" type="string" calculate="0.8"/>
+      <bind nodeset="/data/protocol/k_gait_distance_m" type="string" calculate="4"/>
+      <bind nodeset="/data/g_consent/consent_script" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_consent/consent_confirmed" type="string" required="true()"/>
+      <bind nodeset="/data/g_consent/consent_datetime" type="string" calculate="now()"/>
+      <bind nodeset="/data/g_consent/consent_declined" readonly="true()" type="string" relevant=" /data/g_consent/consent_confirmed  = 'no'"/>
+      <bind nodeset="/data/g_context" relevant=" /data/g_consent/consent_confirmed  = 'yes'"/>
+      <bind nodeset="/data/g_context/screening_date" type="date" required="true()"/>
+      <setvalue ref="/data/g_context/screening_date" value="today()" event="odk-instance-first-load"/>
+      <bind nodeset="/data/g_context/setting" type="string" required="true()"/>
+      <bind nodeset="/data/g_context/camp_code" type="string"/>
+      <bind nodeset="/data/g_context/education_confirm" type="string" required="true()"/>
+      <bind nodeset="/data/g_context/age_confirm" type="int" constraint=". &gt;= 40 and . &lt;= 120" jr:constraintMsg="jr:itext('/data/g_context/age_confirm:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/g_pmis" relevant=" /data/g_consent/consent_confirmed  = 'yes'"/>
+      <bind nodeset="/data/g_pmis/pmis_instructions" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_pmis/pmis_free_recall" type="int" constraint=". &gt;= 0 and . &lt;= 4" jr:constraintMsg="jr:itext('/data/g_pmis/pmis_free_recall:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/g_pmis/pmis_cued_recall" type="int" constraint=". &gt;= 0 and . &lt;= 4 and (. +  /data/g_pmis/pmis_free_recall ) &lt;= 4" jr:constraintMsg="jr:itext('/data/g_pmis/pmis_cued_recall:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/g_pmis/pmis_score" type="string" calculate="(2 *  /data/g_pmis/pmis_free_recall ) +  /data/g_pmis/pmis_cued_recall "/>
+      <bind nodeset="/data/g_pmis/pmis_flag" type="string" calculate="if( /data/g_pmis/pmis_score  &lt;=  /data/protocol/k_pmis_cutoff , 1, 0)"/>
+      <bind nodeset="/data/g_pmis/pmis_result" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_symbol" relevant=" /data/g_consent/consent_confirmed  = 'yes'"/>
+      <bind nodeset="/data/g_symbol/symbol_instructions" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_symbol/symbol_correct" type="int" constraint=". &gt;= 0 and . &lt;= 100" jr:constraintMsg="jr:itext('/data/g_symbol/symbol_correct:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/g_symbol/symbol_completed" type="string" required="true()"/>
+      <bind nodeset="/data/g_symbol/symbol_flag" type="string" calculate="if( /data/g_symbol/symbol_completed  = 'no', 1, if( /data/g_symbol/symbol_correct  &lt;=  /data/protocol/k_symbol_cutoff , 1, 0))"/>
+      <bind nodeset="/data/g_mcr" relevant=" /data/g_consent/consent_confirmed  = 'yes'"/>
+      <bind nodeset="/data/g_mcr/scc_memory_complaint" type="string" required="true()"/>
+      <bind nodeset="/data/g_mcr/existing_dementia_dx" type="string" required="true()"/>
+      <bind nodeset="/data/g_mcr/mobility_disability" type="string" required="true()"/>
+      <bind nodeset="/data/g_mcr/gait_time_sec" type="decimal" relevant=" /data/g_mcr/mobility_disability  = 'no'" constraint=". &gt; 0 and . &lt; 120" jr:constraintMsg="jr:itext('/data/g_mcr/gait_time_sec:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/g_mcr/gait_speed_mps" type="string" calculate="if( /data/g_mcr/mobility_disability  = 'yes', 0, round( /data/protocol/k_gait_distance_m  div  /data/g_mcr/gait_time_sec , 2))"/>
+      <bind nodeset="/data/g_mcr/slow_gait_flag" type="string" calculate="if( /data/g_mcr/gait_speed_mps  &lt;  /data/protocol/k_slow_gait_mps , 1, 0)"/>
+      <bind nodeset="/data/g_mcr/mcr_positive" type="string" calculate="if( /data/g_mcr/scc_memory_complaint  = 'yes' and  /data/g_mcr/slow_gait_flag  = 1 and  /data/g_mcr/existing_dementia_dx  = 'no' and  /data/g_mcr/mobility_disability  = 'no', 1, 0)"/>
+      <bind nodeset="/data/g_mcr/mcr_result" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_outcome" relevant=" /data/g_consent/consent_confirmed  = 'yes'"/>
+      <bind nodeset="/data/g_outcome/stage1_flag_count" type="string" calculate=" /data/g_pmis/pmis_flag  +  /data/g_symbol/symbol_flag  +  /data/g_mcr/mcr_positive "/>
+      <bind nodeset="/data/g_outcome/stage1_result" type="string" calculate="if( /data/g_mcr/existing_dementia_dx  = 'yes', 'known_dementia', if( /data/g_outcome/stage1_flag_count  &gt;= 1, 'refer', 'normal'))"/>
+      <bind nodeset="/data/g_outcome/stage2_same_day" type="string" relevant=" /data/g_outcome/stage1_result  = 'refer'" required="true()"/>
+      <bind nodeset="/data/g_outcome/informant_available" type="string" relevant=" /data/g_outcome/stage1_result  = 'refer'" required="true()"/>
+      <bind nodeset="/data/g_outcome/result_normal" readonly="true()" type="string" relevant=" /data/g_outcome/stage1_result  = 'normal'"/>
+      <bind nodeset="/data/g_outcome/result_refer" readonly="true()" type="string" relevant=" /data/g_outcome/stage1_result  = 'refer'"/>
+      <bind nodeset="/data/g_outcome/screener_notes" type="string"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+      <bind nodeset="/data/meta/instanceName" type="string" calculate="concat( /data/patient_name , ' - Stage 1 - ',  /data/g_outcome/stage1_result )"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="field-list" ref="/data/inputs">
+      <label ref="jr:itext('/data/inputs:label')"/>
+      <group appearance="field-list" ref="/data/inputs/user">
+        <label ref="jr:itext('/data/inputs/user:label')"/>
+      </group>
+      <group appearance="field-list" ref="/data/inputs/contact">
+        <label ref="jr:itext('/data/inputs/contact:label')"/>
+        <input ref="/data/inputs/contact/_id" appearance="select-contact type-participant">
+          <label ref="jr:itext('/data/inputs/contact/_id:label')"/>
+        </input>
+      </group>
+    </group>
+    <group appearance="hidden" ref="/data/protocol">
+      <label ref="jr:itext('/data/protocol:label')"/>
+    </group>
+    <group appearance="field-list" ref="/data/g_consent">
+      <label ref="jr:itext('/data/g_consent:label')"/>
+      <input ref="/data/g_consent/consent_script">
+        <label ref="jr:itext('/data/g_consent/consent_script:label')"/>
+      </input>
+      <select1 ref="/data/g_consent/consent_confirmed">
+        <label ref="jr:itext('/data/g_consent/consent_confirmed:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_consent/consent_declined">
+        <label ref="jr:itext('/data/g_consent/consent_declined:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_context">
+      <label ref="jr:itext('/data/g_context:label')"/>
+      <input ref="/data/g_context/screening_date">
+        <label ref="jr:itext('/data/g_context/screening_date:label')"/>
+      </input>
+      <select1 ref="/data/g_context/setting">
+        <label ref="jr:itext('/data/g_context/setting:label')"/>
+        <itemset nodeset="instance('setting')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_context/camp_code">
+        <label ref="jr:itext('/data/g_context/camp_code:label')"/>
+        <hint ref="jr:itext('/data/g_context/camp_code:hint')"/>
+      </input>
+      <select1 ref="/data/g_context/education_confirm">
+        <label ref="jr:itext('/data/g_context/education_confirm:label')"/>
+        <hint ref="jr:itext('/data/g_context/education_confirm:hint')"/>
+        <itemset nodeset="instance('edu')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_context/age_confirm">
+        <label ref="jr:itext('/data/g_context/age_confirm:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_pmis">
+      <label ref="jr:itext('/data/g_pmis:label')"/>
+      <input ref="/data/g_pmis/pmis_instructions">
+        <label ref="jr:itext('/data/g_pmis/pmis_instructions:label')"/>
+      </input>
+      <input ref="/data/g_pmis/pmis_free_recall">
+        <label ref="jr:itext('/data/g_pmis/pmis_free_recall:label')"/>
+      </input>
+      <input ref="/data/g_pmis/pmis_cued_recall">
+        <label ref="jr:itext('/data/g_pmis/pmis_cued_recall:label')"/>
+        <hint ref="jr:itext('/data/g_pmis/pmis_cued_recall:hint')"/>
+      </input>
+      <input ref="/data/g_pmis/pmis_result">
+        <label ref="jr:itext('/data/g_pmis/pmis_result:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_symbol">
+      <label ref="jr:itext('/data/g_symbol:label')"/>
+      <input ref="/data/g_symbol/symbol_instructions">
+        <label ref="jr:itext('/data/g_symbol/symbol_instructions:label')"/>
+      </input>
+      <input ref="/data/g_symbol/symbol_correct">
+        <label ref="jr:itext('/data/g_symbol/symbol_correct:label')"/>
+      </input>
+      <select1 ref="/data/g_symbol/symbol_completed">
+        <label ref="jr:itext('/data/g_symbol/symbol_completed:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g_mcr">
+      <label ref="jr:itext('/data/g_mcr:label')"/>
+      <select1 ref="/data/g_mcr/scc_memory_complaint">
+        <label ref="jr:itext('/data/g_mcr/scc_memory_complaint:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_mcr/existing_dementia_dx">
+        <label ref="jr:itext('/data/g_mcr/existing_dementia_dx:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_mcr/mobility_disability">
+        <label ref="jr:itext('/data/g_mcr/mobility_disability:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_mcr/gait_time_sec">
+        <label ref="jr:itext('/data/g_mcr/gait_time_sec:label')"/>
+        <hint ref="jr:itext('/data/g_mcr/gait_time_sec:hint')"/>
+      </input>
+      <input ref="/data/g_mcr/mcr_result">
+        <label ref="jr:itext('/data/g_mcr/mcr_result:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_outcome">
+      <label ref="jr:itext('/data/g_outcome:label')"/>
+      <select1 ref="/data/g_outcome/stage2_same_day">
+        <label ref="jr:itext('/data/g_outcome/stage2_same_day:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_outcome/informant_available">
+        <label ref="jr:itext('/data/g_outcome/informant_available:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_outcome/result_normal">
+        <label ref="jr:itext('/data/g_outcome/result_normal:label')"/>
+      </input>
+      <input ref="/data/g_outcome/result_refer">
+        <label ref="jr:itext('/data/g_outcome/result_refer:label')"/>
+      </input>
+      <input ref="/data/g_outcome/screener_notes">
+        <label ref="jr:itext('/data/g_outcome/screener_notes:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

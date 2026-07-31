@@ -1,0 +1,162 @@
+
+  <model xmlns:odk="http://www.opendatakit.org/xforms" odk:xforms-version="1.0.0">
+    <instance>
+        <data xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" id="contact:person:edit" version="2025-05-01 22-43" prefix="J1!contact:person:edit!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+          </inputs>
+          <person>
+            <parent/>
+            <_id/>
+            <type>person</type>
+            <name/>
+            <short_name/>
+            <date_of_birth/>
+            <date_of_birth_method/>
+            <ephemeral_dob>
+              <dob_calendar/>
+              <age_label/>
+              <age_years/>
+              <age_months/>
+              <dob_method/>
+              <dob_approx/>
+              <dob_raw/>
+              <dob_iso/>
+              <dob_debug/>
+            </ephemeral_dob>
+            <phone/>
+            <phone_alternate/>
+            <sex/>
+            <role/>
+            <role_other/>
+            <external_id/>
+            <notes/>
+            <meta tag="hidden">
+              <created_by/>
+              <created_by_person_uuid/>
+              <created_by_place_uuid/>
+              <last_edited_by/>
+              <last_edited_by_person_uuid/>
+              <last_edited_by_place_uuid/>
+            </meta>
+          </person>
+          <init>
+            <person_name/>
+            <person_place_name/>
+            <person_parent/>
+            <type/>
+            <name/>
+            <note_place/>
+            <change_parent>false</change_parent>
+            <edited_place_type/>
+            <id_district_hospital/>
+            <id_health_center/>
+            <id_clinic/>
+          </init>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+    <instance id="yes_no">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>true</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>false</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="male_female">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>male_female-0</itextId>
+            <name>female</name>
+          </item>
+          <item>
+            <itextId>male_female-1</itextId>
+            <name>male</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="boy_girl">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>boy_girl-0</itextId>
+            <name>female</name>
+          </item>
+          <item>
+            <itextId>boy_girl-1</itextId>
+            <name>male</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="select_dob_method">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>select_dob_method-0</itextId>
+            <name>approx</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="roles">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>roles-0</itextId>
+            <name>chw</name>
+          </item>
+          <item>
+            <itextId>roles-1</itextId>
+            <name>chw_supervisor</name>
+          </item>
+          <item>
+            <itextId>roles-2</itextId>
+            <name>nurse</name>
+          </item>
+          <item>
+            <itextId>roles-3</itextId>
+            <name>manager</name>
+          </item>
+          <item>
+            <itextId>roles-4</itextId>
+            <name>patient</name>
+          </item>
+          <item>
+            <itextId>roles-5</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="place_type">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>place_type-0</itextId>
+            <name>district_hospital</name>
+          </item>
+          <item>
+            <itextId>place_type-1</itextId>
+            <name>health_center</name>
+          </item>
+          <item>
+            <itextId>place_type-2</itextId>
+            <name>clinic</name>
+          </item>
+        </root>
+      </instance>
+  </model>
+

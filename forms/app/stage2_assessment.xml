@@ -1,0 +1,1581 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>Stage 2 - Detailed Assessment</h:title>
+    <model odk:xforms-version="1.0.0">
+      <itext>
+        <translation lang="en">
+          <text id="yesno-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesno-1">
+            <value>No</value>
+          </text>
+          <text id="yesnodk-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesnodk-1">
+            <value>No</value>
+          </text>
+          <text id="yesnodk-2">
+            <value>Don't know / Not assessed</value>
+          </text>
+          <text id="edu-0">
+            <value>No formal schooling</value>
+          </text>
+          <text id="edu-1">
+            <value>1-7 years</value>
+          </text>
+          <text id="edu-2">
+            <value>8 years or more</value>
+          </text>
+          <text id="phq-0">
+            <value>Not at all</value>
+          </text>
+          <text id="phq-1">
+            <value>Several days</value>
+          </text>
+          <text id="phq-2">
+            <value>More than half the days</value>
+          </text>
+          <text id="phq-3">
+            <value>Nearly every day</value>
+          </text>
+          <text id="ad8-0">
+            <value>Yes, a change</value>
+          </text>
+          <text id="ad8-1">
+            <value>No change / Don't know</value>
+          </text>
+          <text id="glucose_type-0">
+            <value>Fasting</value>
+          </text>
+          <text id="glucose_type-1">
+            <value>Random / post-meal</value>
+          </text>
+          <text id="glucose_type-2">
+            <value>Not done</value>
+          </text>
+          <text id="informant_rel-0">
+            <value>Spouse</value>
+          </text>
+          <text id="informant_rel-1">
+            <value>Son / Daughter</value>
+          </text>
+          <text id="informant_rel-2">
+            <value>Daughter-in-law / Son-in-law</value>
+          </text>
+          <text id="informant_rel-3">
+            <value>Sibling</value>
+          </text>
+          <text id="informant_rel-4">
+            <value>Other relative</value>
+          </text>
+          <text id="informant_rel-5">
+            <value>Paid caregiver</value>
+          </text>
+          <text id="informant_rel-6">
+            <value>Neighbour / friend</value>
+          </text>
+          <text id="/data/inputs:label">
+            <value>Participant</value>
+          </text>
+          <text id="/data/inputs/user:label">
+            <value>User</value>
+          </text>
+          <text id="/data/inputs/contact:label">
+            <value>Participant</value>
+          </text>
+          <text id="/data/inputs/contact/_id:label">
+            <value>Select participant</value>
+          </text>
+          <text id="/data/protocol:label">
+            <value>Protocol constants</value>
+          </text>
+          <text id="/data/g_link:label">
+            <value>Assessment context</value>
+          </text>
+          <text id="/data/g_link/assessment_date:label">
+            <value>Date of Stage 2 assessment</value>
+          </text>
+          <text id="/data/g_link/consent_reconfirmed:label">
+            <value>Consent re-confirmed for the detailed assessment?</value>
+          </text>
+          <text id="/data/g_link/education_confirm:label">
+            <value>Education level</value>
+          </text>
+          <text id="/data/g_ad8:label">
+            <value>AD8 Dementia Screening Interview</value>
+          </text>
+          <text id="/data/g_ad8/informant_available:label">
+            <value>Is a reliable informant available?</value>
+          </text>
+          <text id="/data/g_ad8/informant_relationship:label">
+            <value>Relationship to participant</value>
+          </text>
+          <text id="/data/g_ad8/informant_contact_years:label">
+            <value>Years the informant has known the participant</value>
+          </text>
+          <text id="/data/g_ad8/ad8_stem:label">
+            <value>Ask the informant: *Compared with a few years ago, has there been a CHANGE caused by thinking or memory problems?* Answer Yes only if the change is due to memory or thinking, not physical illness.</value>
+          </text>
+          <text id="/data/g_ad8/ad8_1:label">
+            <value>Problems with judgement (e.g. poor financial decisions)</value>
+          </text>
+          <text id="/data/g_ad8/ad8_2:label">
+            <value>Reduced interest in hobbies or usual activities</value>
+          </text>
+          <text id="/data/g_ad8/ad8_3:label">
+            <value>Repeats the same questions, stories or statements</value>
+          </text>
+          <text id="/data/g_ad8/ad8_4:label">
+            <value>Trouble learning to use a tool, appliance or gadget</value>
+          </text>
+          <text id="/data/g_ad8/ad8_5:label">
+            <value>Forgets the correct month or year</value>
+          </text>
+          <text id="/data/g_ad8/ad8_6:label">
+            <value>Difficulty handling complicated money matters</value>
+          </text>
+          <text id="/data/g_ad8/ad8_7:label">
+            <value>Trouble remembering appointments</value>
+          </text>
+          <text id="/data/g_ad8/ad8_8:label">
+            <value>Daily problems with thinking and/or memory</value>
+          </text>
+          <text id="/data/g_ad8/ad8_result:label">
+            <value> AD8 total: **<output value=" /data/g_ad8/ad8_total "/>** / 8</value>
+          </text>
+          <text id="/data/g_hmse:label">
+            <value>Hindi Mental State Examination</value>
+          </text>
+          <text id="/data/g_hmse/hmse_note:label">
+            <value>Administer the HMSE on the printed Telugu record sheet, then enter the scores here. Domain subscores are optional but recommended for research use.</value>
+          </text>
+          <text id="/data/g_hmse/hmse_total:jr:constraintMsg">
+            <value>HMSE total must be 0-31.</value>
+          </text>
+          <text id="/data/g_hmse/hmse_total:label">
+            <value>HMSE TOTAL score (0-31)</value>
+          </text>
+          <text id="/data/g_hmse/hmse_subscores_entered:label">
+            <value>Enter domain subscores?</value>
+          </text>
+          <text id="/data/g_hmse/hmse_orientation:jr:constraintMsg">
+            <value>Enter 0-31.</value>
+          </text>
+          <text id="/data/g_hmse/hmse_orientation:label">
+            <value>Orientation subscore</value>
+          </text>
+          <text id="/data/g_hmse/hmse_registration:jr:constraintMsg">
+            <value>Enter 0-31.</value>
+          </text>
+          <text id="/data/g_hmse/hmse_registration:label">
+            <value>Registration subscore</value>
+          </text>
+          <text id="/data/g_hmse/hmse_attention:jr:constraintMsg">
+            <value>Enter 0-31.</value>
+          </text>
+          <text id="/data/g_hmse/hmse_attention:label">
+            <value>Attention / calculation subscore</value>
+          </text>
+          <text id="/data/g_hmse/hmse_recall:jr:constraintMsg">
+            <value>Enter 0-31.</value>
+          </text>
+          <text id="/data/g_hmse/hmse_recall:label">
+            <value>Delayed recall subscore</value>
+          </text>
+          <text id="/data/g_hmse/hmse_language:jr:constraintMsg">
+            <value>Enter 0-31.</value>
+          </text>
+          <text id="/data/g_hmse/hmse_language:label">
+            <value>Language, comprehension and praxis subscore</value>
+          </text>
+          <text id="/data/g_hmse/hmse_mismatch:label">
+            <value> **Check:** subscores add to <output value=" /data/g_hmse/hmse_subtotal "/> but the total entered is <output value=" /data/g_hmse/hmse_total "/>. Reconcile before submitting.</value>
+          </text>
+          <text id="/data/g_phq:label">
+            <value>PHQ-9 Depression Screen</value>
+          </text>
+          <text id="/data/g_phq/phq_stem:label">
+            <value>Over the LAST TWO WEEKS, how often have you been bothered by any of the following?</value>
+          </text>
+          <text id="/data/g_phq/phq_1:label">
+            <value>Little interest or pleasure in doing things</value>
+          </text>
+          <text id="/data/g_phq/phq_2:label">
+            <value>Feeling down, depressed or hopeless</value>
+          </text>
+          <text id="/data/g_phq/phq_3:label">
+            <value>Trouble falling asleep, staying asleep, or sleeping too much</value>
+          </text>
+          <text id="/data/g_phq/phq_4:label">
+            <value>Feeling tired or having little energy</value>
+          </text>
+          <text id="/data/g_phq/phq_5:label">
+            <value>Poor appetite or overeating</value>
+          </text>
+          <text id="/data/g_phq/phq_6:label">
+            <value>Feeling bad about yourself, or that you are a failure, or that you have let yourself or your family down</value>
+          </text>
+          <text id="/data/g_phq/phq_7:label">
+            <value>Trouble concentrating on things such as reading or watching television</value>
+          </text>
+          <text id="/data/g_phq/phq_8:label">
+            <value>Moving or speaking so slowly that others noticed - or being so fidgety or restless that you moved around much more than usual</value>
+          </text>
+          <text id="/data/g_phq/phq_9:label">
+            <value>Thoughts that you would be better off dead, or of hurting yourself in some way</value>
+          </text>
+          <text id="/data/g_phq/phq_safety_alert:label">
+            <value>**SAFETY PROTOCOL - ACT NOW.** The participant has endorsed thoughts of death or self-harm. Do not leave them alone. Follow SOP-SAFE-01: ask directly about current intent and plan, involve the accompanying family member with the participant's permission, call the Satoru clinical supervisor immediately, and give the Tele-MANAS number 14416. Record what you did below.</value>
+          </text>
+          <text id="/data/g_phq/phq_safety_action_taken:label">
+            <value>Describe the safety action taken (mandatory)</value>
+          </text>
+          <text id="/data/g_phq/phq_supervisor_informed:label">
+            <value>Clinical supervisor informed?</value>
+          </text>
+          <text id="/data/g_easi:label">
+            <value>Elder Abuse Suspicion Index</value>
+          </text>
+          <text id="/data/g_easi/easi_intro:label">
+            <value>Ask Q1-Q5 privately, with no family member in earshot. Q6 is your own observation.</value>
+          </text>
+          <text id="/data/g_easi/easi_private:label">
+            <value>Were Q1-Q5 asked in private?</value>
+          </text>
+          <text id="/data/g_easi/easi_1:label">
+            <value>Have you relied on people for bathing, dressing, shopping, banking or meals?</value>
+          </text>
+          <text id="/data/g_easi/easi_2:label">
+            <value>Has anyone prevented you from getting food, clothes, medication, glasses, hearing aids or medical care, or from being with people you wanted to be with?</value>
+          </text>
+          <text id="/data/g_easi/easi_3:label">
+            <value>Have you been upset because someone talked to you in a way that made you feel shamed or threatened?</value>
+          </text>
+          <text id="/data/g_easi/easi_4:label">
+            <value>Has anyone tried to force you to sign papers or to use your money against your will?</value>
+          </text>
+          <text id="/data/g_easi/easi_5:label">
+            <value>Has anyone made you afraid, touched you in ways you did not want, or hurt you physically?</value>
+          </text>
+          <text id="/data/g_easi/easi_6:label">
+            <value>ASSESSOR OBSERVATION: any of poor eye contact, withdrawn manner, malnourishment, hygiene neglect, cuts, bruises, inappropriate clothing, or medication non-adherence?</value>
+          </text>
+          <text id="/data/g_easi/easi_alert:label">
+            <value>**SAFEGUARDING FLAG.** Do not confront the suspected person. Follow SOP-SAFE-02: report to the Satoru safeguarding lead within 24 hours. Elderline 14567 is available, as is the Maintenance and Welfare of Parents and Senior Citizens Act 2007 tribunal route.</value>
+          </text>
+          <text id="/data/g_easi/easi_lead_informed:label">
+            <value>Safeguarding lead informed within 24 hours?</value>
+          </text>
+          <text id="/data/g_sppb:label">
+            <value>Short Physical Performance Battery</value>
+          </text>
+          <text id="/data/g_sppb/sppb_intro:label">
+            <value>Stop any test if the participant reports pain or feels unsafe.</value>
+          </text>
+          <text id="/data/g_sppb/sppb_attempted:label">
+            <value>Was SPPB attempted?</value>
+          </text>
+          <text id="/data/g_sppb/sppb_side_by_side_sec:label">
+            <value>Side-by-side stand (seconds held, max 10)</value>
+          </text>
+          <text id="/data/g_sppb/sppb_semi_tandem_sec:label">
+            <value>Semi-tandem stand (seconds held, max 10)</value>
+          </text>
+          <text id="/data/g_sppb/sppb_tandem_sec:label">
+            <value>Full tandem stand (seconds held, max 10)</value>
+          </text>
+          <text id="/data/g_sppb/sppb_gait_unable:label">
+            <value>Unable to complete the 4 m walk?</value>
+          </text>
+          <text id="/data/g_sppb/sppb_gait_sec:label">
+            <value>4 m walk time (seconds, best of 2)</value>
+          </text>
+          <text id="/data/g_sppb/sppb_chair_unable:label">
+            <value>Unable to complete 5 chair stands without using arms?</value>
+          </text>
+          <text id="/data/g_sppb/sppb_chair_sec:label">
+            <value>Time for 5 chair stands (seconds)</value>
+          </text>
+          <text id="/data/g_sppb/sppb_result:label">
+            <value> SPPB total: **<output value=" /data/g_sppb/sppb_total "/>** / 12</value>
+          </text>
+          <text id="/data/g_grip:label">
+            <value>Handgrip dynamometry (AWGS 2019)</value>
+          </text>
+          <text id="/data/g_grip/grip_attempted:label">
+            <value>Was handgrip measured?</value>
+          </text>
+          <text id="/data/g_grip/grip_right_1:label">
+            <value>Right hand, trial 1 (kg)</value>
+          </text>
+          <text id="/data/g_grip/grip_right_2:label">
+            <value>Right hand, trial 2 (kg)</value>
+          </text>
+          <text id="/data/g_grip/grip_left_1:label">
+            <value>Left hand, trial 1 (kg)</value>
+          </text>
+          <text id="/data/g_grip/grip_left_2:label">
+            <value>Left hand, trial 2 (kg)</value>
+          </text>
+          <text id="/data/g_grip/grip_result:label">
+            <value> Maximum grip: **<output value=" /data/g_grip/grip_max "/> kg** (low-strength cut-off <output value=" /data/g_grip/grip_cutoff "/> kg)</value>
+          </text>
+          <text id="/data/g_glucose:label">
+            <value>Capillary blood glucose</value>
+          </text>
+          <text id="/data/g_glucose/glucose_type:label">
+            <value>Sample type</value>
+          </text>
+          <text id="/data/g_glucose/glucose_mgdl:label">
+            <value>Blood glucose (mg/dL)</value>
+          </text>
+          <text id="/data/g_glucose/known_diabetes:label">
+            <value>Known diabetes on treatment?</value>
+          </text>
+          <text id="/data/g_glucose/glucose_critical:label">
+            <value>**CRITICAL VALUE.** Arrange same-day medical review. If below 70 mg/dL and the participant is conscious, give oral glucose now and re-test in 15 minutes.</value>
+          </text>
+          <text id="/data/g_disposition:label">
+            <value>Composite result and disposition</value>
+          </text>
+          <text id="/data/g_disposition/disposition_summary:label">
+            <value> **Disposition:** <output value=" /data/g_disposition/disposition "/> 
+AD8 <output value=" /data/g_ad8/ad8_total "/>/8 | HMSE <output value=" /data/g_hmse/hmse_total "/>/31 | PHQ-9 <output value=" /data/g_phq/phq_total "/>/27 | SPPB <output value=" /data/g_sppb/sppb_total "/>/12 | Grip <output value=" /data/g_grip/grip_max "/> kg</value>
+          </text>
+          <text id="/data/g_disposition/referral_letter_issued:label">
+            <value>Referral letter issued to the family?</value>
+          </text>
+          <text id="/data/g_disposition/referral_facility:label">
+            <value>Referral facility</value>
+          </text>
+          <text id="/data/g_disposition/referral_facility:hint">
+            <value>e.g. NIMS Memory Clinic, Punjagutta</value>
+          </text>
+          <text id="/data/g_disposition/referral_appointment_date:label">
+            <value>Appointment date given</value>
+          </text>
+          <text id="/data/g_disposition/assessor_notes:label">
+            <value>Assessor notes</value>
+          </text>
+        </translation>
+        <translation lang="te">
+          <text id="yesno-0">
+            <value>అవును</value>
+          </text>
+          <text id="yesno-1">
+            <value>కాదు</value>
+          </text>
+          <text id="yesnodk-0">
+            <value>అవును</value>
+          </text>
+          <text id="yesnodk-1">
+            <value>కాదు</value>
+          </text>
+          <text id="yesnodk-2">
+            <value>తెలియదు</value>
+          </text>
+          <text id="edu-0">
+            <value>చదువు లేదు</value>
+          </text>
+          <text id="edu-1">
+            <value>1-7 తరగతులు</value>
+          </text>
+          <text id="edu-2">
+            <value>8వ తరగతి లేదా ఎక్కువ</value>
+          </text>
+          <text id="phq-0">
+            <value>అస్సలు లేదు</value>
+          </text>
+          <text id="phq-1">
+            <value>కొన్ని రోజులు</value>
+          </text>
+          <text id="phq-2">
+            <value>సగం రోజులకు మించి</value>
+          </text>
+          <text id="phq-3">
+            <value>దాదాపు ప్రతిరోజూ</value>
+          </text>
+          <text id="ad8-0">
+            <value>అవును, మార్పు ఉంది</value>
+          </text>
+          <text id="ad8-1">
+            <value>మార్పు లేదు / తెలియదు</value>
+          </text>
+          <text id="glucose_type-0">
+            <value>పరగడుపున</value>
+          </text>
+          <text id="glucose_type-1">
+            <value>ఏ సమయంలోనైనా</value>
+          </text>
+          <text id="glucose_type-2">
+            <value>చేయలేదు</value>
+          </text>
+          <text id="informant_rel-0">
+            <value>భార్య / భర్త</value>
+          </text>
+          <text id="informant_rel-1">
+            <value>కొడుకు / కూతురు</value>
+          </text>
+          <text id="informant_rel-2">
+            <value>కోడలు / అల్లుడు</value>
+          </text>
+          <text id="informant_rel-3">
+            <value>తోబుట్టువు</value>
+          </text>
+          <text id="informant_rel-4">
+            <value>ఇతర బంధువు</value>
+          </text>
+          <text id="informant_rel-5">
+            <value>జీతానికి చూసుకునేవారు</value>
+          </text>
+          <text id="informant_rel-6">
+            <value>పక్కింటివారు / స్నేహితులు</value>
+          </text>
+          <text id="/data/g_link/consent_reconfirmed:label">
+            <value>వివరమైన పరీక్షకు మళ్లీ అంగీకారం తీసుకున్నారా?</value>
+          </text>
+          <text id="/data/g_ad8/informant_available:label">
+            <value>సమాచారం ఇవ్వగలిగే కుటుంబ సభ్యుడు ఉన్నారా?</value>
+          </text>
+          <text id="/data/g_ad8/ad8_stem:label">
+            <value>*కొన్ని సంవత్సరాల క్రితంతో పోలిస్తే, ఆలోచన లేదా జ్ఞాపకశక్తి సమస్యల వల్ల ఏమైనా మార్పు వచ్చిందా?* శారీరక అనారోగ్యం వల్ల వచ్చిన మార్పులను లెక్కించవద్దు.</value>
+          </text>
+          <text id="/data/g_ad8/ad8_1:label">
+            <value>నిర్ణయాలు తీసుకోవడంలో సమస్యలు (ఉదా: డబ్బు విషయంలో తప్పుడు నిర్ణయాలు)</value>
+          </text>
+          <text id="/data/g_ad8/ad8_2:label">
+            <value>అలవాటైన పనులు, హాబీల మీద ఆసక్తి తగ్గడం</value>
+          </text>
+          <text id="/data/g_ad8/ad8_3:label">
+            <value>ఒకే ప్రశ్న, మాట లేదా కథ మళ్లీ మళ్లీ చెప్పడం</value>
+          </text>
+          <text id="/data/g_ad8/ad8_4:label">
+            <value>కొత్త వస్తువు లేదా పరికరం ఎలా వాడాలో నేర్చుకోవడంలో ఇబ్బంది</value>
+          </text>
+          <text id="/data/g_ad8/ad8_5:label">
+            <value>నెల లేదా సంవత్సరం మర్చిపోవడం</value>
+          </text>
+          <text id="/data/g_ad8/ad8_6:label">
+            <value>డబ్బు లెక్కలు, బ్యాంకు వ్యవహారాలు చూసుకోవడంలో ఇబ్బంది</value>
+          </text>
+          <text id="/data/g_ad8/ad8_7:label">
+            <value>కుదుర్చుకున్న సమయాలు గుర్తుంచుకోలేకపోవడం</value>
+          </text>
+          <text id="/data/g_ad8/ad8_8:label">
+            <value>రోజువారీగా ఆలోచన లేదా జ్ఞాపకశక్తి సమస్యలు</value>
+          </text>
+          <text id="/data/g_phq/phq_stem:label">
+            <value>గత రెండు వారాల్లో, ఈ కింది సమస్యలు మిమ్మల్ని ఎంత తరచుగా ఇబ్బంది పెట్టాయి?</value>
+          </text>
+          <text id="/data/g_phq/phq_1:label">
+            <value>ఏ పని చేయాలన్నా ఆసక్తి లేకపోవడం లేదా సంతోషం అనిపించకపోవడం</value>
+          </text>
+          <text id="/data/g_phq/phq_2:label">
+            <value>నిరాశగా, దిగులుగా లేదా ఏమీ ఆశ లేదన్నట్టు అనిపించడం</value>
+          </text>
+          <text id="/data/g_phq/phq_3:label">
+            <value>నిద్ర పట్టకపోవడం, మధ్యలో మెలకువ రావడం, లేదా మరీ ఎక్కువ నిద్రపోవడం</value>
+          </text>
+          <text id="/data/g_phq/phq_4:label">
+            <value>అలసటగా ఉండటం లేదా ఓపిక లేకపోవడం</value>
+          </text>
+          <text id="/data/g_phq/phq_5:label">
+            <value>ఆకలి లేకపోవడం లేదా మరీ ఎక్కువ తినడం</value>
+          </text>
+          <text id="/data/g_phq/phq_6:label">
+            <value>మీ గురించి మీకే చెడుగా అనిపించడం - మీరు విఫలమయ్యారని, లేదా కుటుంబాన్ని నిరాశపరిచారని అనిపించడం</value>
+          </text>
+          <text id="/data/g_phq/phq_7:label">
+            <value>చదవడం, టీవీ చూడటం లాంటి వాటిపై ధ్యాస నిలపలేకపోవడం</value>
+          </text>
+          <text id="/data/g_phq/phq_8:label">
+            <value>ఇతరులు గమనించేంత నెమ్మదిగా కదలడం లేదా మాట్లాడటం; లేదా కుదురు లేక మామూలు కన్నా ఎక్కువగా అటూఇటూ తిరగడం</value>
+          </text>
+          <text id="/data/g_phq/phq_9:label">
+            <value>మీరు చనిపోతే బాగుండనే ఆలోచనలు, లేదా మిమ్మల్ని మీరు హాని చేసుకోవాలనే ఆలోచనలు</value>
+          </text>
+          <text id="/data/g_phq/phq_safety_alert:label">
+            <value>**భద్రతా విధానం - వెంటనే చర్య తీసుకోండి.** వారిని ఒంటరిగా వదలవద్దు. క్లినికల్ సూపర్‌వైజర్‌కు వెంటనే ఫోన్ చేయండి. టెలి-మానస్: 14416.</value>
+          </text>
+          <text id="/data/g_easi/easi_intro:label">
+            <value>Q1-Q5 ప్రశ్నలను ఏకాంతంగా అడగండి - కుటుంబ సభ్యులు వినకుండా చూసుకోండి.</value>
+          </text>
+          <text id="/data/g_easi/easi_1:label">
+            <value>స్నానం, బట్టలు, షాపింగ్, బ్యాంకు పని, భోజనం - వీటిలో దేనికైనా ఇతరులపై ఆధారపడుతున్నారా?</value>
+          </text>
+          <text id="/data/g_easi/easi_2:label">
+            <value>తిండి, బట్టలు, మందులు, కళ్లద్దాలు, వినికిడి యంత్రం లేదా వైద్యం అందకుండా ఎవరైనా అడ్డుకున్నారా? మీరు కలవాలనుకున్నవారిని కలవనివ్వకుండా చేశారా?</value>
+          </text>
+          <text id="/data/g_easi/easi_3:label">
+            <value>ఎవరైనా మిమ్మల్ని అవమానించేలా లేదా భయపెట్టేలా మాట్లాడి బాధ పెట్టారా?</value>
+          </text>
+          <text id="/data/g_easi/easi_4:label">
+            <value>మీ ఇష్టం లేకుండా కాగితాలపై సంతకం పెట్టమని, లేదా మీ డబ్బు వాడుకోవడానికి ఎవరైనా బలవంతం చేశారా?</value>
+          </text>
+          <text id="/data/g_easi/easi_5:label">
+            <value>ఎవరైనా మిమ్మల్ని భయపెట్టారా, మీకు ఇష్టం లేని విధంగా తాకారా, లేదా శారీరకంగా హాని చేశారా?</value>
+          </text>
+          <text id="/data/g_glucose/known_diabetes:label">
+            <value>ఇప్పటికే షుగర్ వ్యాధికి మందులు వాడుతున్నారా?</value>
+          </text>
+          <text id="/data/g_glucose/glucose_critical:label">
+            <value>**ప్రమాదకర స్థాయి.** ఈరోజే వైద్యుడిని కలిపించండి.</value>
+          </text>
+          <text id="/data/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/data/protocol:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_link:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_link/assessment_date:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_link/education_confirm:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ad8:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ad8/informant_relationship:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ad8/informant_contact_years:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_ad8/ad8_result:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_note:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_total:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_total:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_subscores_entered:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_orientation:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_orientation:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_registration:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_registration:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_attention:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_attention:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_recall:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_recall:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_language:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_language:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_hmse/hmse_mismatch:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_phq:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_phq/phq_safety_action_taken:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_phq/phq_supervisor_informed:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_easi:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_easi/easi_private:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_easi/easi_6:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_easi/easi_alert:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_easi/easi_lead_informed:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_sppb:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_sppb/sppb_intro:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_sppb/sppb_attempted:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_sppb/sppb_side_by_side_sec:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_sppb/sppb_semi_tandem_sec:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_sppb/sppb_tandem_sec:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_sppb/sppb_gait_unable:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_sppb/sppb_gait_sec:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_sppb/sppb_chair_unable:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_sppb/sppb_chair_sec:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_sppb/sppb_result:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_grip:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_grip/grip_attempted:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_grip/grip_right_1:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_grip/grip_right_2:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_grip/grip_left_1:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_grip/grip_left_2:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_grip/grip_result:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_glucose:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_glucose/glucose_type:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_glucose/glucose_mgdl:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_disposition:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_disposition/disposition_summary:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_disposition/referral_letter_issued:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_disposition/referral_facility:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_disposition/referral_facility:hint">
+            <value>-</value>
+          </text>
+          <text id="/data/g_disposition/referral_appointment_date:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_disposition/assessor_notes:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <data id="stage2_assessment" version="2026-07-29 00-00" prefix="J1!stage2_assessment!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <user>
+              <contact_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <name/>
+              <age/>
+              <gender/>
+              <phone/>
+              <education_level/>
+              <consent_given/>
+              <informant_name/>
+              <informant_phone/>
+            </contact>
+          </inputs>
+          <patient_uuid/>
+          <patient_id/>
+          <patient_name/>
+          <patient_sex/>
+          <patient_age/>
+          <patient_phone/>
+          <patient_education/>
+          <screened_by/>
+          <screened_by_name/>
+          <protocol>
+            <k_ad8_cutoff/>
+            <k_hmse_cut_illiterate/>
+            <k_hmse_cut_primary/>
+            <k_hmse_cut_secondary/>
+            <k_phq_cutoff/>
+            <k_grip_cut_male/>
+            <k_grip_cut_female/>
+            <k_sppb_cutoff/>
+          </protocol>
+          <g_link>
+            <assessment_date/>
+            <consent_reconfirmed/>
+            <education_confirm/>
+          </g_link>
+          <g_ad8>
+            <informant_available/>
+            <informant_relationship/>
+            <informant_contact_years/>
+            <ad8_stem/>
+            <ad8_1/>
+            <ad8_2/>
+            <ad8_3/>
+            <ad8_4/>
+            <ad8_5/>
+            <ad8_6/>
+            <ad8_7/>
+            <ad8_8/>
+            <ad8_total/>
+            <ad8_flag/>
+            <ad8_result/>
+          </g_ad8>
+          <g_hmse>
+            <hmse_note/>
+            <hmse_total/>
+            <hmse_subscores_entered>yes</hmse_subscores_entered>
+            <hmse_orientation/>
+            <hmse_registration/>
+            <hmse_attention/>
+            <hmse_recall/>
+            <hmse_language/>
+            <hmse_subtotal/>
+            <hmse_mismatch/>
+            <hmse_cutoff/>
+            <hmse_flag/>
+          </g_hmse>
+          <g_phq>
+            <phq_stem/>
+            <phq_1/>
+            <phq_2/>
+            <phq_3/>
+            <phq_4/>
+            <phq_5/>
+            <phq_6/>
+            <phq_7/>
+            <phq_8/>
+            <phq_9/>
+            <phq_total/>
+            <phq_severity/>
+            <phq_flag/>
+            <phq9_item9_positive/>
+            <phq_safety_alert/>
+            <phq_safety_action_taken/>
+            <phq_supervisor_informed/>
+          </g_phq>
+          <g_easi>
+            <easi_intro/>
+            <easi_private/>
+            <easi_1/>
+            <easi_2/>
+            <easi_3/>
+            <easi_4/>
+            <easi_5/>
+            <easi_6/>
+            <easi_positive/>
+            <easi_alert/>
+            <easi_lead_informed/>
+          </g_easi>
+          <g_sppb>
+            <sppb_intro/>
+            <sppb_attempted/>
+            <sppb_side_by_side_sec/>
+            <sppb_semi_tandem_sec/>
+            <sppb_tandem_sec/>
+            <sppb_bal_a/>
+            <sppb_bal_b/>
+            <sppb_bal_c/>
+            <sppb_balance_score/>
+            <sppb_gait_unable/>
+            <sppb_gait_sec/>
+            <sppb_gait_score/>
+            <sppb_chair_unable/>
+            <sppb_chair_sec/>
+            <sppb_chair_score/>
+            <sppb_total/>
+            <sppb_flag/>
+            <sppb_result/>
+          </g_sppb>
+          <g_grip>
+            <grip_attempted/>
+            <grip_right_1/>
+            <grip_right_2/>
+            <grip_left_1/>
+            <grip_left_2/>
+            <grip_max/>
+            <grip_cutoff/>
+            <grip_flag/>
+            <grip_result/>
+          </g_grip>
+          <g_glucose>
+            <glucose_type/>
+            <glucose_mgdl/>
+            <known_diabetes/>
+            <glucose_flag/>
+            <glucose_critical/>
+          </g_glucose>
+          <g_disposition>
+            <cognitive_flag/>
+            <physical_flag/>
+            <risk_total/>
+            <disposition/>
+            <referral_needed/>
+            <disposition_summary/>
+            <referral_letter_issued/>
+            <referral_facility/>
+            <referral_appointment_date/>
+            <assessor_notes/>
+          </g_disposition>
+          <meta tag="hidden">
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="user-contact-summary"/>
+      <instance id="yesno">
+        <root>
+          <item>
+            <itextId>yesno-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>yesno-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yesnodk">
+        <root>
+          <item>
+            <itextId>yesnodk-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>yesnodk-1</itextId>
+            <name>no</name>
+          </item>
+          <item>
+            <itextId>yesnodk-2</itextId>
+            <name>dk</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="edu">
+        <root>
+          <item>
+            <itextId>edu-0</itextId>
+            <name>illiterate</name>
+          </item>
+          <item>
+            <itextId>edu-1</itextId>
+            <name>primary</name>
+          </item>
+          <item>
+            <itextId>edu-2</itextId>
+            <name>secondary_plus</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="phq">
+        <root>
+          <item>
+            <itextId>phq-0</itextId>
+            <name>0</name>
+          </item>
+          <item>
+            <itextId>phq-1</itextId>
+            <name>1</name>
+          </item>
+          <item>
+            <itextId>phq-2</itextId>
+            <name>2</name>
+          </item>
+          <item>
+            <itextId>phq-3</itextId>
+            <name>3</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="ad8">
+        <root>
+          <item>
+            <itextId>ad8-0</itextId>
+            <name>1</name>
+          </item>
+          <item>
+            <itextId>ad8-1</itextId>
+            <name>0</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="glucose_type">
+        <root>
+          <item>
+            <itextId>glucose_type-0</itextId>
+            <name>fasting</name>
+          </item>
+          <item>
+            <itextId>glucose_type-1</itextId>
+            <name>random</name>
+          </item>
+          <item>
+            <itextId>glucose_type-2</itextId>
+            <name>not_done</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="informant_rel">
+        <root>
+          <item>
+            <itextId>informant_rel-0</itextId>
+            <name>spouse</name>
+          </item>
+          <item>
+            <itextId>informant_rel-1</itextId>
+            <name>child</name>
+          </item>
+          <item>
+            <itextId>informant_rel-2</itextId>
+            <name>child_in_law</name>
+          </item>
+          <item>
+            <itextId>informant_rel-3</itextId>
+            <name>sibling</name>
+          </item>
+          <item>
+            <itextId>informant_rel-4</itextId>
+            <name>other_relative</name>
+          </item>
+          <item>
+            <itextId>informant_rel-5</itextId>
+            <name>paid_carer</name>
+          </item>
+          <item>
+            <itextId>informant_rel-6</itextId>
+            <name>neighbour</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/data/inputs/source" type="string"/>
+      <bind nodeset="/data/inputs/source_id" type="string"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/data/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/data/inputs/contact/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/age" type="string"/>
+      <bind nodeset="/data/inputs/contact/gender" type="string"/>
+      <bind nodeset="/data/inputs/contact/phone" type="string"/>
+      <bind nodeset="/data/inputs/contact/education_level" type="string"/>
+      <bind nodeset="/data/inputs/contact/consent_given" type="string"/>
+      <bind nodeset="/data/inputs/contact/informant_name" type="string"/>
+      <bind nodeset="/data/inputs/contact/informant_phone" type="string"/>
+      <bind nodeset="/data/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/data/patient_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/data/patient_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/data/patient_sex" type="string" calculate="../inputs/contact/gender"/>
+      <bind nodeset="/data/patient_age" type="string" calculate="../inputs/contact/age"/>
+      <bind nodeset="/data/patient_phone" type="string" calculate="../inputs/contact/phone"/>
+      <bind nodeset="/data/patient_education" type="string" calculate="../inputs/contact/education_level"/>
+      <bind nodeset="/data/screened_by" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/data/screened_by_name" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/data/protocol/k_ad8_cutoff" type="string" calculate="2"/>
+      <bind nodeset="/data/protocol/k_hmse_cut_illiterate" type="string" calculate="19"/>
+      <bind nodeset="/data/protocol/k_hmse_cut_primary" type="string" calculate="21"/>
+      <bind nodeset="/data/protocol/k_hmse_cut_secondary" type="string" calculate="23"/>
+      <bind nodeset="/data/protocol/k_phq_cutoff" type="string" calculate="10"/>
+      <bind nodeset="/data/protocol/k_grip_cut_male" type="string" calculate="28"/>
+      <bind nodeset="/data/protocol/k_grip_cut_female" type="string" calculate="18"/>
+      <bind nodeset="/data/protocol/k_sppb_cutoff" type="string" calculate="8"/>
+      <bind nodeset="/data/g_link/assessment_date" type="date" required="true()"/>
+      <setvalue ref="/data/g_link/assessment_date" value="today()" event="odk-instance-first-load"/>
+      <bind nodeset="/data/g_link/consent_reconfirmed" type="string" required="true()"/>
+      <bind nodeset="/data/g_link/education_confirm" type="string" required="true()"/>
+      <bind nodeset="/data/g_ad8" relevant=" /data/g_link/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_ad8/informant_available" type="string" required="true()"/>
+      <bind nodeset="/data/g_ad8/informant_relationship" type="string" relevant=" /data/g_ad8/informant_available  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_ad8/informant_contact_years" type="int" relevant=" /data/g_ad8/informant_available  = 'yes'" constraint=". &gt;= 0 and . &lt;= 100"/>
+      <bind nodeset="/data/g_ad8/ad8_stem" readonly="true()" type="string" relevant=" /data/g_ad8/informant_available  = 'yes'"/>
+      <bind nodeset="/data/g_ad8/ad8_1" type="string" relevant=" /data/g_ad8/informant_available  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_ad8/ad8_2" type="string" relevant=" /data/g_ad8/informant_available  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_ad8/ad8_3" type="string" relevant=" /data/g_ad8/informant_available  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_ad8/ad8_4" type="string" relevant=" /data/g_ad8/informant_available  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_ad8/ad8_5" type="string" relevant=" /data/g_ad8/informant_available  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_ad8/ad8_6" type="string" relevant=" /data/g_ad8/informant_available  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_ad8/ad8_7" type="string" relevant=" /data/g_ad8/informant_available  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_ad8/ad8_8" type="string" relevant=" /data/g_ad8/informant_available  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_ad8/ad8_total" type="string" calculate="if( /data/g_ad8/informant_available  = 'no', -1, number( /data/g_ad8/ad8_1 ) + number( /data/g_ad8/ad8_2 ) + number( /data/g_ad8/ad8_3 ) + number( /data/g_ad8/ad8_4 ) + number( /data/g_ad8/ad8_5 ) + number( /data/g_ad8/ad8_6 ) + number( /data/g_ad8/ad8_7 ) + number( /data/g_ad8/ad8_8 ))"/>
+      <bind nodeset="/data/g_ad8/ad8_flag" type="string" calculate="if( /data/g_ad8/ad8_total  &gt;=  /data/protocol/k_ad8_cutoff , 1, 0)"/>
+      <bind nodeset="/data/g_ad8/ad8_result" readonly="true()" type="string" relevant=" /data/g_ad8/informant_available  = 'yes'"/>
+      <bind nodeset="/data/g_hmse" relevant=" /data/g_link/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_hmse/hmse_note" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_hmse/hmse_total" type="int" constraint=". &gt;= 0 and . &lt;= 31" jr:constraintMsg="jr:itext('/data/g_hmse/hmse_total:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/g_hmse/hmse_subscores_entered" type="string" required="true()"/>
+      <bind nodeset="/data/g_hmse/hmse_orientation" type="int" relevant=" /data/g_hmse/hmse_subscores_entered  = 'yes'" constraint=". &gt;= 0 and . &lt;= 31" jr:constraintMsg="jr:itext('/data/g_hmse/hmse_orientation:jr:constraintMsg')"/>
+      <bind nodeset="/data/g_hmse/hmse_registration" type="int" relevant=" /data/g_hmse/hmse_subscores_entered  = 'yes'" constraint=". &gt;= 0 and . &lt;= 31" jr:constraintMsg="jr:itext('/data/g_hmse/hmse_registration:jr:constraintMsg')"/>
+      <bind nodeset="/data/g_hmse/hmse_attention" type="int" relevant=" /data/g_hmse/hmse_subscores_entered  = 'yes'" constraint=". &gt;= 0 and . &lt;= 31" jr:constraintMsg="jr:itext('/data/g_hmse/hmse_attention:jr:constraintMsg')"/>
+      <bind nodeset="/data/g_hmse/hmse_recall" type="int" relevant=" /data/g_hmse/hmse_subscores_entered  = 'yes'" constraint=". &gt;= 0 and . &lt;= 31" jr:constraintMsg="jr:itext('/data/g_hmse/hmse_recall:jr:constraintMsg')"/>
+      <bind nodeset="/data/g_hmse/hmse_language" type="int" relevant=" /data/g_hmse/hmse_subscores_entered  = 'yes'" constraint=". &gt;= 0 and . &lt;= 31" jr:constraintMsg="jr:itext('/data/g_hmse/hmse_language:jr:constraintMsg')"/>
+      <bind nodeset="/data/g_hmse/hmse_subtotal" type="string" calculate=" /data/g_hmse/hmse_orientation  +  /data/g_hmse/hmse_registration  +  /data/g_hmse/hmse_attention  +  /data/g_hmse/hmse_recall  +  /data/g_hmse/hmse_language "/>
+      <bind nodeset="/data/g_hmse/hmse_mismatch" readonly="true()" type="string" relevant=" /data/g_hmse/hmse_subscores_entered  = 'yes' and  /data/g_hmse/hmse_subtotal  !=  /data/g_hmse/hmse_total "/>
+      <bind nodeset="/data/g_hmse/hmse_cutoff" type="string" calculate="if( /data/g_link/education_confirm  = 'illiterate',  /data/protocol/k_hmse_cut_illiterate , if( /data/g_link/education_confirm  = 'primary',  /data/protocol/k_hmse_cut_primary ,  /data/protocol/k_hmse_cut_secondary ))"/>
+      <bind nodeset="/data/g_hmse/hmse_flag" type="string" calculate="if( /data/g_hmse/hmse_total  &lt;=  /data/g_hmse/hmse_cutoff , 1, 0)"/>
+      <bind nodeset="/data/g_phq" relevant=" /data/g_link/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_phq/phq_stem" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_phq/phq_1" type="string" required="true()"/>
+      <bind nodeset="/data/g_phq/phq_2" type="string" required="true()"/>
+      <bind nodeset="/data/g_phq/phq_3" type="string" required="true()"/>
+      <bind nodeset="/data/g_phq/phq_4" type="string" required="true()"/>
+      <bind nodeset="/data/g_phq/phq_5" type="string" required="true()"/>
+      <bind nodeset="/data/g_phq/phq_6" type="string" required="true()"/>
+      <bind nodeset="/data/g_phq/phq_7" type="string" required="true()"/>
+      <bind nodeset="/data/g_phq/phq_8" type="string" required="true()"/>
+      <bind nodeset="/data/g_phq/phq_9" type="string" required="true()"/>
+      <bind nodeset="/data/g_phq/phq_total" type="string" calculate="number( /data/g_phq/phq_1 ) + number( /data/g_phq/phq_2 ) + number( /data/g_phq/phq_3 ) + number( /data/g_phq/phq_4 ) + number( /data/g_phq/phq_5 ) + number( /data/g_phq/phq_6 ) + number( /data/g_phq/phq_7 ) + number( /data/g_phq/phq_8 ) + number( /data/g_phq/phq_9 )"/>
+      <bind nodeset="/data/g_phq/phq_severity" type="string" calculate="if( /data/g_phq/phq_total  &gt;= 20, 'severe', if( /data/g_phq/phq_total  &gt;= 15, 'moderately_severe', if( /data/g_phq/phq_total  &gt;= 10, 'moderate', if( /data/g_phq/phq_total  &gt;= 5, 'mild', 'minimal'))))"/>
+      <bind nodeset="/data/g_phq/phq_flag" type="string" calculate="if( /data/g_phq/phq_total  &gt;=  /data/protocol/k_phq_cutoff , 1, 0)"/>
+      <bind nodeset="/data/g_phq/phq9_item9_positive" type="string" calculate="if(number( /data/g_phq/phq_9 ) &gt; 0, 1, 0)"/>
+      <bind nodeset="/data/g_phq/phq_safety_alert" readonly="true()" type="string" relevant=" /data/g_phq/phq9_item9_positive  = 1"/>
+      <bind nodeset="/data/g_phq/phq_safety_action_taken" type="string" relevant=" /data/g_phq/phq9_item9_positive  = 1" required="true()"/>
+      <bind nodeset="/data/g_phq/phq_supervisor_informed" type="string" relevant=" /data/g_phq/phq9_item9_positive  = 1" required="true()"/>
+      <bind nodeset="/data/g_easi" relevant=" /data/g_link/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_easi/easi_intro" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_easi/easi_private" type="string" required="true()"/>
+      <bind nodeset="/data/g_easi/easi_1" type="string" required="true()"/>
+      <bind nodeset="/data/g_easi/easi_2" type="string" required="true()"/>
+      <bind nodeset="/data/g_easi/easi_3" type="string" required="true()"/>
+      <bind nodeset="/data/g_easi/easi_4" type="string" required="true()"/>
+      <bind nodeset="/data/g_easi/easi_5" type="string" required="true()"/>
+      <bind nodeset="/data/g_easi/easi_6" type="string" required="true()"/>
+      <bind nodeset="/data/g_easi/easi_positive" type="string" calculate="if( /data/g_easi/easi_2  = 'yes' or  /data/g_easi/easi_3  = 'yes' or  /data/g_easi/easi_4  = 'yes' or  /data/g_easi/easi_5  = 'yes' or  /data/g_easi/easi_6  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/g_easi/easi_alert" readonly="true()" type="string" relevant=" /data/g_easi/easi_positive  = 1"/>
+      <bind nodeset="/data/g_easi/easi_lead_informed" type="string" relevant=" /data/g_easi/easi_positive  = 1" required="true()"/>
+      <bind nodeset="/data/g_sppb" relevant=" /data/g_link/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_sppb/sppb_intro" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_sppb/sppb_attempted" type="string" required="true()"/>
+      <bind nodeset="/data/g_sppb/sppb_side_by_side_sec" type="decimal" relevant=" /data/g_sppb/sppb_attempted  = 'yes'" constraint=". &gt;= 0 and . &lt;= 10" required="true()"/>
+      <bind nodeset="/data/g_sppb/sppb_semi_tandem_sec" type="decimal" relevant=" /data/g_sppb/sppb_attempted  = 'yes'" constraint=". &gt;= 0 and . &lt;= 10" required="true()"/>
+      <bind nodeset="/data/g_sppb/sppb_tandem_sec" type="decimal" relevant=" /data/g_sppb/sppb_attempted  = 'yes'" constraint=". &gt;= 0 and . &lt;= 10" required="true()"/>
+      <bind nodeset="/data/g_sppb/sppb_bal_a" type="string" calculate="if( /data/g_sppb/sppb_side_by_side_sec  &gt;= 10, 1, 0)"/>
+      <bind nodeset="/data/g_sppb/sppb_bal_b" type="string" calculate="if( /data/g_sppb/sppb_bal_a  = 1 and  /data/g_sppb/sppb_semi_tandem_sec  &gt;= 10, 1, 0)"/>
+      <bind nodeset="/data/g_sppb/sppb_bal_c" type="string" calculate="if( /data/g_sppb/sppb_bal_b  = 1 and  /data/g_sppb/sppb_tandem_sec  &gt;= 10, 2, if( /data/g_sppb/sppb_bal_b  = 1 and  /data/g_sppb/sppb_tandem_sec  &gt;= 3, 1, 0))"/>
+      <bind nodeset="/data/g_sppb/sppb_balance_score" type="string" calculate=" /data/g_sppb/sppb_bal_a  +  /data/g_sppb/sppb_bal_b  +  /data/g_sppb/sppb_bal_c "/>
+      <bind nodeset="/data/g_sppb/sppb_gait_unable" type="string" relevant=" /data/g_sppb/sppb_attempted  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_sppb/sppb_gait_sec" type="decimal" relevant=" /data/g_sppb/sppb_attempted  = 'yes' and  /data/g_sppb/sppb_gait_unable  = 'no'" constraint=". &gt; 0 and . &lt; 120" required="true()"/>
+      <bind nodeset="/data/g_sppb/sppb_gait_score" type="string" calculate="if( /data/g_sppb/sppb_gait_unable  = 'yes', 0, if( /data/g_sppb/sppb_gait_sec  &gt; 8.70, 1, if( /data/g_sppb/sppb_gait_sec  &gt;= 6.21, 2, if( /data/g_sppb/sppb_gait_sec  &gt;= 4.82, 3, 4))))"/>
+      <bind nodeset="/data/g_sppb/sppb_chair_unable" type="string" relevant=" /data/g_sppb/sppb_attempted  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_sppb/sppb_chair_sec" type="decimal" relevant=" /data/g_sppb/sppb_attempted  = 'yes' and  /data/g_sppb/sppb_chair_unable  = 'no'" constraint=". &gt; 0 and . &lt;= 120" required="true()"/>
+      <bind nodeset="/data/g_sppb/sppb_chair_score" type="string" calculate="if( /data/g_sppb/sppb_chair_unable  = 'yes', 0, if( /data/g_sppb/sppb_chair_sec  &gt; 60, 0, if( /data/g_sppb/sppb_chair_sec  &gt;= 16.70, 1, if( /data/g_sppb/sppb_chair_sec  &gt;= 13.70, 2, if( /data/g_sppb/sppb_chair_sec  &gt;= 11.20, 3, 4)))))"/>
+      <bind nodeset="/data/g_sppb/sppb_total" type="string" calculate="if( /data/g_sppb/sppb_attempted  = 'no', -1,  /data/g_sppb/sppb_balance_score  +  /data/g_sppb/sppb_gait_score  +  /data/g_sppb/sppb_chair_score )"/>
+      <bind nodeset="/data/g_sppb/sppb_flag" type="string" calculate="if( /data/g_sppb/sppb_total  &gt;= 0 and  /data/g_sppb/sppb_total  &lt;=  /data/protocol/k_sppb_cutoff , 1, 0)"/>
+      <bind nodeset="/data/g_sppb/sppb_result" readonly="true()" type="string" relevant=" /data/g_sppb/sppb_attempted  = 'yes'"/>
+      <bind nodeset="/data/g_grip" relevant=" /data/g_link/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_grip/grip_attempted" type="string" required="true()"/>
+      <bind nodeset="/data/g_grip/grip_right_1" type="decimal" relevant=" /data/g_grip/grip_attempted  = 'yes'" constraint=". &gt;= 0 and . &lt;= 100" required="true()"/>
+      <bind nodeset="/data/g_grip/grip_right_2" type="decimal" relevant=" /data/g_grip/grip_attempted  = 'yes'" constraint=". &gt;= 0 and . &lt;= 100" required="true()"/>
+      <bind nodeset="/data/g_grip/grip_left_1" type="decimal" relevant=" /data/g_grip/grip_attempted  = 'yes'" constraint=". &gt;= 0 and . &lt;= 100" required="true()"/>
+      <bind nodeset="/data/g_grip/grip_left_2" type="decimal" relevant=" /data/g_grip/grip_attempted  = 'yes'" constraint=". &gt;= 0 and . &lt;= 100" required="true()"/>
+      <bind nodeset="/data/g_grip/grip_max" type="string" calculate="if( /data/g_grip/grip_attempted  = 'no', -1, max( /data/g_grip/grip_right_1 ,  /data/g_grip/grip_right_2 ,  /data/g_grip/grip_left_1 ,  /data/g_grip/grip_left_2 ))"/>
+      <bind nodeset="/data/g_grip/grip_cutoff" type="string" calculate="if( /data/patient_sex  = 'female',  /data/protocol/k_grip_cut_female ,  /data/protocol/k_grip_cut_male )"/>
+      <bind nodeset="/data/g_grip/grip_flag" type="string" calculate="if( /data/g_grip/grip_max  &gt;= 0 and  /data/g_grip/grip_max  &lt;  /data/g_grip/grip_cutoff , 1, 0)"/>
+      <bind nodeset="/data/g_grip/grip_result" readonly="true()" type="string" relevant=" /data/g_grip/grip_attempted  = 'yes'"/>
+      <bind nodeset="/data/g_glucose" relevant=" /data/g_link/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_glucose/glucose_type" type="string" required="true()"/>
+      <bind nodeset="/data/g_glucose/glucose_mgdl" type="int" relevant=" /data/g_glucose/glucose_type  != 'not_done'" constraint=". &gt;= 20 and . &lt;= 700" required="true()"/>
+      <bind nodeset="/data/g_glucose/known_diabetes" type="string" required="true()"/>
+      <bind nodeset="/data/g_glucose/glucose_flag" type="string" calculate="if( /data/g_glucose/glucose_type  = 'not_done', 0, if( /data/g_glucose/glucose_mgdl  &lt; 70 or  /data/g_glucose/glucose_mgdl  &gt;= 300, 2, if(( /data/g_glucose/glucose_type  = 'fasting' and  /data/g_glucose/glucose_mgdl  &gt;= 126) or ( /data/g_glucose/glucose_type  = 'random' and  /data/g_glucose/glucose_mgdl  &gt;= 200), 1, 0)))"/>
+      <bind nodeset="/data/g_glucose/glucose_critical" readonly="true()" type="string" relevant=" /data/g_glucose/glucose_flag  = 2"/>
+      <bind nodeset="/data/g_disposition" relevant=" /data/g_link/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_disposition/cognitive_flag" type="string" calculate="if( /data/g_ad8/ad8_flag  = 1 or  /data/g_hmse/hmse_flag  = 1, 1, 0)"/>
+      <bind nodeset="/data/g_disposition/physical_flag" type="string" calculate="if( /data/g_sppb/sppb_flag  = 1 or  /data/g_grip/grip_flag  = 1, 1, 0)"/>
+      <bind nodeset="/data/g_disposition/risk_total" type="string" calculate=" /data/g_disposition/cognitive_flag  +  /data/g_phq/phq_flag  +  /data/g_easi/easi_positive  +  /data/g_disposition/physical_flag  + if( /data/g_glucose/glucose_flag  &gt; 0, 1, 0)"/>
+      <bind nodeset="/data/g_disposition/disposition" type="string" calculate="if( /data/g_phq/phq9_item9_positive  = 1 or  /data/g_glucose/glucose_flag  = 2, 'urgent_same_day', if( /data/g_easi/easi_positive  = 1, 'safeguarding', if( /data/g_disposition/cognitive_flag  = 1, 'memory_clinic_referral', if( /data/g_phq/phq_flag  = 1, 'mental_health_referral', if( /data/g_disposition/physical_flag  = 1, 'rehab_nutrition_referral', if( /data/g_glucose/glucose_flag  = 1, 'primary_care_referral', 'routine_followup'))))))"/>
+      <bind nodeset="/data/g_disposition/referral_needed" type="string" calculate="if( /data/g_disposition/disposition  = 'routine_followup', 'no', 'yes')"/>
+      <bind nodeset="/data/g_disposition/disposition_summary" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_disposition/referral_letter_issued" type="string" relevant=" /data/g_disposition/referral_needed  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_disposition/referral_facility" type="string" relevant=" /data/g_disposition/referral_needed  = 'yes'" required="true()"/>
+      <bind nodeset="/data/g_disposition/referral_appointment_date" type="date" relevant=" /data/g_disposition/referral_needed  = 'yes'"/>
+      <bind nodeset="/data/g_disposition/assessor_notes" type="string"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+      <bind nodeset="/data/meta/instanceName" type="string" calculate="concat( /data/patient_name , ' - Stage 2 - ',  /data/g_disposition/disposition )"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="field-list" ref="/data/inputs">
+      <label ref="jr:itext('/data/inputs:label')"/>
+      <group appearance="field-list" ref="/data/inputs/user">
+        <label ref="jr:itext('/data/inputs/user:label')"/>
+      </group>
+      <group appearance="field-list" ref="/data/inputs/contact">
+        <label ref="jr:itext('/data/inputs/contact:label')"/>
+        <input ref="/data/inputs/contact/_id" appearance="select-contact type-participant">
+          <label ref="jr:itext('/data/inputs/contact/_id:label')"/>
+        </input>
+      </group>
+    </group>
+    <group appearance="hidden" ref="/data/protocol">
+      <label ref="jr:itext('/data/protocol:label')"/>
+    </group>
+    <group appearance="field-list" ref="/data/g_link">
+      <label ref="jr:itext('/data/g_link:label')"/>
+      <input ref="/data/g_link/assessment_date">
+        <label ref="jr:itext('/data/g_link/assessment_date:label')"/>
+      </input>
+      <select1 ref="/data/g_link/consent_reconfirmed">
+        <label ref="jr:itext('/data/g_link/consent_reconfirmed:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_link/education_confirm">
+        <label ref="jr:itext('/data/g_link/education_confirm:label')"/>
+        <itemset nodeset="instance('edu')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g_ad8">
+      <label ref="jr:itext('/data/g_ad8:label')"/>
+      <select1 ref="/data/g_ad8/informant_available">
+        <label ref="jr:itext('/data/g_ad8/informant_available:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_ad8/informant_relationship">
+        <label ref="jr:itext('/data/g_ad8/informant_relationship:label')"/>
+        <itemset nodeset="instance('informant_rel')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_ad8/informant_contact_years">
+        <label ref="jr:itext('/data/g_ad8/informant_contact_years:label')"/>
+      </input>
+      <input ref="/data/g_ad8/ad8_stem">
+        <label ref="jr:itext('/data/g_ad8/ad8_stem:label')"/>
+      </input>
+      <select1 ref="/data/g_ad8/ad8_1">
+        <label ref="jr:itext('/data/g_ad8/ad8_1:label')"/>
+        <itemset nodeset="instance('ad8')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_ad8/ad8_2">
+        <label ref="jr:itext('/data/g_ad8/ad8_2:label')"/>
+        <itemset nodeset="instance('ad8')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_ad8/ad8_3">
+        <label ref="jr:itext('/data/g_ad8/ad8_3:label')"/>
+        <itemset nodeset="instance('ad8')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_ad8/ad8_4">
+        <label ref="jr:itext('/data/g_ad8/ad8_4:label')"/>
+        <itemset nodeset="instance('ad8')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_ad8/ad8_5">
+        <label ref="jr:itext('/data/g_ad8/ad8_5:label')"/>
+        <itemset nodeset="instance('ad8')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_ad8/ad8_6">
+        <label ref="jr:itext('/data/g_ad8/ad8_6:label')"/>
+        <itemset nodeset="instance('ad8')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_ad8/ad8_7">
+        <label ref="jr:itext('/data/g_ad8/ad8_7:label')"/>
+        <itemset nodeset="instance('ad8')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_ad8/ad8_8">
+        <label ref="jr:itext('/data/g_ad8/ad8_8:label')"/>
+        <itemset nodeset="instance('ad8')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_ad8/ad8_result">
+        <label ref="jr:itext('/data/g_ad8/ad8_result:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_hmse">
+      <label ref="jr:itext('/data/g_hmse:label')"/>
+      <input ref="/data/g_hmse/hmse_note">
+        <label ref="jr:itext('/data/g_hmse/hmse_note:label')"/>
+      </input>
+      <input ref="/data/g_hmse/hmse_total">
+        <label ref="jr:itext('/data/g_hmse/hmse_total:label')"/>
+      </input>
+      <select1 ref="/data/g_hmse/hmse_subscores_entered">
+        <label ref="jr:itext('/data/g_hmse/hmse_subscores_entered:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_hmse/hmse_orientation">
+        <label ref="jr:itext('/data/g_hmse/hmse_orientation:label')"/>
+      </input>
+      <input ref="/data/g_hmse/hmse_registration">
+        <label ref="jr:itext('/data/g_hmse/hmse_registration:label')"/>
+      </input>
+      <input ref="/data/g_hmse/hmse_attention">
+        <label ref="jr:itext('/data/g_hmse/hmse_attention:label')"/>
+      </input>
+      <input ref="/data/g_hmse/hmse_recall">
+        <label ref="jr:itext('/data/g_hmse/hmse_recall:label')"/>
+      </input>
+      <input ref="/data/g_hmse/hmse_language">
+        <label ref="jr:itext('/data/g_hmse/hmse_language:label')"/>
+      </input>
+      <input ref="/data/g_hmse/hmse_mismatch">
+        <label ref="jr:itext('/data/g_hmse/hmse_mismatch:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_phq">
+      <label ref="jr:itext('/data/g_phq:label')"/>
+      <input ref="/data/g_phq/phq_stem">
+        <label ref="jr:itext('/data/g_phq/phq_stem:label')"/>
+      </input>
+      <select1 ref="/data/g_phq/phq_1">
+        <label ref="jr:itext('/data/g_phq/phq_1:label')"/>
+        <itemset nodeset="instance('phq')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_phq/phq_2">
+        <label ref="jr:itext('/data/g_phq/phq_2:label')"/>
+        <itemset nodeset="instance('phq')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_phq/phq_3">
+        <label ref="jr:itext('/data/g_phq/phq_3:label')"/>
+        <itemset nodeset="instance('phq')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_phq/phq_4">
+        <label ref="jr:itext('/data/g_phq/phq_4:label')"/>
+        <itemset nodeset="instance('phq')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_phq/phq_5">
+        <label ref="jr:itext('/data/g_phq/phq_5:label')"/>
+        <itemset nodeset="instance('phq')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_phq/phq_6">
+        <label ref="jr:itext('/data/g_phq/phq_6:label')"/>
+        <itemset nodeset="instance('phq')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_phq/phq_7">
+        <label ref="jr:itext('/data/g_phq/phq_7:label')"/>
+        <itemset nodeset="instance('phq')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_phq/phq_8">
+        <label ref="jr:itext('/data/g_phq/phq_8:label')"/>
+        <itemset nodeset="instance('phq')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_phq/phq_9">
+        <label ref="jr:itext('/data/g_phq/phq_9:label')"/>
+        <itemset nodeset="instance('phq')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_phq/phq_safety_alert">
+        <label ref="jr:itext('/data/g_phq/phq_safety_alert:label')"/>
+      </input>
+      <input ref="/data/g_phq/phq_safety_action_taken">
+        <label ref="jr:itext('/data/g_phq/phq_safety_action_taken:label')"/>
+      </input>
+      <select1 ref="/data/g_phq/phq_supervisor_informed">
+        <label ref="jr:itext('/data/g_phq/phq_supervisor_informed:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g_easi">
+      <label ref="jr:itext('/data/g_easi:label')"/>
+      <input ref="/data/g_easi/easi_intro">
+        <label ref="jr:itext('/data/g_easi/easi_intro:label')"/>
+      </input>
+      <select1 ref="/data/g_easi/easi_private">
+        <label ref="jr:itext('/data/g_easi/easi_private:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_easi/easi_1">
+        <label ref="jr:itext('/data/g_easi/easi_1:label')"/>
+        <itemset nodeset="instance('yesnodk')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_easi/easi_2">
+        <label ref="jr:itext('/data/g_easi/easi_2:label')"/>
+        <itemset nodeset="instance('yesnodk')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_easi/easi_3">
+        <label ref="jr:itext('/data/g_easi/easi_3:label')"/>
+        <itemset nodeset="instance('yesnodk')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_easi/easi_4">
+        <label ref="jr:itext('/data/g_easi/easi_4:label')"/>
+        <itemset nodeset="instance('yesnodk')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_easi/easi_5">
+        <label ref="jr:itext('/data/g_easi/easi_5:label')"/>
+        <itemset nodeset="instance('yesnodk')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_easi/easi_6">
+        <label ref="jr:itext('/data/g_easi/easi_6:label')"/>
+        <itemset nodeset="instance('yesnodk')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_easi/easi_alert">
+        <label ref="jr:itext('/data/g_easi/easi_alert:label')"/>
+      </input>
+      <select1 ref="/data/g_easi/easi_lead_informed">
+        <label ref="jr:itext('/data/g_easi/easi_lead_informed:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g_sppb">
+      <label ref="jr:itext('/data/g_sppb:label')"/>
+      <input ref="/data/g_sppb/sppb_intro">
+        <label ref="jr:itext('/data/g_sppb/sppb_intro:label')"/>
+      </input>
+      <select1 ref="/data/g_sppb/sppb_attempted">
+        <label ref="jr:itext('/data/g_sppb/sppb_attempted:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_sppb/sppb_side_by_side_sec">
+        <label ref="jr:itext('/data/g_sppb/sppb_side_by_side_sec:label')"/>
+      </input>
+      <input ref="/data/g_sppb/sppb_semi_tandem_sec">
+        <label ref="jr:itext('/data/g_sppb/sppb_semi_tandem_sec:label')"/>
+      </input>
+      <input ref="/data/g_sppb/sppb_tandem_sec">
+        <label ref="jr:itext('/data/g_sppb/sppb_tandem_sec:label')"/>
+      </input>
+      <select1 ref="/data/g_sppb/sppb_gait_unable">
+        <label ref="jr:itext('/data/g_sppb/sppb_gait_unable:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_sppb/sppb_gait_sec">
+        <label ref="jr:itext('/data/g_sppb/sppb_gait_sec:label')"/>
+      </input>
+      <select1 ref="/data/g_sppb/sppb_chair_unable">
+        <label ref="jr:itext('/data/g_sppb/sppb_chair_unable:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_sppb/sppb_chair_sec">
+        <label ref="jr:itext('/data/g_sppb/sppb_chair_sec:label')"/>
+      </input>
+      <input ref="/data/g_sppb/sppb_result">
+        <label ref="jr:itext('/data/g_sppb/sppb_result:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_grip">
+      <label ref="jr:itext('/data/g_grip:label')"/>
+      <select1 ref="/data/g_grip/grip_attempted">
+        <label ref="jr:itext('/data/g_grip/grip_attempted:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_grip/grip_right_1">
+        <label ref="jr:itext('/data/g_grip/grip_right_1:label')"/>
+      </input>
+      <input ref="/data/g_grip/grip_right_2">
+        <label ref="jr:itext('/data/g_grip/grip_right_2:label')"/>
+      </input>
+      <input ref="/data/g_grip/grip_left_1">
+        <label ref="jr:itext('/data/g_grip/grip_left_1:label')"/>
+      </input>
+      <input ref="/data/g_grip/grip_left_2">
+        <label ref="jr:itext('/data/g_grip/grip_left_2:label')"/>
+      </input>
+      <input ref="/data/g_grip/grip_result">
+        <label ref="jr:itext('/data/g_grip/grip_result:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_glucose">
+      <label ref="jr:itext('/data/g_glucose:label')"/>
+      <select1 ref="/data/g_glucose/glucose_type">
+        <label ref="jr:itext('/data/g_glucose/glucose_type:label')"/>
+        <itemset nodeset="instance('glucose_type')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_glucose/glucose_mgdl">
+        <label ref="jr:itext('/data/g_glucose/glucose_mgdl:label')"/>
+      </input>
+      <select1 ref="/data/g_glucose/known_diabetes">
+        <label ref="jr:itext('/data/g_glucose/known_diabetes:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_glucose/glucose_critical">
+        <label ref="jr:itext('/data/g_glucose/glucose_critical:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_disposition">
+      <label ref="jr:itext('/data/g_disposition:label')"/>
+      <input ref="/data/g_disposition/disposition_summary">
+        <label ref="jr:itext('/data/g_disposition/disposition_summary:label')"/>
+      </input>
+      <select1 ref="/data/g_disposition/referral_letter_issued">
+        <label ref="jr:itext('/data/g_disposition/referral_letter_issued:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_disposition/referral_facility">
+        <label ref="jr:itext('/data/g_disposition/referral_facility:label')"/>
+        <hint ref="jr:itext('/data/g_disposition/referral_facility:hint')"/>
+      </input>
+      <input ref="/data/g_disposition/referral_appointment_date">
+        <label ref="jr:itext('/data/g_disposition/referral_appointment_date:label')"/>
+      </input>
+      <input ref="/data/g_disposition/assessor_notes">
+        <label ref="jr:itext('/data/g_disposition/assessor_notes:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

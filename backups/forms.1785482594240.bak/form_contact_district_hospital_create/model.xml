@@ -1,0 +1,216 @@
+
+  <model xmlns:odk="http://www.opendatakit.org/xforms" odk:xforms-version="1.0.0">
+    <instance>
+        <data xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" id="contact:district_hospital:create" version="2025-05-01 22-44" prefix="J1!contact:district_hospital:create!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <user>
+              <contact_id/>
+              <facility_id/>
+              <name/>
+            </user>
+          </inputs>
+          <district_hospital>
+            <parent>PARENT</parent>
+            <type/>
+            <is_name_generated>true</is_name_generated>
+            <name/>
+            <external_id/>
+            <notes/>
+            <contact/>
+            <geolocation/>
+            <meta tag="hidden">
+              <created_by/>
+              <created_by_person_uuid/>
+              <created_by_place_uuid/>
+            </meta>
+          </district_hospital>
+          <init>
+            <create_new_person/>
+            <select_person/>
+            <name/>
+            <contact_name/>
+            <custom_place_name_label_translator/>
+            <custom_place_name_label/>
+            <custom_place_name/>
+            <place_type>district_hospital</place_type>
+            <place_type_translation/>
+            <generated_name>district_hospital</generated_name>
+            <generated_name_translation/>
+          </init>
+          <contact>
+            <parent>PARENT</parent>
+            <type>person</type>
+            <name/>
+            <short_name/>
+            <date_of_birth/>
+            <date_of_birth_method/>
+            <ephemeral_dob>
+              <dob_calendar/>
+              <age_label/>
+              <age_years/>
+              <age_months/>
+              <dob_method/>
+              <dob_approx/>
+              <dob_raw/>
+              <dob_iso/>
+              <dob_debug/>
+            </ephemeral_dob>
+            <phone/>
+            <phone_alternate/>
+            <sex/>
+            <role/>
+            <role_other/>
+            <external_id/>
+            <notes/>
+            <user_for_contact>
+              <create/>
+            </user_for_contact>
+            <meta tag="hidden">
+              <created_by/>
+              <created_by_person_uuid/>
+              <created_by_place_uuid/>
+            </meta>
+          </contact>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+    <instance id="yes_no">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>yes_no-0</itextId>
+            <name>true</name>
+          </item>
+          <item>
+            <itextId>yes_no-1</itextId>
+            <name>false</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="male_female">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>male_female-0</itextId>
+            <name>female</name>
+          </item>
+          <item>
+            <itextId>male_female-1</itextId>
+            <name>male</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="contact">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>contact-0</itextId>
+            <name>new_person</name>
+          </item>
+          <item>
+            <itextId>contact-1</itextId>
+            <name>old_person</name>
+          </item>
+          <item>
+            <itextId>contact-2</itextId>
+            <name>none</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="select_dob_method">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>select_dob_method-0</itextId>
+            <name>approx</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="roles">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>roles-0</itextId>
+            <name>chw</name>
+          </item>
+          <item>
+            <itextId>roles-1</itextId>
+            <name>chw_supervisor</name>
+          </item>
+          <item>
+            <itextId>roles-2</itextId>
+            <name>nurse</name>
+          </item>
+          <item>
+            <itextId>roles-3</itextId>
+            <name>manager</name>
+          </item>
+          <item>
+            <itextId>roles-4</itextId>
+            <name>patient</name>
+          </item>
+          <item>
+            <itextId>roles-5</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="yes_no_generated_name">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>yes_no_generated_name-0</itextId>
+            <name>true</name>
+          </item>
+          <item>
+            <itextId>yes_no_generated_name-1</itextId>
+            <name>false</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="place_type">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>place_type-0</itextId>
+            <name>district_hospital</name>
+          </item>
+          <item>
+            <itextId>place_type-1</itextId>
+            <name>health_center</name>
+          </item>
+          <item>
+            <itextId>place_type-2</itextId>
+            <name>clinic</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="generated_name">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>generated_name-0</itextId>
+            <name>district_hospital</name>
+          </item>
+          <item>
+            <itextId>generated_name-1</itextId>
+            <name>health_center</name>
+          </item>
+          <item>
+            <itextId>generated_name-2</itextId>
+            <name>clinic</name>
+          </item>
+        </root>
+      </instance>
+    <instance id="translate_name_label">
+        <root xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms">
+          <item>
+            <itextId>translate_name_label-0</itextId>
+            <name>name</name>
+          </item>
+        </root>
+      </instance>
+  </model>
+

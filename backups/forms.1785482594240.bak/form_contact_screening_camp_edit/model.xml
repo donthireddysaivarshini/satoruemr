@@ -1,0 +1,17 @@
+
+  <model xmlns:odk="http://www.opendatakit.org/xforms" odk:xforms-version="1.0.0">
+    <instance>
+        <data xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" id="contact:screening_camp:edit" version="2026-07-27 00-00" prefix="J1!contact:screening_camp:edit!" delimiter="#">
+          <screening_camp>
+            <name/>
+            <location/>
+            <contact_number/>
+            <notes/>
+          </screening_camp>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+  </model>
+

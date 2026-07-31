@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>Edit Screening Camp</h:title>
+    <model odk:xforms-version="1.0.0">
+      <instance>
+        <data id="contact:screening_camp:edit" version="2026-07-27 00-00" prefix="J1!contact:screening_camp:edit!" delimiter="#">
+          <screening_camp>
+            <name/>
+            <location/>
+            <contact_number/>
+            <notes/>
+          </screening_camp>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <bind nodeset="/data/screening_camp/name" type="string" required="true()"/>
+      <bind nodeset="/data/screening_camp/location" type="string" required="true()"/>
+      <bind nodeset="/data/screening_camp/contact_number" type="tel" constraint="true()" jr:constraintMsg="Please enter a valid phone number."/>
+      <bind nodeset="/data/screening_camp/notes" type="string"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/data/screening_camp">
+      <label>NO_LABEL</label>
+      <input ref="/data/screening_camp/name">
+        <label>Camp Name</label>
+      </input>
+      <input ref="/data/screening_camp/location">
+        <label>Location</label>
+      </input>
+      <input ref="/data/screening_camp/contact_number">
+        <label>Contact Number</label>
+      </input>
+      <input ref="/data/screening_camp/notes" appearance="multiline">
+        <label>Notes</label>
+      </input>
+    </group>
+  </h:body>
+</h:html>

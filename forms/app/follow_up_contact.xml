@@ -1,0 +1,547 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>Follow-up Contact</h:title>
+    <model odk:xforms-version="1.0.0">
+      <itext>
+        <translation lang="en">
+          <text id="yesno-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesno-1">
+            <value>No</value>
+          </text>
+          <text id="mode-0">
+            <value>Phone call</value>
+          </text>
+          <text id="mode-1">
+            <value>Home visit</value>
+          </text>
+          <text id="mode-2">
+            <value>Met at camp</value>
+          </text>
+          <text id="mode-3">
+            <value>WhatsApp / SMS</value>
+          </text>
+          <text id="mode-4">
+            <value>Via community leader / ASHA</value>
+          </text>
+          <text id="outcome-0">
+            <value>Reached - Stage 2 appointment scheduled</value>
+          </text>
+          <text id="outcome-1">
+            <value>Reached - undecided, call again</value>
+          </text>
+          <text id="outcome-2">
+            <value>Reached - declined further assessment</value>
+          </text>
+          <text id="outcome-3">
+            <value>Reached - already assessed elsewhere</value>
+          </text>
+          <text id="outcome-4">
+            <value>Not reachable - no answer</value>
+          </text>
+          <text id="outcome-5">
+            <value>Wrong or invalid number</value>
+          </text>
+          <text id="outcome-6">
+            <value>Moved away from the area</value>
+          </text>
+          <text id="outcome-7">
+            <value>Participant has died</value>
+          </text>
+          <text id="outcome-8">
+            <value>Too unwell to attend</value>
+          </text>
+          <text id="barrier-0">
+            <value>Transport / distance</value>
+          </text>
+          <text id="barrier-1">
+            <value>Cost concerns</value>
+          </text>
+          <text id="barrier-2">
+            <value>Family not permitting</value>
+          </text>
+          <text id="barrier-3">
+            <value>Stigma / fear of label</value>
+          </text>
+          <text id="barrier-4">
+            <value>Does not feel it is needed</value>
+          </text>
+          <text id="barrier-5">
+            <value>No informant available</value>
+          </text>
+          <text id="barrier-6">
+            <value>Work / farming commitments</value>
+          </text>
+          <text id="barrier-7">
+            <value>Other</value>
+          </text>
+          <text id="/data/inputs:label">
+            <value>Participant</value>
+          </text>
+          <text id="/data/inputs/user:label">
+            <value>User</value>
+          </text>
+          <text id="/data/inputs/contact:label">
+            <value>Participant</value>
+          </text>
+          <text id="/data/inputs/contact/_id:label">
+            <value>Select participant</value>
+          </text>
+          <text id="/data/g_fu:label">
+            <value>Follow-up attempt</value>
+          </text>
+          <text id="/data/g_fu/attempt_number:label">
+            <value>Attempt number</value>
+          </text>
+          <text id="/data/g_fu/contact_date:label">
+            <value>Date of this attempt</value>
+          </text>
+          <text id="/data/g_fu/contact_mode:label">
+            <value>How was contact attempted?</value>
+          </text>
+          <text id="/data/g_fu/outcome:label">
+            <value>Outcome of this attempt</value>
+          </text>
+          <text id="/data/g_fu/barriers:label">
+            <value>Barriers reported</value>
+          </text>
+          <text id="/data/g_fu/appointment_date:jr:constraintMsg">
+            <value>Appointment must be today or later.</value>
+          </text>
+          <text id="/data/g_fu/appointment_date:label">
+            <value>Stage 2 appointment date agreed</value>
+          </text>
+          <text id="/data/g_fu/appointment_location:label">
+            <value>Where</value>
+          </text>
+          <text id="/data/g_fu/date_of_death:label">
+            <value>Date of death (if known)</value>
+          </text>
+          <text id="/data/g_fu/new_phone:label">
+            <value>Updated phone number</value>
+          </text>
+          <text id="/data/g_fu/notes:label">
+            <value>Notes</value>
+          </text>
+          <text id="/data/g_next:label">
+            <value>Next action</value>
+          </text>
+          <text id="/data/g_next/closing_note:label">
+            <value>This closes the active follow-up for this participant. They stay in the annual re-screen list unless deceased or moved away.</value>
+          </text>
+        </translation>
+        <translation lang="te">
+          <text id="yesno-0">
+            <value>అవును</value>
+          </text>
+          <text id="yesno-1">
+            <value>కాదు</value>
+          </text>
+          <text id="mode-0">
+            <value>ఫోన్ కాల్</value>
+          </text>
+          <text id="mode-1">
+            <value>ఇంటికి వెళ్లడం</value>
+          </text>
+          <text id="mode-2">
+            <value>క్యాంప్‌లో కలిశారు</value>
+          </text>
+          <text id="mode-3">
+            <value>వాట్సాప్ / SMS</value>
+          </text>
+          <text id="mode-4">
+            <value>కమ్యూనిటీ లీడర్ / ఆశా ద్వారా</value>
+          </text>
+          <text id="outcome-0">
+            <value>కుదిరింది - రెండో దశకు తేదీ ఇచ్చాం</value>
+          </text>
+          <text id="outcome-1">
+            <value>కుదిరింది - ఇంకా నిర్ణయించుకోలేదు</value>
+          </text>
+          <text id="outcome-2">
+            <value>కుదిరింది - ఇంక వద్దన్నారు</value>
+          </text>
+          <text id="outcome-3">
+            <value>వేరే చోట పరీక్ష చేయించుకున్నారు</value>
+          </text>
+          <text id="outcome-4">
+            <value>ఫోన్ ఎత్తలేదు</value>
+          </text>
+          <text id="outcome-5">
+            <value>నంబర్ తప్పు</value>
+          </text>
+          <text id="outcome-6">
+            <value>ఊరు వదిలి వెళ్లారు</value>
+          </text>
+          <text id="outcome-7">
+            <value>మరణించారు</value>
+          </text>
+          <text id="outcome-8">
+            <value>ఆరోగ్యం బాగాలేదు</value>
+          </text>
+          <text id="barrier-0">
+            <value>రవాణా / దూరం</value>
+          </text>
+          <text id="barrier-1">
+            <value>ఖర్చు</value>
+          </text>
+          <text id="barrier-2">
+            <value>కుటుంబం ఒప్పుకోవడం లేదు</value>
+          </text>
+          <text id="barrier-3">
+            <value>అపవాదు భయం</value>
+          </text>
+          <text id="barrier-4">
+            <value>అవసరం లేదని అనుకుంటున్నారు</value>
+          </text>
+          <text id="barrier-5">
+            <value>సమాచారం ఇచ్చేవారు లేరు</value>
+          </text>
+          <text id="barrier-6">
+            <value>పని / వ్యవసాయం</value>
+          </text>
+          <text id="barrier-7">
+            <value>ఇతర</value>
+          </text>
+          <text id="/data/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_fu:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_fu/attempt_number:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_fu/contact_date:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_fu/contact_mode:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_fu/outcome:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_fu/barriers:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_fu/appointment_date:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_fu/appointment_date:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_fu/appointment_location:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_fu/date_of_death:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_fu/new_phone:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_fu/notes:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_next:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_next/closing_note:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <data id="follow_up_contact" version="2026-07-29 00-00" prefix="J1!follow_up_contact!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <user>
+              <contact_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <name/>
+              <age/>
+              <gender/>
+              <phone/>
+              <education_level/>
+              <consent_given/>
+              <informant_name/>
+              <informant_phone/>
+            </contact>
+          </inputs>
+          <patient_uuid/>
+          <patient_id/>
+          <patient_name/>
+          <patient_sex/>
+          <patient_age/>
+          <patient_phone/>
+          <patient_education/>
+          <screened_by/>
+          <screened_by_name/>
+          <g_fu>
+            <attempt_number>1</attempt_number>
+            <contact_date/>
+            <contact_mode/>
+            <outcome/>
+            <barriers/>
+            <appointment_date/>
+            <appointment_location/>
+            <date_of_death/>
+            <new_phone/>
+            <notes/>
+          </g_fu>
+          <g_next>
+            <closes_case/>
+            <follow_up_status/>
+            <closing_note/>
+          </g_next>
+          <meta tag="hidden">
+            <instanceID/>
+            <instanceName/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="user-contact-summary"/>
+      <instance id="yesno">
+        <root>
+          <item>
+            <itextId>yesno-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>yesno-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="mode">
+        <root>
+          <item>
+            <itextId>mode-0</itextId>
+            <name>phone</name>
+          </item>
+          <item>
+            <itextId>mode-1</itextId>
+            <name>home_visit</name>
+          </item>
+          <item>
+            <itextId>mode-2</itextId>
+            <name>camp</name>
+          </item>
+          <item>
+            <itextId>mode-3</itextId>
+            <name>whatsapp</name>
+          </item>
+          <item>
+            <itextId>mode-4</itextId>
+            <name>community_leader</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="outcome">
+        <root>
+          <item>
+            <itextId>outcome-0</itextId>
+            <name>scheduled</name>
+          </item>
+          <item>
+            <itextId>outcome-1</itextId>
+            <name>will_think</name>
+          </item>
+          <item>
+            <itextId>outcome-2</itextId>
+            <name>refused</name>
+          </item>
+          <item>
+            <itextId>outcome-3</itextId>
+            <name>done_elsewhere</name>
+          </item>
+          <item>
+            <itextId>outcome-4</itextId>
+            <name>no_answer</name>
+          </item>
+          <item>
+            <itextId>outcome-5</itextId>
+            <name>wrong_number</name>
+          </item>
+          <item>
+            <itextId>outcome-6</itextId>
+            <name>moved</name>
+          </item>
+          <item>
+            <itextId>outcome-7</itextId>
+            <name>deceased</name>
+          </item>
+          <item>
+            <itextId>outcome-8</itextId>
+            <name>unwell</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="barrier">
+        <root>
+          <item>
+            <itextId>barrier-0</itextId>
+            <name>transport</name>
+          </item>
+          <item>
+            <itextId>barrier-1</itextId>
+            <name>cost</name>
+          </item>
+          <item>
+            <itextId>barrier-2</itextId>
+            <name>family_permission</name>
+          </item>
+          <item>
+            <itextId>barrier-3</itextId>
+            <name>stigma</name>
+          </item>
+          <item>
+            <itextId>barrier-4</itextId>
+            <name>no_perceived_need</name>
+          </item>
+          <item>
+            <itextId>barrier-5</itextId>
+            <name>caregiver_unavailable</name>
+          </item>
+          <item>
+            <itextId>barrier-6</itextId>
+            <name>work</name>
+          </item>
+          <item>
+            <itextId>barrier-7</itextId>
+            <name>other</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/data/inputs/source" type="string"/>
+      <bind nodeset="/data/inputs/source_id" type="string"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/data/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/data/inputs/contact/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/age" type="string"/>
+      <bind nodeset="/data/inputs/contact/gender" type="string"/>
+      <bind nodeset="/data/inputs/contact/phone" type="string"/>
+      <bind nodeset="/data/inputs/contact/education_level" type="string"/>
+      <bind nodeset="/data/inputs/contact/consent_given" type="string"/>
+      <bind nodeset="/data/inputs/contact/informant_name" type="string"/>
+      <bind nodeset="/data/inputs/contact/informant_phone" type="string"/>
+      <bind nodeset="/data/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/data/patient_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/data/patient_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/data/patient_sex" type="string" calculate="../inputs/contact/gender"/>
+      <bind nodeset="/data/patient_age" type="string" calculate="../inputs/contact/age"/>
+      <bind nodeset="/data/patient_phone" type="string" calculate="../inputs/contact/phone"/>
+      <bind nodeset="/data/patient_education" type="string" calculate="../inputs/contact/education_level"/>
+      <bind nodeset="/data/screened_by" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/data/screened_by_name" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/data/g_fu/attempt_number" type="int" constraint=". &gt;= 1 and . &lt;= 10" required="true()"/>
+      <bind nodeset="/data/g_fu/contact_date" type="date" required="true()"/>
+      <setvalue ref="/data/g_fu/contact_date" value="today()" event="odk-instance-first-load"/>
+      <bind nodeset="/data/g_fu/contact_mode" type="string" required="true()"/>
+      <bind nodeset="/data/g_fu/outcome" type="string" required="true()"/>
+      <bind nodeset="/data/g_fu/barriers" type="string" relevant="selected( /data/g_fu/outcome , 'will_think') or selected( /data/g_fu/outcome , 'refused') or selected( /data/g_fu/outcome , 'unwell')"/>
+      <bind nodeset="/data/g_fu/appointment_date" type="date" relevant=" /data/g_fu/outcome  = 'scheduled'" constraint=". &gt;= today()" jr:constraintMsg="jr:itext('/data/g_fu/appointment_date:jr:constraintMsg')" required="true()"/>
+      <bind nodeset="/data/g_fu/appointment_location" type="string" relevant=" /data/g_fu/outcome  = 'scheduled'" required="true()"/>
+      <bind nodeset="/data/g_fu/date_of_death" type="date" relevant=" /data/g_fu/outcome  = 'deceased'"/>
+      <bind nodeset="/data/g_fu/new_phone" type="string" relevant=" /data/g_fu/outcome  = 'wrong_number'"/>
+      <bind nodeset="/data/g_fu/notes" type="string"/>
+      <bind nodeset="/data/g_next/closes_case" type="string" calculate="if( /data/g_fu/outcome  = 'refused' or  /data/g_fu/outcome  = 'deceased' or  /data/g_fu/outcome  = 'moved' or  /data/g_fu/outcome  = 'done_elsewhere' or  /data/g_fu/attempt_number  &gt;= 3, 'yes', 'no')"/>
+      <bind nodeset="/data/g_next/follow_up_status" type="string" calculate="if( /data/g_fu/outcome  = 'scheduled', 'scheduled', if( /data/g_next/closes_case  = 'yes', 'closed', 'pending'))"/>
+      <bind nodeset="/data/g_next/closing_note" readonly="true()" type="string" relevant=" /data/g_next/closes_case  = 'yes'"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+      <bind nodeset="/data/meta/instanceName" type="string" calculate="concat( /data/patient_name , ' - Follow-up - ',  /data/g_fu/outcome )"/>
+    </model>
+  </h:head>
+  <h:body class="pages">
+    <group appearance="field-list" ref="/data/inputs">
+      <label ref="jr:itext('/data/inputs:label')"/>
+      <group appearance="field-list" ref="/data/inputs/user">
+        <label ref="jr:itext('/data/inputs/user:label')"/>
+      </group>
+      <group appearance="field-list" ref="/data/inputs/contact">
+        <label ref="jr:itext('/data/inputs/contact:label')"/>
+        <input ref="/data/inputs/contact/_id" appearance="select-contact type-participant">
+          <label ref="jr:itext('/data/inputs/contact/_id:label')"/>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/data/g_fu">
+      <label ref="jr:itext('/data/g_fu:label')"/>
+      <input ref="/data/g_fu/attempt_number">
+        <label ref="jr:itext('/data/g_fu/attempt_number:label')"/>
+      </input>
+      <input ref="/data/g_fu/contact_date">
+        <label ref="jr:itext('/data/g_fu/contact_date:label')"/>
+      </input>
+      <select1 ref="/data/g_fu/contact_mode">
+        <label ref="jr:itext('/data/g_fu/contact_mode:label')"/>
+        <itemset nodeset="instance('mode')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_fu/outcome">
+        <label ref="jr:itext('/data/g_fu/outcome:label')"/>
+        <itemset nodeset="instance('outcome')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select ref="/data/g_fu/barriers">
+        <label ref="jr:itext('/data/g_fu/barriers:label')"/>
+        <itemset nodeset="instance('barrier')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select>
+      <input ref="/data/g_fu/appointment_date">
+        <label ref="jr:itext('/data/g_fu/appointment_date:label')"/>
+      </input>
+      <input ref="/data/g_fu/appointment_location">
+        <label ref="jr:itext('/data/g_fu/appointment_location:label')"/>
+      </input>
+      <input ref="/data/g_fu/date_of_death">
+        <label ref="jr:itext('/data/g_fu/date_of_death:label')"/>
+      </input>
+      <input ref="/data/g_fu/new_phone">
+        <label ref="jr:itext('/data/g_fu/new_phone:label')"/>
+      </input>
+      <input ref="/data/g_fu/notes">
+        <label ref="jr:itext('/data/g_fu/notes:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_next">
+      <label ref="jr:itext('/data/g_next:label')"/>
+      <input ref="/data/g_next/closing_note">
+        <label ref="jr:itext('/data/g_next/closing_note:label')"/>
+      </input>
+    </group>
+  </h:body>
+</h:html>

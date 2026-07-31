@@ -1,0 +1,14 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Referral Outcome"
+    }
+  ],
+  "icon": "icon-healthcare-referral",
+  "context": {
+    "person": true,
+    "place": false,
+    "expression": "summary.context.is_participant && summary.context.has_stage2 && !summary.context.is_exited"
+  }
+}
