@@ -1,0 +1,209 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>Assessment Visit</h:title>
+    <model odk:xforms-version="1.0.0">
+      <instance>
+        <data id="assessment_visit" version="2026-08-12 00-00" prefix="J1!assessment_visit!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <user>
+              <contact_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <name/>
+              <age/>
+              <gender/>
+              <phone/>
+              <education_level/>
+              <informant_name/>
+              <informant_phone/>
+              <cr_no/>
+            </contact>
+          </inputs>
+          <patient_uuid/>
+          <patient_id/>
+          <patient_name/>
+          <patient_sex/>
+          <patient_age/>
+          <patient_phone/>
+          <patient_education/>
+          <patient_cr_no/>
+          <screened_by/>
+          <screened_by_name/>
+          <g_assessment>
+            <assessment_datetime/>
+            <administered_by/>
+            <g_scale jr:template="">
+              <scale_name/>
+              <score/>
+              <interpretation/>
+            </g_scale>
+          </g_assessment>
+          <g_clinical>
+            <clinical_impression/>
+          </g_clinical>
+          <g_followup>
+            <next_visit_date/>
+            <notes/>
+            <assessed_by/>
+            <reviewed_by/>
+          </g_followup>
+          <g_office>
+            <entered_in_cht/>
+            <qc_checked_by/>
+            <record_id/>
+            <qc_check_date/>
+          </g_office>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="user-contact-summary"/>
+      <instance id="yes_no">
+        <root>
+          <item>
+            <name>yes</name>
+            <label>Yes</label>
+          </item>
+          <item>
+            <name>no</name>
+            <label>No</label>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/data/inputs/source" type="string"/>
+      <bind nodeset="/data/inputs/source_id" type="string"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/data/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/data/inputs/contact/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/age" type="string"/>
+      <bind nodeset="/data/inputs/contact/gender" type="string"/>
+      <bind nodeset="/data/inputs/contact/phone" type="string"/>
+      <bind nodeset="/data/inputs/contact/education_level" type="string"/>
+      <bind nodeset="/data/inputs/contact/informant_name" type="string"/>
+      <bind nodeset="/data/inputs/contact/informant_phone" type="string"/>
+      <bind nodeset="/data/inputs/contact/cr_no" type="string"/>
+      <bind nodeset="/data/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/data/patient_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/data/patient_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/data/patient_sex" type="string" calculate="../inputs/contact/gender"/>
+      <bind nodeset="/data/patient_age" type="string" calculate="../inputs/contact/age"/>
+      <bind nodeset="/data/patient_phone" type="string" calculate="../inputs/contact/phone"/>
+      <bind nodeset="/data/patient_education" type="string" calculate="../inputs/contact/education_level"/>
+      <bind nodeset="/data/patient_cr_no" type="string" calculate="../inputs/contact/cr_no"/>
+      <bind nodeset="/data/screened_by" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/data/screened_by_name" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/data/g_assessment/assessment_datetime" type="dateTime" required="true()"/>
+      <setvalue ref="/data/g_assessment/assessment_datetime" value="now()" event="odk-instance-first-load"/>
+      <bind nodeset="/data/g_assessment/administered_by" type="string"/>
+      <bind nodeset="/data/g_assessment/g_scale/scale_name" type="string"/>
+      <bind nodeset="/data/g_assessment/g_scale/score" type="string"/>
+      <bind nodeset="/data/g_assessment/g_scale/interpretation" type="string"/>
+      <bind nodeset="/data/g_clinical/clinical_impression" type="string"/>
+      <bind nodeset="/data/g_followup/next_visit_date" type="date"/>
+      <bind nodeset="/data/g_followup/notes" type="string"/>
+      <bind nodeset="/data/g_followup/assessed_by" type="string"/>
+      <bind nodeset="/data/g_followup/reviewed_by" type="string"/>
+      <bind nodeset="/data/g_office/entered_in_cht" type="string"/>
+      <bind nodeset="/data/g_office/qc_checked_by" type="string"/>
+      <bind nodeset="/data/g_office/record_id" type="string"/>
+      <bind nodeset="/data/g_office/qc_check_date" type="date"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/data/inputs">
+      <label>Participant</label>
+      <group appearance="field-list" ref="/data/inputs/user">
+        <label>User</label>
+      </group>
+      <group appearance="field-list" ref="/data/inputs/contact">
+        <label>Participant</label>
+        <input ref="/data/inputs/contact/_id" appearance="select-contact type-participant">
+          <label>Select participant</label>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/data/g_assessment">
+      <label>Assessment</label>
+      <input ref="/data/g_assessment/assessment_datetime">
+        <label>Date &amp; time of assessment</label>
+      </input>
+      <input ref="/data/g_assessment/administered_by">
+        <label>Administered by (staff name/s)</label>
+      </input>
+      <group ref="/data/g_assessment/g_scale">
+        <label>Assessment scales used (record each separately)</label>
+        <repeat nodeset="/data/g_assessment/g_scale" appearance="field-list">
+          <input ref="/data/g_assessment/g_scale/scale_name">
+            <label>Assessment scale used</label>
+          </input>
+          <input ref="/data/g_assessment/g_scale/score">
+            <label>Score / result</label>
+          </input>
+          <input ref="/data/g_assessment/g_scale/interpretation">
+            <label>Interpretation</label>
+          </input>
+        </repeat>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/data/g_clinical">
+      <label>Clinical impression</label>
+      <input ref="/data/g_clinical/clinical_impression" appearance="multiline">
+        <label>Provisional diagnosis (post-assessment) / Clinical impression</label>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_followup">
+      <label>Follow-up &amp; notes</label>
+      <input ref="/data/g_followup/next_visit_date">
+        <label>Follow-up / next visit date</label>
+      </input>
+      <input ref="/data/g_followup/notes" appearance="multiline">
+        <label>Notes</label>
+      </input>
+      <input ref="/data/g_followup/assessed_by">
+        <label>Assessed by (staff - name &amp; signature)</label>
+      </input>
+      <input ref="/data/g_followup/reviewed_by">
+        <label>Reviewed by (staff - name &amp; signature)</label>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_office">
+      <label>For office use only (not part of clinical assessment)</label>
+      <select1 ref="/data/g_office/entered_in_cht">
+        <label>Entered in Kobo / CHT</label>
+        <itemset nodeset="instance('yes_no')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_office/qc_checked_by">
+        <label>Quality control - checked by (name)</label>
+      </input>
+      <input ref="/data/g_office/record_id">
+        <label>Participant kobo / Record ID</label>
+      </input>
+      <input ref="/data/g_office/qc_check_date">
+        <label>Quality control checking date</label>
+      </input>
+    </group>
+  </h:body>
+</h:html>

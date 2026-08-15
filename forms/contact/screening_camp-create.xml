@@ -61,7 +61,7 @@
       </group>
     </group>
     <group appearance="field-list" ref="/data/screening_camp">
-      <label>NO_LABEL</label>
+      <label>Screening Camp</label>
       <input ref="/data/screening_camp/name">
         <label>Camp Name</label>
       </input>

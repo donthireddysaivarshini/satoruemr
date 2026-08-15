@@ -1,0 +1,11 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Edit Participant"
+    }
+  ],
+  "duplicate_check": {
+    "expression": "current.cr_no && existing.cr_no && current.cr_no === existing.cr_no"
+  }
+}

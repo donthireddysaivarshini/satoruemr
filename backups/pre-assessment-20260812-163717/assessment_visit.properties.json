@@ -2,13 +2,13 @@
   "title": [
     {
       "locale": "en",
-      "content": "Stage 2 - Detailed Assessment"
+      "content": "Assessment Visit"
     }
   ],
   "icon": "icon-healthcare-assessment",
   "context": {
     "person": true,
     "place": false,
-    "expression": "summary.is_participant && summary.pending_stage2"
+    "expression": "summary.context.is_participant"
   }
 }

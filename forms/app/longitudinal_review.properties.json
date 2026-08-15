@@ -9,6 +9,6 @@
   "context": {
     "person": true,
     "place": false,
-    "expression": "summary.context.is_participant && (summary.context.has_stage1 || summary.context.has_stage2) && !summary.context.is_exited"
+    "expression": "summary.is_participant && (summary.has_stage1 || summary.has_stage2) && !summary.is_exited"
   }
 }

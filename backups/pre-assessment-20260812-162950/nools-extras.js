@@ -24,7 +24,6 @@ const FORMS = {
   FOLLOW_UP: 'follow_up_contact',
   REFERRAL: 'referral_outcome',
   REVIEW: 'longitudinal_review',
-  ASSESSMENT: 'assessment_visit',
 };
 
 /**

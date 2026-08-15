@@ -32,14 +32,12 @@ const stage2 = byForm(FORMS.STAGE2);
 const followUps = byForm(FORMS.FOLLOW_UP);
 const referrals = byForm(FORMS.REFERRAL);
 const reviews = byForm(FORMS.REVIEW);
-const assessments = byForm(FORMS.ASSESSMENT);
 
 const lastStage1 = stage1[0];
 const lastStage2 = stage2[0];
 const lastFollowUp = followUps[0];
 const lastReferral = referrals[0];
 const lastReview = reviews[0];
-const lastAssessment = assessments[0];
 
 const isExited = followUps.some(
   (r) => EXIT_OUTCOMES.indexOf(getField(r, 'g_fu.outcome')) !== -1
@@ -71,12 +69,6 @@ const riskFlags = !lastStage2 ? [] : [
 // Header fields
 // ---------------------------------------------------------------------------
 const fields = [
-  {
-    appliesToType: PARTICIPANT,
-    label: 'contact.cr_no',
-    value: contact.cr_no,
-    width: 3,
-  },
   {
     appliesToType: PARTICIPANT,
     label: 'contact.age',
@@ -269,28 +261,6 @@ const cards = [
     ],
   },
 
-  // ---- latest assessment visit ----
-  {
-    label: 'contact.card.assessment',
-    appliesToType: [PARTICIPANT],
-    appliesIf: () => !!lastAssessment,
-    fields: () => [
-      { label: 'contact.assessment_visit_number',
-        value: assessments.length, width: 4 },
-      { label: 'contact.assessment_date',
-        value: lastAssessment.reported_date, filter: 'simpleDate', width: 4 },
-      { label: 'contact.assessment_administered_by',
-        value: getField(lastAssessment, 'g_assessment.administered_by'),
-        width: 4 },
-      { label: 'contact.assessment_next_visit',
-        value: getField(lastAssessment, 'g_followup.next_visit_date'),
-        filter: 'simpleDate', width: 6 },
-      { label: 'contact.assessment_impression',
-        value: getField(lastAssessment, 'g_clinical.clinical_impression'),
-        width: 6 },
-    ],
-  },
-
   // ---- full encounter history ----
   {
     label: 'contact.card.history',
@@ -324,9 +294,6 @@ const context = {
   follow_up_attempts: followUps.length,
   cognitive_flag: lastStage2
     ? num(lastStage2, 'g_disposition.cognitive_flag') : 0,
-  cr_no: contact.cr_no,
-  has_assessment: assessments.length > 0,
-  assessment_count: assessments.length,
 };
 
 module.exports = { fields, cards, context };
