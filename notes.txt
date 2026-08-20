@@ -1,0 +1,33 @@
+ Step 1 — Close the open Ubuntu terminal window (the one showing saivarshini@Varshini).
+Step 2 — Recover WSL first (it's currently unresponsive):
+wsl --shutdown
+Wait 10 seconds. Then:
+wsl --status
+It should show "Default Version: 2" with no error.
+Step 3 — Resume (start containers):
+wsl -d Ubuntu bash -lc "docker start satoruemr-dir-cht-upgrade-service-1 satoruemr-nouveau-1 satoruemr-couchdb-1 satoruemr-haproxy-1 satoruemr-api-1 satoruemr-sentinel-1 satoruemr-nginx-1"
+Step 4 — Verify data is back (open https://172-27-250-199.local-ip.medicmobile.org:10443/ and check camps/users appear).
+Step 5 — Test pause (when done working):
+wsl -d Ubuntu bash -lc "docker stop satoruemr-nginx-1 satoruemr-api-1 satoruemr-sentinel-1 satoruemr-haproxy-1 satoruemr-couchdb-1 satoruemr-nouveau-1 satoruemr-dir-cht-upgrade-service-1"
+Step 6 — Resume again (repeat Step 3 whenever you come back).
+The rule: only the wsl -d Ubuntu bash -lc "docker ..." commands from PowerShell. Never use Docker Desktop's container list or its docker context for these. If data ever looks default again, run wsl -d Ubuntu bash -lc "docker restart satoruemr-couchdb-1"
+-------------------------------------------
+ 
+ cd /mnt/c/Projects/EMRCHT/cht-core
+ Run docker commands inside Ubuntu WSL, not from PowerShell:
+# Pause (from Ubuntu WSL)
+wsl -d Ubuntu bash -lc "docker stop satoruemr-nginx-1 satoruemr-api-1 satoruemr-sentinel-1 satoruemr-haproxy-1 satoruemr-couchdb-1 satoruemr-nouveau-1 satoruemr-dir-cht-upgrade-service-1"
+
+# Resume (from Ubuntu WSL)
+cd /mnt/c/Projects/EMRCHT/cht-core
+wsl -d Ubuntu bash -lc "docker start satoruemr-dir-cht-upgrade-service-1 satoruemr-nouveau-1 satoruemr-couchdb-1 satoruemr-haproxy-1 satoruemr-api-1 satoruemr-sentinel-1 satoruemr-nginx-1"
+Critical rule: always use wsl -d Ubuntu bash -lc "docker ..." so bind mounts resolve to your real data in the Ubuntu distro. Never docker stop/start from PowerShell/desktop-linux context for the couchdb container. If it ever happens again, just wsl -d Ubuntu bash -lc "docker restart satoruemr-couchdb-1" to recover.
+Hard-refresh the CHT URL now — everything should be back to your customized instance
+
+ https://172-27-250-199.local-ip.medicmobile.org:10443/
+
+ Restore config (only if it ever gets wiped by the old script):
+cd /mnt/c/Projects/EMRCHT/satoru-config
+cht --url=https://medic:password@172-27-250-199.local-ip.medicmobile.org:10443 --accept-self-signed-certs upload-app-settings upload-app-forms upload-contact-forms upload-resources upload-custom-translations
+
+ Add a permissions block to app_settings.json (base_settings.json): intern = view/create/collect; supervisor = +can_edit/can_update_reports/verify/export; remove can_configure/can_delete_reports from interns. Recompile + upload via cht-conf; verify varshini no longer sees Edit/Delete.
