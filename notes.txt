@@ -31,3 +31,22 @@ cd /mnt/c/Projects/EMRCHT/satoru-config
 cht --url=https://medic:password@172-27-250-199.local-ip.medicmobile.org:10443 --accept-self-signed-certs upload-app-settings upload-app-forms upload-contact-forms upload-resources upload-custom-translations
 
  Add a permissions block to app_settings.json (base_settings.json): intern = view/create/collect; supervisor = +can_edit/can_update_reports/verify/export; remove can_configure/can_delete_reports from interns. Recompile + upload via cht-conf; verify varshini no longer sees Edit/Delete.
+
+------------------------------------------\Submitted by fix
+
+FIRST WE NEED TO CREATE A USER AND CREATE THE CONTACT
+Why it shows a contact, not the username: In CHT, every user account must be linked to a contact (person). The report's "Submitted by" header always comes from that linked contact's name — it's how CHT identifies who submitted. There's no mode where it shows the raw username.
+What happened in your case: When varshini's user was created in admin, her account got linked to Vijayamma's contact (contact_id: 019ffcb0-...). So even though the form's fields.user.name = varshini, the report header uses the linked contact = Vijayamma.
+The only way to show "Submitted by varshini": varshini's user must point to her own contact. That means creating a varshini contact (like you created NIMS/Jayasri/etc.) and updating org.couchdb.user:varshini.contact_id to it. Then the flow is exactly what you expect:
+- varshini submits → "Submitted by varshini"
+- any other user submits → their own name
+This is a live-data change (create 1 contact + update 1 user doc). Shall I go ahead with it?
+---------------------------
+ MOCA-
+ in eng difference in 1st sequence section
+ face :that section
+ and wording somehwat change
+
+
+ DST:
+ 77 question dependent or independednt

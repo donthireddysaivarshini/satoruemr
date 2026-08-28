@@ -360,6 +360,18 @@ AD8 <output value=" /data/g_ad8/ad8_total "/>/8 | HMSE <output value=" /data/g_h
           <text id="/data/g_disposition/assessor_notes:label">
             <value>Assessor notes</value>
           </text>
+          <text id="/data/g_supporting_docs:label">
+            <value>Supporting Documents / Scale Upload</value>
+          </text>
+          <text id="/data/g_supporting_docs/upload_scale_image:label">
+            <value>Upload completed scale / assessment sheet (image)</value>
+          </text>
+          <text id="/data/g_supporting_docs/upload_scale_pdf:label">
+            <value>Upload completed scale / assessment sheet (PDF)</value>
+          </text>
+          <text id="/data/g_supporting_docs/upload_caption:label">
+            <value>Attachment caption / description (optional)</value>
+          </text>
         </translation>
         <translation lang="te">
           <text id="yesno-0">
@@ -523,6 +535,12 @@ AD8 <output value=" /data/g_ad8/ad8_total "/>/8 | HMSE <output value=" /data/g_h
           </text>
           <text id="/data/g_glucose/glucose_critical:label">
             <value>**ప్రమాదకర స్థాయి.** ఈరోజే వైద్యుడిని కలిపించండి.</value>
+          </text>
+          <text id="/data/g_supporting_docs/upload_scale_image:label">
+            <value>Upload clear photos of the completed paper scale, consent form, or supporting assessment document. Accepts JPG, JPEG, PNG. For PDF use next field.</value>
+          </text>
+          <text id="/data/g_supporting_docs/upload_scale_pdf:label">
+            <value>Upload a PDF of the completed paper scale if not already uploaded as image. Accepts PDF.</value>
           </text>
           <text id="/data/inputs:label">
             <value>-</value>
@@ -716,6 +734,12 @@ AD8 <output value=" /data/g_ad8/ad8_total "/>/8 | HMSE <output value=" /data/g_h
           <text id="/data/g_disposition/assessor_notes:label">
             <value>-</value>
           </text>
+          <text id="/data/g_supporting_docs:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_supporting_docs/upload_caption:label">
+            <value>-</value>
+          </text>
         </translation>
       </itext>
       <instance>
@@ -885,6 +909,11 @@ AD8 <output value=" /data/g_ad8/ad8_total "/>/8 | HMSE <output value=" /data/g_h
             <referral_appointment_date/>
             <assessor_notes/>
           </g_disposition>
+          <g_supporting_docs>
+            <upload_scale_image/>
+            <upload_scale_pdf/>
+            <upload_caption/>
+          </g_supporting_docs>
           <meta tag="hidden">
             <instanceID/>
             <instanceName/>
@@ -1158,6 +1187,9 @@ AD8 <output value=" /data/g_ad8/ad8_total "/>/8 | HMSE <output value=" /data/g_h
       <bind nodeset="/data/g_disposition/referral_facility" type="string" relevant=" /data/g_disposition/referral_needed  = 'yes'" required="true()"/>
       <bind nodeset="/data/g_disposition/referral_appointment_date" type="date" relevant=" /data/g_disposition/referral_needed  = 'yes'"/>
       <bind nodeset="/data/g_disposition/assessor_notes" type="string"/>
+      <bind nodeset="/data/g_supporting_docs/upload_scale_image" type="binary" readonly="binary"/>
+      <bind nodeset="/data/g_supporting_docs/upload_scale_pdf" type="binary" readonly="binary"/>
+      <bind nodeset="/data/g_supporting_docs/upload_caption" type="string"/>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
       <bind nodeset="/data/meta/instanceName" type="string" calculate="concat( /data/patient_name , ' - Stage 2 - ',  /data/g_disposition/disposition )"/>
     </model>
@@ -1575,6 +1607,18 @@ AD8 <output value=" /data/g_ad8/ad8_total "/>/8 | HMSE <output value=" /data/g_h
       </input>
       <input ref="/data/g_disposition/assessor_notes">
         <label ref="jr:itext('/data/g_disposition/assessor_notes:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_supporting_docs">
+      <label ref="jr:itext('/data/g_supporting_docs:label')"/>
+      <upload ref="/data/g_supporting_docs/upload_scale_image" mediatype="image/*">
+        <label ref="jr:itext('/data/g_supporting_docs/upload_scale_image:label')"/>
+      </upload>
+      <upload ref="/data/g_supporting_docs/upload_scale_pdf" mediatype="application/*">
+        <label ref="jr:itext('/data/g_supporting_docs/upload_scale_pdf:label')"/>
+      </upload>
+      <input ref="/data/g_supporting_docs/upload_caption">
+        <label ref="jr:itext('/data/g_supporting_docs/upload_caption:label')"/>
       </input>
     </group>
   </h:body>

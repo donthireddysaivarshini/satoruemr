@@ -1,0 +1,1651 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>MoCA Assessment</h:title>
+    <model odk:xforms-version="1.0.0">
+      <itext>
+        <translation lang="en">
+          <text id="yesno-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesno-1">
+            <value>No</value>
+          </text>
+          <text id="yesnodk-0">
+            <value>Yes</value>
+          </text>
+          <text id="yesnodk-1">
+            <value>No</value>
+          </text>
+          <text id="yesnodk-2">
+            <value>Don't know / Not assessed</value>
+          </text>
+          <text id="naming_score-0">
+            <value>Correct</value>
+          </text>
+          <text id="naming_score-1">
+            <value>Incorrect</value>
+          </text>
+          <text id="naming_score-2">
+            <value>Don't know / Not assessed</value>
+          </text>
+          <text id="serial7_score-0">
+            <value>0 correct subtractions (0 pts)</value>
+          </text>
+          <text id="serial7_score-1">
+            <value>1 correct subtraction (1 pt)</value>
+          </text>
+          <text id="serial7_score-2">
+            <value>2-3 correct subtractions (2 pts)</value>
+          </text>
+          <text id="serial7_score-3">
+            <value>4-5 correct subtractions (3 pts)</value>
+          </text>
+          <text id="delayed_cue-0">
+            <value>Recalled with cue</value>
+          </text>
+          <text id="delayed_cue-1">
+            <value>Not recalled even with cue</value>
+          </text>
+          <text id="orientation_month-0">
+            <value>January</value>
+          </text>
+          <text id="orientation_month-1">
+            <value>February</value>
+          </text>
+          <text id="orientation_month-2">
+            <value>March</value>
+          </text>
+          <text id="orientation_month-3">
+            <value>April</value>
+          </text>
+          <text id="orientation_month-4">
+            <value>May</value>
+          </text>
+          <text id="orientation_month-5">
+            <value>June</value>
+          </text>
+          <text id="orientation_month-6">
+            <value>July</value>
+          </text>
+          <text id="orientation_month-7">
+            <value>August</value>
+          </text>
+          <text id="orientation_month-8">
+            <value>September</value>
+          </text>
+          <text id="orientation_month-9">
+            <value>October</value>
+          </text>
+          <text id="orientation_month-10">
+            <value>November</value>
+          </text>
+          <text id="orientation_month-11">
+            <value>December</value>
+          </text>
+          <text id="orientation_day-0">
+            <value>Monday</value>
+          </text>
+          <text id="orientation_day-1">
+            <value>Tuesday</value>
+          </text>
+          <text id="orientation_day-2">
+            <value>Wednesday</value>
+          </text>
+          <text id="orientation_day-3">
+            <value>Thursday</value>
+          </text>
+          <text id="orientation_day-4">
+            <value>Friday</value>
+          </text>
+          <text id="orientation_day-5">
+            <value>Saturday</value>
+          </text>
+          <text id="orientation_day-6">
+            <value>Sunday</value>
+          </text>
+          <text id="/data/inputs:label">
+            <value>Participant</value>
+          </text>
+          <text id="/data/inputs/user:label">
+            <value>User</value>
+          </text>
+          <text id="/data/inputs/contact:label">
+            <value>Participant</value>
+          </text>
+          <text id="/data/inputs/contact/_id:label">
+            <value>Select participant</value>
+          </text>
+          <text id="/data/g_consent:label">
+            <value>Consent</value>
+          </text>
+          <text id="/data/g_consent/consent_reconfirmed:label">
+            <value>Consent re-confirmed for the MoCA assessment?</value>
+          </text>
+          <text id="/data/g_visuospatial:label">
+            <value>Visuospatial / Executive</value>
+          </text>
+          <text id="/data/g_visuospatial/trail_making_inst:label">
+            <value>Please draw a line, going from a number to a letter in ascending order. Begin here [point to (1)] and draw a line from 1 then to A then to 2 and so on. End here [point to (E)].</value>
+            <value form="image">jr://images/trail_making.png</value>
+          </text>
+          <text id="/data/g_visuospatial/trail_making:label">
+            <value>Trail Making (1-A-2-B-3-C-4-D-5-E, no crossing lines)</value>
+          </text>
+          <text id="/data/g_visuospatial/cube_inst:label">
+            <value>Copy this drawing as accurately as you can, in the space below.</value>
+            <value form="image">jr://images/cube.png</value>
+          </text>
+          <text id="/data/g_visuospatial/cube_copy:label">
+            <value>Cube Copy (3D, all lines, no extra lines, parallel lines)</value>
+          </text>
+          <text id="/data/g_visuospatial/clock_inst:label">
+            <value>Draw a clock. Put in all the numbers and set the time to 10 past 11.</value>
+          </text>
+          <text id="/data/g_visuospatial/clock_contour:label">
+            <value>Clock - Contour (circle, minor distortion OK)</value>
+          </text>
+          <text id="/data/g_visuospatial/clock_numbers:label">
+            <value>Clock - Numbers (all 12 present, correct order, correct quadrants)</value>
+          </text>
+          <text id="/data/g_visuospatial/clock_hands:label">
+            <value>Clock - Hands (two hands, 10:11, hour hand shorter, centered)</value>
+          </text>
+          <text id="/data/g_naming:label">
+            <value>Naming</value>
+          </text>
+          <text id="/data/g_naming/naming_inst:label">
+            <value>Beginning on the left, point to each figure and say: Tell me the name of this animal.</value>
+            <value form="image">jr://images/naming.png</value>
+          </text>
+          <text id="/data/g_naming/naming_1:label">
+            <value>Figure 1 (Lion)</value>
+          </text>
+          <text id="/data/g_naming/naming_2:label">
+            <value>Figure 2 (Rhinoceros / Rhino)</value>
+          </text>
+          <text id="/data/g_naming/naming_3:label">
+            <value>Figure 3 (Camel / Dromedary)</value>
+          </text>
+          <text id="/data/g_memory:label">
+            <value>Memory</value>
+          </text>
+          <text id="/data/g_memory/memory_inst_trial1:label">
+            <value>This is a memory test. I am going to read a list of words that you will have to remember now and later on. Listen carefully. When I am through, tell me as many words as you can remember. It does not matter in what order you say them.</value>
+          </text>
+          <text id="/data/g_memory/memory_words:label">
+            <value>Words: FACE, VELVET, CHURCH, DAISY, RED</value>
+          </text>
+          <text id="/data/g_memory/mem_trial1:label">
+            <value>Trial 1</value>
+          </text>
+          <text id="/data/g_memory/mem_trial1/mem_t1_face:label">
+            <value>FACE</value>
+          </text>
+          <text id="/data/g_memory/mem_trial1/mem_t1_velvet:label">
+            <value>VELVET</value>
+          </text>
+          <text id="/data/g_memory/mem_trial1/mem_t1_church:label">
+            <value>CHURCH</value>
+          </text>
+          <text id="/data/g_memory/mem_trial1/mem_t1_daisy:label">
+            <value>DAISY</value>
+          </text>
+          <text id="/data/g_memory/mem_trial1/mem_t1_red:label">
+            <value>RED</value>
+          </text>
+          <text id="/data/g_memory/memory_inst_trial2:label">
+            <value>I am going to read the same list for a second time. Try to remember and tell me as many words as you can, including words you said the first time.</value>
+          </text>
+          <text id="/data/g_memory/mem_trial2:label">
+            <value>Trial 2</value>
+          </text>
+          <text id="/data/g_memory/mem_trial2/mem_t2_face:label">
+            <value>FACE</value>
+          </text>
+          <text id="/data/g_memory/mem_trial2/mem_t2_velvet:label">
+            <value>VELVET</value>
+          </text>
+          <text id="/data/g_memory/mem_trial2/mem_t2_church:label">
+            <value>CHURCH</value>
+          </text>
+          <text id="/data/g_memory/mem_trial2/mem_t2_daisy:label">
+            <value>DAISY</value>
+          </text>
+          <text id="/data/g_memory/mem_trial2/mem_t2_red:label">
+            <value>RED</value>
+          </text>
+          <text id="/data/g_memory/memory_inst_delayed:label">
+            <value>I will ask you to recall those words again at the end of the test.</value>
+          </text>
+          <text id="/data/g_attention:label">
+            <value>Attention</value>
+          </text>
+          <text id="/data/g_attention/attention_fwd_inst:label">
+            <value>I am going to say some numbers and when I am through, repeat them to me exactly as I said them. Sequence: 2 1 8 5 4 (1 digit/sec).</value>
+          </text>
+          <text id="/data/g_attention/digit_span_fwd:label">
+            <value>Forward Digit Span (2-1-8-5-4) correct?</value>
+          </text>
+          <text id="/data/g_attention/attention_bwd_inst:label">
+            <value>Now I am going to say some more numbers, but when I am through you must repeat them to me in the backwards order. Sequence: 7 4 2 (1 digit/sec). Correct backward: 2-4-7.</value>
+          </text>
+          <text id="/data/g_attention/digit_span_bwd:label">
+            <value>Backward Digit Span (2-4-7) correct?</value>
+          </text>
+          <text id="/data/g_attention/vigilance_inst:label">
+            <value>I am going to read a sequence of letters. Every time I say the letter A, tap your hand once. If I say a different letter, do not tap your hand. Letters: F B A C M N A A J K L B A F A K D E A A A J A M O F A A B (read at 1/sec).</value>
+          </text>
+          <text id="/data/g_attention/vigilance:label">
+            <value>Vigilance (A-tapping) - 0 or 1 error?</value>
+          </text>
+          <text id="/data/g_attention/serial7_inst:label">
+            <value>Count by subtracting seven from 100, and then keep subtracting seven from your answer until I tell you to stop. (Max 5 subtractions: 93, 86, 79, 72, 65)</value>
+          </text>
+          <text id="/data/g_attention/serial_7s:label">
+            <value>Serial 7s score (0-3)</value>
+          </text>
+          <text id="/data/g_language:label">
+            <value>Language</value>
+          </text>
+          <text id="/data/g_language/sentence1_inst:label">
+            <value>Repeat: I only know that John is the one to help today. (Must be exact)</value>
+          </text>
+          <text id="/data/g_language/sentence_rep_1:label">
+            <value>Sentence 1: I only know that John is the one to help today. (Exact)</value>
+          </text>
+          <text id="/data/g_language/sentence2_inst:label">
+            <value>The cat always hid under the couch when dogs were in the room. (Must be exact)</value>
+          </text>
+          <text id="/data/g_language/sentence_rep_2:label">
+            <value>Sentence 2: The cat always hid under the couch when dogs were in the room. (Exact)</value>
+          </text>
+          <text id="/data/g_language/fluency_inst:label">
+            <value>Tell me as many words as you can think of that begin with the letter F. No proper nouns, numbers, or same-sound-different-suffix words. 60 seconds.</value>
+          </text>
+          <text id="/data/g_language/fluency_count:jr:constraintMsg">
+            <value>. &gt;= 0</value>
+          </text>
+          <text id="/data/g_language/fluency_count:label">
+            <value>Fluency count (F words, &gt;=11 = 1 pt)</value>
+          </text>
+          <text id="/data/g_abstraction:label">
+            <value>Abstraction</value>
+          </text>
+          <text id="/data/g_abstraction/abstraction_inst_practice:label">
+            <value>Practice: Tell me how an orange and a banana are alike. If concrete, prompt once: Tell me another way. If not fruit, say: Yes, and they are also both fruit.</value>
+          </text>
+          <text id="/data/g_abstraction/abstraction_1:label">
+            <value>Train - Bicycle (conceptual: transportation/travelling/trips = 1 pt; wheels = 0)</value>
+          </text>
+          <text id="/data/g_abstraction/abstraction_2:label">
+            <value>Ruler - Watch (conceptual: measuring instruments/measure = 1 pt; numbers = 0)</value>
+          </text>
+          <text id="/data/g_delayed_recall:label">
+            <value>Delayed Recall</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_inst:label">
+            <value>I read some words to you earlier, which I asked you to remember. Tell me as many of those words as you can remember.</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_face:label">
+            <value>FACE (free recall)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_face_cat:label">
+            <value>FACE - Category cue (part of body)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_face_mc:label">
+            <value>FACE - Multiple choice (nose/face/hand)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_velvet:label">
+            <value>VELVET (free recall)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_velvet_cat:label">
+            <value>VELVET - Category cue (type of fabric)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_velvet_mc:label">
+            <value>VELVET - Multiple choice (denim/cotton/velvet)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_church:label">
+            <value>CHURCH (free recall)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_church_cat:label">
+            <value>CHURCH - Category cue (type of building)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_church_mc:label">
+            <value>CHURCH - Multiple choice (church/school/hospital)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_daisy:label">
+            <value>DAISY (free recall)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_daisy_cat:label">
+            <value>DAISY - Category cue (type of flower)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_daisy_mc:label">
+            <value>DAISY - Multiple choice (rose/daisy/tulip)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_red:label">
+            <value>RED (free recall)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_red_cat:label">
+            <value>RED - Category cue (a colour)</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_red_mc:label">
+            <value>RED - Multiple choice (red/blue/green)</value>
+          </text>
+          <text id="/data/g_orientation:label">
+            <value>Orientation</value>
+          </text>
+          <text id="/data/g_orientation/orientation_inst:label">
+            <value>Tell me the date today. If incomplete, prompt for year, month, exact date, day. Then: Tell me the name of this place, and which city it is in. No points if off by one day.</value>
+          </text>
+          <text id="/data/g_orientation/orientation_date:label">
+            <value>Exact date correct?</value>
+          </text>
+          <text id="/data/g_orientation/orientation_month:label">
+            <value>Month correct?</value>
+          </text>
+          <text id="/data/g_orientation/orientation_year:label">
+            <value>Year correct?</value>
+          </text>
+          <text id="/data/g_orientation/orientation_day:label">
+            <value>Day of week correct?</value>
+          </text>
+          <text id="/data/g_orientation/orientation_place:label">
+            <value>Place (hospital/clinic/office) correct?</value>
+          </text>
+          <text id="/data/g_orientation/orientation_city:label">
+            <value>City correct?</value>
+          </text>
+          <text id="/data/g_admin:label">
+            <value>Administrator</value>
+          </text>
+          <text id="/data/g_admin/administered_by:label">
+            <value>Administered by (staff name)</value>
+          </text>
+          <text id="/data/g_admin/assessment_datetime:label">
+            <value>Date &amp; Time of Assessment</value>
+          </text>
+          <text id="/data/g_moca_sheets:label">
+            <value>MoCA sheet / supporting documents</value>
+          </text>
+          <text id="/data/g_moca_sheets/moca_sheets:label">
+            <value>MoCA sheet upload</value>
+          </text>
+          <text id="/data/g_moca_sheets/moca_sheets/moca_image:label">
+            <value>Upload MoCA sheet (image)</value>
+          </text>
+          <text id="/data/g_moca_sheets/moca_sheets/moca_pdf:label">
+            <value>Upload MoCA sheet (PDF)</value>
+          </text>
+        </translation>
+        <translation lang="te">
+          <text id="yesno-0">
+            <value>అవును</value>
+          </text>
+          <text id="yesno-1">
+            <value>కాదు</value>
+          </text>
+          <text id="yesnodk-0">
+            <value>అవును</value>
+          </text>
+          <text id="yesnodk-1">
+            <value>కాదు</value>
+          </text>
+          <text id="yesnodk-2">
+            <value>తెలియదు</value>
+          </text>
+          <text id="naming_score-0">
+            <value>చక్కగా</value>
+          </text>
+          <text id="naming_score-1">
+            <value>తప్పు</value>
+          </text>
+          <text id="naming_score-2">
+            <value>తెలియదు</value>
+          </text>
+          <text id="serial7_score-0">
+            <value>0 సరిగా 없지</value>
+          </text>
+          <text id="serial7_score-1">
+            <value>1 సరిగ్గా అవుటుంది</value>
+          </text>
+          <text id="serial7_score-2">
+            <value>2-3 సరిగ్గాయి</value>
+          </text>
+          <text id="serial7_score-3">
+            <value>3-5 సరిగ్గాయి</value>
+          </text>
+          <text id="delayed_cue-0">
+            <value>సూచనతో మrode</value>
+          </text>
+          <text id="delayed_cue-1">
+            <value>సూచనతో కాదు మrode</value>
+          </text>
+          <text id="orientation_month-0">
+            <value>జనవరి</value>
+          </text>
+          <text id="orientation_month-1">
+            <value>ఫిబ్రవరి</value>
+          </text>
+          <text id="orientation_month-2">
+            <value>మార్చి</value>
+          </text>
+          <text id="orientation_month-3">
+            <value>ఏప్రిల్</value>
+          </text>
+          <text id="orientation_month-4">
+            <value>మే</value>
+          </text>
+          <text id="orientation_month-5">
+            <value>జూన్</value>
+          </text>
+          <text id="orientation_month-6">
+            <value>జూలై</value>
+          </text>
+          <text id="orientation_month-7">
+            <value>ఆగస్టు</value>
+          </text>
+          <text id="orientation_month-8">
+            <value>September</value>
+          </text>
+          <text id="orientation_month-9">
+            <value>అక్టోబర్</value>
+          </text>
+          <text id="orientation_month-10">
+            <value>నవంబర్</value>
+          </text>
+          <text id="orientation_month-11">
+            <value>డిసెంబర్</value>
+          </text>
+          <text id="orientation_day-0">
+            <value>సోమవారం</value>
+          </text>
+          <text id="orientation_day-1">
+            <value>మంగళవారం</value>
+          </text>
+          <text id="orientation_day-2">
+            <value>బుధవారం</value>
+          </text>
+          <text id="orientation_day-3">
+            <value>గురువారం</value>
+          </text>
+          <text id="orientation_day-4">
+            <value>శుక్రవారం</value>
+          </text>
+          <text id="orientation_day-5">
+            <value>శనివారం</value>
+          </text>
+          <text id="orientation_day-6">
+            <value>ఆదివారం</value>
+          </text>
+          <text id="/data/g_moca_sheets/moca_sheets:label">
+            <value>Upload the completed paper MoCA sheet (image or PDF). Add more than one if needed.</value>
+          </text>
+          <text id="/data/g_moca_sheets/moca_sheets/moca_image:label">
+            <value>Upload clear photo of MoCA sheet. Accepts JPG, JPEG, PNG.</value>
+          </text>
+          <text id="/data/g_moca_sheets/moca_sheets/moca_pdf:label">
+            <value>Upload PDF of MoCA sheet. Accepts PDF.</value>
+          </text>
+          <text id="/data/inputs:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/user:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/contact:label">
+            <value>-</value>
+          </text>
+          <text id="/data/inputs/contact/_id:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_consent:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_consent/consent_reconfirmed:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_visuospatial:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_visuospatial/trail_making_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_visuospatial/trail_making:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_visuospatial/cube_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_visuospatial/cube_copy:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_visuospatial/clock_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_visuospatial/clock_contour:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_visuospatial/clock_numbers:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_visuospatial/clock_hands:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_naming:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_naming/naming_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_naming/naming_1:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_naming/naming_2:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_naming/naming_3:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/memory_inst_trial1:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/memory_words:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/mem_trial1:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/mem_trial1/mem_t1_face:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/mem_trial1/mem_t1_velvet:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/mem_trial1/mem_t1_church:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/mem_trial1/mem_t1_daisy:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/mem_trial1/mem_t1_red:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/memory_inst_trial2:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/mem_trial2:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/mem_trial2/mem_t2_face:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/mem_trial2/mem_t2_velvet:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/mem_trial2/mem_t2_church:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/mem_trial2/mem_t2_daisy:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/mem_trial2/mem_t2_red:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_memory/memory_inst_delayed:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_attention:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_attention/attention_fwd_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_attention/digit_span_fwd:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_attention/attention_bwd_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_attention/digit_span_bwd:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_attention/vigilance_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_attention/vigilance:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_attention/serial7_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_attention/serial_7s:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_language:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_language/sentence1_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_language/sentence_rep_1:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_language/sentence2_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_language/sentence_rep_2:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_language/fluency_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_language/fluency_count:jr:constraintMsg">
+            <value>-</value>
+          </text>
+          <text id="/data/g_language/fluency_count:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_abstraction:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_abstraction/abstraction_inst_practice:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_abstraction/abstraction_1:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_abstraction/abstraction_2:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_face:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_face_cat:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_face_mc:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_velvet:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_velvet_cat:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_velvet_mc:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_church:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_church_cat:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_church_mc:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_daisy:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_daisy_cat:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_daisy_mc:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_red:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_red_cat:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_delayed_recall/delayed_red_mc:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_orientation:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_orientation/orientation_inst:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_orientation/orientation_date:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_orientation/orientation_month:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_orientation/orientation_year:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_orientation/orientation_day:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_orientation/orientation_place:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_orientation/orientation_city:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_admin:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_admin/administered_by:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_admin/assessment_datetime:label">
+            <value>-</value>
+          </text>
+          <text id="/data/g_moca_sheets:label">
+            <value>-</value>
+          </text>
+        </translation>
+      </itext>
+      <instance>
+        <data id="moca_assessment" version="2026-08-22 03-00" prefix="J1!moca_assessment!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <user>
+              <contact_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <name/>
+              <age/>
+              <gender/>
+              <phone/>
+              <education_level/>
+              <consent_given/>
+              <informant_name/>
+              <informant_phone/>
+            </contact>
+          </inputs>
+          <patient_uuid/>
+          <patient_id/>
+          <patient_name/>
+          <patient_sex/>
+          <patient_age/>
+          <patient_phone/>
+          <patient_education/>
+          <screened_by/>
+          <screened_by_name/>
+          <g_consent>
+            <consent_reconfirmed/>
+          </g_consent>
+          <g_visuospatial>
+            <trail_making_inst/>
+            <trail_making/>
+            <cube_inst/>
+            <cube_copy/>
+            <clock_inst/>
+            <clock_contour/>
+            <clock_numbers/>
+            <clock_hands/>
+          </g_visuospatial>
+          <g_naming>
+            <naming_inst/>
+            <naming_1/>
+            <naming_2/>
+            <naming_3/>
+          </g_naming>
+          <g_memory>
+            <memory_inst_trial1/>
+            <memory_words/>
+            <mem_trial1>
+              <mem_t1_face/>
+              <mem_t1_velvet/>
+              <mem_t1_church/>
+              <mem_t1_daisy/>
+              <mem_t1_red/>
+            </mem_trial1>
+            <memory_inst_trial2/>
+            <mem_trial2>
+              <mem_t2_face/>
+              <mem_t2_velvet/>
+              <mem_t2_church/>
+              <mem_t2_daisy/>
+              <mem_t2_red/>
+            </mem_trial2>
+            <memory_inst_delayed/>
+          </g_memory>
+          <g_attention>
+            <attention_fwd_inst/>
+            <digit_span_fwd/>
+            <attention_bwd_inst/>
+            <digit_span_bwd/>
+            <vigilance_inst/>
+            <vigilance/>
+            <serial7_inst/>
+            <serial_7s/>
+          </g_attention>
+          <g_language>
+            <sentence1_inst/>
+            <sentence_rep_1/>
+            <sentence2_inst/>
+            <sentence_rep_2/>
+            <fluency_inst/>
+            <fluency_count/>
+          </g_language>
+          <g_abstraction>
+            <abstraction_inst_practice/>
+            <abstraction_1/>
+            <abstraction_2/>
+          </g_abstraction>
+          <g_delayed_recall>
+            <delayed_inst/>
+            <delayed_face/>
+            <delayed_face_cat/>
+            <delayed_face_mc/>
+            <delayed_velvet/>
+            <delayed_velvet_cat/>
+            <delayed_velvet_mc/>
+            <delayed_church/>
+            <delayed_church_cat/>
+            <delayed_church_mc/>
+            <delayed_daisy/>
+            <delayed_daisy_cat/>
+            <delayed_daisy_mc/>
+            <delayed_red/>
+            <delayed_red_cat/>
+            <delayed_red_mc/>
+          </g_delayed_recall>
+          <g_orientation>
+            <orientation_inst/>
+            <orientation_date/>
+            <orientation_month/>
+            <orientation_year/>
+            <orientation_day/>
+            <orientation_place/>
+            <orientation_city/>
+          </g_orientation>
+          <moca_visuospatial_total/>
+          <moca_naming_total/>
+          <moca_memory_total/>
+          <moca_attention_total/>
+          <moca_language_total/>
+          <moca_abstraction_total/>
+          <moca_delayed_total/>
+          <moca_orientation_total/>
+          <moca_raw_total/>
+          <moca_education_adj/>
+          <moca_total_score/>
+          <moca_interpretation/>
+          <g_admin>
+            <administered_by/>
+            <assessment_datetime/>
+          </g_admin>
+          <g_moca_sheets>
+            <moca_sheets jr:template="">
+              <moca_image/>
+              <moca_pdf/>
+            </moca_sheets>
+          </g_moca_sheets>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="user-contact-summary"/>
+      <instance id="yesno">
+        <root>
+          <item>
+            <itextId>yesno-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>yesno-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="yesnodk">
+        <root>
+          <item>
+            <itextId>yesnodk-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>yesnodk-1</itextId>
+            <name>no</name>
+          </item>
+          <item>
+            <itextId>yesnodk-2</itextId>
+            <name>dk</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="naming_score">
+        <root>
+          <item>
+            <itextId>naming_score-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>naming_score-1</itextId>
+            <name>no</name>
+          </item>
+          <item>
+            <itextId>naming_score-2</itextId>
+            <name>dk</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="serial7_score">
+        <root>
+          <item>
+            <itextId>serial7_score-0</itextId>
+            <name>0</name>
+          </item>
+          <item>
+            <itextId>serial7_score-1</itextId>
+            <name>1</name>
+          </item>
+          <item>
+            <itextId>serial7_score-2</itextId>
+            <name>2</name>
+          </item>
+          <item>
+            <itextId>serial7_score-3</itextId>
+            <name>3</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="delayed_cue">
+        <root>
+          <item>
+            <itextId>delayed_cue-0</itextId>
+            <name>yes</name>
+          </item>
+          <item>
+            <itextId>delayed_cue-1</itextId>
+            <name>no</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="orientation_month">
+        <root>
+          <item>
+            <itextId>orientation_month-0</itextId>
+            <name>1</name>
+          </item>
+          <item>
+            <itextId>orientation_month-1</itextId>
+            <name>2</name>
+          </item>
+          <item>
+            <itextId>orientation_month-2</itextId>
+            <name>3</name>
+          </item>
+          <item>
+            <itextId>orientation_month-3</itextId>
+            <name>4</name>
+          </item>
+          <item>
+            <itextId>orientation_month-4</itextId>
+            <name>5</name>
+          </item>
+          <item>
+            <itextId>orientation_month-5</itextId>
+            <name>6</name>
+          </item>
+          <item>
+            <itextId>orientation_month-6</itextId>
+            <name>7</name>
+          </item>
+          <item>
+            <itextId>orientation_month-7</itextId>
+            <name>8</name>
+          </item>
+          <item>
+            <itextId>orientation_month-8</itextId>
+            <name>9</name>
+          </item>
+          <item>
+            <itextId>orientation_month-9</itextId>
+            <name>10</name>
+          </item>
+          <item>
+            <itextId>orientation_month-10</itextId>
+            <name>11</name>
+          </item>
+          <item>
+            <itextId>orientation_month-11</itextId>
+            <name>12</name>
+          </item>
+        </root>
+      </instance>
+      <instance id="orientation_day">
+        <root>
+          <item>
+            <itextId>orientation_day-0</itextId>
+            <name>monday</name>
+          </item>
+          <item>
+            <itextId>orientation_day-1</itextId>
+            <name>tuesday</name>
+          </item>
+          <item>
+            <itextId>orientation_day-2</itextId>
+            <name>wednesday</name>
+          </item>
+          <item>
+            <itextId>orientation_day-3</itextId>
+            <name>thursday</name>
+          </item>
+          <item>
+            <itextId>orientation_day-4</itextId>
+            <name>friday</name>
+          </item>
+          <item>
+            <itextId>orientation_day-5</itextId>
+            <name>saturday</name>
+          </item>
+          <item>
+            <itextId>orientation_day-6</itextId>
+            <name>sunday</name>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/data/inputs/source" type="string"/>
+      <bind nodeset="/data/inputs/source_id" type="string"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/data/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/data/inputs/contact/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/age" type="string"/>
+      <bind nodeset="/data/inputs/contact/gender" type="string"/>
+      <bind nodeset="/data/inputs/contact/phone" type="string"/>
+      <bind nodeset="/data/inputs/contact/education_level" type="string"/>
+      <bind nodeset="/data/inputs/contact/consent_given" type="string"/>
+      <bind nodeset="/data/inputs/contact/informant_name" type="string"/>
+      <bind nodeset="/data/inputs/contact/informant_phone" type="string"/>
+      <bind nodeset="/data/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/data/patient_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/data/patient_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/data/patient_sex" type="string" calculate="../inputs/contact/gender"/>
+      <bind nodeset="/data/patient_age" type="string" calculate="../inputs/contact/age"/>
+      <bind nodeset="/data/patient_phone" type="string" calculate="../inputs/contact/phone"/>
+      <bind nodeset="/data/patient_education" type="string" calculate="../inputs/contact/education_level"/>
+      <bind nodeset="/data/screened_by" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/data/screened_by_name" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/data/g_consent/consent_reconfirmed" type="string" required="true()"/>
+      <bind nodeset="/data/g_visuospatial" relevant=" /data/g_consent/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_visuospatial/trail_making_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_visuospatial/trail_making" type="string" required="true()"/>
+      <bind nodeset="/data/g_visuospatial/cube_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_visuospatial/cube_copy" type="string" required="true()"/>
+      <bind nodeset="/data/g_visuospatial/clock_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_visuospatial/clock_contour" type="string" required="true()"/>
+      <bind nodeset="/data/g_visuospatial/clock_numbers" type="string" required="true()"/>
+      <bind nodeset="/data/g_visuospatial/clock_hands" type="string" required="true()"/>
+      <bind nodeset="/data/g_naming" relevant=" /data/g_consent/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_naming/naming_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_naming/naming_1" type="string" required="true()"/>
+      <bind nodeset="/data/g_naming/naming_2" type="string" required="true()"/>
+      <bind nodeset="/data/g_naming/naming_3" type="string" required="true()"/>
+      <bind nodeset="/data/g_memory" relevant=" /data/g_consent/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_memory/memory_inst_trial1" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_memory/memory_words" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_memory/mem_trial1/mem_t1_face" type="string" required="true()"/>
+      <bind nodeset="/data/g_memory/mem_trial1/mem_t1_velvet" type="string" required="true()"/>
+      <bind nodeset="/data/g_memory/mem_trial1/mem_t1_church" type="string" required="true()"/>
+      <bind nodeset="/data/g_memory/mem_trial1/mem_t1_daisy" type="string" required="true()"/>
+      <bind nodeset="/data/g_memory/mem_trial1/mem_t1_red" type="string" required="true()"/>
+      <bind nodeset="/data/g_memory/memory_inst_trial2" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_memory/mem_trial2/mem_t2_face" type="string" required="true()"/>
+      <bind nodeset="/data/g_memory/mem_trial2/mem_t2_velvet" type="string" required="true()"/>
+      <bind nodeset="/data/g_memory/mem_trial2/mem_t2_church" type="string" required="true()"/>
+      <bind nodeset="/data/g_memory/mem_trial2/mem_t2_daisy" type="string" required="true()"/>
+      <bind nodeset="/data/g_memory/mem_trial2/mem_t2_red" type="string" required="true()"/>
+      <bind nodeset="/data/g_memory/memory_inst_delayed" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_attention" relevant=" /data/g_consent/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_attention/attention_fwd_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_attention/digit_span_fwd" type="string" required="true()"/>
+      <bind nodeset="/data/g_attention/attention_bwd_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_attention/digit_span_bwd" type="string" required="true()"/>
+      <bind nodeset="/data/g_attention/vigilance_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_attention/vigilance" type="string" required="true()"/>
+      <bind nodeset="/data/g_attention/serial7_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_attention/serial_7s" type="string" required="true()"/>
+      <bind nodeset="/data/g_language" relevant=" /data/g_consent/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_language/sentence1_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_language/sentence_rep_1" type="string" required="true()"/>
+      <bind nodeset="/data/g_language/sentence2_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_language/sentence_rep_2" type="string" required="true()"/>
+      <bind nodeset="/data/g_language/fluency_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_language/fluency_count" type="int" jr:constraintMsg="jr:itext('/data/g_language/fluency_count:jr:constraintMsg')" calculate="true()"/>
+      <bind nodeset="/data/g_abstraction" relevant=" /data/g_consent/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_abstraction/abstraction_inst_practice" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_abstraction/abstraction_1" type="string" required="true()"/>
+      <bind nodeset="/data/g_abstraction/abstraction_2" type="string" required="true()"/>
+      <bind nodeset="/data/g_delayed_recall" relevant=" /data/g_consent/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_face" type="string" required="true()"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_face_cat" type="string"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_face_mc" type="string"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_velvet" type="string" required="true()"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_velvet_cat" type="string"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_velvet_mc" type="string"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_church" type="string" required="true()"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_church_cat" type="string"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_church_mc" type="string"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_daisy" type="string" required="true()"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_daisy_cat" type="string"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_daisy_mc" type="string"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_red" type="string" required="true()"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_red_cat" type="string"/>
+      <bind nodeset="/data/g_delayed_recall/delayed_red_mc" type="string"/>
+      <bind nodeset="/data/g_orientation" relevant=" /data/g_consent/consent_reconfirmed  = 'yes'"/>
+      <bind nodeset="/data/g_orientation/orientation_inst" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_orientation/orientation_date" type="string" required="true()"/>
+      <bind nodeset="/data/g_orientation/orientation_month" type="string" required="true()"/>
+      <bind nodeset="/data/g_orientation/orientation_year" type="string" required="true()"/>
+      <bind nodeset="/data/g_orientation/orientation_day" type="string" required="true()"/>
+      <bind nodeset="/data/g_orientation/orientation_place" type="string" required="true()"/>
+      <bind nodeset="/data/g_orientation/orientation_city" type="string" required="true()"/>
+      <bind nodeset="/data/moca_visuospatial_total" type="string" calculate="if( /data/g_visuospatial/trail_making  = &quot;yes&quot;, 1, 0) + if( /data/g_visuospatial/cube_copy  = &quot;yes&quot;, 1, 0) + if( /data/g_visuospatial/clock_contour  = &quot;yes&quot;, 1, 0) + if( /data/g_visuospatial/clock_numbers  = &quot;yes&quot;, 1, 0) + if( /data/g_visuospatial/clock_hands  = &quot;yes&quot;, 1, 0)"/>
+      <bind nodeset="/data/moca_naming_total" type="string" calculate="if( /data/g_naming/naming_1  = &quot;yes&quot;, 1, 0) + if( /data/g_naming/naming_2  = &quot;yes&quot;, 1, 0) + if( /data/g_naming/naming_3  = &quot;yes&quot;, 1, 0)"/>
+      <bind nodeset="/data/moca_memory_total" type="string" calculate="if( /data/g_delayed_recall/delayed_face  = &quot;yes&quot;, 1, 0) + if( /data/g_delayed_recall/delayed_velvet  = &quot;yes&quot;, 1, 0) + if( /data/g_delayed_recall/delayed_church  = &quot;yes&quot;, 1, 0) + if( /data/g_delayed_recall/delayed_daisy  = &quot;yes&quot;, 1, 0) + if( /data/g_delayed_recall/delayed_red  = &quot;yes&quot;, 1, 0)"/>
+      <bind nodeset="/data/moca_attention_total" type="string" calculate="if( /data/g_attention/digit_span_fwd  = &quot;yes&quot;, 1, 0) + if( /data/g_attention/digit_span_bwd  = &quot;yes&quot;, 1, 0) + if( /data/g_attention/vigilance  = &quot;yes&quot;, 1, 0) +  /data/g_attention/serial_7s "/>
+      <bind nodeset="/data/moca_language_total" type="string" calculate="if( /data/g_language/sentence_rep_1  = &quot;yes&quot;, 1, 0) + if( /data/g_language/sentence_rep_2  = &quot;yes&quot;, 1, 0) + if( /data/g_language/fluency_count  &gt;= 11, 1, 0)"/>
+      <bind nodeset="/data/moca_abstraction_total" type="string" calculate="if( /data/g_abstraction/abstraction_1  = &quot;yes&quot;, 1, 0) + if( /data/g_abstraction/abstraction_2  = &quot;yes&quot;, 1, 0)"/>
+      <bind nodeset="/data/moca_delayed_total" type="string" calculate="if( /data/g_delayed_recall/delayed_face  = &quot;yes&quot;, 1, 0) + if( /data/g_delayed_recall/delayed_velvet  = &quot;yes&quot;, 1, 0) + if( /data/g_delayed_recall/delayed_church  = &quot;yes&quot;, 1, 0) + if( /data/g_delayed_recall/delayed_daisy  = &quot;yes&quot;, 1, 0) + if( /data/g_delayed_recall/delayed_red  = &quot;yes&quot;, 1, 0)"/>
+      <bind nodeset="/data/moca_orientation_total" type="string" calculate="if( /data/g_orientation/orientation_date  = &quot;yes&quot;, 1, 0) + if( /data/g_orientation/orientation_month  = &quot;yes&quot;, 1, 0) + if( /data/g_orientation/orientation_year  = &quot;yes&quot;, 1, 0) + if( /data/g_orientation/orientation_day  = &quot;yes&quot;, 1, 0) + if( /data/g_orientation/orientation_place  = &quot;yes&quot;, 1, 0) + if( /data/g_orientation/orientation_city  = &quot;yes&quot;, 1, 0)"/>
+      <bind nodeset="/data/moca_raw_total" type="string" calculate=" /data/moca_visuospatial_total  +  /data/moca_naming_total  +  /data/moca_memory_total  +  /data/moca_attention_total  +  /data/moca_language_total  +  /data/moca_abstraction_total  +  /data/moca_orientation_total "/>
+      <bind nodeset="/data/moca_education_adj" type="string" calculate="if( /data/patient_education  = &quot;illiterate&quot; or  /data/patient_education  = &quot;primary&quot;, 1, 0)"/>
+      <bind nodeset="/data/moca_total_score" type="string" calculate="min( /data/moca_raw_total  +  /data/moca_education_adj , 30)"/>
+      <bind nodeset="/data/moca_interpretation" type="string" calculate="if( /data/moca_total_score  &gt;= 26, &quot;normal&quot;, &quot;impaired&quot;)"/>
+      <bind nodeset="/data/g_admin/administered_by" type="string" required="true()"/>
+      <bind nodeset="/data/g_admin/assessment_datetime" type="dateTime" required="true()" calculate="now()"/>
+      <bind nodeset="/data/g_moca_sheets/moca_sheets/moca_image" type="binary" readonly="binary"/>
+      <bind nodeset="/data/g_moca_sheets/moca_sheets/moca_pdf" type="binary" readonly="binary"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/data/inputs">
+      <label ref="jr:itext('/data/inputs:label')"/>
+      <group appearance="field-list" ref="/data/inputs/user">
+        <label ref="jr:itext('/data/inputs/user:label')"/>
+      </group>
+      <group appearance="field-list" ref="/data/inputs/contact">
+        <label ref="jr:itext('/data/inputs/contact:label')"/>
+        <input ref="/data/inputs/contact/_id" appearance="select-contact type-participant">
+          <label ref="jr:itext('/data/inputs/contact/_id:label')"/>
+        </input>
+      </group>
+    </group>
+    <group appearance="field-list" ref="/data/g_consent">
+      <label ref="jr:itext('/data/g_consent:label')"/>
+      <select1 ref="/data/g_consent/consent_reconfirmed">
+        <label ref="jr:itext('/data/g_consent/consent_reconfirmed:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g_visuospatial">
+      <label ref="jr:itext('/data/g_visuospatial:label')"/>
+      <input ref="/data/g_visuospatial/trail_making_inst">
+        <label ref="jr:itext('/data/g_visuospatial/trail_making_inst:label')"/>
+      </input>
+      <select1 ref="/data/g_visuospatial/trail_making">
+        <label ref="jr:itext('/data/g_visuospatial/trail_making:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_visuospatial/cube_inst">
+        <label ref="jr:itext('/data/g_visuospatial/cube_inst:label')"/>
+      </input>
+      <select1 ref="/data/g_visuospatial/cube_copy">
+        <label ref="jr:itext('/data/g_visuospatial/cube_copy:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_visuospatial/clock_inst">
+        <label ref="jr:itext('/data/g_visuospatial/clock_inst:label')"/>
+      </input>
+      <select1 ref="/data/g_visuospatial/clock_contour">
+        <label ref="jr:itext('/data/g_visuospatial/clock_contour:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_visuospatial/clock_numbers">
+        <label ref="jr:itext('/data/g_visuospatial/clock_numbers:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_visuospatial/clock_hands">
+        <label ref="jr:itext('/data/g_visuospatial/clock_hands:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g_naming">
+      <label ref="jr:itext('/data/g_naming:label')"/>
+      <input ref="/data/g_naming/naming_inst">
+        <label ref="jr:itext('/data/g_naming/naming_inst:label')"/>
+      </input>
+      <select1 ref="/data/g_naming/naming_1">
+        <label ref="jr:itext('/data/g_naming/naming_1:label')"/>
+        <itemset nodeset="instance('naming_score')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_naming/naming_2">
+        <label ref="jr:itext('/data/g_naming/naming_2:label')"/>
+        <itemset nodeset="instance('naming_score')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_naming/naming_3">
+        <label ref="jr:itext('/data/g_naming/naming_3:label')"/>
+        <itemset nodeset="instance('naming_score')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g_memory">
+      <label ref="jr:itext('/data/g_memory:label')"/>
+      <input ref="/data/g_memory/memory_inst_trial1">
+        <label ref="jr:itext('/data/g_memory/memory_inst_trial1:label')"/>
+      </input>
+      <input ref="/data/g_memory/memory_words">
+        <label ref="jr:itext('/data/g_memory/memory_words:label')"/>
+      </input>
+      <group appearance="field-list" ref="/data/g_memory/mem_trial1">
+        <label ref="jr:itext('/data/g_memory/mem_trial1:label')"/>
+        <select1 ref="/data/g_memory/mem_trial1/mem_t1_face">
+          <label ref="jr:itext('/data/g_memory/mem_trial1/mem_t1_face:label')"/>
+          <itemset nodeset="instance('yesno')/root/item">
+            <value ref="name"/>
+            <label ref="jr:itext(itextId)"/>
+          </itemset>
+        </select1>
+        <select1 ref="/data/g_memory/mem_trial1/mem_t1_velvet">
+          <label ref="jr:itext('/data/g_memory/mem_trial1/mem_t1_velvet:label')"/>
+          <itemset nodeset="instance('yesno')/root/item">
+            <value ref="name"/>
+            <label ref="jr:itext(itextId)"/>
+          </itemset>
+        </select1>
+        <select1 ref="/data/g_memory/mem_trial1/mem_t1_church">
+          <label ref="jr:itext('/data/g_memory/mem_trial1/mem_t1_church:label')"/>
+          <itemset nodeset="instance('yesno')/root/item">
+            <value ref="name"/>
+            <label ref="jr:itext(itextId)"/>
+          </itemset>
+        </select1>
+        <select1 ref="/data/g_memory/mem_trial1/mem_t1_daisy">
+          <label ref="jr:itext('/data/g_memory/mem_trial1/mem_t1_daisy:label')"/>
+          <itemset nodeset="instance('yesno')/root/item">
+            <value ref="name"/>
+            <label ref="jr:itext(itextId)"/>
+          </itemset>
+        </select1>
+        <select1 ref="/data/g_memory/mem_trial1/mem_t1_red">
+          <label ref="jr:itext('/data/g_memory/mem_trial1/mem_t1_red:label')"/>
+          <itemset nodeset="instance('yesno')/root/item">
+            <value ref="name"/>
+            <label ref="jr:itext(itextId)"/>
+          </itemset>
+        </select1>
+      </group>
+      <input ref="/data/g_memory/memory_inst_trial2">
+        <label ref="jr:itext('/data/g_memory/memory_inst_trial2:label')"/>
+      </input>
+      <group appearance="field-list" ref="/data/g_memory/mem_trial2">
+        <label ref="jr:itext('/data/g_memory/mem_trial2:label')"/>
+        <select1 ref="/data/g_memory/mem_trial2/mem_t2_face">
+          <label ref="jr:itext('/data/g_memory/mem_trial2/mem_t2_face:label')"/>
+          <itemset nodeset="instance('yesno')/root/item">
+            <value ref="name"/>
+            <label ref="jr:itext(itextId)"/>
+          </itemset>
+        </select1>
+        <select1 ref="/data/g_memory/mem_trial2/mem_t2_velvet">
+          <label ref="jr:itext('/data/g_memory/mem_trial2/mem_t2_velvet:label')"/>
+          <itemset nodeset="instance('yesno')/root/item">
+            <value ref="name"/>
+            <label ref="jr:itext(itextId)"/>
+          </itemset>
+        </select1>
+        <select1 ref="/data/g_memory/mem_trial2/mem_t2_church">
+          <label ref="jr:itext('/data/g_memory/mem_trial2/mem_t2_church:label')"/>
+          <itemset nodeset="instance('yesno')/root/item">
+            <value ref="name"/>
+            <label ref="jr:itext(itextId)"/>
+          </itemset>
+        </select1>
+        <select1 ref="/data/g_memory/mem_trial2/mem_t2_daisy">
+          <label ref="jr:itext('/data/g_memory/mem_trial2/mem_t2_daisy:label')"/>
+          <itemset nodeset="instance('yesno')/root/item">
+            <value ref="name"/>
+            <label ref="jr:itext(itextId)"/>
+          </itemset>
+        </select1>
+        <select1 ref="/data/g_memory/mem_trial2/mem_t2_red">
+          <label ref="jr:itext('/data/g_memory/mem_trial2/mem_t2_red:label')"/>
+          <itemset nodeset="instance('yesno')/root/item">
+            <value ref="name"/>
+            <label ref="jr:itext(itextId)"/>
+          </itemset>
+        </select1>
+      </group>
+      <input ref="/data/g_memory/memory_inst_delayed">
+        <label ref="jr:itext('/data/g_memory/memory_inst_delayed:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_attention">
+      <label ref="jr:itext('/data/g_attention:label')"/>
+      <input ref="/data/g_attention/attention_fwd_inst">
+        <label ref="jr:itext('/data/g_attention/attention_fwd_inst:label')"/>
+      </input>
+      <select1 ref="/data/g_attention/digit_span_fwd">
+        <label ref="jr:itext('/data/g_attention/digit_span_fwd:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_attention/attention_bwd_inst">
+        <label ref="jr:itext('/data/g_attention/attention_bwd_inst:label')"/>
+      </input>
+      <select1 ref="/data/g_attention/digit_span_bwd">
+        <label ref="jr:itext('/data/g_attention/digit_span_bwd:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_attention/vigilance_inst">
+        <label ref="jr:itext('/data/g_attention/vigilance_inst:label')"/>
+      </input>
+      <select1 ref="/data/g_attention/vigilance">
+        <label ref="jr:itext('/data/g_attention/vigilance:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_attention/serial7_inst">
+        <label ref="jr:itext('/data/g_attention/serial7_inst:label')"/>
+      </input>
+      <select1 ref="/data/g_attention/serial_7s">
+        <label ref="jr:itext('/data/g_attention/serial_7s:label')"/>
+        <itemset nodeset="instance('serial7_score')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g_language">
+      <label ref="jr:itext('/data/g_language:label')"/>
+      <input ref="/data/g_language/sentence1_inst">
+        <label ref="jr:itext('/data/g_language/sentence1_inst:label')"/>
+      </input>
+      <select1 ref="/data/g_language/sentence_rep_1">
+        <label ref="jr:itext('/data/g_language/sentence_rep_1:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_language/sentence2_inst">
+        <label ref="jr:itext('/data/g_language/sentence2_inst:label')"/>
+      </input>
+      <select1 ref="/data/g_language/sentence_rep_2">
+        <label ref="jr:itext('/data/g_language/sentence_rep_2:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <input ref="/data/g_language/fluency_inst">
+        <label ref="jr:itext('/data/g_language/fluency_inst:label')"/>
+      </input>
+      <input ref="/data/g_language/fluency_count">
+        <label ref="jr:itext('/data/g_language/fluency_count:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_abstraction">
+      <label ref="jr:itext('/data/g_abstraction:label')"/>
+      <input ref="/data/g_abstraction/abstraction_inst_practice">
+        <label ref="jr:itext('/data/g_abstraction/abstraction_inst_practice:label')"/>
+      </input>
+      <select1 ref="/data/g_abstraction/abstraction_1">
+        <label ref="jr:itext('/data/g_abstraction/abstraction_1:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_abstraction/abstraction_2">
+        <label ref="jr:itext('/data/g_abstraction/abstraction_2:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g_delayed_recall">
+      <label ref="jr:itext('/data/g_delayed_recall:label')"/>
+      <input ref="/data/g_delayed_recall/delayed_inst">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_inst:label')"/>
+      </input>
+      <select1 ref="/data/g_delayed_recall/delayed_face">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_face:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_face_cat">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_face_cat:label')"/>
+        <itemset nodeset="instance('delayed_cue')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_face_mc">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_face_mc:label')"/>
+        <itemset nodeset="instance('delayed_cue')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_velvet">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_velvet:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_velvet_cat">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_velvet_cat:label')"/>
+        <itemset nodeset="instance('delayed_cue')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_velvet_mc">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_velvet_mc:label')"/>
+        <itemset nodeset="instance('delayed_cue')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_church">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_church:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_church_cat">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_church_cat:label')"/>
+        <itemset nodeset="instance('delayed_cue')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_church_mc">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_church_mc:label')"/>
+        <itemset nodeset="instance('delayed_cue')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_daisy">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_daisy:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_daisy_cat">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_daisy_cat:label')"/>
+        <itemset nodeset="instance('delayed_cue')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_daisy_mc">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_daisy_mc:label')"/>
+        <itemset nodeset="instance('delayed_cue')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_red">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_red:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_red_cat">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_red_cat:label')"/>
+        <itemset nodeset="instance('delayed_cue')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_delayed_recall/delayed_red_mc">
+        <label ref="jr:itext('/data/g_delayed_recall/delayed_red_mc:label')"/>
+        <itemset nodeset="instance('delayed_cue')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g_orientation">
+      <label ref="jr:itext('/data/g_orientation:label')"/>
+      <input ref="/data/g_orientation/orientation_inst">
+        <label ref="jr:itext('/data/g_orientation/orientation_inst:label')"/>
+      </input>
+      <select1 ref="/data/g_orientation/orientation_date">
+        <label ref="jr:itext('/data/g_orientation/orientation_date:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_orientation/orientation_month">
+        <label ref="jr:itext('/data/g_orientation/orientation_month:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_orientation/orientation_year">
+        <label ref="jr:itext('/data/g_orientation/orientation_year:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_orientation/orientation_day">
+        <label ref="jr:itext('/data/g_orientation/orientation_day:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_orientation/orientation_place">
+        <label ref="jr:itext('/data/g_orientation/orientation_place:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_orientation/orientation_city">
+        <label ref="jr:itext('/data/g_orientation/orientation_city:label')"/>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="jr:itext(itextId)"/>
+        </itemset>
+      </select1>
+    </group>
+    <group appearance="field-list" ref="/data/g_admin">
+      <label ref="jr:itext('/data/g_admin:label')"/>
+      <input ref="/data/g_admin/administered_by">
+        <label ref="jr:itext('/data/g_admin/administered_by:label')"/>
+      </input>
+      <input ref="/data/g_admin/assessment_datetime">
+        <label ref="jr:itext('/data/g_admin/assessment_datetime:label')"/>
+      </input>
+    </group>
+    <group appearance="field-list" ref="/data/g_moca_sheets">
+      <label ref="jr:itext('/data/g_moca_sheets:label')"/>
+      <group ref="/data/g_moca_sheets/moca_sheets">
+        <label ref="jr:itext('/data/g_moca_sheets/moca_sheets:label')"/>
+        <repeat nodeset="/data/g_moca_sheets/moca_sheets" appearance="field-list">
+          <upload ref="/data/g_moca_sheets/moca_sheets/moca_image" mediatype="image/*">
+            <label ref="jr:itext('/data/g_moca_sheets/moca_sheets/moca_image:label')"/>
+          </upload>
+          <upload ref="/data/g_moca_sheets/moca_sheets/moca_pdf" mediatype="application/*">
+            <label ref="jr:itext('/data/g_moca_sheets/moca_sheets/moca_pdf:label')"/>
+          </upload>
+        </repeat>
+      </group>
+    </group>
+  </h:body>
+</h:html>

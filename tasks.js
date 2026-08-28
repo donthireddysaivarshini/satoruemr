@@ -25,6 +25,7 @@ const {
   addDays,
   isActive,
   isExited,
+  isUserContact,
   stage1NeedsFollowUp,
   stage1FlagCount,
   stage2DoneAfter,
@@ -34,6 +35,8 @@ const {
   followUpAttemptsSince,
   appointmentBooked,
   nextReviewDue,
+  mocaDue,
+  vinelandDue,
 } = require('./nools-extras');
 
 const PRIORITY_HIGH = { level: 'high', label: 'task.priority.high' };
@@ -279,31 +282,88 @@ module.exports = [
   },
 
   // ---------------------------------------------------------------------
-  // 8. STAGE 1 NOT YET DONE
-  //    Catches camp-day registrations that were never followed by a
-  //    screening - the commonest data gap in a busy camp.
+  // 8. ASSESSMENT VISIT DUE FOR NEW PARTICIPANTS
+  //    Creates an Assessment Visit task when a new participant is registered.
+  //    Only for eligible child/beneficiary contacts — never for user/staff contacts.
   // ---------------------------------------------------------------------
   {
-    name: 'satoru.stage1-missing',
+    name: 'satoru.assessment-visit-due',
     icon: 'icon-healthcare-assessment',
-    title: 'task.stage1_missing.title',
+    title: 'task.assessment_visit_due.title',
     appliesTo: 'contacts',
     appliesToType: [CONTACT_TYPES.PARTICIPANT],
     appliesIf: (contact) =>
-      isActive(contact) && reportsOf(contact, FORMS.STAGE1).length === 0,
-    resolvedIf: (contact) => reportsOf(contact, FORMS.STAGE1).length > 0,
+      isActive(contact) &&
+      !isUserContact(contact) &&
+      reportsOf(contact, FORMS.ASSESSMENT).length === 0 &&
+      contact.role !== 'staff',
+    resolvedIf: (contact) => reportsOf(contact, FORMS.ASSESSMENT).length > 0,
     events: [{
-      id: 'stage1-missing',
+      id: 'assessment-visit-due',
       start: 0,
-      end: CONFIG.STAGE1_MISSING_DAYS,
+      end: CONFIG.ASSESSMENT_VISIT_DUE_DAYS,
       dueDate: (event, contact) =>
         new Date((contact.contact && contact.contact.reported_date)
           || Utils.now()),
     }],
     actions: [{
       type: 'report',
-      form: FORMS.STAGE1,
-      label: 'task.stage1_missing.action',
+      form: FORMS.ASSESSMENT,
+      label: 'task.assessment_visit_due.action',
+    }],
+  },
+
+  // ---------------------------------------------------------------------
+  // 9. MOCA ASSESSMENT DUE
+  //    Disabled: scales are launched as app forms and must not appear in Due Today.
+  // ---------------------------------------------------------------------
+  {
+    name: 'satoru.moca-due',
+    icon: 'icon-healthcare-assessment',
+    title: 'task.moca_due.title',
+    appliesTo: 'contacts',
+    appliesToType: [CONTACT_TYPES.PARTICIPANT],
+    appliesIf: () => false, // Disabled: scales are launched as app forms and must not appear in Due Today.
+    resolvedIf: (contact) => !mocaDue(contact),
+    events: [{
+      id: 'moca-due',
+      start: 0,
+      end: CONFIG.MOCA_DUE_DAYS,
+      dueDate: (event, contact) =>
+        new Date((contact.contact && contact.contact.reported_date)
+          || Utils.now()),
+    }],
+    actions: [{
+      type: 'report',
+      form: FORMS.MOCA,
+      label: 'task.moca_due.action',
+    }],
+  },
+
+  // ---------------------------------------------------------------------
+  // 10. VINELAND ASSESSMENT DUE
+  //     Disabled: scales are launched as app forms and must not appear in Due Today.
+  // ---------------------------------------------------------------------
+  {
+    name: 'satoru.vineland-due',
+    icon: 'icon-healthcare-assessment',
+    title: 'task.vineland_due.title',
+    appliesTo: 'contacts',
+    appliesToType: [CONTACT_TYPES.PARTICIPANT],
+    appliesIf: () => false, // Disabled: scales are launched as app forms and must not appear in Due Today.
+    resolvedIf: (contact) => !vinelandDue(contact),
+    events: [{
+      id: 'vineland-due',
+      start: 0,
+      end: CONFIG.VINELAND_DUE_DAYS,
+      dueDate: (event, contact) =>
+        new Date((contact.contact && contact.contact.reported_date)
+          || Utils.now()),
+    }],
+    actions: [{
+      type: 'report',
+      form: FORMS.VINELAND,
+      label: 'task.vineland_due.action',
     }],
   },
 ];

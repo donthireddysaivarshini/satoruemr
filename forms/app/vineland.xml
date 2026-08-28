@@ -1,0 +1,1316 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>Vineland-style Social Maturity Scale (VSMS)</h:title>
+    <model odk:xforms-version="1.0.0">
+      <instance>
+        <data id="vineland" version="2026-08-27" prefix="J1!vineland!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <user>
+              <contact_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <name/>
+              <age/>
+              <reported_date/>
+            </contact>
+          </inputs>
+          <patient_uuid/>
+          <patient_id/>
+          <patient_name/>
+          <screened_by/>
+          <screened_by_name/>
+          <g_intro>
+            <vineland_disclaimer/>
+            <acknowledged/>
+          </g_intro>
+          <g_child>
+            <assessment_date/>
+            <child_dob/>
+            <ca_days/>
+            <ca_months_dec/>
+            <ca_months_floor/>
+            <ca_years_display/>
+            <ca_rem_months/>
+            <age_valid/>
+            <dob_warning/>
+            <ca_display/>
+            <show_all>no</show_all>
+          </g_child>
+          <ca_band/>
+          <g_y0_1>
+            <item_1/>
+            <item_2/>
+            <item_3/>
+            <item_4/>
+            <item_5/>
+            <item_6/>
+            <item_7/>
+            <item_8/>
+            <item_9/>
+            <item_10/>
+            <item_11/>
+            <item_12/>
+            <item_13/>
+            <item_14/>
+            <item_15/>
+            <item_16/>
+            <item_17/>
+          </g_y0_1>
+          <g_y1_2>
+            <item_18/>
+            <item_19/>
+            <item_20/>
+            <item_21/>
+            <item_22/>
+            <item_23/>
+            <item_24/>
+            <item_25/>
+            <item_26/>
+            <item_27/>
+            <item_28/>
+            <item_29/>
+            <item_30/>
+            <item_31/>
+            <item_32/>
+            <item_33/>
+            <item_34/>
+          </g_y1_2>
+          <g_y2_3>
+            <item_35/>
+            <item_36/>
+            <item_37/>
+            <item_38/>
+            <item_39/>
+            <item_40/>
+            <item_41/>
+            <item_42/>
+            <item_43/>
+            <item_44/>
+          </g_y2_3>
+          <g_y3_4>
+            <item_45/>
+            <item_46/>
+            <item_47/>
+            <item_48/>
+            <item_49/>
+            <item_50/>
+          </g_y3_4>
+          <g_y4_5>
+            <item_51/>
+            <item_52/>
+            <item_53/>
+            <item_54/>
+            <item_55/>
+            <item_56/>
+          </g_y4_5>
+          <g_y5_6>
+            <item_57/>
+            <item_58/>
+            <item_59/>
+            <item_60/>
+            <item_61/>
+          </g_y5_6>
+          <g_y6_7>
+            <item_62/>
+            <item_63/>
+            <item_64/>
+            <item_65/>
+          </g_y6_7>
+          <g_y7_8>
+            <item_66/>
+            <item_67/>
+            <item_68/>
+            <item_69/>
+            <item_70/>
+          </g_y7_8>
+          <g_y8_9>
+            <item_71/>
+            <item_72/>
+            <item_73/>
+            <item_74/>
+          </g_y8_9>
+          <g_y9_10>
+            <item_75/>
+            <item_76/>
+            <item_77/>
+          </g_y9_10>
+          <g_y10_11>
+            <item_78/>
+            <item_79/>
+            <item_80/>
+            <item_81/>
+          </g_y10_11>
+          <g_y11_12>
+            <item_82/>
+            <item_83/>
+            <item_84/>
+          </g_y11_12>
+          <g_y12_15>
+            <item_85/>
+            <item_86/>
+            <item_87/>
+            <item_88/>
+            <item_89/>
+          </g_y12_15>
+          <item_1_score/>
+          <item_2_score/>
+          <item_3_score/>
+          <item_4_score/>
+          <item_5_score/>
+          <item_6_score/>
+          <item_7_score/>
+          <item_8_score/>
+          <item_9_score/>
+          <item_10_score/>
+          <item_11_score/>
+          <item_12_score/>
+          <item_13_score/>
+          <item_14_score/>
+          <item_15_score/>
+          <item_16_score/>
+          <item_17_score/>
+          <item_18_score/>
+          <item_19_score/>
+          <item_20_score/>
+          <item_21_score/>
+          <item_22_score/>
+          <item_23_score/>
+          <item_24_score/>
+          <item_25_score/>
+          <item_26_score/>
+          <item_27_score/>
+          <item_28_score/>
+          <item_29_score/>
+          <item_30_score/>
+          <item_31_score/>
+          <item_32_score/>
+          <item_33_score/>
+          <item_34_score/>
+          <item_35_score/>
+          <item_36_score/>
+          <item_37_score/>
+          <item_38_score/>
+          <item_39_score/>
+          <item_40_score/>
+          <item_41_score/>
+          <item_42_score/>
+          <item_43_score/>
+          <item_44_score/>
+          <item_45_score/>
+          <item_46_score/>
+          <item_47_score/>
+          <item_48_score/>
+          <item_49_score/>
+          <item_50_score/>
+          <item_51_score/>
+          <item_52_score/>
+          <item_53_score/>
+          <item_54_score/>
+          <item_55_score/>
+          <item_56_score/>
+          <item_57_score/>
+          <item_58_score/>
+          <item_59_score/>
+          <item_60_score/>
+          <item_61_score/>
+          <item_62_score/>
+          <item_63_score/>
+          <item_64_score/>
+          <item_65_score/>
+          <item_66_score/>
+          <item_67_score/>
+          <item_68_score/>
+          <item_69_score/>
+          <item_70_score/>
+          <item_71_score/>
+          <item_72_score/>
+          <item_73_score/>
+          <item_74_score/>
+          <item_75_score/>
+          <item_76_score/>
+          <item_77_score/>
+          <item_78_score/>
+          <item_79_score/>
+          <item_80_score/>
+          <item_81_score/>
+          <item_82_score/>
+          <item_83_score/>
+          <item_84_score/>
+          <item_85_score/>
+          <item_86_score/>
+          <item_87_score/>
+          <item_88_score/>
+          <item_89_score/>
+          <raw_score/>
+          <total_yes_items/>
+          <total_no_items/>
+          <total_not_assessed_items/>
+          <social_age_months/>
+          <social_age_years/>
+          <social_age_remaining_months/>
+          <social_quotient_raw/>
+          <social_quotient_rounded/>
+          <sq_interpretation/>
+          <score_status/>
+          <na_reason/>
+          <clinical_notes/>
+          <result_complete/>
+          <result_incomplete/>
+          <result_invalid/>
+          <g_supporting_docs>
+            <upload_scale_image type="binary"/>
+            <upload_scale_pdf type="binary"/>
+            <upload_caption/>
+          </g_supporting_docs>
+          <scoring_version/>
+          <scoring_notes/>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="user-contact-summary"/>
+      <instance id="yesno">
+        <root>
+          <item>
+            <name>yes</name>
+            <label>Yes</label>
+          </item>
+          <item>
+            <name>no</name>
+            <label>No</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="vsms_response">
+        <root>
+          <item>
+            <name>yes</name>
+            <label>Yes</label>
+          </item>
+          <item>
+            <name>no</name>
+            <label>No</label>
+          </item>
+          <item>
+            <name>not_assessed</name>
+            <label>Not Assessed</label>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/data/inputs/source" type="string"/>
+      <bind nodeset="/data/inputs/source_id" type="string"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/data/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/data/inputs/contact/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/age" type="string"/>
+      <bind nodeset="/data/inputs/contact/reported_date" type="string"/>
+      <bind nodeset="/data/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/data/patient_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/data/patient_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/data/screened_by" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/data/screened_by_name" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/data/g_intro/vineland_disclaimer" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_intro/acknowledged" type="string" required="true()" constraint=". = 'yes'" jr:constraintMsg="You must confirm before continuing."/>
+      <bind nodeset="/data/g_child/assessment_date" type="date" required="true()"/>
+      <setvalue ref="/data/g_child/assessment_date" value="today()" event="odk-instance-first-load"/>
+      <bind nodeset="/data/g_child/child_dob" type="date" required="true()" constraint=". &lt;= today() and today() - . &lt;= 5479" jr:constraintMsg="Date of birth must be today or earlier, and the child must be 15 years or younger."/>
+      <bind nodeset="/data/g_child/ca_days" type="string" calculate="int( /data/g_child/assessment_date  -  /data/g_child/child_dob )"/>
+      <bind nodeset="/data/g_child/ca_months_dec" type="string" calculate=" /data/g_child/ca_days  div 30.4375"/>
+      <bind nodeset="/data/g_child/ca_months_floor" type="string" calculate="floor( /data/g_child/ca_months_dec )"/>
+      <bind nodeset="/data/g_child/ca_years_display" type="string" calculate="floor( /data/g_child/ca_days  div 365.25)"/>
+      <bind nodeset="/data/g_child/ca_rem_months" type="string" calculate="floor(( /data/g_child/ca_days  mod 365) div 30.4375)"/>
+      <bind nodeset="/data/g_child/age_valid" type="string" calculate="if( /data/g_child/ca_days  &gt;= 0 and  /data/g_child/ca_months_dec  &lt;= 180 and  /data/g_intro/acknowledged  = 'yes', 'yes', 'no')"/>
+      <bind nodeset="/data/g_child/dob_warning" readonly="true()" type="string" relevant=" /data/g_child/child_dob  = '' or  /data/g_child/age_valid  != 'yes'"/>
+      <bind nodeset="/data/g_child/ca_display" readonly="true()" type="string" relevant=" /data/g_child/age_valid  = 'yes'"/>
+      <bind nodeset="/data/g_child/show_all" type="string"/>
+      <bind nodeset="/data/ca_band" type="string" calculate="if( /data/g_child/ca_months_dec  &lt; 12, 1, if( /data/g_child/ca_months_dec  &lt; 24, 2, if( /data/g_child/ca_months_dec  &lt; 36, 3, if( /data/g_child/ca_months_dec  &lt; 48, 4, if( /data/g_child/ca_months_dec  &lt; 60, 5, if( /data/g_child/ca_months_dec  &lt; 72, 6, if( /data/g_child/ca_months_dec  &lt; 84, 7, if( /data/g_child/ca_months_dec  &lt; 96, 8, if( /data/g_child/ca_months_dec  &lt; 108, 9, if( /data/g_child/ca_months_dec  &lt; 120, 10, if( /data/g_child/ca_months_dec  &lt; 132, 11, if( /data/g_child/ca_months_dec  &lt; 144, 12, 13))))))))))))"/>
+      <bind nodeset="/data/g_y0_1" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 1"/>
+      <bind nodeset="/data/g_y0_1/item_1" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_2" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_3" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_4" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_5" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_6" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_7" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_8" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_9" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_10" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_11" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_12" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_13" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_14" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_15" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_16" type="string" required="true()"/>
+      <bind nodeset="/data/g_y0_1/item_17" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 2"/>
+      <bind nodeset="/data/g_y1_2/item_18" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_19" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_20" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_21" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_22" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_23" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_24" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_25" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_26" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_27" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_28" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_29" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_30" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_31" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_32" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_33" type="string" required="true()"/>
+      <bind nodeset="/data/g_y1_2/item_34" type="string" required="true()"/>
+      <bind nodeset="/data/g_y2_3" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 3"/>
+      <bind nodeset="/data/g_y2_3/item_35" type="string" required="true()"/>
+      <bind nodeset="/data/g_y2_3/item_36" type="string" required="true()"/>
+      <bind nodeset="/data/g_y2_3/item_37" type="string" required="true()"/>
+      <bind nodeset="/data/g_y2_3/item_38" type="string" required="true()"/>
+      <bind nodeset="/data/g_y2_3/item_39" type="string" required="true()"/>
+      <bind nodeset="/data/g_y2_3/item_40" type="string" required="true()"/>
+      <bind nodeset="/data/g_y2_3/item_41" type="string" required="true()"/>
+      <bind nodeset="/data/g_y2_3/item_42" type="string" required="true()"/>
+      <bind nodeset="/data/g_y2_3/item_43" type="string" required="true()"/>
+      <bind nodeset="/data/g_y2_3/item_44" type="string" required="true()"/>
+      <bind nodeset="/data/g_y3_4" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 4"/>
+      <bind nodeset="/data/g_y3_4/item_45" type="string" required="true()"/>
+      <bind nodeset="/data/g_y3_4/item_46" type="string" required="true()"/>
+      <bind nodeset="/data/g_y3_4/item_47" type="string" required="true()"/>
+      <bind nodeset="/data/g_y3_4/item_48" type="string" required="true()"/>
+      <bind nodeset="/data/g_y3_4/item_49" type="string" required="true()"/>
+      <bind nodeset="/data/g_y3_4/item_50" type="string" required="true()"/>
+      <bind nodeset="/data/g_y4_5" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 5"/>
+      <bind nodeset="/data/g_y4_5/item_51" type="string" required="true()"/>
+      <bind nodeset="/data/g_y4_5/item_52" type="string" required="true()"/>
+      <bind nodeset="/data/g_y4_5/item_53" type="string" required="true()"/>
+      <bind nodeset="/data/g_y4_5/item_54" type="string" required="true()"/>
+      <bind nodeset="/data/g_y4_5/item_55" type="string" required="true()"/>
+      <bind nodeset="/data/g_y4_5/item_56" type="string" required="true()"/>
+      <bind nodeset="/data/g_y5_6" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 6"/>
+      <bind nodeset="/data/g_y5_6/item_57" type="string" required="true()"/>
+      <bind nodeset="/data/g_y5_6/item_58" type="string" required="true()"/>
+      <bind nodeset="/data/g_y5_6/item_59" type="string" required="true()"/>
+      <bind nodeset="/data/g_y5_6/item_60" type="string" required="true()"/>
+      <bind nodeset="/data/g_y5_6/item_61" type="string" required="true()"/>
+      <bind nodeset="/data/g_y6_7" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 7"/>
+      <bind nodeset="/data/g_y6_7/item_62" type="string" required="true()"/>
+      <bind nodeset="/data/g_y6_7/item_63" type="string" required="true()"/>
+      <bind nodeset="/data/g_y6_7/item_64" type="string" required="true()"/>
+      <bind nodeset="/data/g_y6_7/item_65" type="string" required="true()"/>
+      <bind nodeset="/data/g_y7_8" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 8"/>
+      <bind nodeset="/data/g_y7_8/item_66" type="string" required="true()"/>
+      <bind nodeset="/data/g_y7_8/item_67" type="string" required="true()"/>
+      <bind nodeset="/data/g_y7_8/item_68" type="string" required="true()"/>
+      <bind nodeset="/data/g_y7_8/item_69" type="string" required="true()"/>
+      <bind nodeset="/data/g_y7_8/item_70" type="string" required="true()"/>
+      <bind nodeset="/data/g_y8_9" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 9"/>
+      <bind nodeset="/data/g_y8_9/item_71" type="string" required="true()"/>
+      <bind nodeset="/data/g_y8_9/item_72" type="string" required="true()"/>
+      <bind nodeset="/data/g_y8_9/item_73" type="string" required="true()"/>
+      <bind nodeset="/data/g_y8_9/item_74" type="string" required="true()"/>
+      <bind nodeset="/data/g_y9_10" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 10"/>
+      <bind nodeset="/data/g_y9_10/item_75" type="string" required="true()"/>
+      <bind nodeset="/data/g_y9_10/item_76" type="string" required="true()"/>
+      <bind nodeset="/data/g_y9_10/item_77" type="string" required="true()"/>
+      <bind nodeset="/data/g_y10_11" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 11"/>
+      <bind nodeset="/data/g_y10_11/item_78" type="string" required="true()"/>
+      <bind nodeset="/data/g_y10_11/item_79" type="string" required="true()"/>
+      <bind nodeset="/data/g_y10_11/item_80" type="string" required="true()"/>
+      <bind nodeset="/data/g_y10_11/item_81" type="string" required="true()"/>
+      <bind nodeset="/data/g_y11_12" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 12"/>
+      <bind nodeset="/data/g_y11_12/item_82" type="string" required="true()"/>
+      <bind nodeset="/data/g_y11_12/item_83" type="string" required="true()"/>
+      <bind nodeset="/data/g_y11_12/item_84" type="string" required="true()"/>
+      <bind nodeset="/data/g_y12_15" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 13"/>
+      <bind nodeset="/data/g_y12_15/item_85" type="string" required="true()"/>
+      <bind nodeset="/data/g_y12_15/item_86" type="string" required="true()"/>
+      <bind nodeset="/data/g_y12_15/item_87" type="string" required="true()"/>
+      <bind nodeset="/data/g_y12_15/item_88" type="string" required="true()"/>
+      <bind nodeset="/data/g_y12_15/item_89" type="string" required="true()"/>
+      <bind nodeset="/data/item_1_score" type="string" calculate="if( /data/g_y0_1/item_1  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_2_score" type="string" calculate="if( /data/g_y0_1/item_2  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_3_score" type="string" calculate="if( /data/g_y0_1/item_3  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_4_score" type="string" calculate="if( /data/g_y0_1/item_4  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_5_score" type="string" calculate="if( /data/g_y0_1/item_5  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_6_score" type="string" calculate="if( /data/g_y0_1/item_6  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_7_score" type="string" calculate="if( /data/g_y0_1/item_7  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_8_score" type="string" calculate="if( /data/g_y0_1/item_8  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_9_score" type="string" calculate="if( /data/g_y0_1/item_9  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_10_score" type="string" calculate="if( /data/g_y0_1/item_10  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_11_score" type="string" calculate="if( /data/g_y0_1/item_11  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_12_score" type="string" calculate="if( /data/g_y0_1/item_12  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_13_score" type="string" calculate="if( /data/g_y0_1/item_13  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_14_score" type="string" calculate="if( /data/g_y0_1/item_14  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_15_score" type="string" calculate="if( /data/g_y0_1/item_15  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_16_score" type="string" calculate="if( /data/g_y0_1/item_16  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_17_score" type="string" calculate="if( /data/g_y0_1/item_17  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_18_score" type="string" calculate="if( /data/g_y1_2/item_18  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_19_score" type="string" calculate="if( /data/g_y1_2/item_19  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_20_score" type="string" calculate="if( /data/g_y1_2/item_20  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_21_score" type="string" calculate="if( /data/g_y1_2/item_21  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_22_score" type="string" calculate="if( /data/g_y1_2/item_22  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_23_score" type="string" calculate="if( /data/g_y1_2/item_23  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_24_score" type="string" calculate="if( /data/g_y1_2/item_24  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_25_score" type="string" calculate="if( /data/g_y1_2/item_25  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_26_score" type="string" calculate="if( /data/g_y1_2/item_26  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_27_score" type="string" calculate="if( /data/g_y1_2/item_27  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_28_score" type="string" calculate="if( /data/g_y1_2/item_28  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_29_score" type="string" calculate="if( /data/g_y1_2/item_29  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_30_score" type="string" calculate="if( /data/g_y1_2/item_30  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_31_score" type="string" calculate="if( /data/g_y1_2/item_31  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_32_score" type="string" calculate="if( /data/g_y1_2/item_32  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_33_score" type="string" calculate="if( /data/g_y1_2/item_33  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_34_score" type="string" calculate="if( /data/g_y1_2/item_34  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_35_score" type="string" calculate="if( /data/g_y2_3/item_35  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_36_score" type="string" calculate="if( /data/g_y2_3/item_36  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_37_score" type="string" calculate="if( /data/g_y2_3/item_37  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_38_score" type="string" calculate="if( /data/g_y2_3/item_38  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_39_score" type="string" calculate="if( /data/g_y2_3/item_39  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_40_score" type="string" calculate="if( /data/g_y2_3/item_40  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_41_score" type="string" calculate="if( /data/g_y2_3/item_41  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_42_score" type="string" calculate="if( /data/g_y2_3/item_42  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_43_score" type="string" calculate="if( /data/g_y2_3/item_43  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_44_score" type="string" calculate="if( /data/g_y2_3/item_44  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_45_score" type="string" calculate="if( /data/g_y3_4/item_45  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_46_score" type="string" calculate="if( /data/g_y3_4/item_46  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_47_score" type="string" calculate="if( /data/g_y3_4/item_47  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_48_score" type="string" calculate="if( /data/g_y3_4/item_48  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_49_score" type="string" calculate="if( /data/g_y3_4/item_49  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_50_score" type="string" calculate="if( /data/g_y3_4/item_50  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_51_score" type="string" calculate="if( /data/g_y4_5/item_51  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_52_score" type="string" calculate="if( /data/g_y4_5/item_52  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_53_score" type="string" calculate="if( /data/g_y4_5/item_53  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_54_score" type="string" calculate="if( /data/g_y4_5/item_54  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_55_score" type="string" calculate="if( /data/g_y4_5/item_55  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_56_score" type="string" calculate="if( /data/g_y4_5/item_56  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_57_score" type="string" calculate="if( /data/g_y5_6/item_57  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_58_score" type="string" calculate="if( /data/g_y5_6/item_58  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_59_score" type="string" calculate="if( /data/g_y5_6/item_59  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_60_score" type="string" calculate="if( /data/g_y5_6/item_60  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_61_score" type="string" calculate="if( /data/g_y5_6/item_61  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_62_score" type="string" calculate="if( /data/g_y6_7/item_62  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_63_score" type="string" calculate="if( /data/g_y6_7/item_63  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_64_score" type="string" calculate="if( /data/g_y6_7/item_64  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_65_score" type="string" calculate="if( /data/g_y6_7/item_65  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_66_score" type="string" calculate="if( /data/g_y7_8/item_66  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_67_score" type="string" calculate="if( /data/g_y7_8/item_67  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_68_score" type="string" calculate="if( /data/g_y7_8/item_68  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_69_score" type="string" calculate="if( /data/g_y7_8/item_69  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_70_score" type="string" calculate="if( /data/g_y7_8/item_70  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_71_score" type="string" calculate="if( /data/g_y8_9/item_71  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_72_score" type="string" calculate="if( /data/g_y8_9/item_72  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_73_score" type="string" calculate="if( /data/g_y8_9/item_73  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_74_score" type="string" calculate="if( /data/g_y8_9/item_74  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_75_score" type="string" calculate="if( /data/g_y9_10/item_75  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_76_score" type="string" calculate="if( /data/g_y9_10/item_76  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_77_score" type="string" calculate="if( /data/g_y9_10/item_77  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_78_score" type="string" calculate="if( /data/g_y10_11/item_78  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_79_score" type="string" calculate="if( /data/g_y10_11/item_79  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_80_score" type="string" calculate="if( /data/g_y10_11/item_80  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_81_score" type="string" calculate="if( /data/g_y10_11/item_81  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_82_score" type="string" calculate="if( /data/g_y11_12/item_82  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_83_score" type="string" calculate="if( /data/g_y11_12/item_83  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_84_score" type="string" calculate="if( /data/g_y11_12/item_84  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_85_score" type="string" calculate="if( /data/g_y12_15/item_85  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_86_score" type="string" calculate="if( /data/g_y12_15/item_86  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_87_score" type="string" calculate="if( /data/g_y12_15/item_87  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_88_score" type="string" calculate="if( /data/g_y12_15/item_88  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/item_89_score" type="string" calculate="if( /data/g_y12_15/item_89  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/raw_score" type="string" calculate=" /data/item_1_score  +  /data/item_2_score  +  /data/item_3_score  +  /data/item_4_score  +  /data/item_5_score  +  /data/item_6_score  +  /data/item_7_score  +  /data/item_8_score  +  /data/item_9_score  +  /data/item_10_score  +  /data/item_11_score  +  /data/item_12_score  +  /data/item_13_score  +  /data/item_14_score  +  /data/item_15_score  +  /data/item_16_score  +  /data/item_17_score  +  /data/item_18_score  +  /data/item_19_score  +  /data/item_20_score  +  /data/item_21_score  +  /data/item_22_score  +  /data/item_23_score  +  /data/item_24_score  +  /data/item_25_score  +  /data/item_26_score  +  /data/item_27_score  +  /data/item_28_score  +  /data/item_29_score  +  /data/item_30_score  +  /data/item_31_score  +  /data/item_32_score  +  /data/item_33_score  +  /data/item_34_score  +  /data/item_35_score  +  /data/item_36_score  +  /data/item_37_score  +  /data/item_38_score  +  /data/item_39_score  +  /data/item_40_score  +  /data/item_41_score  +  /data/item_42_score  +  /data/item_43_score  +  /data/item_44_score  +  /data/item_45_score  +  /data/item_46_score  +  /data/item_47_score  +  /data/item_48_score  +  /data/item_49_score  +  /data/item_50_score  +  /data/item_51_score  +  /data/item_52_score  +  /data/item_53_score  +  /data/item_54_score  +  /data/item_55_score  +  /data/item_56_score  +  /data/item_57_score  +  /data/item_58_score  +  /data/item_59_score  +  /data/item_60_score  +  /data/item_61_score  +  /data/item_62_score  +  /data/item_63_score  +  /data/item_64_score  +  /data/item_65_score  +  /data/item_66_score  +  /data/item_67_score  +  /data/item_68_score  +  /data/item_69_score  +  /data/item_70_score  +  /data/item_71_score  +  /data/item_72_score  +  /data/item_73_score  +  /data/item_74_score  +  /data/item_75_score  +  /data/item_76_score  +  /data/item_77_score  +  /data/item_78_score  +  /data/item_79_score  +  /data/item_80_score  +  /data/item_81_score  +  /data/item_82_score  +  /data/item_83_score  +  /data/item_84_score  +  /data/item_85_score  +  /data/item_86_score  +  /data/item_87_score  +  /data/item_88_score  +  /data/item_89_score "/>
+      <bind nodeset="/data/total_yes_items" type="string" calculate="if( /data/g_y0_1/item_1  = 'yes', 1, 0) + if( /data/g_y0_1/item_2  = 'yes', 1, 0) + if( /data/g_y0_1/item_3  = 'yes', 1, 0) + if( /data/g_y0_1/item_4  = 'yes', 1, 0) + if( /data/g_y0_1/item_5  = 'yes', 1, 0) + if( /data/g_y0_1/item_6  = 'yes', 1, 0) + if( /data/g_y0_1/item_7  = 'yes', 1, 0) + if( /data/g_y0_1/item_8  = 'yes', 1, 0) + if( /data/g_y0_1/item_9  = 'yes', 1, 0) + if( /data/g_y0_1/item_10  = 'yes', 1, 0) + if( /data/g_y0_1/item_11  = 'yes', 1, 0) + if( /data/g_y0_1/item_12  = 'yes', 1, 0) + if( /data/g_y0_1/item_13  = 'yes', 1, 0) + if( /data/g_y0_1/item_14  = 'yes', 1, 0) + if( /data/g_y0_1/item_15  = 'yes', 1, 0) + if( /data/g_y0_1/item_16  = 'yes', 1, 0) + if( /data/g_y0_1/item_17  = 'yes', 1, 0) + if( /data/g_y1_2/item_18  = 'yes', 1, 0) + if( /data/g_y1_2/item_19  = 'yes', 1, 0) + if( /data/g_y1_2/item_20  = 'yes', 1, 0) + if( /data/g_y1_2/item_21  = 'yes', 1, 0) + if( /data/g_y1_2/item_22  = 'yes', 1, 0) + if( /data/g_y1_2/item_23  = 'yes', 1, 0) + if( /data/g_y1_2/item_24  = 'yes', 1, 0) + if( /data/g_y1_2/item_25  = 'yes', 1, 0) + if( /data/g_y1_2/item_26  = 'yes', 1, 0) + if( /data/g_y1_2/item_27  = 'yes', 1, 0) + if( /data/g_y1_2/item_28  = 'yes', 1, 0) + if( /data/g_y1_2/item_29  = 'yes', 1, 0) + if( /data/g_y1_2/item_30  = 'yes', 1, 0) + if( /data/g_y1_2/item_31  = 'yes', 1, 0) + if( /data/g_y1_2/item_32  = 'yes', 1, 0) + if( /data/g_y1_2/item_33  = 'yes', 1, 0) + if( /data/g_y1_2/item_34  = 'yes', 1, 0) + if( /data/g_y2_3/item_35  = 'yes', 1, 0) + if( /data/g_y2_3/item_36  = 'yes', 1, 0) + if( /data/g_y2_3/item_37  = 'yes', 1, 0) + if( /data/g_y2_3/item_38  = 'yes', 1, 0) + if( /data/g_y2_3/item_39  = 'yes', 1, 0) + if( /data/g_y2_3/item_40  = 'yes', 1, 0) + if( /data/g_y2_3/item_41  = 'yes', 1, 0) + if( /data/g_y2_3/item_42  = 'yes', 1, 0) + if( /data/g_y2_3/item_43  = 'yes', 1, 0) + if( /data/g_y2_3/item_44  = 'yes', 1, 0) + if( /data/g_y3_4/item_45  = 'yes', 1, 0) + if( /data/g_y3_4/item_46  = 'yes', 1, 0) + if( /data/g_y3_4/item_47  = 'yes', 1, 0) + if( /data/g_y3_4/item_48  = 'yes', 1, 0) + if( /data/g_y3_4/item_49  = 'yes', 1, 0) + if( /data/g_y3_4/item_50  = 'yes', 1, 0) + if( /data/g_y4_5/item_51  = 'yes', 1, 0) + if( /data/g_y4_5/item_52  = 'yes', 1, 0) + if( /data/g_y4_5/item_53  = 'yes', 1, 0) + if( /data/g_y4_5/item_54  = 'yes', 1, 0) + if( /data/g_y4_5/item_55  = 'yes', 1, 0) + if( /data/g_y4_5/item_56  = 'yes', 1, 0) + if( /data/g_y5_6/item_57  = 'yes', 1, 0) + if( /data/g_y5_6/item_58  = 'yes', 1, 0) + if( /data/g_y5_6/item_59  = 'yes', 1, 0) + if( /data/g_y5_6/item_60  = 'yes', 1, 0) + if( /data/g_y5_6/item_61  = 'yes', 1, 0) + if( /data/g_y6_7/item_62  = 'yes', 1, 0) + if( /data/g_y6_7/item_63  = 'yes', 1, 0) + if( /data/g_y6_7/item_64  = 'yes', 1, 0) + if( /data/g_y6_7/item_65  = 'yes', 1, 0) + if( /data/g_y7_8/item_66  = 'yes', 1, 0) + if( /data/g_y7_8/item_67  = 'yes', 1, 0) + if( /data/g_y7_8/item_68  = 'yes', 1, 0) + if( /data/g_y7_8/item_69  = 'yes', 1, 0) + if( /data/g_y7_8/item_70  = 'yes', 1, 0) + if( /data/g_y8_9/item_71  = 'yes', 1, 0) + if( /data/g_y8_9/item_72  = 'yes', 1, 0) + if( /data/g_y8_9/item_73  = 'yes', 1, 0) + if( /data/g_y8_9/item_74  = 'yes', 1, 0) + if( /data/g_y9_10/item_75  = 'yes', 1, 0) + if( /data/g_y9_10/item_76  = 'yes', 1, 0) + if( /data/g_y9_10/item_77  = 'yes', 1, 0) + if( /data/g_y10_11/item_78  = 'yes', 1, 0) + if( /data/g_y10_11/item_79  = 'yes', 1, 0) + if( /data/g_y10_11/item_80  = 'yes', 1, 0) + if( /data/g_y10_11/item_81  = 'yes', 1, 0) + if( /data/g_y11_12/item_82  = 'yes', 1, 0) + if( /data/g_y11_12/item_83  = 'yes', 1, 0) + if( /data/g_y11_12/item_84  = 'yes', 1, 0) + if( /data/g_y12_15/item_85  = 'yes', 1, 0) + if( /data/g_y12_15/item_86  = 'yes', 1, 0) + if( /data/g_y12_15/item_87  = 'yes', 1, 0) + if( /data/g_y12_15/item_88  = 'yes', 1, 0) + if( /data/g_y12_15/item_89  = 'yes', 1, 0)"/>
+      <bind nodeset="/data/total_no_items" type="string" calculate="if( /data/g_y0_1/item_1  = 'no', 1, 0) + if( /data/g_y0_1/item_2  = 'no', 1, 0) + if( /data/g_y0_1/item_3  = 'no', 1, 0) + if( /data/g_y0_1/item_4  = 'no', 1, 0) + if( /data/g_y0_1/item_5  = 'no', 1, 0) + if( /data/g_y0_1/item_6  = 'no', 1, 0) + if( /data/g_y0_1/item_7  = 'no', 1, 0) + if( /data/g_y0_1/item_8  = 'no', 1, 0) + if( /data/g_y0_1/item_9  = 'no', 1, 0) + if( /data/g_y0_1/item_10  = 'no', 1, 0) + if( /data/g_y0_1/item_11  = 'no', 1, 0) + if( /data/g_y0_1/item_12  = 'no', 1, 0) + if( /data/g_y0_1/item_13  = 'no', 1, 0) + if( /data/g_y0_1/item_14  = 'no', 1, 0) + if( /data/g_y0_1/item_15  = 'no', 1, 0) + if( /data/g_y0_1/item_16  = 'no', 1, 0) + if( /data/g_y0_1/item_17  = 'no', 1, 0) + if( /data/g_y1_2/item_18  = 'no', 1, 0) + if( /data/g_y1_2/item_19  = 'no', 1, 0) + if( /data/g_y1_2/item_20  = 'no', 1, 0) + if( /data/g_y1_2/item_21  = 'no', 1, 0) + if( /data/g_y1_2/item_22  = 'no', 1, 0) + if( /data/g_y1_2/item_23  = 'no', 1, 0) + if( /data/g_y1_2/item_24  = 'no', 1, 0) + if( /data/g_y1_2/item_25  = 'no', 1, 0) + if( /data/g_y1_2/item_26  = 'no', 1, 0) + if( /data/g_y1_2/item_27  = 'no', 1, 0) + if( /data/g_y1_2/item_28  = 'no', 1, 0) + if( /data/g_y1_2/item_29  = 'no', 1, 0) + if( /data/g_y1_2/item_30  = 'no', 1, 0) + if( /data/g_y1_2/item_31  = 'no', 1, 0) + if( /data/g_y1_2/item_32  = 'no', 1, 0) + if( /data/g_y1_2/item_33  = 'no', 1, 0) + if( /data/g_y1_2/item_34  = 'no', 1, 0) + if( /data/g_y2_3/item_35  = 'no', 1, 0) + if( /data/g_y2_3/item_36  = 'no', 1, 0) + if( /data/g_y2_3/item_37  = 'no', 1, 0) + if( /data/g_y2_3/item_38  = 'no', 1, 0) + if( /data/g_y2_3/item_39  = 'no', 1, 0) + if( /data/g_y2_3/item_40  = 'no', 1, 0) + if( /data/g_y2_3/item_41  = 'no', 1, 0) + if( /data/g_y2_3/item_42  = 'no', 1, 0) + if( /data/g_y2_3/item_43  = 'no', 1, 0) + if( /data/g_y2_3/item_44  = 'no', 1, 0) + if( /data/g_y3_4/item_45  = 'no', 1, 0) + if( /data/g_y3_4/item_46  = 'no', 1, 0) + if( /data/g_y3_4/item_47  = 'no', 1, 0) + if( /data/g_y3_4/item_48  = 'no', 1, 0) + if( /data/g_y3_4/item_49  = 'no', 1, 0) + if( /data/g_y3_4/item_50  = 'no', 1, 0) + if( /data/g_y4_5/item_51  = 'no', 1, 0) + if( /data/g_y4_5/item_52  = 'no', 1, 0) + if( /data/g_y4_5/item_53  = 'no', 1, 0) + if( /data/g_y4_5/item_54  = 'no', 1, 0) + if( /data/g_y4_5/item_55  = 'no', 1, 0) + if( /data/g_y4_5/item_56  = 'no', 1, 0) + if( /data/g_y5_6/item_57  = 'no', 1, 0) + if( /data/g_y5_6/item_58  = 'no', 1, 0) + if( /data/g_y5_6/item_59  = 'no', 1, 0) + if( /data/g_y5_6/item_60  = 'no', 1, 0) + if( /data/g_y5_6/item_61  = 'no', 1, 0) + if( /data/g_y6_7/item_62  = 'no', 1, 0) + if( /data/g_y6_7/item_63  = 'no', 1, 0) + if( /data/g_y6_7/item_64  = 'no', 1, 0) + if( /data/g_y6_7/item_65  = 'no', 1, 0) + if( /data/g_y7_8/item_66  = 'no', 1, 0) + if( /data/g_y7_8/item_67  = 'no', 1, 0) + if( /data/g_y7_8/item_68  = 'no', 1, 0) + if( /data/g_y7_8/item_69  = 'no', 1, 0) + if( /data/g_y7_8/item_70  = 'no', 1, 0) + if( /data/g_y8_9/item_71  = 'no', 1, 0) + if( /data/g_y8_9/item_72  = 'no', 1, 0) + if( /data/g_y8_9/item_73  = 'no', 1, 0) + if( /data/g_y8_9/item_74  = 'no', 1, 0) + if( /data/g_y9_10/item_75  = 'no', 1, 0) + if( /data/g_y9_10/item_76  = 'no', 1, 0) + if( /data/g_y9_10/item_77  = 'no', 1, 0) + if( /data/g_y10_11/item_78  = 'no', 1, 0) + if( /data/g_y10_11/item_79  = 'no', 1, 0) + if( /data/g_y10_11/item_80  = 'no', 1, 0) + if( /data/g_y10_11/item_81  = 'no', 1, 0) + if( /data/g_y11_12/item_82  = 'no', 1, 0) + if( /data/g_y11_12/item_83  = 'no', 1, 0) + if( /data/g_y11_12/item_84  = 'no', 1, 0) + if( /data/g_y12_15/item_85  = 'no', 1, 0) + if( /data/g_y12_15/item_86  = 'no', 1, 0) + if( /data/g_y12_15/item_87  = 'no', 1, 0) + if( /data/g_y12_15/item_88  = 'no', 1, 0) + if( /data/g_y12_15/item_89  = 'no', 1, 0)"/>
+      <bind nodeset="/data/total_not_assessed_items" type="string" calculate="if( /data/g_y0_1/item_1  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_2  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_3  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_4  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_5  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_6  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_7  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_8  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_9  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_10  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_11  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_12  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_13  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_14  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_15  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_16  = 'not_assessed', 1, 0) + if( /data/g_y0_1/item_17  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_18  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_19  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_20  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_21  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_22  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_23  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_24  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_25  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_26  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_27  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_28  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_29  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_30  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_31  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_32  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_33  = 'not_assessed', 1, 0) + if( /data/g_y1_2/item_34  = 'not_assessed', 1, 0) + if( /data/g_y2_3/item_35  = 'not_assessed', 1, 0) + if( /data/g_y2_3/item_36  = 'not_assessed', 1, 0) + if( /data/g_y2_3/item_37  = 'not_assessed', 1, 0) + if( /data/g_y2_3/item_38  = 'not_assessed', 1, 0) + if( /data/g_y2_3/item_39  = 'not_assessed', 1, 0) + if( /data/g_y2_3/item_40  = 'not_assessed', 1, 0) + if( /data/g_y2_3/item_41  = 'not_assessed', 1, 0) + if( /data/g_y2_3/item_42  = 'not_assessed', 1, 0) + if( /data/g_y2_3/item_43  = 'not_assessed', 1, 0) + if( /data/g_y2_3/item_44  = 'not_assessed', 1, 0) + if( /data/g_y3_4/item_45  = 'not_assessed', 1, 0) + if( /data/g_y3_4/item_46  = 'not_assessed', 1, 0) + if( /data/g_y3_4/item_47  = 'not_assessed', 1, 0) + if( /data/g_y3_4/item_48  = 'not_assessed', 1, 0) + if( /data/g_y3_4/item_49  = 'not_assessed', 1, 0) + if( /data/g_y3_4/item_50  = 'not_assessed', 1, 0) + if( /data/g_y4_5/item_51  = 'not_assessed', 1, 0) + if( /data/g_y4_5/item_52  = 'not_assessed', 1, 0) + if( /data/g_y4_5/item_53  = 'not_assessed', 1, 0) + if( /data/g_y4_5/item_54  = 'not_assessed', 1, 0) + if( /data/g_y4_5/item_55  = 'not_assessed', 1, 0) + if( /data/g_y4_5/item_56  = 'not_assessed', 1, 0) + if( /data/g_y5_6/item_57  = 'not_assessed', 1, 0) + if( /data/g_y5_6/item_58  = 'not_assessed', 1, 0) + if( /data/g_y5_6/item_59  = 'not_assessed', 1, 0) + if( /data/g_y5_6/item_60  = 'not_assessed', 1, 0) + if( /data/g_y5_6/item_61  = 'not_assessed', 1, 0) + if( /data/g_y6_7/item_62  = 'not_assessed', 1, 0) + if( /data/g_y6_7/item_63  = 'not_assessed', 1, 0) + if( /data/g_y6_7/item_64  = 'not_assessed', 1, 0) + if( /data/g_y6_7/item_65  = 'not_assessed', 1, 0) + if( /data/g_y7_8/item_66  = 'not_assessed', 1, 0) + if( /data/g_y7_8/item_67  = 'not_assessed', 1, 0) + if( /data/g_y7_8/item_68  = 'not_assessed', 1, 0) + if( /data/g_y7_8/item_69  = 'not_assessed', 1, 0) + if( /data/g_y7_8/item_70  = 'not_assessed', 1, 0) + if( /data/g_y8_9/item_71  = 'not_assessed', 1, 0) + if( /data/g_y8_9/item_72  = 'not_assessed', 1, 0) + if( /data/g_y8_9/item_73  = 'not_assessed', 1, 0) + if( /data/g_y8_9/item_74  = 'not_assessed', 1, 0) + if( /data/g_y9_10/item_75  = 'not_assessed', 1, 0) + if( /data/g_y9_10/item_76  = 'not_assessed', 1, 0) + if( /data/g_y9_10/item_77  = 'not_assessed', 1, 0) + if( /data/g_y10_11/item_78  = 'not_assessed', 1, 0) + if( /data/g_y10_11/item_79  = 'not_assessed', 1, 0) + if( /data/g_y10_11/item_80  = 'not_assessed', 1, 0) + if( /data/g_y10_11/item_81  = 'not_assessed', 1, 0) + if( /data/g_y11_12/item_82  = 'not_assessed', 1, 0) + if( /data/g_y11_12/item_83  = 'not_assessed', 1, 0) + if( /data/g_y11_12/item_84  = 'not_assessed', 1, 0) + if( /data/g_y12_15/item_85  = 'not_assessed', 1, 0) + if( /data/g_y12_15/item_86  = 'not_assessed', 1, 0) + if( /data/g_y12_15/item_87  = 'not_assessed', 1, 0) + if( /data/g_y12_15/item_88  = 'not_assessed', 1, 0) + if( /data/g_y12_15/item_89  = 'not_assessed', 1, 0)"/>
+      <bind nodeset="/data/social_age_months" type="string" calculate="if( /data/raw_score  = 0, 0, if( /data/raw_score  = 1, 1, if( /data/raw_score  = 2, 2, if( /data/raw_score  = 3, 3, if( /data/raw_score  = 4, 4, if( /data/raw_score  = 5, 5, if( /data/raw_score  = 6, 6, if( /data/raw_score  = 7, 7, if( /data/raw_score  = 8, 8, if( /data/raw_score  = 9, 9, if( /data/raw_score  = 10, 10, if( /data/raw_score  = 11, 11, if( /data/raw_score  = 12, 12, if( /data/raw_score  = 13, 13, if( /data/raw_score  = 14, 14, if( /data/raw_score  = 15, 15, if( /data/raw_score  = 16, 16, if( /data/raw_score  = 17, 17, if( /data/raw_score  = 18, 18, if( /data/raw_score  = 19, 19, if( /data/raw_score  = 20, 20, if( /data/raw_score  = 21, 21, if( /data/raw_score  = 22, 22, if( /data/raw_score  = 23, 23, if( /data/raw_score  = 24, 24, if( /data/raw_score  = 25, 25, if( /data/raw_score  = 26, 26, if( /data/raw_score  = 27, 27, if( /data/raw_score  = 28, 28, if( /data/raw_score  = 29, 29, if( /data/raw_score  = 30, 30, if( /data/raw_score  = 31, 31, if( /data/raw_score  = 32, 32, if( /data/raw_score  = 33, 33, if( /data/raw_score  = 34, 34, if( /data/raw_score  = 35, 35, if( /data/raw_score  = 36, 36, if( /data/raw_score  = 37, 37, if( /data/raw_score  = 38, 38, if( /data/raw_score  = 39, 39, if( /data/raw_score  = 40, 40, if( /data/raw_score  = 41, 41, if( /data/raw_score  = 42, 42, if( /data/raw_score  = 43, 43, if( /data/raw_score  = 44, 44, if( /data/raw_score  = 45, 45, if( /data/raw_score  = 46, 46, if( /data/raw_score  = 47, 47, if( /data/raw_score  = 48, 48, if( /data/raw_score  = 49, 49, if( /data/raw_score  = 50, 50, if( /data/raw_score  = 51, 51, if( /data/raw_score  = 52, 52, if( /data/raw_score  = 53, 53, if( /data/raw_score  = 54, 54, if( /data/raw_score  = 55, 55, if( /data/raw_score  = 56, 56, if( /data/raw_score  = 57, 57, if( /data/raw_score  = 58, 58, if( /data/raw_score  = 59, 59, if( /data/raw_score  = 60, 60, if( /data/raw_score  = 61, 61, if( /data/raw_score  = 62, 62, if( /data/raw_score  = 63, 63, if( /data/raw_score  = 64, 64, if( /data/raw_score  = 65, 65, if( /data/raw_score  = 66, 66, if( /data/raw_score  = 67, 67, if( /data/raw_score  = 68, 68, if( /data/raw_score  = 69, 69, if( /data/raw_score  = 70, 70, if( /data/raw_score  = 71, 71, if( /data/raw_score  = 72, 72, if( /data/raw_score  = 73, 73, if( /data/raw_score  = 74, 74, if( /data/raw_score  = 75, 75, if( /data/raw_score  = 76, 76, if( /data/raw_score  = 77, 77, if( /data/raw_score  = 78, 78, if( /data/raw_score  = 79, 79, if( /data/raw_score  = 80, 80, if( /data/raw_score  = 81, 81, if( /data/raw_score  = 82, 82, if( /data/raw_score  = 83, 83, if( /data/raw_score  = 84, 84, if( /data/raw_score  = 85, 85, if( /data/raw_score  = 86, 86, if( /data/raw_score  = 87, 87, if( /data/raw_score  = 88, 88, if( /data/raw_score  = 89, 89, 0))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))))"/>
+      <bind nodeset="/data/social_age_years" type="string" calculate="floor( /data/social_age_months  div 12)"/>
+      <bind nodeset="/data/social_age_remaining_months" type="string" calculate=" /data/social_age_months  - ( /data/social_age_years  * 12)"/>
+      <bind nodeset="/data/social_quotient_raw" type="string" calculate="if( /data/g_child/age_valid  = 'yes' and  /data/g_child/ca_months_dec  &gt; 0,  /data/social_age_months  div  /data/g_child/ca_months_dec  * 100, '')"/>
+      <bind nodeset="/data/social_quotient_rounded" type="string" calculate="if( /data/social_quotient_raw  != '', round( /data/social_quotient_raw ), '')"/>
+      <bind nodeset="/data/sq_interpretation" type="string" calculate="if( /data/score_status  != 'complete', 'Incomplete', if( /data/social_quotient_rounded  &gt;= 90, 'Average', if( /data/social_quotient_rounded  &gt;= 80, 'Low Average', if( /data/social_quotient_rounded  &gt;= 70, 'Borderline', 'Social Developmental Delay'))))"/>
+      <bind nodeset="/data/score_status" type="string" calculate="if( /data/g_child/age_valid  != 'yes', 'invalid_age', if( /data/total_not_assessed_items  &gt; 0, 'incomplete', 'complete'))"/>
+      <bind nodeset="/data/na_reason" type="string" required="true()" relevant=" /data/total_not_assessed_items  &gt; 0"/>
+      <bind nodeset="/data/clinical_notes" type="string"/>
+      <bind nodeset="/data/result_complete" readonly="true()" type="string" relevant=" /data/score_status  = 'complete'"/>
+      <bind nodeset="/data/result_incomplete" readonly="true()" type="string" relevant=" /data/score_status  = 'incomplete'"/>
+      <bind nodeset="/data/result_invalid" readonly="true()" type="string" relevant=" /data/score_status  = 'invalid_age'"/>
+      <bind nodeset="/data/g_supporting_docs/upload_scale_image" type="binary"/>
+      <bind nodeset="/data/g_supporting_docs/upload_scale_pdf" type="binary"/>
+      <bind nodeset="/data/g_supporting_docs/upload_caption" type="string"/>
+      <bind nodeset="/data/scoring_version" type="string" calculate="'vsms-v1-doll1965-1to1'"/>
+      <bind nodeset="/data/scoring_notes" type="string" calculate="'Doll 1965 VSMS 1:1 raw=SA months (0-89). SQ=SA/CA*100. Internet snippet (40-&gt;54,42-&gt;60,45-&gt;66) differs from manual.'"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/data/inputs">
+      <label>Participant</label>
+      <group appearance="field-list" ref="/data/inputs/user">
+        <label>User</label>
+      </group>
+      <group appearance="field-list" ref="/data/inputs/contact">
+        <label>Select child / beneficiary</label>
+        <input ref="/data/inputs/contact/_id" appearance="select-contact type-participant">
+          <label>Select participant</label>
+        </input>
+      </group>
+    </group>
+    <group ref="/data/g_intro">
+      <label>Vineland-style Social Maturity Scale (VSMS)</label>
+      <input ref="/data/g_intro/vineland_disclaimer">
+        <label>This assessment is a social maturity screening tool. It does not provide a diagnosis. Results must be interpreted by a qualified clinician.</label>
+      </input>
+      <select1 ref="/data/g_intro/acknowledged">
+        <label>I confirm that this assessment is being completed by or reviewed with a trained/authorized health worker.</label>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_child">
+      <label>Child details &amp; assessment date</label>
+      <input ref="/data/g_child/assessment_date">
+        <label>Assessment date</label>
+      </input>
+      <input ref="/data/g_child/child_dob">
+        <label>Child date of birth</label>
+        <hint>Contacts do not store date of birth, so it is captured here.</hint>
+      </input>
+      <input ref="/data/g_child/dob_warning">
+        <label>**WARNING:** Child date of birth is missing or invalid. Please enter DOB before scoring. Do not guess age.</label>
+      </input>
+      <input ref="/data/g_child/ca_display">
+        <label> Chronological age: **<output value=" /data/g_child/ca_years_display "/>y <output value=" /data/g_child/ca_rem_months "/>m** (<output value=" /data/g_child/ca_days "/> days). </label>
+      </input>
+      <select1 ref="/data/g_child/show_all">
+        <label>Show all VSMS items? (trained assessors)</label>
+        <hint>No = show birth through child age band; future bands hidden. Yes = show all bands.</hint>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y0_1">
+      <label>0–1 Years</label>
+      <select1 ref="/data/g_y0_1/item_1">
+        <label>1. Cries, laughs</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_2">
+        <label>2. Balances head</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_3">
+        <label>3. Grasps object within reach</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_4">
+        <label>4. Reaches for familiar persons</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_5">
+        <label>5. Rolls over (unassisted)</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_6">
+        <label>6. Reaches for nearby objects</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_7">
+        <label>7. Occupies self unattended*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_8">
+        <label>8. Sits unsupported</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_9">
+        <label>9. Pulls self upright</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_10">
+        <label>10. Talks, imitates sounds</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_11">
+        <label>11. Drinks from cup or glass assisted</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_12">
+        <label>12. Moves about on floor, (creeping, crawling)</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_13">
+        <label>13. Grasps with thumb and finger</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_14">
+        <label>14. Demands personal attention</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_15">
+        <label>15. Stands alone</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_16">
+        <label>16. Does not drool</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y0_1/item_17">
+        <label>17. Follows simple instructions</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y1_2">
+      <label>1–2 Years</label>
+      <select1 ref="/data/g_y1_2/item_18">
+        <label>18. Walks about room unattended</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_19">
+        <label>19. Marks with pencil or crayon</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_20">
+        <label>20. Masticates (chews) solid or semi-solid food</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_21">
+        <label>21. Removes shoes or sandals, pulls off socks</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_22">
+        <label>22. Transfers objects</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_23">
+        <label>23. Overcomes simple obstacles*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_24">
+        <label>24. Fetches or carries familiar objects</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_25">
+        <label>25. Drinks from cup or glass unassisted</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_26">
+        <label>26. Walks or uses a go-cart for walking*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_27">
+        <label>27. Plays with own hands</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_28">
+        <label>28. Eats with own hands</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_29">
+        <label>29. Goes about house or yard</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_30">
+        <label>30. Discriminates edible substances from non-edibles</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_31">
+        <label>31. Uses names of familiar objects</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_32">
+        <label>32. Walks up-stairs unassisted</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_33">
+        <label>33. Unwraps sweets, chocolates</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y1_2/item_34">
+        <label>34. Talks in short sentences</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y2_3">
+      <label>2–3 Years</label>
+      <select1 ref="/data/g_y2_3/item_35">
+        <label>35. Signals (asks) to go to toilet</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y2_3/item_36">
+        <label>36. Initiates own play activities</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y2_3/item_37">
+        <label>37. Removes shirt or frock (if unbuttoned)</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y2_3/item_38">
+        <label>38. Eats with spoon</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y2_3/item_39">
+        <label>39. Drinks (water) unassisted (Gets drink unassisted)</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y2_3/item_40">
+        <label>40. Dries own hands</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y2_3/item_41">
+        <label>41. Avoids simple hazards</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y2_3/item_42">
+        <label>42. Puts on shirt or frock unassisted (need not button)</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y2_3/item_43">
+        <label>43. Can do paper folding</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y2_3/item_44">
+        <label>44. Relates experiences</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y3_4">
+      <label>3–4 Years</label>
+      <select1 ref="/data/g_y3_4/item_45">
+        <label>45. Walks down stairs, one step at a time</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y3_4/item_46">
+        <label>46. Plays cooperatively at kindergarten level</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y3_4/item_47">
+        <label>47. Buttons shirt or frock</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y3_4/item_48">
+        <label>48. Helps at little household tasks</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y3_4/item_49">
+        <label>49. Performs for others</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y3_4/item_50">
+        <label>50. Washes hands unaided</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y4_5">
+      <label>4–5 Years</label>
+      <select1 ref="/data/g_y4_5/item_51">
+        <label>51. Cares for self at toilet</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y4_5/item_52">
+        <label>52. Washes face unassisted</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y4_5/item_53">
+        <label>53. Goes about neighbourhood unattended</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y4_5/item_54">
+        <label>54. Dresses self except for tying or buttoning</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y4_5/item_55">
+        <label>55. Uses pencils or crayon for drawing</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y4_5/item_56">
+        <label>56. Plays competitive exercise games</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y5_6">
+      <label>5–6 Years</label>
+      <select1 ref="/data/g_y5_6/item_57">
+        <label>57. Uses hoops, flies kites, rides tricycles</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y5_6/item_58">
+        <label>58. Prints (writes) simple words</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y5_6/item_59">
+        <label>59. Plays simple table games</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y5_6/item_60">
+        <label>60. Is trusted with money</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y5_6/item_61">
+        <label>61. Goes to school unattended</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y6_7">
+      <label>6–7 Years</label>
+      <select1 ref="/data/g_y6_7/item_62">
+        <label>62. Mixes rice properly unassisted</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y6_7/item_63">
+        <label>63. Uses pencil for writing</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y6_7/item_64">
+        <label>64. Bathes self assisted</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y6_7/item_65">
+        <label>65. Goes to bed unassisted*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y7_8">
+      <label>7–8 Years</label>
+      <select1 ref="/data/g_y7_8/item_66">
+        <label>66. Tells time to quarter hour</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y7_8/item_67">
+        <label>67. Helps himself during meals*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y7_8/item_68">
+        <label>68. Refuses to believe in magic and fairy tales</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y7_8/item_69">
+        <label>69. Participates in pre-adolescent play*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y7_8/item_70">
+        <label>70. Combs or brushes hair</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y8_9">
+      <label>8–9 Years</label>
+      <select1 ref="/data/g_y8_9/item_71">
+        <label>71. Uses tools or utensils*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y8_9/item_72">
+        <label>72. Does routine household tasks*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y8_9/item_73">
+        <label>73. Reads on own initiative</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y8_9/item_74">
+        <label>74. Bathes self unaided</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y9_10">
+      <label>9–10 Years</label>
+      <select1 ref="/data/g_y9_10/item_75">
+        <label>75. Cares for self at table (meals)</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y9_10/item_76">
+        <label>76. Makes minor purchases*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y9_10/item_77">
+        <label>77. Goes about home town freely</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y10_11">
+      <label>10–11 Years</label>
+      <select1 ref="/data/g_y10_11/item_78">
+        <label>78. Writes occasional short letters to friends</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y10_11/item_79">
+        <label>79. Makes independent choice of shops*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y10_11/item_80">
+        <label>80. Does small remunerative work; makes articles*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y10_11/item_81">
+        <label>81. Answers ads; writes letters for information</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y11_12">
+      <label>11–12 Years</label>
+      <select1 ref="/data/g_y11_12/item_82">
+        <label>82. Does simple creative work</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y11_12/item_83">
+        <label>83. Is left to care for self or others</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y11_12/item_84">
+        <label>84. Enjoys reading books, newspapers, magazines</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_y12_15">
+      <label>12–15 Years</label>
+      <select1 ref="/data/g_y12_15/item_85">
+        <label>85. Plays difficult games</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y12_15/item_86">
+        <label>86. Exercises complete care for dress</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y12_15/item_87">
+        <label>87. Buys own clothing accessories*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y12_15/item_88">
+        <label>88. Engages in adolescent group activities*</label>
+        <hint>Speech/Language-related</hint>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_y12_15/item_89">
+        <label>89. Performs responsible routine chores</label>
+        <itemset nodeset="instance('vsms_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <input ref="/data/na_reason">
+      <label>Reason for items not assessed</label>
+    </input>
+    <input ref="/data/clinical_notes">
+      <label>Clinical notes</label>
+    </input>
+    <input ref="/data/result_complete">
+      <label> ✅ Assessment complete. Social Quotient: <output value=" /data/social_quotient_rounded "/> (<output value=" /data/sq_interpretation "/>). </label>
+    </input>
+    <input ref="/data/result_incomplete">
+      <label>⚠️ Score incomplete — clinician review required. Some items were not assessed.</label>
+    </input>
+    <input ref="/data/result_invalid">
+      <label>❌ Invalid age: child must be 0–15 years for VSMS.</label>
+    </input>
+    <group ref="/data/g_supporting_docs">
+      <label>Supporting Documents / Scale Upload</label>
+      <upload ref="/data/g_supporting_docs/upload_scale_image" mediatype="image/*">
+        <label>Upload completed scale / assessment sheet (image)</label>
+        <hint>Upload clear photos of the completed paper scale, consent form, or supporting assessment document. Accepts JPG, JPEG, PNG. For PDF use next field.</hint>
+      </upload>
+      <upload ref="/data/g_supporting_docs/upload_scale_pdf" mediatype="application/*">
+        <label>Upload completed scale / assessment sheet (PDF)</label>
+        <hint>Upload a PDF of the completed paper scale if not already uploaded as image. Accepts PDF.</hint>
+      </upload>
+      <input ref="/data/g_supporting_docs/upload_caption">
+        <label>Attachment caption / description (optional)</label>
+      </input>
+    </group>
+  </h:body>
+</h:html>

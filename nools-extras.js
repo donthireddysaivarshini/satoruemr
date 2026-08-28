@@ -25,6 +25,8 @@ const FORMS = {
   REFERRAL: 'referral_outcome',
   REVIEW: 'longitudinal_review',
   ASSESSMENT: 'assessment_visit',
+  MOCA: 'moca_assessment',
+  VINELAND: 'vineland',
 };
 
 /**
@@ -42,6 +44,9 @@ const CONFIG = {
   URGENT_ESCALATION_DAYS: 1,
   SAFEGUARDING_ESCALATION_DAYS: 3,
   STAGE1_MISSING_DAYS: 14,
+  ASSESSMENT_VISIT_DUE_DAYS: 30,
+  MOCA_DUE_DAYS: 30,
+  VINELAND_DUE_DAYS: 30,
 };
 
 // ---------------------------------------------------------------------------
@@ -124,6 +129,40 @@ function isParticipant(contact) {
 
 function isCamp(contact) {
   return contactType(contact) === CONTACT_TYPES.CAMP;
+}
+
+/**
+ * Generic helper to detect contacts that represent CHT system users / staff.
+ * Covers: linked org.couchdb.user via contact_id, contact_type === 'user',
+ * and staff/system roles (staff, chw, supervisor, admin, mm-online, etc.).
+ * Safe when users map is unavailable — falls back to role/contact_type checks
+ * and never throws. Does NOT exclude a child because its parent/guardian is a user;
+ * call only on the assessed contact itself.
+ */
+function isUserContact(contact) {
+  if (!contact) { return false; }
+  try {
+    const doc = contact.contact || contact;
+    if (!doc || typeof doc !== 'object') { return false; }
+    // 1. Explicit user contact type
+    if (doc.contact_type === 'user') { return true; }
+    // 2. Staff / system role on the contact itself
+    if (doc.role) {
+      const r = String(doc.role).toLowerCase();
+      const staffRoles = ['staff', 'chw', 'chw_supervisor', 'supervisor', 'admin', 'mm-online', 'intern_supervisor'];
+      if (staffRoles.includes(r)) { return true; }
+      if (r.includes('staff') || r.includes('admin') || r.includes('supervisor') || r.includes('chw')) { return true; }
+    }
+    // 3. Contact has user-identifying fields set by CHT user creation
+    if (doc.username || doc.user_id) { return true; }
+    // 4. Best-effort linked-user check: if doc is linked via contact_id on a user doc,
+    //    tasks runtime may expose it as doc.user or doc.isUserContact; honor if present.
+    if (doc.isUserContact === true) { return true; }
+  } catch (e) {
+    // Safe fallback — do not block task creation on helper error, just treat as not a user contact
+    return false;
+  }
+  return false;
 }
 
 /**
@@ -281,6 +320,81 @@ function screenedBy(report) {
   return getField(report, 'screened_by');
 }
 
+// ---- MoCA ----
+
+/** Get MoCA total score from a report. */
+function mocaTotalScore(report) {
+  return num(report, 'moca_total_score');
+}
+
+/** Get MoCA interpretation. */
+function mocaInterpretation(report) {
+  return getField(report, 'moca_interpretation');
+}
+
+/** Check if MoCA score indicates cognitive impairment. */
+function mocaImpaired(report) {
+  return mocaInterpretation(report) === 'impaired';
+}
+
+/** Get MoCA section scores for detailed reporting. */
+function mocaSectionScores(report) {
+  return {
+    visuospatial: num(report, 'moca_visuospatial_total') || 0,
+    naming: num(report, 'moca_naming_total') || 0,
+    memory: num(report, 'moca_memory_total') || 0,
+    attention: num(report, 'moca_attention_total') || 0,
+    language: num(report, 'moca_language_total') || 0,
+    abstraction: num(report, 'moca_abstraction_total') || 0,
+    delayedRecall: num(report, 'moca_delayed_total') || 0,
+    orientation: num(report, 'moca_orientation_total') || 0,
+    rawTotal: num(report, 'moca_raw_total') || 0,
+    educationAdj: num(report, 'moca_education_adj') || 0,
+    totalScore: mocaTotalScore(report),
+    interpretation: mocaInterpretation(report),
+  };
+}
+
+/** Check if a participant has a MoCA assessment report. */
+function hasMocaAssessment(contact) {
+  return reportsOf(contact, FORMS.MOCA).length > 0;
+}
+
+/** Get the most recent MoCA assessment report for a contact. */
+function latestMocaAssessment(contact) {
+  return latestReport(contact, FORMS.MOCA);
+}
+
+/** Check if MoCA assessment is due for a participant (no assessment in last 30 days). */
+function mocaDue(contact) {
+  const latest = latestMocaAssessment(contact);
+  if (!latest) {
+    return true;
+  }
+  const daysSince = daysBetween(latest.reported_date, Date.now());
+  return daysSince >= CONFIG.MOCA_DUE_DAYS;
+}
+
+/** Check if Vineland assessment exists for a participant. */
+function hasVinelandAssessment(contact) {
+  return reportsOf(contact, FORMS.VINELAND).length > 0;
+}
+
+/** Get the most recent Vineland assessment report for a contact. */
+function latestVinelandAssessment(contact) {
+  return latestReport(contact, FORMS.VINELAND);
+}
+
+/** Check if Vineland assessment is due for a participant (no assessment in last 30 days). */
+function vinelandDue(contact) {
+  const latest = latestVinelandAssessment(contact);
+  if (!latest) {
+    return true;
+  }
+  const daysSince = daysBetween(latest.reported_date, Date.now());
+  return daysSince >= CONFIG.VINELAND_DUE_DAYS;
+}
+
 module.exports = {
   MS_IN_DAY,
   CONTACT_TYPES,
@@ -298,6 +412,7 @@ module.exports = {
   contactType,
   isParticipant,
   isCamp,
+  isUserContact,
   currentAge,
   hasConsent,
   isExited,
@@ -317,4 +432,14 @@ module.exports = {
   nextReviewDue,
   convertedInWindow,
   screenedBy,
+  mocaTotalScore,
+  mocaInterpretation,
+  mocaImpaired,
+  mocaSectionScores,
+  hasMocaAssessment,
+  latestMocaAssessment,
+  mocaDue,
+  hasVinelandAssessment,
+  latestVinelandAssessment,
+  vinelandDue,
 };

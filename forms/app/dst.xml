@@ -1,0 +1,1298 @@
+<?xml version="1.0"?>
+<h:html xmlns="http://www.w3.org/2002/xforms" xmlns:h="http://www.w3.org/1999/xhtml" xmlns:ev="http://www.w3.org/2001/xml-events" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:jr="http://openrosa.org/javarosa" xmlns:orx="http://openrosa.org/xforms" xmlns:odk="http://www.opendatakit.org/xforms">
+  <h:head>
+    <h:title>Developmental Screening Test (DST)</h:title>
+    <model odk:xforms-version="1.0.0">
+      <instance>
+        <data id="dst" version="2026-08-22 01-00" prefix="J1!dst!" delimiter="#">
+          <inputs>
+            <meta>
+              <location>
+                <lat/>
+                <long/>
+                <error/>
+                <message/>
+              </location>
+            </meta>
+            <source/>
+            <source_id/>
+            <user>
+              <contact_id/>
+              <name/>
+            </user>
+            <contact>
+              <_id/>
+              <patient_id/>
+              <name/>
+              <age/>
+              <reported_date/>
+            </contact>
+          </inputs>
+          <patient_uuid/>
+          <patient_id/>
+          <patient_name/>
+          <screened_by/>
+          <screened_by_name/>
+          <g_intro>
+            <dst_disclaimer/>
+            <acknowledged/>
+          </g_intro>
+          <g_child>
+            <assessment_date/>
+            <child_dob/>
+            <ca_days/>
+            <ca_months_dec/>
+            <ca_months_floor/>
+            <age_valid/>
+            <dob_warning/>
+            <ca_display/>
+            <ca_years_display/>
+            <ca_rem_months/>
+            <show_all>no</show_all>
+          </g_child>
+          <ca_band/>
+          <g_birth_to_3_months>
+            <item_1/>
+            <item_2/>
+            <item_3/>
+            <item_4/>
+            <item_5/>
+            <item_6/>
+            <item_7/>
+          </g_birth_to_3_months>
+          <band_1_passed_count/>
+          <band_1_not_assessed/>
+          <band_1_failed_count/>
+          <band_1_earned_months/>
+          <g_m3_to_6>
+            <item_8/>
+            <item_9/>
+            <item_10/>
+            <item_11/>
+            <item_12/>
+            <item_13/>
+          </g_m3_to_6>
+          <band_2_passed_count/>
+          <band_2_not_assessed/>
+          <band_2_failed_count/>
+          <band_2_earned_months/>
+          <g_m6_to_9>
+            <item_14/>
+            <item_15/>
+            <item_16/>
+            <item_17/>
+          </g_m6_to_9>
+          <band_3_passed_count/>
+          <band_3_not_assessed/>
+          <band_3_failed_count/>
+          <band_3_earned_months/>
+          <g_m9_to_12>
+            <item_18/>
+            <item_19/>
+            <item_20/>
+            <item_21/>
+          </g_m9_to_12>
+          <band_4_passed_count/>
+          <band_4_not_assessed/>
+          <band_4_failed_count/>
+          <band_4_earned_months/>
+          <g_m12_to_18>
+            <item_22/>
+            <item_23/>
+            <item_24/>
+            <item_25/>
+          </g_m12_to_18>
+          <band_5_passed_count/>
+          <band_5_not_assessed/>
+          <band_5_failed_count/>
+          <band_5_earned_months/>
+          <g_m18_to_24>
+            <item_26/>
+            <item_27/>
+            <item_28/>
+            <item_29/>
+          </g_m18_to_24>
+          <band_6_passed_count/>
+          <band_6_not_assessed/>
+          <band_6_failed_count/>
+          <band_6_earned_months/>
+          <g_m24_to_36>
+            <item_30/>
+            <item_31/>
+            <item_32/>
+            <item_33/>
+            <item_34/>
+            <item_35/>
+          </g_m24_to_36>
+          <band_7_passed_count/>
+          <band_7_not_assessed/>
+          <band_7_failed_count/>
+          <band_7_earned_months/>
+          <g_m36_to_48>
+            <item_36/>
+            <item_37/>
+            <item_38/>
+            <item_39/>
+            <item_40/>
+          </g_m36_to_48>
+          <band_8_passed_count/>
+          <band_8_not_assessed/>
+          <band_8_failed_count/>
+          <band_8_earned_months/>
+          <g_m48_to_60>
+            <item_41/>
+            <item_42/>
+            <item_43/>
+            <item_44/>
+            <item_45/>
+            <item_46/>
+          </g_m48_to_60>
+          <band_9_passed_count/>
+          <band_9_not_assessed/>
+          <band_9_failed_count/>
+          <band_9_earned_months/>
+          <g_m60_to_72>
+            <item_47/>
+            <item_48/>
+            <item_49/>
+            <item_50/>
+            <item_51/>
+          </g_m60_to_72>
+          <band_10_passed_count/>
+          <band_10_not_assessed/>
+          <band_10_failed_count/>
+          <band_10_earned_months/>
+          <g_m72_to_84>
+            <item_52/>
+            <item_53/>
+            <item_54/>
+            <item_55/>
+            <item_56/>
+          </g_m72_to_84>
+          <band_11_passed_count/>
+          <band_11_not_assessed/>
+          <band_11_failed_count/>
+          <band_11_earned_months/>
+          <g_m84_to_96>
+            <item_57/>
+            <item_58/>
+            <item_59/>
+            <item_60/>
+          </g_m84_to_96>
+          <band_12_passed_count/>
+          <band_12_not_assessed/>
+          <band_12_failed_count/>
+          <band_12_earned_months/>
+          <g_m96_to_108>
+            <item_61/>
+            <item_62/>
+            <item_63/>
+            <item_64/>
+            <item_65/>
+            <item_66/>
+          </g_m96_to_108>
+          <band_13_passed_count/>
+          <band_13_not_assessed/>
+          <band_13_failed_count/>
+          <band_13_earned_months/>
+          <g_m108_to_120>
+            <item_67/>
+            <item_68/>
+            <item_69/>
+            <item_70/>
+            <item_71/>
+          </g_m108_to_120>
+          <band_14_passed_count/>
+          <band_14_not_assessed/>
+          <band_14_failed_count/>
+          <band_14_earned_months/>
+          <g_m120_to_132>
+            <item_72/>
+            <item_73/>
+            <item_74/>
+            <item_75/>
+          </g_m120_to_132>
+          <band_15_passed_count/>
+          <band_15_not_assessed/>
+          <band_15_failed_count/>
+          <band_15_earned_months/>
+          <g_m132_to_144>
+            <item_76/>
+            <item_77/>
+            <item_78/>
+          </g_m132_to_144>
+          <band_16_passed_count/>
+          <band_16_not_assessed/>
+          <band_16_failed_count/>
+          <band_16_earned_months/>
+          <g_m144_to_156>
+            <item_79/>
+            <item_80/>
+            <item_81/>
+            <item_82/>
+            <item_83/>
+          </g_m144_to_156>
+          <band_17_passed_count/>
+          <band_17_not_assessed/>
+          <band_17_failed_count/>
+          <band_17_earned_months/>
+          <g_m156_to_180>
+            <item_84/>
+            <item_85/>
+            <item_86/>
+            <item_87/>
+            <item_88/>
+          </g_m156_to_180>
+          <band_18_passed_count/>
+          <band_18_not_assessed/>
+          <band_18_failed_count/>
+          <band_18_earned_months/>
+          <total_passed_items/>
+          <total_failed_items/>
+          <total_not_assessed_items/>
+          <developmental_age_months/>
+          <developmental_age_years/>
+          <developmental_age_remaining_months/>
+          <score_status/>
+          <developmental_quotient_raw/>
+          <developmental_quotient_rounded/>
+          <na_reason/>
+          <clinical_notes/>
+          <result_complete/>
+          <result_incomplete/>
+          <result_invalid/>
+          <g_supporting_docs>
+            <upload_scale_image type="binary"/>
+            <upload_scale_pdf type="binary"/>
+            <upload_caption/>
+          </g_supporting_docs>
+          <meta tag="hidden">
+            <instanceID/>
+          </meta>
+        </data>
+      </instance>
+      <instance id="contact-summary"/>
+      <instance id="user-contact-summary"/>
+      <instance id="yesno">
+        <root>
+          <item>
+            <name>yes</name>
+            <label>Yes</label>
+          </item>
+          <item>
+            <name>no</name>
+            <label>No</label>
+          </item>
+        </root>
+      </instance>
+      <instance id="dst_response">
+        <root>
+          <item>
+            <name>pass</name>
+            <label>Pass</label>
+          </item>
+          <item>
+            <name>fail</name>
+            <label>Fail</label>
+          </item>
+          <item>
+            <name>not_assessed</name>
+            <label>Not assessed</label>
+          </item>
+        </root>
+      </instance>
+      <bind nodeset="/data/inputs" relevant="./source = 'user'"/>
+      <bind nodeset="/data/inputs/source" type="string"/>
+      <bind nodeset="/data/inputs/source_id" type="string"/>
+      <bind nodeset="/data/inputs/user/contact_id" type="string"/>
+      <bind nodeset="/data/inputs/user/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/_id" type="db:person"/>
+      <bind nodeset="/data/inputs/contact/patient_id" type="string"/>
+      <bind nodeset="/data/inputs/contact/name" type="string"/>
+      <bind nodeset="/data/inputs/contact/age" type="string"/>
+      <bind nodeset="/data/inputs/contact/reported_date" type="string"/>
+      <bind nodeset="/data/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
+      <bind nodeset="/data/patient_id" type="string" calculate="../inputs/contact/patient_id"/>
+      <bind nodeset="/data/patient_name" type="string" calculate="../inputs/contact/name"/>
+      <bind nodeset="/data/screened_by" type="string" calculate="../inputs/user/contact_id"/>
+      <bind nodeset="/data/screened_by_name" type="string" calculate="../inputs/user/name"/>
+      <bind nodeset="/data/g_intro/dst_disclaimer" readonly="true()" type="string"/>
+      <bind nodeset="/data/g_intro/acknowledged" type="string" required="true()" constraint=". = 'yes'" jr:constraintMsg="You must confirm before continuing."/>
+      <bind nodeset="/data/g_child/assessment_date" type="date" required="true()"/>
+      <setvalue ref="/data/g_child/assessment_date" value="today()" event="odk-instance-first-load"/>
+      <bind nodeset="/data/g_child/child_dob" type="date" required="true()" constraint=". &lt;= today() and today() - . &lt;= 5479" jr:constraintMsg="Date of birth must be today or earlier, and the child must be 15 years or younger."/>
+      <bind nodeset="/data/g_child/ca_days" type="string" calculate="int( /data/g_child/assessment_date  -  /data/g_child/child_dob )"/>
+      <bind nodeset="/data/g_child/ca_months_dec" type="string" calculate=" /data/g_child/ca_days  div 30.4375"/>
+      <bind nodeset="/data/g_child/ca_months_floor" type="string" calculate="floor( /data/g_child/ca_months_dec )"/>
+      <bind nodeset="/data/g_child/age_valid" type="string" calculate="if( /data/g_child/ca_days  &gt;= 0 and  /data/g_child/ca_months_dec  &lt;= 180 and  /data/g_intro/acknowledged  = 'yes', 'yes', 'no')"/>
+      <bind nodeset="/data/g_child/dob_warning" readonly="true()" type="string" relevant=" /data/g_child/child_dob  = '' or  /data/g_child/age_valid  != 'yes'"/>
+      <bind nodeset="/data/g_child/ca_display" readonly="true()" type="string" relevant=" /data/g_child/age_valid  = 'yes'"/>
+      <bind nodeset="/data/g_child/ca_years_display" type="string" calculate="floor( /data/g_child/ca_days  div 365.25)"/>
+      <bind nodeset="/data/g_child/ca_rem_months" type="string" calculate="floor(( /data/g_child/ca_days  mod 365) div 30.4375)"/>
+      <bind nodeset="/data/g_child/show_all" type="string"/>
+      <bind nodeset="/data/ca_band" type="string" calculate="if( /data/g_child/ca_months_dec  &lt; 3, 1, if( /data/g_child/ca_months_dec  &lt; 6, 2, if( /data/g_child/ca_months_dec  &lt; 9, 3, if( /data/g_child/ca_months_dec  &lt; 12, 4, if( /data/g_child/ca_months_dec  &lt; 18, 5, if( /data/g_child/ca_months_dec  &lt; 24, 6, if( /data/g_child/ca_months_dec  &lt; 36, 7, if( /data/g_child/ca_months_dec  &lt; 48, 8, if( /data/g_child/ca_months_dec  &lt; 60, 9, if( /data/g_child/ca_months_dec  &lt; 72, 10, if( /data/g_child/ca_months_dec  &lt; 84, 11, if( /data/g_child/ca_months_dec  &lt; 96, 12, if( /data/g_child/ca_months_dec  &lt; 108, 13, if( /data/g_child/ca_months_dec  &lt; 120, 14, if( /data/g_child/ca_months_dec  &lt; 132, 15, if( /data/g_child/ca_months_dec  &lt; 144, 16, if( /data/g_child/ca_months_dec  &lt; 156, 17, 18)))))))))))))))))"/>
+      <bind nodeset="/data/g_birth_to_3_months" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 1"/>
+      <bind nodeset="/data/g_birth_to_3_months/item_1" type="string" required="true()"/>
+      <bind nodeset="/data/g_birth_to_3_months/item_2" type="string" required="true()"/>
+      <bind nodeset="/data/g_birth_to_3_months/item_3" type="string" required="true()"/>
+      <bind nodeset="/data/g_birth_to_3_months/item_4" type="string" required="true()"/>
+      <bind nodeset="/data/g_birth_to_3_months/item_5" type="string" required="true()"/>
+      <bind nodeset="/data/g_birth_to_3_months/item_6" type="string" required="true()"/>
+      <bind nodeset="/data/g_birth_to_3_months/item_7" type="string" required="true()"/>
+      <bind nodeset="/data/band_1_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 1), if( /data/g_birth_to_3_months/item_1  = 'pass', 1, 0) + if( /data/g_birth_to_3_months/item_2  = 'pass', 1, 0) + if( /data/g_birth_to_3_months/item_3  = 'pass', 1, 0) + if( /data/g_birth_to_3_months/item_4  = 'pass', 1, 0) + if( /data/g_birth_to_3_months/item_5  = 'pass', 1, 0) + if( /data/g_birth_to_3_months/item_6  = 'pass', 1, 0) + if( /data/g_birth_to_3_months/item_7  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_1_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 1), if( /data/g_birth_to_3_months/item_1  = 'not_assessed', 1, 0) + if( /data/g_birth_to_3_months/item_2  = 'not_assessed', 1, 0) + if( /data/g_birth_to_3_months/item_3  = 'not_assessed', 1, 0) + if( /data/g_birth_to_3_months/item_4  = 'not_assessed', 1, 0) + if( /data/g_birth_to_3_months/item_5  = 'not_assessed', 1, 0) + if( /data/g_birth_to_3_months/item_6  = 'not_assessed', 1, 0) + if( /data/g_birth_to_3_months/item_7  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_1_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 1), if( /data/g_birth_to_3_months/item_1  = 'fail', 1, 0) + if( /data/g_birth_to_3_months/item_2  = 'fail', 1, 0) + if( /data/g_birth_to_3_months/item_3  = 'fail', 1, 0) + if( /data/g_birth_to_3_months/item_4  = 'fail', 1, 0) + if( /data/g_birth_to_3_months/item_5  = 'fail', 1, 0) + if( /data/g_birth_to_3_months/item_6  = 'fail', 1, 0) + if( /data/g_birth_to_3_months/item_7  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_1_earned_months" type="string" calculate=" /data/band_1_passed_count  * (3 div 7)"/>
+      <bind nodeset="/data/g_m3_to_6" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 2"/>
+      <bind nodeset="/data/g_m3_to_6/item_8" type="string" required="true()"/>
+      <bind nodeset="/data/g_m3_to_6/item_9" type="string" required="true()"/>
+      <bind nodeset="/data/g_m3_to_6/item_10" type="string" required="true()"/>
+      <bind nodeset="/data/g_m3_to_6/item_11" type="string" required="true()"/>
+      <bind nodeset="/data/g_m3_to_6/item_12" type="string" required="true()"/>
+      <bind nodeset="/data/g_m3_to_6/item_13" type="string" required="true()"/>
+      <bind nodeset="/data/band_2_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 2), if( /data/g_m3_to_6/item_8  = 'pass', 1, 0) + if( /data/g_m3_to_6/item_9  = 'pass', 1, 0) + if( /data/g_m3_to_6/item_10  = 'pass', 1, 0) + if( /data/g_m3_to_6/item_11  = 'pass', 1, 0) + if( /data/g_m3_to_6/item_12  = 'pass', 1, 0) + if( /data/g_m3_to_6/item_13  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_2_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 2), if( /data/g_m3_to_6/item_8  = 'not_assessed', 1, 0) + if( /data/g_m3_to_6/item_9  = 'not_assessed', 1, 0) + if( /data/g_m3_to_6/item_10  = 'not_assessed', 1, 0) + if( /data/g_m3_to_6/item_11  = 'not_assessed', 1, 0) + if( /data/g_m3_to_6/item_12  = 'not_assessed', 1, 0) + if( /data/g_m3_to_6/item_13  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_2_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 2), if( /data/g_m3_to_6/item_8  = 'fail', 1, 0) + if( /data/g_m3_to_6/item_9  = 'fail', 1, 0) + if( /data/g_m3_to_6/item_10  = 'fail', 1, 0) + if( /data/g_m3_to_6/item_11  = 'fail', 1, 0) + if( /data/g_m3_to_6/item_12  = 'fail', 1, 0) + if( /data/g_m3_to_6/item_13  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_2_earned_months" type="string" calculate=" /data/band_2_passed_count  * (0.5)"/>
+      <bind nodeset="/data/g_m6_to_9" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 3"/>
+      <bind nodeset="/data/g_m6_to_9/item_14" type="string" required="true()"/>
+      <bind nodeset="/data/g_m6_to_9/item_15" type="string" required="true()"/>
+      <bind nodeset="/data/g_m6_to_9/item_16" type="string" required="true()"/>
+      <bind nodeset="/data/g_m6_to_9/item_17" type="string" required="true()"/>
+      <bind nodeset="/data/band_3_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 3), if( /data/g_m6_to_9/item_14  = 'pass', 1, 0) + if( /data/g_m6_to_9/item_15  = 'pass', 1, 0) + if( /data/g_m6_to_9/item_16  = 'pass', 1, 0) + if( /data/g_m6_to_9/item_17  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_3_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 3), if( /data/g_m6_to_9/item_14  = 'not_assessed', 1, 0) + if( /data/g_m6_to_9/item_15  = 'not_assessed', 1, 0) + if( /data/g_m6_to_9/item_16  = 'not_assessed', 1, 0) + if( /data/g_m6_to_9/item_17  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_3_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 3), if( /data/g_m6_to_9/item_14  = 'fail', 1, 0) + if( /data/g_m6_to_9/item_15  = 'fail', 1, 0) + if( /data/g_m6_to_9/item_16  = 'fail', 1, 0) + if( /data/g_m6_to_9/item_17  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_3_earned_months" type="string" calculate=" /data/band_3_passed_count  * (0.75)"/>
+      <bind nodeset="/data/g_m9_to_12" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 4"/>
+      <bind nodeset="/data/g_m9_to_12/item_18" type="string" required="true()"/>
+      <bind nodeset="/data/g_m9_to_12/item_19" type="string" required="true()"/>
+      <bind nodeset="/data/g_m9_to_12/item_20" type="string" required="true()"/>
+      <bind nodeset="/data/g_m9_to_12/item_21" type="string" required="true()"/>
+      <bind nodeset="/data/band_4_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 4), if( /data/g_m9_to_12/item_18  = 'pass', 1, 0) + if( /data/g_m9_to_12/item_19  = 'pass', 1, 0) + if( /data/g_m9_to_12/item_20  = 'pass', 1, 0) + if( /data/g_m9_to_12/item_21  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_4_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 4), if( /data/g_m9_to_12/item_18  = 'not_assessed', 1, 0) + if( /data/g_m9_to_12/item_19  = 'not_assessed', 1, 0) + if( /data/g_m9_to_12/item_20  = 'not_assessed', 1, 0) + if( /data/g_m9_to_12/item_21  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_4_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 4), if( /data/g_m9_to_12/item_18  = 'fail', 1, 0) + if( /data/g_m9_to_12/item_19  = 'fail', 1, 0) + if( /data/g_m9_to_12/item_20  = 'fail', 1, 0) + if( /data/g_m9_to_12/item_21  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_4_earned_months" type="string" calculate=" /data/band_4_passed_count  * (0.75)"/>
+      <bind nodeset="/data/g_m12_to_18" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 5"/>
+      <bind nodeset="/data/g_m12_to_18/item_22" type="string" required="true()"/>
+      <bind nodeset="/data/g_m12_to_18/item_23" type="string" required="true()"/>
+      <bind nodeset="/data/g_m12_to_18/item_24" type="string" required="true()"/>
+      <bind nodeset="/data/g_m12_to_18/item_25" type="string" required="true()"/>
+      <bind nodeset="/data/band_5_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 5), if( /data/g_m12_to_18/item_22  = 'pass', 1, 0) + if( /data/g_m12_to_18/item_23  = 'pass', 1, 0) + if( /data/g_m12_to_18/item_24  = 'pass', 1, 0) + if( /data/g_m12_to_18/item_25  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_5_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 5), if( /data/g_m12_to_18/item_22  = 'not_assessed', 1, 0) + if( /data/g_m12_to_18/item_23  = 'not_assessed', 1, 0) + if( /data/g_m12_to_18/item_24  = 'not_assessed', 1, 0) + if( /data/g_m12_to_18/item_25  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_5_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 5), if( /data/g_m12_to_18/item_22  = 'fail', 1, 0) + if( /data/g_m12_to_18/item_23  = 'fail', 1, 0) + if( /data/g_m12_to_18/item_24  = 'fail', 1, 0) + if( /data/g_m12_to_18/item_25  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_5_earned_months" type="string" calculate=" /data/band_5_passed_count  * (1.5)"/>
+      <bind nodeset="/data/g_m18_to_24" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 6"/>
+      <bind nodeset="/data/g_m18_to_24/item_26" type="string" required="true()"/>
+      <bind nodeset="/data/g_m18_to_24/item_27" type="string" required="true()"/>
+      <bind nodeset="/data/g_m18_to_24/item_28" type="string" required="true()"/>
+      <bind nodeset="/data/g_m18_to_24/item_29" type="string" required="true()"/>
+      <bind nodeset="/data/band_6_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 6), if( /data/g_m18_to_24/item_26  = 'pass', 1, 0) + if( /data/g_m18_to_24/item_27  = 'pass', 1, 0) + if( /data/g_m18_to_24/item_28  = 'pass', 1, 0) + if( /data/g_m18_to_24/item_29  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_6_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 6), if( /data/g_m18_to_24/item_26  = 'not_assessed', 1, 0) + if( /data/g_m18_to_24/item_27  = 'not_assessed', 1, 0) + if( /data/g_m18_to_24/item_28  = 'not_assessed', 1, 0) + if( /data/g_m18_to_24/item_29  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_6_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 6), if( /data/g_m18_to_24/item_26  = 'fail', 1, 0) + if( /data/g_m18_to_24/item_27  = 'fail', 1, 0) + if( /data/g_m18_to_24/item_28  = 'fail', 1, 0) + if( /data/g_m18_to_24/item_29  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_6_earned_months" type="string" calculate=" /data/band_6_passed_count  * (1.5)"/>
+      <bind nodeset="/data/g_m24_to_36" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 7"/>
+      <bind nodeset="/data/g_m24_to_36/item_30" type="string" required="true()"/>
+      <bind nodeset="/data/g_m24_to_36/item_31" type="string" required="true()"/>
+      <bind nodeset="/data/g_m24_to_36/item_32" type="string" required="true()"/>
+      <bind nodeset="/data/g_m24_to_36/item_33" type="string" required="true()"/>
+      <bind nodeset="/data/g_m24_to_36/item_34" type="string" required="true()"/>
+      <bind nodeset="/data/g_m24_to_36/item_35" type="string" required="true()"/>
+      <bind nodeset="/data/band_7_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 7), if( /data/g_m24_to_36/item_30  = 'pass', 1, 0) + if( /data/g_m24_to_36/item_31  = 'pass', 1, 0) + if( /data/g_m24_to_36/item_32  = 'pass', 1, 0) + if( /data/g_m24_to_36/item_33  = 'pass', 1, 0) + if( /data/g_m24_to_36/item_34  = 'pass', 1, 0) + if( /data/g_m24_to_36/item_35  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_7_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 7), if( /data/g_m24_to_36/item_30  = 'not_assessed', 1, 0) + if( /data/g_m24_to_36/item_31  = 'not_assessed', 1, 0) + if( /data/g_m24_to_36/item_32  = 'not_assessed', 1, 0) + if( /data/g_m24_to_36/item_33  = 'not_assessed', 1, 0) + if( /data/g_m24_to_36/item_34  = 'not_assessed', 1, 0) + if( /data/g_m24_to_36/item_35  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_7_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 7), if( /data/g_m24_to_36/item_30  = 'fail', 1, 0) + if( /data/g_m24_to_36/item_31  = 'fail', 1, 0) + if( /data/g_m24_to_36/item_32  = 'fail', 1, 0) + if( /data/g_m24_to_36/item_33  = 'fail', 1, 0) + if( /data/g_m24_to_36/item_34  = 'fail', 1, 0) + if( /data/g_m24_to_36/item_35  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_7_earned_months" type="string" calculate=" /data/band_7_passed_count  * (2)"/>
+      <bind nodeset="/data/g_m36_to_48" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 8"/>
+      <bind nodeset="/data/g_m36_to_48/item_36" type="string" required="true()"/>
+      <bind nodeset="/data/g_m36_to_48/item_37" type="string" required="true()"/>
+      <bind nodeset="/data/g_m36_to_48/item_38" type="string" required="true()"/>
+      <bind nodeset="/data/g_m36_to_48/item_39" type="string" required="true()"/>
+      <bind nodeset="/data/g_m36_to_48/item_40" type="string" required="true()"/>
+      <bind nodeset="/data/band_8_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 8), if( /data/g_m36_to_48/item_36  = 'pass', 1, 0) + if( /data/g_m36_to_48/item_37  = 'pass', 1, 0) + if( /data/g_m36_to_48/item_38  = 'pass', 1, 0) + if( /data/g_m36_to_48/item_39  = 'pass', 1, 0) + if( /data/g_m36_to_48/item_40  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_8_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 8), if( /data/g_m36_to_48/item_36  = 'not_assessed', 1, 0) + if( /data/g_m36_to_48/item_37  = 'not_assessed', 1, 0) + if( /data/g_m36_to_48/item_38  = 'not_assessed', 1, 0) + if( /data/g_m36_to_48/item_39  = 'not_assessed', 1, 0) + if( /data/g_m36_to_48/item_40  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_8_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 8), if( /data/g_m36_to_48/item_36  = 'fail', 1, 0) + if( /data/g_m36_to_48/item_37  = 'fail', 1, 0) + if( /data/g_m36_to_48/item_38  = 'fail', 1, 0) + if( /data/g_m36_to_48/item_39  = 'fail', 1, 0) + if( /data/g_m36_to_48/item_40  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_8_earned_months" type="string" calculate=" /data/band_8_passed_count  * (2.4)"/>
+      <bind nodeset="/data/g_m48_to_60" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 9"/>
+      <bind nodeset="/data/g_m48_to_60/item_41" type="string" required="true()"/>
+      <bind nodeset="/data/g_m48_to_60/item_42" type="string" required="true()"/>
+      <bind nodeset="/data/g_m48_to_60/item_43" type="string" required="true()"/>
+      <bind nodeset="/data/g_m48_to_60/item_44" type="string" required="true()"/>
+      <bind nodeset="/data/g_m48_to_60/item_45" type="string" required="true()"/>
+      <bind nodeset="/data/g_m48_to_60/item_46" type="string" required="true()"/>
+      <bind nodeset="/data/band_9_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 9), if( /data/g_m48_to_60/item_41  = 'pass', 1, 0) + if( /data/g_m48_to_60/item_42  = 'pass', 1, 0) + if( /data/g_m48_to_60/item_43  = 'pass', 1, 0) + if( /data/g_m48_to_60/item_44  = 'pass', 1, 0) + if( /data/g_m48_to_60/item_45  = 'pass', 1, 0) + if( /data/g_m48_to_60/item_46  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_9_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 9), if( /data/g_m48_to_60/item_41  = 'not_assessed', 1, 0) + if( /data/g_m48_to_60/item_42  = 'not_assessed', 1, 0) + if( /data/g_m48_to_60/item_43  = 'not_assessed', 1, 0) + if( /data/g_m48_to_60/item_44  = 'not_assessed', 1, 0) + if( /data/g_m48_to_60/item_45  = 'not_assessed', 1, 0) + if( /data/g_m48_to_60/item_46  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_9_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 9), if( /data/g_m48_to_60/item_41  = 'fail', 1, 0) + if( /data/g_m48_to_60/item_42  = 'fail', 1, 0) + if( /data/g_m48_to_60/item_43  = 'fail', 1, 0) + if( /data/g_m48_to_60/item_44  = 'fail', 1, 0) + if( /data/g_m48_to_60/item_45  = 'fail', 1, 0) + if( /data/g_m48_to_60/item_46  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_9_earned_months" type="string" calculate=" /data/band_9_passed_count  * (2)"/>
+      <bind nodeset="/data/g_m60_to_72" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 10"/>
+      <bind nodeset="/data/g_m60_to_72/item_47" type="string" required="true()"/>
+      <bind nodeset="/data/g_m60_to_72/item_48" type="string" required="true()"/>
+      <bind nodeset="/data/g_m60_to_72/item_49" type="string" required="true()"/>
+      <bind nodeset="/data/g_m60_to_72/item_50" type="string" required="true()"/>
+      <bind nodeset="/data/g_m60_to_72/item_51" type="string" required="true()"/>
+      <bind nodeset="/data/band_10_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 10), if( /data/g_m60_to_72/item_47  = 'pass', 1, 0) + if( /data/g_m60_to_72/item_48  = 'pass', 1, 0) + if( /data/g_m60_to_72/item_49  = 'pass', 1, 0) + if( /data/g_m60_to_72/item_50  = 'pass', 1, 0) + if( /data/g_m60_to_72/item_51  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_10_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 10), if( /data/g_m60_to_72/item_47  = 'not_assessed', 1, 0) + if( /data/g_m60_to_72/item_48  = 'not_assessed', 1, 0) + if( /data/g_m60_to_72/item_49  = 'not_assessed', 1, 0) + if( /data/g_m60_to_72/item_50  = 'not_assessed', 1, 0) + if( /data/g_m60_to_72/item_51  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_10_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 10), if( /data/g_m60_to_72/item_47  = 'fail', 1, 0) + if( /data/g_m60_to_72/item_48  = 'fail', 1, 0) + if( /data/g_m60_to_72/item_49  = 'fail', 1, 0) + if( /data/g_m60_to_72/item_50  = 'fail', 1, 0) + if( /data/g_m60_to_72/item_51  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_10_earned_months" type="string" calculate=" /data/band_10_passed_count  * (2.4)"/>
+      <bind nodeset="/data/g_m72_to_84" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 11"/>
+      <bind nodeset="/data/g_m72_to_84/item_52" type="string" required="true()"/>
+      <bind nodeset="/data/g_m72_to_84/item_53" type="string" required="true()"/>
+      <bind nodeset="/data/g_m72_to_84/item_54" type="string" required="true()"/>
+      <bind nodeset="/data/g_m72_to_84/item_55" type="string" required="true()"/>
+      <bind nodeset="/data/g_m72_to_84/item_56" type="string" required="true()"/>
+      <bind nodeset="/data/band_11_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 11), if( /data/g_m72_to_84/item_52  = 'pass', 1, 0) + if( /data/g_m72_to_84/item_53  = 'pass', 1, 0) + if( /data/g_m72_to_84/item_54  = 'pass', 1, 0) + if( /data/g_m72_to_84/item_55  = 'pass', 1, 0) + if( /data/g_m72_to_84/item_56  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_11_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 11), if( /data/g_m72_to_84/item_52  = 'not_assessed', 1, 0) + if( /data/g_m72_to_84/item_53  = 'not_assessed', 1, 0) + if( /data/g_m72_to_84/item_54  = 'not_assessed', 1, 0) + if( /data/g_m72_to_84/item_55  = 'not_assessed', 1, 0) + if( /data/g_m72_to_84/item_56  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_11_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 11), if( /data/g_m72_to_84/item_52  = 'fail', 1, 0) + if( /data/g_m72_to_84/item_53  = 'fail', 1, 0) + if( /data/g_m72_to_84/item_54  = 'fail', 1, 0) + if( /data/g_m72_to_84/item_55  = 'fail', 1, 0) + if( /data/g_m72_to_84/item_56  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_11_earned_months" type="string" calculate=" /data/band_11_passed_count  * (2.4)"/>
+      <bind nodeset="/data/g_m84_to_96" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 12"/>
+      <bind nodeset="/data/g_m84_to_96/item_57" type="string" required="true()"/>
+      <bind nodeset="/data/g_m84_to_96/item_58" type="string" required="true()"/>
+      <bind nodeset="/data/g_m84_to_96/item_59" type="string" required="true()"/>
+      <bind nodeset="/data/g_m84_to_96/item_60" type="string" required="true()"/>
+      <bind nodeset="/data/band_12_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 12), if( /data/g_m84_to_96/item_57  = 'pass', 1, 0) + if( /data/g_m84_to_96/item_58  = 'pass', 1, 0) + if( /data/g_m84_to_96/item_59  = 'pass', 1, 0) + if( /data/g_m84_to_96/item_60  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_12_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 12), if( /data/g_m84_to_96/item_57  = 'not_assessed', 1, 0) + if( /data/g_m84_to_96/item_58  = 'not_assessed', 1, 0) + if( /data/g_m84_to_96/item_59  = 'not_assessed', 1, 0) + if( /data/g_m84_to_96/item_60  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_12_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 12), if( /data/g_m84_to_96/item_57  = 'fail', 1, 0) + if( /data/g_m84_to_96/item_58  = 'fail', 1, 0) + if( /data/g_m84_to_96/item_59  = 'fail', 1, 0) + if( /data/g_m84_to_96/item_60  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_12_earned_months" type="string" calculate=" /data/band_12_passed_count  * (3)"/>
+      <bind nodeset="/data/g_m96_to_108" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 13"/>
+      <bind nodeset="/data/g_m96_to_108/item_61" type="string" required="true()"/>
+      <bind nodeset="/data/g_m96_to_108/item_62" type="string" required="true()"/>
+      <bind nodeset="/data/g_m96_to_108/item_63" type="string" required="true()"/>
+      <bind nodeset="/data/g_m96_to_108/item_64" type="string" required="true()"/>
+      <bind nodeset="/data/g_m96_to_108/item_65" type="string" required="true()"/>
+      <bind nodeset="/data/g_m96_to_108/item_66" type="string" required="true()"/>
+      <bind nodeset="/data/band_13_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 13), if( /data/g_m96_to_108/item_61  = 'pass', 1, 0) + if( /data/g_m96_to_108/item_62  = 'pass', 1, 0) + if( /data/g_m96_to_108/item_63  = 'pass', 1, 0) + if( /data/g_m96_to_108/item_64  = 'pass', 1, 0) + if( /data/g_m96_to_108/item_65  = 'pass', 1, 0) + if( /data/g_m96_to_108/item_66  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_13_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 13), if( /data/g_m96_to_108/item_61  = 'not_assessed', 1, 0) + if( /data/g_m96_to_108/item_62  = 'not_assessed', 1, 0) + if( /data/g_m96_to_108/item_63  = 'not_assessed', 1, 0) + if( /data/g_m96_to_108/item_64  = 'not_assessed', 1, 0) + if( /data/g_m96_to_108/item_65  = 'not_assessed', 1, 0) + if( /data/g_m96_to_108/item_66  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_13_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 13), if( /data/g_m96_to_108/item_61  = 'fail', 1, 0) + if( /data/g_m96_to_108/item_62  = 'fail', 1, 0) + if( /data/g_m96_to_108/item_63  = 'fail', 1, 0) + if( /data/g_m96_to_108/item_64  = 'fail', 1, 0) + if( /data/g_m96_to_108/item_65  = 'fail', 1, 0) + if( /data/g_m96_to_108/item_66  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_13_earned_months" type="string" calculate=" /data/band_13_passed_count  * (2)"/>
+      <bind nodeset="/data/g_m108_to_120" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 14"/>
+      <bind nodeset="/data/g_m108_to_120/item_67" type="string" required="true()"/>
+      <bind nodeset="/data/g_m108_to_120/item_68" type="string" required="true()"/>
+      <bind nodeset="/data/g_m108_to_120/item_69" type="string" required="true()"/>
+      <bind nodeset="/data/g_m108_to_120/item_70" type="string" required="true()"/>
+      <bind nodeset="/data/g_m108_to_120/item_71" type="string" required="true()"/>
+      <bind nodeset="/data/band_14_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 14), if( /data/g_m108_to_120/item_67  = 'pass', 1, 0) + if( /data/g_m108_to_120/item_68  = 'pass', 1, 0) + if( /data/g_m108_to_120/item_69  = 'pass', 1, 0) + if( /data/g_m108_to_120/item_70  = 'pass', 1, 0) + if( /data/g_m108_to_120/item_71  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_14_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 14), if( /data/g_m108_to_120/item_67  = 'not_assessed', 1, 0) + if( /data/g_m108_to_120/item_68  = 'not_assessed', 1, 0) + if( /data/g_m108_to_120/item_69  = 'not_assessed', 1, 0) + if( /data/g_m108_to_120/item_70  = 'not_assessed', 1, 0) + if( /data/g_m108_to_120/item_71  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_14_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 14), if( /data/g_m108_to_120/item_67  = 'fail', 1, 0) + if( /data/g_m108_to_120/item_68  = 'fail', 1, 0) + if( /data/g_m108_to_120/item_69  = 'fail', 1, 0) + if( /data/g_m108_to_120/item_70  = 'fail', 1, 0) + if( /data/g_m108_to_120/item_71  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_14_earned_months" type="string" calculate=" /data/band_14_passed_count  * (2.4)"/>
+      <bind nodeset="/data/g_m120_to_132" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 15"/>
+      <bind nodeset="/data/g_m120_to_132/item_72" type="string" required="true()"/>
+      <bind nodeset="/data/g_m120_to_132/item_73" type="string" required="true()"/>
+      <bind nodeset="/data/g_m120_to_132/item_74" type="string" required="true()"/>
+      <bind nodeset="/data/g_m120_to_132/item_75" type="string" required="true()"/>
+      <bind nodeset="/data/band_15_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 15), if( /data/g_m120_to_132/item_72  = 'pass', 1, 0) + if( /data/g_m120_to_132/item_73  = 'pass', 1, 0) + if( /data/g_m120_to_132/item_74  = 'pass', 1, 0) + if( /data/g_m120_to_132/item_75  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_15_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 15), if( /data/g_m120_to_132/item_72  = 'not_assessed', 1, 0) + if( /data/g_m120_to_132/item_73  = 'not_assessed', 1, 0) + if( /data/g_m120_to_132/item_74  = 'not_assessed', 1, 0) + if( /data/g_m120_to_132/item_75  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_15_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 15), if( /data/g_m120_to_132/item_72  = 'fail', 1, 0) + if( /data/g_m120_to_132/item_73  = 'fail', 1, 0) + if( /data/g_m120_to_132/item_74  = 'fail', 1, 0) + if( /data/g_m120_to_132/item_75  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_15_earned_months" type="string" calculate=" /data/band_15_passed_count  * (3)"/>
+      <bind nodeset="/data/g_m132_to_144" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 16"/>
+      <bind nodeset="/data/g_m132_to_144/item_76" type="string" required="true()"/>
+      <bind nodeset="/data/g_m132_to_144/item_77" type="string" required="true()"/>
+      <bind nodeset="/data/g_m132_to_144/item_78" type="string" required="true()"/>
+      <bind nodeset="/data/band_16_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 16), if( /data/g_m132_to_144/item_76  = 'pass', 1, 0) + if( /data/g_m132_to_144/item_77  = 'pass', 1, 0) + if( /data/g_m132_to_144/item_78  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_16_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 16), if( /data/g_m132_to_144/item_76  = 'not_assessed', 1, 0) + if( /data/g_m132_to_144/item_77  = 'not_assessed', 1, 0) + if( /data/g_m132_to_144/item_78  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_16_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 16), if( /data/g_m132_to_144/item_76  = 'fail', 1, 0) + if( /data/g_m132_to_144/item_77  = 'fail', 1, 0) + if( /data/g_m132_to_144/item_78  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_16_earned_months" type="string" calculate=" /data/band_16_passed_count  * (4)"/>
+      <bind nodeset="/data/g_m144_to_156" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 17"/>
+      <bind nodeset="/data/g_m144_to_156/item_79" type="string" required="true()"/>
+      <bind nodeset="/data/g_m144_to_156/item_80" type="string" required="true()"/>
+      <bind nodeset="/data/g_m144_to_156/item_81" type="string" required="true()"/>
+      <bind nodeset="/data/g_m144_to_156/item_82" type="string" required="true()"/>
+      <bind nodeset="/data/g_m144_to_156/item_83" type="string" required="true()"/>
+      <bind nodeset="/data/band_17_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 17), if( /data/g_m144_to_156/item_79  = 'pass', 1, 0) + if( /data/g_m144_to_156/item_80  = 'pass', 1, 0) + if( /data/g_m144_to_156/item_81  = 'pass', 1, 0) + if( /data/g_m144_to_156/item_82  = 'pass', 1, 0) + if( /data/g_m144_to_156/item_83  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_17_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 17), if( /data/g_m144_to_156/item_79  = 'not_assessed', 1, 0) + if( /data/g_m144_to_156/item_80  = 'not_assessed', 1, 0) + if( /data/g_m144_to_156/item_81  = 'not_assessed', 1, 0) + if( /data/g_m144_to_156/item_82  = 'not_assessed', 1, 0) + if( /data/g_m144_to_156/item_83  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_17_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 17), if( /data/g_m144_to_156/item_79  = 'fail', 1, 0) + if( /data/g_m144_to_156/item_80  = 'fail', 1, 0) + if( /data/g_m144_to_156/item_81  = 'fail', 1, 0) + if( /data/g_m144_to_156/item_82  = 'fail', 1, 0) + if( /data/g_m144_to_156/item_83  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_17_earned_months" type="string" calculate=" /data/band_17_passed_count  * (2.4)"/>
+      <bind nodeset="/data/g_m156_to_180" relevant=" /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 18"/>
+      <bind nodeset="/data/g_m156_to_180/item_84" type="string" required="true()"/>
+      <bind nodeset="/data/g_m156_to_180/item_85" type="string" required="true()"/>
+      <bind nodeset="/data/g_m156_to_180/item_86" type="string" required="true()"/>
+      <bind nodeset="/data/g_m156_to_180/item_87" type="string" required="true()"/>
+      <bind nodeset="/data/g_m156_to_180/item_88" type="string" required="true()"/>
+      <bind nodeset="/data/band_18_passed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 18), if( /data/g_m156_to_180/item_84  = 'pass', 1, 0) + if( /data/g_m156_to_180/item_85  = 'pass', 1, 0) + if( /data/g_m156_to_180/item_86  = 'pass', 1, 0) + if( /data/g_m156_to_180/item_87  = 'pass', 1, 0) + if( /data/g_m156_to_180/item_88  = 'pass', 1, 0), 0)"/>
+      <bind nodeset="/data/band_18_not_assessed" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 18), if( /data/g_m156_to_180/item_84  = 'not_assessed', 1, 0) + if( /data/g_m156_to_180/item_85  = 'not_assessed', 1, 0) + if( /data/g_m156_to_180/item_86  = 'not_assessed', 1, 0) + if( /data/g_m156_to_180/item_87  = 'not_assessed', 1, 0) + if( /data/g_m156_to_180/item_88  = 'not_assessed', 1, 0), 0)"/>
+      <bind nodeset="/data/band_18_failed_count" type="string" calculate="if(( /data/g_child/show_all  = 'yes' or  /data/ca_band  &gt;= 18), if( /data/g_m156_to_180/item_84  = 'fail', 1, 0) + if( /data/g_m156_to_180/item_85  = 'fail', 1, 0) + if( /data/g_m156_to_180/item_86  = 'fail', 1, 0) + if( /data/g_m156_to_180/item_87  = 'fail', 1, 0) + if( /data/g_m156_to_180/item_88  = 'fail', 1, 0), 0)"/>
+      <bind nodeset="/data/band_18_earned_months" type="string" calculate=" /data/band_18_passed_count  * (4.8)"/>
+      <bind nodeset="/data/total_passed_items" type="string" calculate=" /data/band_1_passed_count  +  /data/band_2_passed_count  +  /data/band_3_passed_count  +  /data/band_4_passed_count  +  /data/band_5_passed_count  +  /data/band_6_passed_count  +  /data/band_7_passed_count  +  /data/band_8_passed_count  +  /data/band_9_passed_count  +  /data/band_10_passed_count  +  /data/band_11_passed_count  +  /data/band_12_passed_count  +  /data/band_13_passed_count  +  /data/band_14_passed_count  +  /data/band_15_passed_count  +  /data/band_16_passed_count  +  /data/band_17_passed_count  +  /data/band_18_passed_count "/>
+      <bind nodeset="/data/total_failed_items" type="string" calculate=" /data/band_1_failed_count  +  /data/band_2_failed_count  +  /data/band_3_failed_count  +  /data/band_4_failed_count  +  /data/band_5_failed_count  +  /data/band_6_failed_count  +  /data/band_7_failed_count  +  /data/band_8_failed_count  +  /data/band_9_failed_count  +  /data/band_10_failed_count  +  /data/band_11_failed_count  +  /data/band_12_failed_count  +  /data/band_13_failed_count  +  /data/band_14_failed_count  +  /data/band_15_failed_count  +  /data/band_16_failed_count  +  /data/band_17_failed_count  +  /data/band_18_failed_count "/>
+      <bind nodeset="/data/total_not_assessed_items" type="string" calculate=" /data/band_1_not_assessed  +  /data/band_2_not_assessed  +  /data/band_3_not_assessed  +  /data/band_4_not_assessed  +  /data/band_5_not_assessed  +  /data/band_6_not_assessed  +  /data/band_7_not_assessed  +  /data/band_8_not_assessed  +  /data/band_9_not_assessed  +  /data/band_10_not_assessed  +  /data/band_11_not_assessed  +  /data/band_12_not_assessed  +  /data/band_13_not_assessed  +  /data/band_14_not_assessed  +  /data/band_15_not_assessed  +  /data/band_16_not_assessed  +  /data/band_17_not_assessed  +  /data/band_18_not_assessed "/>
+      <bind nodeset="/data/developmental_age_months" type="string" calculate=" /data/band_1_earned_months  +  /data/band_2_earned_months  +  /data/band_3_earned_months  +  /data/band_4_earned_months  +  /data/band_5_earned_months  +  /data/band_6_earned_months  +  /data/band_7_earned_months  +  /data/band_8_earned_months  +  /data/band_9_earned_months  +  /data/band_10_earned_months  +  /data/band_11_earned_months  +  /data/band_12_earned_months  +  /data/band_13_earned_months  +  /data/band_14_earned_months  +  /data/band_15_earned_months  +  /data/band_16_earned_months  +  /data/band_17_earned_months  +  /data/band_18_earned_months "/>
+      <bind nodeset="/data/developmental_age_years" type="string" calculate="floor( /data/developmental_age_months  div 12)"/>
+      <bind nodeset="/data/developmental_age_remaining_months" type="string" calculate="round( /data/developmental_age_months  - ( /data/developmental_age_years  * 12))"/>
+      <bind nodeset="/data/score_status" type="string" calculate="if( /data/g_child/age_valid  != 'yes', 'invalid_age', if( /data/total_not_assessed_items  &gt; 0, 'incomplete', 'complete'))"/>
+      <bind nodeset="/data/developmental_quotient_raw" type="string" calculate="if( /data/score_status  = 'complete' and  /data/g_child/ca_months_dec  &gt; 0,  /data/developmental_age_months  div  /data/g_child/ca_months_dec  * 100, '')"/>
+      <bind nodeset="/data/developmental_quotient_rounded" type="string" calculate="if( /data/score_status  = 'complete', round( /data/developmental_quotient_raw ), '')"/>
+      <bind nodeset="/data/na_reason" type="string" required="true()" relevant=" /data/total_not_assessed_items  &gt; 0"/>
+      <bind nodeset="/data/clinical_notes" type="string"/>
+      <bind nodeset="/data/result_complete" readonly="true()" type="string" relevant=" /data/score_status  = 'complete'"/>
+      <bind nodeset="/data/result_incomplete" readonly="true()" type="string" relevant=" /data/score_status  = 'incomplete'"/>
+      <bind nodeset="/data/result_invalid" readonly="true()" type="string" relevant=" /data/score_status  = 'invalid_age'"/>
+      <bind nodeset="/data/g_supporting_docs/upload_scale_image" type="binary"/>
+      <bind nodeset="/data/g_supporting_docs/upload_scale_pdf" type="binary"/>
+      <bind nodeset="/data/g_supporting_docs/upload_caption" type="string"/>
+      <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
+    </model>
+  </h:head>
+  <h:body>
+    <group appearance="field-list" ref="/data/inputs">
+      <label>Participant</label>
+      <group appearance="field-list" ref="/data/inputs/user">
+        <label>User</label>
+      </group>
+      <group appearance="field-list" ref="/data/inputs/contact">
+        <label>Select child / beneficiary</label>
+        <input ref="/data/inputs/contact/_id" appearance="select-contact type-participant">
+          <label>Select participant</label>
+        </input>
+      </group>
+    </group>
+    <group ref="/data/g_intro">
+      <label>Developmental Screening Test (DST)</label>
+      <input ref="/data/g_intro/dst_disclaimer">
+        <label>DST is a developmental screening instrument and does not provide a diagnosis. Results must be interpreted by a qualified clinician. This assessment does not diagnose developmental, intellectual, neurological or psychiatric conditions.</label>
+      </input>
+      <select1 ref="/data/g_intro/acknowledged">
+        <label>I confirm that this assessment is being completed by or reviewed with a trained/authorized health worker.</label>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_child">
+      <label>Child details &amp; assessment date</label>
+      <input ref="/data/g_child/assessment_date">
+        <label>Assessment date</label>
+      </input>
+      <input ref="/data/g_child/child_dob">
+        <label>Child date of birth</label>
+        <hint>Contacts do not store date of birth, so it is captured here.</hint>
+      </input>
+      <input ref="/data/g_child/dob_warning">
+        <label>**WARNING:** Child date of birth is missing or invalid. Please enter DOB before scoring. Do not guess age.</label>
+      </input>
+      <input ref="/data/g_child/ca_display">
+        <label> Chronological age: **<output value=" /data/g_child/ca_years_display "/>y <output value=" /data/g_child/ca_rem_months "/>m** (<output value=" /data/g_child/ca_days "/> days). </label>
+      </input>
+      <select1 ref="/data/g_child/show_all">
+        <label>Show all DST items? (trained assessors)</label>
+        <hint>No = show birth through child age band; future bands hidden. Yes = show all bands.</hint>
+        <itemset nodeset="instance('yesno')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_birth_to_3_months">
+      <label>Birth to 3 months (items 1-7)</label>
+      <select1 ref="/data/g_birth_to_3_months/item_1">
+        <label>1. birth cry present* [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_birth_to_3_months/item_2">
+        <label>2. equal bilateral movements</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_birth_to_3_months/item_3">
+        <label>3. responds to bell</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_birth_to_3_months/item_4">
+        <label>4. vocalises sounds* [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_birth_to_3_months/item_5">
+        <label>5. smiles spontaneously</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_birth_to_3_months/item_6">
+        <label>6. eyes follow moving objects</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_birth_to_3_months/item_7">
+        <label>7. head steady</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m3_to_6">
+      <label>3 to 6 months (items 8-13)</label>
+      <select1 ref="/data/g_m3_to_6/item_8">
+        <label>8. reaches for objects</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m3_to_6/item_9">
+        <label>9. laughs aloud [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m3_to_6/item_10">
+        <label>10. recognizes mother</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m3_to_6/item_11">
+        <label>11. vocalizes for pleasure/babbles [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m3_to_6/item_12">
+        <label>12. carries objects to mouth</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m3_to_6/item_13">
+        <label>13. rolls over</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m6_to_9">
+      <label>6 to 9 months (items 14-17)</label>
+      <select1 ref="/data/g_m6_to_9/item_14">
+        <label>14. imitates speech sounds [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m6_to_9/item_15">
+        <label>15. sits by self</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m6_to_9/item_16">
+        <label>16. thumb finger grasp</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m6_to_9/item_17">
+        <label>17. shows curiosity</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m9_to_12">
+      <label>9 to 12 months (items 18-21)</label>
+      <select1 ref="/data/g_m9_to_12/item_18">
+        <label>18. says 3 word, dada, mama etc [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m9_to_12/item_19">
+        <label>19. stands alone well</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m9_to_12/item_20">
+        <label>20. follows simple instructions [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m9_to_12/item_21">
+        <label>21. cooperates for dressing</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m12_to_18">
+      <label>12 to 18 months (items 22-25)</label>
+      <select1 ref="/data/g_m12_to_18/item_22">
+        <label>22. many intelligible words [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m12_to_18/item_23">
+        <label>23. walks, runs well</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m12_to_18/item_24">
+        <label>24. indicates wants</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m12_to_18/item_25">
+        <label>25. scribbles spontaneously</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m18_to_24">
+      <label>18 to 24 months (items 26-29)</label>
+      <select1 ref="/data/g_m18_to_24/item_26">
+        <label>26. says sentences of 2/3 words [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m18_to_24/item_27">
+        <label>27. points out objects in pictures</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m18_to_24/item_28">
+        <label>28. shows body parts</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m18_to_24/item_29">
+        <label>29. participates in play</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m24_to_36">
+      <label>2 to 3 years (items 30-35)</label>
+      <select1 ref="/data/g_m24_to_36/item_30">
+        <label>30. copies O</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m24_to_36/item_31">
+        <label>31. relates experiences [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m24_to_36/item_32">
+        <label>32. knows names, uses of common objects</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m24_to_36/item_33">
+        <label>33. begins to ask why? [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m24_to_36/item_34">
+        <label>34. takes food by self</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m24_to_36/item_35">
+        <label>35. toilet control present</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m36_to_48">
+      <label>3 to 4 years (items 36-40)</label>
+      <select1 ref="/data/g_m36_to_48/item_36">
+        <label>36. buttons up</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m36_to_48/item_37">
+        <label>37. comprehends hunger, cold [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m36_to_48/item_38">
+        <label>38. plays cooperatively with children</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m36_to_48/item_39">
+        <label>39. repeats 3 digits [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m36_to_48/item_40">
+        <label>40. tells stories [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m48_to_60">
+      <label>4 to 5 years (items 41-46)</label>
+      <select1 ref="/data/g_m48_to_60/item_41">
+        <label>41. defines words [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m48_to_60/item_42">
+        <label>42. makes simple drawings</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m48_to_60/item_43">
+        <label>43. dresses with no supervision</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m48_to_60/item_44">
+        <label>44. describes actions in pictures [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m48_to_60/item_45">
+        <label>45. gives sensible answers to questions [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m48_to_60/item_46">
+        <label>46. goes about neighborhood</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m60_to_72">
+      <label>5 to 6 years (items 47-51)</label>
+      <select1 ref="/data/g_m60_to_72/item_47">
+        <label>47. can name primary color</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m60_to_72/item_48">
+        <label>48. plays games governed by rules</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m60_to_72/item_49">
+        <label>49. writes simple words [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m60_to_72/item_50">
+        <label>50. gains admission to school</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m60_to_72/item_51">
+        <label>51. enjoys constructive play</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m72_to_84">
+      <label>6 to 7 years (items 52-56)</label>
+      <select1 ref="/data/g_m72_to_84/item_52">
+        <label>52. adapts to home, school</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m72_to_84/item_53">
+        <label>53. tells differences of objects</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m72_to_84/item_54">
+        <label>54. spells, reads, writes simple words [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m72_to_84/item_55">
+        <label>55. enjoys group play</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m72_to_84/item_56">
+        <label>56. knows comparative value of coins</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m84_to_96">
+      <label>7 to 8 years (items 57-60)</label>
+      <select1 ref="/data/g_m84_to_96/item_57">
+        <label>57. combs hair by self</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m84_to_96/item_58">
+        <label>58. makes small purchases</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m84_to_96/item_59">
+        <label>59. competition in school/play</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m84_to_96/item_60">
+        <label>60. tells time</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m96_to_108">
+      <label>8 to 9 years (items 61-66)</label>
+      <select1 ref="/data/g_m96_to_108/item_61">
+        <label>61. tells day, month, year [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m96_to_108/item_62">
+        <label>62. reads on own initiative [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m96_to_108/item_63">
+        <label>63. recognizes property rights</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m96_to_108/item_64">
+        <label>64. favourite of fairy tales [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m96_to_108/item_65">
+        <label>65. muscle coordination games (marbles)</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m96_to_108/item_66">
+        <label>66. bathes self unaided</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m108_to_120">
+      <label>9 to 10 years (items 67-71)</label>
+      <select1 ref="/data/g_m108_to_120/item_67">
+        <label>67. cooperates keenly with companions</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m108_to_120/item_68">
+        <label>68. has various hobbies, collections</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m108_to_120/item_69">
+        <label>69. goes about town freely</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m108_to_120/item_70">
+        <label>70. sex difference in play becomes marked</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m108_to_120/item_71">
+        <label>71. can stay away from home</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m120_to_132">
+      <label>10 to 11 years (items 72-75)</label>
+      <select1 ref="/data/g_m120_to_132/item_72">
+        <label>72. writes occasional short letters</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m120_to_132/item_73">
+        <label>73. comprehends social situations</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m120_to_132/item_74">
+        <label>74. physical feats liked</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m120_to_132/item_75">
+        <label>75. able to discuss problems [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m132_to_144">
+      <label>11 to 12 years (items 76-78)</label>
+      <select1 ref="/data/g_m132_to_144/item_76">
+        <label>76. enjoys books, newspapers, magazines</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m132_to_144/item_77">
+        <label>77. more independent in spending</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m132_to_144/item_78">
+        <label>78. capable of self-criticism</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m144_to_156">
+      <label>12 to 13 years (items 79-83)</label>
+      <select1 ref="/data/g_m144_to_156/item_79">
+        <label>79. shows foresight, planning, judgment</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m144_to_156/item_80">
+        <label>80. learns from experiences</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m144_to_156/item_81">
+        <label>81. plays difficult games</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m144_to_156/item_82">
+        <label>82. interested in dressing up</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m144_to_156/item_83">
+        <label>83. understands abstract ideas (justice)</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <group ref="/data/g_m156_to_180">
+      <label>13 to 15 years (items 84-88)</label>
+      <select1 ref="/data/g_m156_to_180/item_84">
+        <label>84. makes sensible plans for future (job)</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m156_to_180/item_85">
+        <label>85. follows current events [Speech/Language-related]</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m156_to_180/item_86">
+        <label>86. buys own clothing</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m156_to_180/item_87">
+        <label>87. systematises own work</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+      <select1 ref="/data/g_m156_to_180/item_88">
+        <label>88. purchases for others</label>
+        <itemset nodeset="instance('dst_response')/root/item">
+          <value ref="name"/>
+          <label ref="label"/>
+        </itemset>
+      </select1>
+    </group>
+    <input ref="/data/na_reason">
+      <label>Reason item(s) were NOT ASSESSED (required when any applicable item is not assessed)</label>
+    </input>
+    <input ref="/data/clinical_notes">
+      <label>Clinical notes</label>
+    </input>
+    <input ref="/data/result_complete">
+      <label>
+        **RESULTS**
+Developmental Age (DA):
+        <output value=" /data/developmental_age_years "/>
+        y
+        <output value=" /data/developmental_age_remaining_months "/>
+        m (
+        <output value=" /data/developmental_age_months "/>
+        months)
+Developmental Quotient (DQ):
+        <output value=" /data/developmental_quotient_rounded "/>
+        (raw:
+        <output value=" /data/developmental_quotient_raw "/>
+        )
+DA = passed items weighted per age band. DQ = DA / chronological age x 100.
+This is a screening estimate and must be reviewed by a qualified clinician.
+      </label>
+    </input>
+    <input ref="/data/result_incomplete">
+      <label>Score incomplete - clinician review required. Some applicable items were NOT ASSESSED; DA/DQ are withheld.</label>
+    </input>
+    <input ref="/data/result_invalid">
+      <label>Chronological age is outside the DST supported range (birth through 15 years). Result marked invalid_age.</label>
+    </input>
+    <group ref="/data/g_supporting_docs">
+      <label>Supporting Documents / Scale Upload</label>
+      <upload ref="/data/g_supporting_docs/upload_scale_image" mediatype="image/*">
+        <label>Upload completed scale / assessment sheet (image)</label>
+        <hint>Upload clear photos of the completed paper scale, consent form, or supporting assessment document. Accepts JPG, JPEG, PNG. For PDF use next field.</hint>
+      </upload>
+      <upload ref="/data/g_supporting_docs/upload_scale_pdf" mediatype="application/*">
+        <label>Upload completed scale / assessment sheet (PDF)</label>
+        <hint>Upload a PDF of the completed paper scale if not already uploaded as image. Accepts PDF.</hint>
+      </upload>
+      <input ref="/data/g_supporting_docs/upload_caption">
+        <label>Attachment caption / description (optional)</label>
+      </input>
+    </group>
+  </h:body>
+</h:html>

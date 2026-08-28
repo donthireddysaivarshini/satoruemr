@@ -4,7 +4,7 @@
     <h:title>New Participant</h:title>
     <model odk:xforms-version="1.0.0">
       <instance>
-        <data id="contact:participant:create" version="2026-08-12 00-00" prefix="J1!contact:participant:create!" delimiter="#">
+        <data id="contact:participant:create" version="2026-08-20 00-00" prefix="J1!contact:participant:create!" delimiter="#">
           <inputs>
             <meta>
               <location>
@@ -23,6 +23,9 @@
           <participant>
             <parent>PARENT</parent>
             <type>participant</type>
+            <registration_date/>
+            <ward_dept_no/>
+            <hospital_name/>
             <name/>
             <cr_no/>
             <aadhaar_last4/>
@@ -35,12 +38,6 @@
             <referral_department/>
             <referred_by/>
             <referral_complaint/>
-            <informant_name/>
-            <informant_phone/>
-            <consent_mode/>
-            <consent_given/>
-            <consent_recorded_at/>
-            <consent_version/>
             <notes/>
           </participant>
           <meta tag="hidden">
@@ -60,70 +57,28 @@
           </item>
         </root>
       </instance>
-      <instance id="education_list">
-        <root>
-          <item>
-            <name>illiterate</name>
-            <label>No formal schooling / cannot read</label>
-          </item>
-          <item>
-            <name>primary</name>
-            <label>1-7 years of schooling</label>
-          </item>
-          <item>
-            <name>secondary_plus</name>
-            <label>8 years or more</label>
-          </item>
-        </root>
-      </instance>
-      <instance id="consent_mode_list">
-        <root>
-          <item>
-            <name>written</name>
-            <label>Written</label>
-          </item>
-          <item>
-            <name>verbal</name>
-            <label>Verbal</label>
-          </item>
-        </root>
-      </instance>
-      <instance id="yes_no">
-        <root>
-          <item>
-            <name>yes</name>
-            <label>Yes</label>
-          </item>
-          <item>
-            <name>no</name>
-            <label>No</label>
-          </item>
-        </root>
-      </instance>
       <bind nodeset="/data/inputs" relevant="false()"/>
       <bind nodeset="/data/inputs/user/contact_id" type="string"/>
       <bind nodeset="/data/inputs/user/facility_id" type="string"/>
       <bind nodeset="/data/inputs/user/name" type="string"/>
       <bind nodeset="/data/participant/parent" type="string"/>
       <bind nodeset="/data/participant/type" type="string"/>
+      <bind nodeset="/data/participant/registration_date" type="date" required="true()"/>
+      <setvalue ref="/data/participant/registration_date" value="today()" event="odk-instance-first-load"/>
+      <bind nodeset="/data/participant/ward_dept_no" type="string" required="true()"/>
+      <bind nodeset="/data/participant/hospital_name" type="string" required="true()"/>
       <bind nodeset="/data/participant/name" type="string" required="true()"/>
       <bind nodeset="/data/participant/cr_no" type="string" required="true()"/>
-      <bind nodeset="/data/participant/aadhaar_last4" type="string"/>
+      <bind nodeset="/data/participant/aadhaar_last4" type="string" required="true()"/>
       <bind nodeset="/data/participant/age" type="int" required="true()" constraint=". &gt;= 0 and . &lt;= 130" jr:constraintMsg="Age must be between 0 and 130"/>
       <bind nodeset="/data/participant/gender" type="string" required="true()"/>
-      <bind nodeset="/data/participant/education_level" type="string" required="true()"/>
+      <bind nodeset="/data/participant/education_level" type="string"/>
       <bind nodeset="/data/participant/occupation" type="string"/>
       <bind nodeset="/data/participant/phone" type="tel" constraint="true()" jr:constraintMsg="Please enter a valid phone number."/>
       <bind nodeset="/data/participant/address" type="string"/>
       <bind nodeset="/data/participant/referral_department" type="string"/>
       <bind nodeset="/data/participant/referred_by" type="string"/>
       <bind nodeset="/data/participant/referral_complaint" type="string"/>
-      <bind nodeset="/data/participant/informant_name" type="string"/>
-      <bind nodeset="/data/participant/informant_phone" type="tel" constraint="true()" jr:constraintMsg="Please enter a valid phone number."/>
-      <bind nodeset="/data/participant/consent_mode" type="string"/>
-      <bind nodeset="/data/participant/consent_given" type="string" required="true()"/>
-      <bind nodeset="/data/participant/consent_recorded_at" type="string" calculate="now()"/>
-      <bind nodeset="/data/participant/consent_version" type="string" calculate="'SATORU-CONSENT-v1.0-2026'"/>
       <bind nodeset="/data/participant/notes" type="string"/>
       <bind nodeset="/data/meta/instanceID" type="string" readonly="true()" jr:preload="uid"/>
     </model>
@@ -145,9 +100,18 @@
       </group>
     </group>
     <group appearance="field-list" ref="/data/participant">
-      <label>Participant</label>
+      <label>Patient Registration</label>
+      <input ref="/data/participant/registration_date">
+        <label>Date</label>
+      </input>
+      <input ref="/data/participant/ward_dept_no">
+        <label>Ward / Dept No</label>
+      </input>
+      <input ref="/data/participant/hospital_name">
+        <label>Hospital Name</label>
+      </input>
       <input ref="/data/participant/name">
-        <label>Full Name</label>
+        <label>Patient Name</label>
       </input>
       <input ref="/data/participant/cr_no">
         <label>CR (Case Record) No.</label>
@@ -160,20 +124,15 @@
         <label>Age</label>
       </input>
       <select1 ref="/data/participant/gender">
-        <label>Gender</label>
+        <label>Sex</label>
         <itemset nodeset="instance('gender_list')/root/item">
           <value ref="name"/>
           <label ref="label"/>
         </itemset>
       </select1>
-      <select1 ref="/data/participant/education_level">
-        <label>Education level</label>
-        <hint>Used to select the correct HMSE cut-off in Stage 2.</hint>
-        <itemset nodeset="instance('education_list')/root/item">
-          <value ref="name"/>
-          <label ref="label"/>
-        </itemset>
-      </select1>
+      <input ref="/data/participant/education_level">
+        <label>Education</label>
+      </input>
       <input ref="/data/participant/occupation">
         <label>Occupation</label>
       </input>
@@ -181,7 +140,7 @@
         <label>Phone (patient / caregiver / attendant)</label>
       </input>
       <input ref="/data/participant/address">
-        <label>Address / Locality</label>
+        <label>Address / Locality - City / Town / Village / District</label>
       </input>
       <input ref="/data/participant/referral_department">
         <label>Department (referral)</label>
@@ -192,27 +151,6 @@
       <input ref="/data/participant/referral_complaint">
         <label>Health complaint &amp; reason for referral</label>
       </input>
-      <input ref="/data/participant/informant_name">
-        <label>Respondent name &amp; relation</label>
-      </input>
-      <input ref="/data/participant/informant_phone">
-        <label>Informant phone number</label>
-      </input>
-      <select1 ref="/data/participant/consent_mode">
-        <label>Type of consent obtained</label>
-        <itemset nodeset="instance('consent_mode_list')/root/item">
-          <value ref="name"/>
-          <label ref="label"/>
-        </itemset>
-      </select1>
-      <select1 ref="/data/participant/consent_given">
-        <label>Consent given for screening and data storage?</label>
-        <hint>Explain purpose, confidentiality and the right to stop at any time before recording this.</hint>
-        <itemset nodeset="instance('yes_no')/root/item">
-          <value ref="name"/>
-          <label ref="label"/>
-        </itemset>
-      </select1>
       <input ref="/data/participant/notes" appearance="multiline">
         <label>Notes</label>
       </input>

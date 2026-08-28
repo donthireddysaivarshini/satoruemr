@@ -1,0 +1,14 @@
+{
+  "title": [
+    {
+      "locale": "en",
+      "content": "Vineland-style Social Maturity Scale (VSMS)"
+    }
+  ],
+  "icon": "icon-healthcare-assessment",
+  "context": {
+    "person": true,
+    "place": false,
+    "expression": "!contact || summary.is_participant"
+  }
+}
