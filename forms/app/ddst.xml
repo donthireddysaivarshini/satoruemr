@@ -27,15 +27,10 @@
               <age/>
               <gender/>
               <date_of_birth/>
-              <reported_date/>
             </contact>
           </inputs>
           <patient_uuid/>
           <patient_name/>
-          <g_intro>
-            <ddst_disclaimer/>
-            <acknowledged/>
-          </g_intro>
           <g_meta>
             <test_date/>
             <child_dob/>
@@ -385,11 +380,8 @@
       <bind nodeset="/data/inputs/contact/age" type="string"/>
       <bind nodeset="/data/inputs/contact/gender" type="string"/>
       <bind nodeset="/data/inputs/contact/date_of_birth" type="string"/>
-      <bind nodeset="/data/inputs/contact/reported_date" type="string"/>
       <bind nodeset="/data/patient_uuid" type="string" calculate="../inputs/contact/_id"/>
       <bind nodeset="/data/patient_name" type="string" calculate="../inputs/contact/name"/>
-      <bind nodeset="/data/g_intro/ddst_disclaimer" readonly="true()" type="string"/>
-      <bind nodeset="/data/g_intro/acknowledged" type="string" required="true()" constraint=". = 'yes'" jr:constraintMsg="You must confirm before continuing."/>
       <bind nodeset="/data/g_meta/test_date" type="date" required="true()"/>
       <setvalue ref="/data/g_meta/test_date" value="today()" event="odk-instance-first-load"/>
       <bind nodeset="/data/g_meta/child_dob" type="date" required="true()" constraint=". &lt;= today()" jr:constraintMsg="DOB cannot be in the future."/>
@@ -399,49 +391,49 @@
       <bind nodeset="/data/g_meta/ca_note" readonly="true()" type="string" relevant=" /data/g_meta/ca_days  &gt;= 0"/>
       <bind nodeset="/data/g_meta/ca_band" type="string" calculate="if( /data/g_meta/ca_months_dec  &lt; 12, 1, if( /data/g_meta/ca_months_dec  &lt; 24, 2, if( /data/g_meta/ca_months_dec  &lt; 36, 3, if( /data/g_meta/ca_months_dec  &lt; 48, 4, if( /data/g_meta/ca_months_dec  &lt; 60, 5, if( /data/g_meta/ca_months_dec  &lt; 72, 6, if( /data/g_meta/ca_months_dec  &lt; 84, 7, if( /data/g_meta/ca_months_dec  &lt; 96, 8, if( /data/g_meta/ca_months_dec  &lt; 108, 9, if( /data/g_meta/ca_months_dec  &lt; 120, 10, if( /data/g_meta/ca_months_dec  &lt; 132, 11, if( /data/g_meta/ca_months_dec  &lt; 144, 12, 13))))))))))))"/>
       <bind nodeset="/data/g_meta/show_all" type="string"/>
-      <bind nodeset="/data/g_ps/ps_01" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 0.0000"/>
-      <bind nodeset="/data/g_ps/ps_02" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 1.5000"/>
-      <bind nodeset="/data/g_ps/ps_03" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 2.1000"/>
-      <bind nodeset="/data/g_ps/ps_04" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 3.7000"/>
-      <bind nodeset="/data/g_ps/ps_05" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 5.0000"/>
-      <bind nodeset="/data/g_ps/ps_06" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 5.6500"/>
-      <bind nodeset="/data/g_ps/ps_07" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 9.2500"/>
-      <bind nodeset="/data/g_ps/ps_08" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 10.0500"/>
-      <bind nodeset="/data/g_ps/ps_09" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 10.3500"/>
-      <bind nodeset="/data/g_ps/ps_10" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 12.6000"/>
-      <bind nodeset="/data/g_ps/ps_11" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 13.0500"/>
-      <bind nodeset="/data/g_ps/ps_12" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 12.9500"/>
-      <bind nodeset="/data/g_ps/ps_13" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 14.9500"/>
-      <bind nodeset="/data/g_ps/ps_14" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 16.3500"/>
-      <bind nodeset="/data/g_ps/ps_15" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 18.6000"/>
-      <bind nodeset="/data/g_ps/ps_16" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 19.4000"/>
-      <bind nodeset="/data/g_ps/ps_17" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 25.2500"/>
-      <bind nodeset="/data/g_ps/ps_18" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 24.2500"/>
-      <bind nodeset="/data/g_ps/ps_19" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 28.2000"/>
-      <bind nodeset="/data/g_ps/ps_20" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 31.8000"/>
-      <bind nodeset="/data/g_ps/ps_21" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 34.2000"/>
-      <bind nodeset="/data/g_ps/ps_22" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 45.0000"/>
-      <bind nodeset="/data/g_ps/ps_23" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 45.6000"/>
-      <bind nodeset="/data/g_ps/ps_24" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 45.6000"/>
-      <bind nodeset="/data/g_ps/ps_25" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 48.6000"/>
-      <bind nodeset="/data/g_fm/fm_01" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 12.2628"/>
-      <bind nodeset="/data/g_fm/fm_02" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 24.6571"/>
-      <bind nodeset="/data/g_fm/fm_03" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 36.6571"/>
+      <bind nodeset="/data/g_ps/ps_01" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 1.0000"/>
+      <bind nodeset="/data/g_ps/ps_02" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 1.3285"/>
+      <bind nodeset="/data/g_ps/ps_03" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 2.0000"/>
+      <bind nodeset="/data/g_ps/ps_04" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 4.0000"/>
+      <bind nodeset="/data/g_ps/ps_05" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 5.6571"/>
+      <bind nodeset="/data/g_ps/ps_06" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 6.3285"/>
+      <bind nodeset="/data/g_ps/ps_07" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 11.3285"/>
+      <bind nodeset="/data/g_ps/ps_08" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 12.6571"/>
+      <bind nodeset="/data/g_ps/ps_09" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 14.0000"/>
+      <bind nodeset="/data/g_ps/ps_10" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 15.6571"/>
+      <bind nodeset="/data/g_ps/ps_11" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 16.0000"/>
+      <bind nodeset="/data/g_ps/ps_12" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 17.0000"/>
+      <bind nodeset="/data/g_ps/ps_13" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 17.3285"/>
+      <bind nodeset="/data/g_ps/ps_14" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 20.0000"/>
+      <bind nodeset="/data/g_ps/ps_15" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 23.6571"/>
+      <bind nodeset="/data/g_ps/ps_16" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 24.0000"/>
+      <bind nodeset="/data/g_ps/ps_17" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 30.0000"/>
+      <bind nodeset="/data/g_ps/ps_18" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 32.0000"/>
+      <bind nodeset="/data/g_ps/ps_19" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 36.4928"/>
+      <bind nodeset="/data/g_ps/ps_20" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 37.0000"/>
+      <bind nodeset="/data/g_ps/ps_21" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 40.4928"/>
+      <bind nodeset="/data/g_ps/ps_22" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 53.0000"/>
+      <bind nodeset="/data/g_ps/ps_23" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 58.4928"/>
+      <bind nodeset="/data/g_ps/ps_24" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 60.0000"/>
+      <bind nodeset="/data/g_ps/ps_25" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 61.0000"/>
+      <bind nodeset="/data/g_fm/fm_01" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 1.2628"/>
+      <bind nodeset="/data/g_fm/fm_02" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 2.6571"/>
+      <bind nodeset="/data/g_fm/fm_03" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 3.6571"/>
       <bind nodeset="/data/g_fm/fm_04" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 4.0000"/>
       <bind nodeset="/data/g_fm/fm_05" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 4.5000"/>
-      <bind nodeset="/data/g_fm/fm_06" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 60.1971"/>
+      <bind nodeset="/data/g_fm/fm_06" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 5.1971"/>
       <bind nodeset="/data/g_fm/fm_07" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 5.5000"/>
-      <bind nodeset="/data/g_fm/fm_08" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 84.1971"/>
-      <bind nodeset="/data/g_fm/fm_09" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 84.2628"/>
-      <bind nodeset="/data/g_fm/fm_10" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 84.6571"/>
-      <bind nodeset="/data/g_fm/fm_11" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 108.1643"/>
-      <bind nodeset="/data/g_fm/fm_12" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 120.1643"/>
+      <bind nodeset="/data/g_fm/fm_08" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 7.1971"/>
+      <bind nodeset="/data/g_fm/fm_09" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 7.2628"/>
+      <bind nodeset="/data/g_fm/fm_10" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 7.6571"/>
+      <bind nodeset="/data/g_fm/fm_11" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 9.1643"/>
+      <bind nodeset="/data/g_fm/fm_12" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 10.1643"/>
       <bind nodeset="/data/g_fm/fm_13" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 11.0000"/>
-      <bind nodeset="/data/g_fm/fm_14" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 156.6571"/>
-      <bind nodeset="/data/g_fm/fm_15" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 192.3285"/>
+      <bind nodeset="/data/g_fm/fm_14" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 13.6571"/>
+      <bind nodeset="/data/g_fm/fm_15" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 16.3285"/>
       <bind nodeset="/data/g_fm/fm_16" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 19.5000"/>
       <bind nodeset="/data/g_fm/fm_17" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 20.5000"/>
-      <bind nodeset="/data/g_fm/fm_18" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 276.6571"/>
+      <bind nodeset="/data/g_fm/fm_18" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 23.6571"/>
       <bind nodeset="/data/g_fm/fm_19" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 31.5000"/>
       <bind nodeset="/data/g_fm/fm_20" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 36.0000"/>
       <bind nodeset="/data/g_fm/fm_21" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 41.5000"/>
@@ -455,13 +447,13 @@
       <bind nodeset="/data/g_fm/fm_29" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 72.0000"/>
       <bind nodeset="/data/g_lang/lang_01" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 0.3285"/>
       <bind nodeset="/data/g_lang/lang_02" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 0.6571"/>
-      <bind nodeset="/data/g_lang/lang_03" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 24.4928"/>
+      <bind nodeset="/data/g_lang/lang_03" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 2.4928"/>
       <bind nodeset="/data/g_lang/lang_04" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 3.0000"/>
-      <bind nodeset="/data/g_lang/lang_05" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 48.3285"/>
+      <bind nodeset="/data/g_lang/lang_05" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 4.3285"/>
       <bind nodeset="/data/g_lang/lang_06" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 5.5000"/>
       <bind nodeset="/data/g_lang/lang_07" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 6.5000"/>
-      <bind nodeset="/data/g_lang/lang_08" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 84.3285"/>
-      <bind nodeset="/data/g_lang/lang_09" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 96.6571"/>
+      <bind nodeset="/data/g_lang/lang_08" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 7.3285"/>
+      <bind nodeset="/data/g_lang/lang_09" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 8.6571"/>
       <bind nodeset="/data/g_lang/lang_10" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 9.0000"/>
       <bind nodeset="/data/g_lang/lang_11" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 10.0000"/>
       <bind nodeset="/data/g_lang/lang_12" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 12.0000"/>
@@ -484,25 +476,25 @@
       <bind nodeset="/data/g_lang/lang_29" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 47.0000"/>
       <bind nodeset="/data/g_lang/lang_30" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 49.0000"/>
       <bind nodeset="/data/g_lang/lang_31" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 50.0000"/>
-      <bind nodeset="/data/g_lang/lang_32" type="string" required="true()" relevant="true()"/>
-      <bind nodeset="/data/g_lang/lang_33" type="string" required="true()" relevant="true()"/>
-      <bind nodeset="/data/g_lang/lang_34" type="string" required="true()" relevant="true()"/>
+      <bind nodeset="/data/g_lang/lang_32" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 56.0000"/>
+      <bind nodeset="/data/g_lang/lang_33" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 51.0000"/>
+      <bind nodeset="/data/g_lang/lang_34" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 64.0000"/>
       <bind nodeset="/data/g_lang/lang_35" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 40.5000"/>
       <bind nodeset="/data/g_lang/lang_36" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 40.5000"/>
       <bind nodeset="/data/g_lang/lang_37" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 44.0000"/>
       <bind nodeset="/data/g_lang/lang_38" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 72.0000"/>
-      <bind nodeset="/data/g_lang/lang_39" type="string" required="true()" relevant="true()"/>
-      <bind nodeset="/data/g_gm/gm_01" type="string" required="true()" relevant="true()"/>
-      <bind nodeset="/data/g_gm/gm_02" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 24.4928"/>
-      <bind nodeset="/data/g_gm/gm_03" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 36.4928"/>
+      <bind nodeset="/data/g_lang/lang_39" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 62.0000"/>
+      <bind nodeset="/data/g_gm/gm_01" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 0.1643"/>
+      <bind nodeset="/data/g_gm/gm_02" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 2.4928"/>
+      <bind nodeset="/data/g_gm/gm_03" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 3.4928"/>
       <bind nodeset="/data/g_gm/gm_04" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 4.0000"/>
-      <bind nodeset="/data/g_gm/gm_05" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 48.4928"/>
-      <bind nodeset="/data/g_gm/gm_06" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 48.4928"/>
+      <bind nodeset="/data/g_gm/gm_05" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 4.4928"/>
+      <bind nodeset="/data/g_gm/gm_06" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 4.4928"/>
       <bind nodeset="/data/g_gm/gm_07" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 5.5000"/>
       <bind nodeset="/data/g_gm/gm_08" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 6.0000"/>
       <bind nodeset="/data/g_gm/gm_09" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 6.5000"/>
-      <bind nodeset="/data/g_gm/gm_10" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 8.5000"/>
-      <bind nodeset="/data/g_gm/gm_11" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 9.5000"/>
+      <bind nodeset="/data/g_gm/gm_10" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 6.5000"/>
+      <bind nodeset="/data/g_gm/gm_11" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 8.5000"/>
       <bind nodeset="/data/g_gm/gm_12" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 10.0000"/>
       <bind nodeset="/data/g_gm/gm_13" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 11.5000"/>
       <bind nodeset="/data/g_gm/gm_14" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 13.5000"/>
@@ -523,51 +515,51 @@
       <bind nodeset="/data/g_gm/gm_29" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 66.0000"/>
       <bind nodeset="/data/g_gm/gm_30" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 68.0000"/>
       <bind nodeset="/data/g_gm/gm_31" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 72.0000"/>
-      <bind nodeset="/data/g_gm/gm_32" type="string" required="true()" relevant="true()"/>
+      <bind nodeset="/data/g_gm/gm_32" type="string" required="true()" relevant=" /data/g_meta/show_all  = 'yes' or  /data/g_meta/ca_months_dec  &gt;= 72.0000"/>
       <bind nodeset="/data/clinical_notes" type="string"/>
-      <bind nodeset="/data/ps_01_delayed" type="string" calculate="if((selected( /data/g_ps/ps_01 , 'F') or selected( /data/g_ps/ps_01 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 0.0, 1, 0)"/>
-      <bind nodeset="/data/ps_02_delayed" type="string" calculate="if((selected( /data/g_ps/ps_02 , 'F') or selected( /data/g_ps/ps_02 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 1.5, 1, 0)"/>
-      <bind nodeset="/data/ps_03_delayed" type="string" calculate="if((selected( /data/g_ps/ps_03 , 'F') or selected( /data/g_ps/ps_03 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 2.1, 1, 0)"/>
-      <bind nodeset="/data/ps_04_delayed" type="string" calculate="if(selected( /data/g_ps/ps_04 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 3.7, 1, 0)"/>
-      <bind nodeset="/data/ps_05_delayed" type="string" calculate="if((selected( /data/g_ps/ps_05 , 'F') or selected( /data/g_ps/ps_05 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 5.0, 1, 0)"/>
-      <bind nodeset="/data/ps_06_delayed" type="string" calculate="if(selected( /data/g_ps/ps_06 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 5.65, 1, 0)"/>
-      <bind nodeset="/data/ps_07_delayed" type="string" calculate="if((selected( /data/g_ps/ps_07 , 'F') or selected( /data/g_ps/ps_07 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 9.25, 1, 0)"/>
-      <bind nodeset="/data/ps_08_delayed" type="string" calculate="if(selected( /data/g_ps/ps_08 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 10.05, 1, 0)"/>
-      <bind nodeset="/data/ps_09_delayed" type="string" calculate="if(selected( /data/g_ps/ps_09 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 10.35, 1, 0)"/>
-      <bind nodeset="/data/ps_10_delayed" type="string" calculate="if((selected( /data/g_ps/ps_10 , 'F') or selected( /data/g_ps/ps_10 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 12.6, 1, 0)"/>
-      <bind nodeset="/data/ps_11_delayed" type="string" calculate="if((selected( /data/g_ps/ps_11 , 'F') or selected( /data/g_ps/ps_11 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 13.05, 1, 0)"/>
-      <bind nodeset="/data/ps_12_delayed" type="string" calculate="if((selected( /data/g_ps/ps_12 , 'F') or selected( /data/g_ps/ps_12 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 12.95, 1, 0)"/>
-      <bind nodeset="/data/ps_13_delayed" type="string" calculate="if(selected( /data/g_ps/ps_13 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 14.95, 1, 0)"/>
-      <bind nodeset="/data/ps_14_delayed" type="string" calculate="if((selected( /data/g_ps/ps_14 , 'F') or selected( /data/g_ps/ps_14 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 16.35, 1, 0)"/>
-      <bind nodeset="/data/ps_15_delayed" type="string" calculate="if(selected( /data/g_ps/ps_15 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 18.6, 1, 0)"/>
-      <bind nodeset="/data/ps_16_delayed" type="string" calculate="if((selected( /data/g_ps/ps_16 , 'F') or selected( /data/g_ps/ps_16 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 19.4, 1, 0)"/>
-      <bind nodeset="/data/ps_17_delayed" type="string" calculate="if((selected( /data/g_ps/ps_17 , 'F') or selected( /data/g_ps/ps_17 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 25.25, 1, 0)"/>
-      <bind nodeset="/data/ps_18_delayed" type="string" calculate="if((selected( /data/g_ps/ps_18 , 'F') or selected( /data/g_ps/ps_18 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 24.25, 1, 0)"/>
-      <bind nodeset="/data/ps_19_delayed" type="string" calculate="if((selected( /data/g_ps/ps_19 , 'F') or selected( /data/g_ps/ps_19 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 28.2, 1, 0)"/>
-      <bind nodeset="/data/ps_20_delayed" type="string" calculate="if((selected( /data/g_ps/ps_20 , 'F') or selected( /data/g_ps/ps_20 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 31.8, 1, 0)"/>
-      <bind nodeset="/data/ps_21_delayed" type="string" calculate="if((selected( /data/g_ps/ps_21 , 'F') or selected( /data/g_ps/ps_21 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 34.2, 1, 0)"/>
-      <bind nodeset="/data/ps_22_delayed" type="string" calculate="if(selected( /data/g_ps/ps_22 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 45, 1, 0)"/>
-      <bind nodeset="/data/ps_23_delayed" type="string" calculate="if((selected( /data/g_ps/ps_23 , 'F') or selected( /data/g_ps/ps_23 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 45.6, 1, 0)"/>
-      <bind nodeset="/data/ps_24_delayed" type="string" calculate="if((selected( /data/g_ps/ps_24 , 'F') or selected( /data/g_ps/ps_24 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 45.6, 1, 0)"/>
-      <bind nodeset="/data/ps_25_delayed" type="string" calculate="if(selected( /data/g_ps/ps_25 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 48.6, 1, 0)"/>
-      <bind nodeset="/data/fm_01_delayed" type="string" calculate="if((selected( /data/g_fm/fm_01 , 'F') or selected( /data/g_fm/fm_01 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 12.2628, 1, 0)"/>
-      <bind nodeset="/data/fm_02_delayed" type="string" calculate="if((selected( /data/g_fm/fm_02 , 'F') or selected( /data/g_fm/fm_02 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 24.6571, 1, 0)"/>
-      <bind nodeset="/data/fm_03_delayed" type="string" calculate="if((selected( /data/g_fm/fm_03 , 'F') or selected( /data/g_fm/fm_03 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 36.6571, 1, 0)"/>
+      <bind nodeset="/data/ps_01_delayed" type="string" calculate="if((selected( /data/g_ps/ps_01 , 'F') or selected( /data/g_ps/ps_01 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 1.0, 1, 0)"/>
+      <bind nodeset="/data/ps_02_delayed" type="string" calculate="if((selected( /data/g_ps/ps_02 , 'F') or selected( /data/g_ps/ps_02 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 1.3285, 1, 0)"/>
+      <bind nodeset="/data/ps_03_delayed" type="string" calculate="if((selected( /data/g_ps/ps_03 , 'F') or selected( /data/g_ps/ps_03 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 2.0, 1, 0)"/>
+      <bind nodeset="/data/ps_04_delayed" type="string" calculate="if(selected( /data/g_ps/ps_04 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 4.0, 1, 0)"/>
+      <bind nodeset="/data/ps_05_delayed" type="string" calculate="if((selected( /data/g_ps/ps_05 , 'F') or selected( /data/g_ps/ps_05 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 5.6571, 1, 0)"/>
+      <bind nodeset="/data/ps_06_delayed" type="string" calculate="if(selected( /data/g_ps/ps_06 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 6.3285, 1, 0)"/>
+      <bind nodeset="/data/ps_07_delayed" type="string" calculate="if((selected( /data/g_ps/ps_07 , 'F') or selected( /data/g_ps/ps_07 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 11.3285, 1, 0)"/>
+      <bind nodeset="/data/ps_08_delayed" type="string" calculate="if(selected( /data/g_ps/ps_08 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 12.6571, 1, 0)"/>
+      <bind nodeset="/data/ps_09_delayed" type="string" calculate="if(selected( /data/g_ps/ps_09 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 14.0, 1, 0)"/>
+      <bind nodeset="/data/ps_10_delayed" type="string" calculate="if((selected( /data/g_ps/ps_10 , 'F') or selected( /data/g_ps/ps_10 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 15.6571, 1, 0)"/>
+      <bind nodeset="/data/ps_11_delayed" type="string" calculate="if((selected( /data/g_ps/ps_11 , 'F') or selected( /data/g_ps/ps_11 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 16.0, 1, 0)"/>
+      <bind nodeset="/data/ps_12_delayed" type="string" calculate="if((selected( /data/g_ps/ps_12 , 'F') or selected( /data/g_ps/ps_12 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 17.0, 1, 0)"/>
+      <bind nodeset="/data/ps_13_delayed" type="string" calculate="if(selected( /data/g_ps/ps_13 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 17.3285, 1, 0)"/>
+      <bind nodeset="/data/ps_14_delayed" type="string" calculate="if((selected( /data/g_ps/ps_14 , 'F') or selected( /data/g_ps/ps_14 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 20.0, 1, 0)"/>
+      <bind nodeset="/data/ps_15_delayed" type="string" calculate="if(selected( /data/g_ps/ps_15 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 23.6571, 1, 0)"/>
+      <bind nodeset="/data/ps_16_delayed" type="string" calculate="if((selected( /data/g_ps/ps_16 , 'F') or selected( /data/g_ps/ps_16 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 24.0, 1, 0)"/>
+      <bind nodeset="/data/ps_17_delayed" type="string" calculate="if((selected( /data/g_ps/ps_17 , 'F') or selected( /data/g_ps/ps_17 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 30.0, 1, 0)"/>
+      <bind nodeset="/data/ps_18_delayed" type="string" calculate="if((selected( /data/g_ps/ps_18 , 'F') or selected( /data/g_ps/ps_18 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 32.0, 1, 0)"/>
+      <bind nodeset="/data/ps_19_delayed" type="string" calculate="if((selected( /data/g_ps/ps_19 , 'F') or selected( /data/g_ps/ps_19 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 36.4928, 1, 0)"/>
+      <bind nodeset="/data/ps_20_delayed" type="string" calculate="if((selected( /data/g_ps/ps_20 , 'F') or selected( /data/g_ps/ps_20 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 37.0, 1, 0)"/>
+      <bind nodeset="/data/ps_21_delayed" type="string" calculate="if((selected( /data/g_ps/ps_21 , 'F') or selected( /data/g_ps/ps_21 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 40.4928, 1, 0)"/>
+      <bind nodeset="/data/ps_22_delayed" type="string" calculate="if(selected( /data/g_ps/ps_22 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 53.0, 1, 0)"/>
+      <bind nodeset="/data/ps_23_delayed" type="string" calculate="if((selected( /data/g_ps/ps_23 , 'F') or selected( /data/g_ps/ps_23 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 58.4928, 1, 0)"/>
+      <bind nodeset="/data/ps_24_delayed" type="string" calculate="if((selected( /data/g_ps/ps_24 , 'F') or selected( /data/g_ps/ps_24 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 60.0, 1, 0)"/>
+      <bind nodeset="/data/ps_25_delayed" type="string" calculate="if(selected( /data/g_ps/ps_25 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 61.0, 1, 0)"/>
+      <bind nodeset="/data/fm_01_delayed" type="string" calculate="if((selected( /data/g_fm/fm_01 , 'F') or selected( /data/g_fm/fm_01 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 1.2628, 1, 0)"/>
+      <bind nodeset="/data/fm_02_delayed" type="string" calculate="if((selected( /data/g_fm/fm_02 , 'F') or selected( /data/g_fm/fm_02 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 2.6571, 1, 0)"/>
+      <bind nodeset="/data/fm_03_delayed" type="string" calculate="if((selected( /data/g_fm/fm_03 , 'F') or selected( /data/g_fm/fm_03 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 3.6571, 1, 0)"/>
       <bind nodeset="/data/fm_04_delayed" type="string" calculate="if((selected( /data/g_fm/fm_04 , 'F') or selected( /data/g_fm/fm_04 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 4.0, 1, 0)"/>
       <bind nodeset="/data/fm_05_delayed" type="string" calculate="if((selected( /data/g_fm/fm_05 , 'F') or selected( /data/g_fm/fm_05 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 4.5, 1, 0)"/>
-      <bind nodeset="/data/fm_06_delayed" type="string" calculate="if((selected( /data/g_fm/fm_06 , 'F') or selected( /data/g_fm/fm_06 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 60.1971, 1, 0)"/>
+      <bind nodeset="/data/fm_06_delayed" type="string" calculate="if((selected( /data/g_fm/fm_06 , 'F') or selected( /data/g_fm/fm_06 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 5.1971, 1, 0)"/>
       <bind nodeset="/data/fm_07_delayed" type="string" calculate="if((selected( /data/g_fm/fm_07 , 'F') or selected( /data/g_fm/fm_07 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 5.5, 1, 0)"/>
-      <bind nodeset="/data/fm_08_delayed" type="string" calculate="if((selected( /data/g_fm/fm_08 , 'F') or selected( /data/g_fm/fm_08 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 84.1971, 1, 0)"/>
-      <bind nodeset="/data/fm_09_delayed" type="string" calculate="if((selected( /data/g_fm/fm_09 , 'F') or selected( /data/g_fm/fm_09 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 84.2628, 1, 0)"/>
-      <bind nodeset="/data/fm_10_delayed" type="string" calculate="if((selected( /data/g_fm/fm_10 , 'F') or selected( /data/g_fm/fm_10 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 84.6571, 1, 0)"/>
-      <bind nodeset="/data/fm_11_delayed" type="string" calculate="if((selected( /data/g_fm/fm_11 , 'F') or selected( /data/g_fm/fm_11 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 108.1643, 1, 0)"/>
-      <bind nodeset="/data/fm_12_delayed" type="string" calculate="if((selected( /data/g_fm/fm_12 , 'F') or selected( /data/g_fm/fm_12 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 120.1643, 1, 0)"/>
+      <bind nodeset="/data/fm_08_delayed" type="string" calculate="if((selected( /data/g_fm/fm_08 , 'F') or selected( /data/g_fm/fm_08 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 7.1971, 1, 0)"/>
+      <bind nodeset="/data/fm_09_delayed" type="string" calculate="if((selected( /data/g_fm/fm_09 , 'F') or selected( /data/g_fm/fm_09 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 7.2628, 1, 0)"/>
+      <bind nodeset="/data/fm_10_delayed" type="string" calculate="if((selected( /data/g_fm/fm_10 , 'F') or selected( /data/g_fm/fm_10 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 7.6571, 1, 0)"/>
+      <bind nodeset="/data/fm_11_delayed" type="string" calculate="if((selected( /data/g_fm/fm_11 , 'F') or selected( /data/g_fm/fm_11 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 9.1643, 1, 0)"/>
+      <bind nodeset="/data/fm_12_delayed" type="string" calculate="if((selected( /data/g_fm/fm_12 , 'F') or selected( /data/g_fm/fm_12 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 10.1643, 1, 0)"/>
       <bind nodeset="/data/fm_13_delayed" type="string" calculate="if((selected( /data/g_fm/fm_13 , 'F') or selected( /data/g_fm/fm_13 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 11.0, 1, 0)"/>
-      <bind nodeset="/data/fm_14_delayed" type="string" calculate="if((selected( /data/g_fm/fm_14 , 'F') or selected( /data/g_fm/fm_14 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 156.6571, 1, 0)"/>
-      <bind nodeset="/data/fm_15_delayed" type="string" calculate="if((selected( /data/g_fm/fm_15 , 'F') or selected( /data/g_fm/fm_15 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 192.3285, 1, 0)"/>
+      <bind nodeset="/data/fm_14_delayed" type="string" calculate="if((selected( /data/g_fm/fm_14 , 'F') or selected( /data/g_fm/fm_14 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 13.6571, 1, 0)"/>
+      <bind nodeset="/data/fm_15_delayed" type="string" calculate="if((selected( /data/g_fm/fm_15 , 'F') or selected( /data/g_fm/fm_15 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 16.3285, 1, 0)"/>
       <bind nodeset="/data/fm_16_delayed" type="string" calculate="if((selected( /data/g_fm/fm_16 , 'F') or selected( /data/g_fm/fm_16 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 19.5, 1, 0)"/>
       <bind nodeset="/data/fm_17_delayed" type="string" calculate="if((selected( /data/g_fm/fm_17 , 'F') or selected( /data/g_fm/fm_17 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 20.5, 1, 0)"/>
-      <bind nodeset="/data/fm_18_delayed" type="string" calculate="if((selected( /data/g_fm/fm_18 , 'F') or selected( /data/g_fm/fm_18 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 276.6571, 1, 0)"/>
+      <bind nodeset="/data/fm_18_delayed" type="string" calculate="if((selected( /data/g_fm/fm_18 , 'F') or selected( /data/g_fm/fm_18 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 23.6571, 1, 0)"/>
       <bind nodeset="/data/fm_19_delayed" type="string" calculate="if((selected( /data/g_fm/fm_19 , 'F') or selected( /data/g_fm/fm_19 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 31.5, 1, 0)"/>
       <bind nodeset="/data/fm_20_delayed" type="string" calculate="if((selected( /data/g_fm/fm_20 , 'F') or selected( /data/g_fm/fm_20 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 36.0, 1, 0)"/>
       <bind nodeset="/data/fm_21_delayed" type="string" calculate="if((selected( /data/g_fm/fm_21 , 'F') or selected( /data/g_fm/fm_21 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 41.5, 1, 0)"/>
@@ -581,13 +573,13 @@
       <bind nodeset="/data/fm_29_delayed" type="string" calculate="if((selected( /data/g_fm/fm_29 , 'F') or selected( /data/g_fm/fm_29 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 72.0, 1, 0)"/>
       <bind nodeset="/data/lang_01_delayed" type="string" calculate="if((selected( /data/g_lang/lang_01 , 'F') or selected( /data/g_lang/lang_01 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 0.3285, 1, 0)"/>
       <bind nodeset="/data/lang_02_delayed" type="string" calculate="if(selected( /data/g_lang/lang_02 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 0.6571, 1, 0)"/>
-      <bind nodeset="/data/lang_03_delayed" type="string" calculate="if(selected( /data/g_lang/lang_03 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 24.4928, 1, 0)"/>
+      <bind nodeset="/data/lang_03_delayed" type="string" calculate="if(selected( /data/g_lang/lang_03 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 2.4928, 1, 0)"/>
       <bind nodeset="/data/lang_04_delayed" type="string" calculate="if(selected( /data/g_lang/lang_04 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 3.0, 1, 0)"/>
-      <bind nodeset="/data/lang_05_delayed" type="string" calculate="if(selected( /data/g_lang/lang_05 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 48.3285, 1, 0)"/>
+      <bind nodeset="/data/lang_05_delayed" type="string" calculate="if(selected( /data/g_lang/lang_05 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 4.3285, 1, 0)"/>
       <bind nodeset="/data/lang_06_delayed" type="string" calculate="if((selected( /data/g_lang/lang_06 , 'F') or selected( /data/g_lang/lang_06 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 5.5, 1, 0)"/>
       <bind nodeset="/data/lang_07_delayed" type="string" calculate="if((selected( /data/g_lang/lang_07 , 'F') or selected( /data/g_lang/lang_07 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 6.5, 1, 0)"/>
-      <bind nodeset="/data/lang_08_delayed" type="string" calculate="if(selected( /data/g_lang/lang_08 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 84.3285, 1, 0)"/>
-      <bind nodeset="/data/lang_09_delayed" type="string" calculate="if(selected( /data/g_lang/lang_09 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 96.6571, 1, 0)"/>
+      <bind nodeset="/data/lang_08_delayed" type="string" calculate="if(selected( /data/g_lang/lang_08 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 7.3285, 1, 0)"/>
+      <bind nodeset="/data/lang_09_delayed" type="string" calculate="if(selected( /data/g_lang/lang_09 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 8.6571, 1, 0)"/>
       <bind nodeset="/data/lang_10_delayed" type="string" calculate="if(selected( /data/g_lang/lang_10 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 9.0, 1, 0)"/>
       <bind nodeset="/data/lang_11_delayed" type="string" calculate="if(selected( /data/g_lang/lang_11 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 10.0, 1, 0)"/>
       <bind nodeset="/data/lang_12_delayed" type="string" calculate="if(selected( /data/g_lang/lang_12 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 12.0, 1, 0)"/>
@@ -610,25 +602,25 @@
       <bind nodeset="/data/lang_29_delayed" type="string" calculate="if((selected( /data/g_lang/lang_29 , 'F') or selected( /data/g_lang/lang_29 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 47.0, 1, 0)"/>
       <bind nodeset="/data/lang_30_delayed" type="string" calculate="if((selected( /data/g_lang/lang_30 , 'F') or selected( /data/g_lang/lang_30 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 49.0, 1, 0)"/>
       <bind nodeset="/data/lang_31_delayed" type="string" calculate="if((selected( /data/g_lang/lang_31 , 'F') or selected( /data/g_lang/lang_31 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 50.0, 1, 0)"/>
-      <bind nodeset="/data/lang_32_delayed" type="string" calculate="0"/>
-      <bind nodeset="/data/lang_33_delayed" type="string" calculate="0"/>
-      <bind nodeset="/data/lang_34_delayed" type="string" calculate="0"/>
+      <bind nodeset="/data/lang_32_delayed" type="string" calculate="if((selected( /data/g_lang/lang_32 , 'F') or selected( /data/g_lang/lang_32 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 56.0, 1, 0)"/>
+      <bind nodeset="/data/lang_33_delayed" type="string" calculate="if((selected( /data/g_lang/lang_33 , 'F') or selected( /data/g_lang/lang_33 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 51.0, 1, 0)"/>
+      <bind nodeset="/data/lang_34_delayed" type="string" calculate="if((selected( /data/g_lang/lang_34 , 'F') or selected( /data/g_lang/lang_34 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 64.0, 1, 0)"/>
       <bind nodeset="/data/lang_35_delayed" type="string" calculate="if((selected( /data/g_lang/lang_35 , 'F') or selected( /data/g_lang/lang_35 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 40.5, 1, 0)"/>
       <bind nodeset="/data/lang_36_delayed" type="string" calculate="if((selected( /data/g_lang/lang_36 , 'F') or selected( /data/g_lang/lang_36 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 40.5, 1, 0)"/>
       <bind nodeset="/data/lang_37_delayed" type="string" calculate="if((selected( /data/g_lang/lang_37 , 'F') or selected( /data/g_lang/lang_37 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 44.0, 1, 0)"/>
       <bind nodeset="/data/lang_38_delayed" type="string" calculate="if((selected( /data/g_lang/lang_38 , 'F') or selected( /data/g_lang/lang_38 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 72.0, 1, 0)"/>
-      <bind nodeset="/data/lang_39_delayed" type="string" calculate="0"/>
-      <bind nodeset="/data/gm_01_delayed" type="string" calculate="0"/>
-      <bind nodeset="/data/gm_02_delayed" type="string" calculate="if((selected( /data/g_gm/gm_02 , 'F') or selected( /data/g_gm/gm_02 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 24.4928, 1, 0)"/>
-      <bind nodeset="/data/gm_03_delayed" type="string" calculate="if((selected( /data/g_gm/gm_03 , 'F') or selected( /data/g_gm/gm_03 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 36.4928, 1, 0)"/>
+      <bind nodeset="/data/lang_39_delayed" type="string" calculate="if((selected( /data/g_lang/lang_39 , 'F') or selected( /data/g_lang/lang_39 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 62.0, 1, 0)"/>
+      <bind nodeset="/data/gm_01_delayed" type="string" calculate="if((selected( /data/g_gm/gm_01 , 'F') or selected( /data/g_gm/gm_01 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 0.1643, 1, 0)"/>
+      <bind nodeset="/data/gm_02_delayed" type="string" calculate="if((selected( /data/g_gm/gm_02 , 'F') or selected( /data/g_gm/gm_02 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 2.4928, 1, 0)"/>
+      <bind nodeset="/data/gm_03_delayed" type="string" calculate="if((selected( /data/g_gm/gm_03 , 'F') or selected( /data/g_gm/gm_03 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 3.4928, 1, 0)"/>
       <bind nodeset="/data/gm_04_delayed" type="string" calculate="if((selected( /data/g_gm/gm_04 , 'F') or selected( /data/g_gm/gm_04 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 4.0, 1, 0)"/>
-      <bind nodeset="/data/gm_05_delayed" type="string" calculate="if((selected( /data/g_gm/gm_05 , 'F') or selected( /data/g_gm/gm_05 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 48.4928, 1, 0)"/>
-      <bind nodeset="/data/gm_06_delayed" type="string" calculate="if((selected( /data/g_gm/gm_06 , 'F') or selected( /data/g_gm/gm_06 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 48.4928, 1, 0)"/>
+      <bind nodeset="/data/gm_05_delayed" type="string" calculate="if((selected( /data/g_gm/gm_05 , 'F') or selected( /data/g_gm/gm_05 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 4.4928, 1, 0)"/>
+      <bind nodeset="/data/gm_06_delayed" type="string" calculate="if((selected( /data/g_gm/gm_06 , 'F') or selected( /data/g_gm/gm_06 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 4.4928, 1, 0)"/>
       <bind nodeset="/data/gm_07_delayed" type="string" calculate="if((selected( /data/g_gm/gm_07 , 'F') or selected( /data/g_gm/gm_07 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 5.5, 1, 0)"/>
       <bind nodeset="/data/gm_08_delayed" type="string" calculate="if(selected( /data/g_gm/gm_08 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 6.0, 1, 0)"/>
       <bind nodeset="/data/gm_09_delayed" type="string" calculate="if((selected( /data/g_gm/gm_09 , 'F') or selected( /data/g_gm/gm_09 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 6.5, 1, 0)"/>
-      <bind nodeset="/data/gm_10_delayed" type="string" calculate="if((selected( /data/g_gm/gm_10 , 'F') or selected( /data/g_gm/gm_10 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 8.5, 1, 0)"/>
-      <bind nodeset="/data/gm_11_delayed" type="string" calculate="if((selected( /data/g_gm/gm_11 , 'F') or selected( /data/g_gm/gm_11 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 9.5, 1, 0)"/>
+      <bind nodeset="/data/gm_10_delayed" type="string" calculate="if((selected( /data/g_gm/gm_10 , 'F') or selected( /data/g_gm/gm_10 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 6.5, 1, 0)"/>
+      <bind nodeset="/data/gm_11_delayed" type="string" calculate="if((selected( /data/g_gm/gm_11 , 'F') or selected( /data/g_gm/gm_11 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 8.5, 1, 0)"/>
       <bind nodeset="/data/gm_12_delayed" type="string" calculate="if((selected( /data/g_gm/gm_12 , 'F') or selected( /data/g_gm/gm_12 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 10.0, 1, 0)"/>
       <bind nodeset="/data/gm_13_delayed" type="string" calculate="if(selected( /data/g_gm/gm_13 , 'F') and  /data/g_meta/ca_months_dec  &gt;= 11.5, 1, 0)"/>
       <bind nodeset="/data/gm_14_delayed" type="string" calculate="if((selected( /data/g_gm/gm_14 , 'F') or selected( /data/g_gm/gm_14 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 13.5, 1, 0)"/>
@@ -649,7 +641,7 @@
       <bind nodeset="/data/gm_29_delayed" type="string" calculate="if((selected( /data/g_gm/gm_29 , 'F') or selected( /data/g_gm/gm_29 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 66.0, 1, 0)"/>
       <bind nodeset="/data/gm_30_delayed" type="string" calculate="if((selected( /data/g_gm/gm_30 , 'F') or selected( /data/g_gm/gm_30 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 68.0, 1, 0)"/>
       <bind nodeset="/data/gm_31_delayed" type="string" calculate="if((selected( /data/g_gm/gm_31 , 'F') or selected( /data/g_gm/gm_31 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 72.0, 1, 0)"/>
-      <bind nodeset="/data/gm_32_delayed" type="string" calculate="0"/>
+      <bind nodeset="/data/gm_32_delayed" type="string" calculate="if((selected( /data/g_gm/gm_32 , 'F') or selected( /data/g_gm/gm_32 , 'R')) and  /data/g_meta/ca_months_dec  &gt;= 72.0, 1, 0)"/>
       <bind nodeset="/data/d_ps_delayed" type="string" calculate=" /data/ps_01_delayed  +  /data/ps_02_delayed  +  /data/ps_03_delayed  +  /data/ps_04_delayed  +  /data/ps_05_delayed  +  /data/ps_06_delayed  +  /data/ps_07_delayed  +  /data/ps_08_delayed  +  /data/ps_09_delayed  +  /data/ps_10_delayed  +  /data/ps_11_delayed  +  /data/ps_12_delayed  +  /data/ps_13_delayed  +  /data/ps_14_delayed  +  /data/ps_15_delayed  +  /data/ps_16_delayed  +  /data/ps_17_delayed  +  /data/ps_18_delayed  +  /data/ps_19_delayed  +  /data/ps_20_delayed  +  /data/ps_21_delayed  +  /data/ps_22_delayed  +  /data/ps_23_delayed  +  /data/ps_24_delayed  +  /data/ps_25_delayed "/>
       <bind nodeset="/data/d_ps_status" type="string" calculate="if( /data/d_ps_delayed  &gt;= 2, 'Suspect', if( /data/d_ps_delayed  = 1, 'Caution', 'Normal'))"/>
       <bind nodeset="/data/d_fm_delayed" type="string" calculate=" /data/fm_01_delayed  +  /data/fm_02_delayed  +  /data/fm_03_delayed  +  /data/fm_04_delayed  +  /data/fm_05_delayed  +  /data/fm_06_delayed  +  /data/fm_07_delayed  +  /data/fm_08_delayed  +  /data/fm_09_delayed  +  /data/fm_10_delayed  +  /data/fm_11_delayed  +  /data/fm_12_delayed  +  /data/fm_13_delayed  +  /data/fm_14_delayed  +  /data/fm_15_delayed  +  /data/fm_16_delayed  +  /data/fm_17_delayed  +  /data/fm_18_delayed  +  /data/fm_19_delayed  +  /data/fm_20_delayed  +  /data/fm_21_delayed  +  /data/fm_22_delayed  +  /data/fm_23_delayed  +  /data/fm_24_delayed  +  /data/fm_25_delayed  +  /data/fm_26_delayed  +  /data/fm_27_delayed  +  /data/fm_28_delayed  +  /data/fm_29_delayed "/>
@@ -682,19 +674,6 @@
         </input>
       </group>
     </group>
-    <group ref="/data/g_intro">
-      <label>DDST-II Developmental Screening</label>
-      <input ref="/data/g_intro/ddst_disclaimer">
-        <label>This assessment is a developmental screening instrument and does not provide a diagnosis. Results must be interpreted by a qualified clinician.</label>
-      </input>
-      <select1 ref="/data/g_intro/acknowledged">
-        <label>I confirm that this assessment is being completed by or reviewed with a trained/authorized health worker.</label>
-        <itemset nodeset="instance('yesno')/root/item">
-          <value ref="name"/>
-          <label ref="label"/>
-        </itemset>
-      </select1>
-    </group>
     <group ref="/data/g_meta">
       <label>Test Information</label>
       <input ref="/data/g_meta/test_date">
@@ -702,7 +681,6 @@
       </input>
       <input ref="/data/g_meta/child_dob">
         <label>Child date of birth</label>
-        <hint>Contacts do not store date of birth, so it is captured here.</hint>
       </input>
       <input ref="/data/g_meta/dob_warning">
         <label>**WARNING:** Child date of birth is missing or invalid. Please enter DOB before scoring. Do not guess age.</label>
@@ -1041,7 +1019,7 @@
         </itemset>
       </select1>
       <select1 ref="/data/g_fm/fm_20">
-        <label>45. Imitate Vertical Line</label>
+        <label>45. Imitative Vertical Line</label>
         <itemset nodeset="instance('ddst_direct')/root/item">
           <value ref="name"/>
           <label ref="label"/>
@@ -1346,21 +1324,21 @@
         </itemset>
       </select1>
       <select1 ref="/data/g_lang/lang_32">
-        <label>86. Understand 4 Prepositions [AGE UNCONFIRMED — TODO]</label>
+        <label>86. Understand 4 Prepositions</label>
         <itemset nodeset="instance('ddst_direct')/root/item">
           <value ref="name"/>
           <label ref="label"/>
         </itemset>
       </select1>
       <select1 ref="/data/g_lang/lang_33">
-        <label>87. Speech Fully Understandable [AGE UNCONFIRMED — TODO]</label>
+        <label>87. Speech Fully Understandable</label>
         <itemset nodeset="instance('ddst_direct')/root/item">
           <value ref="name"/>
           <label ref="label"/>
         </itemset>
       </select1>
       <select1 ref="/data/g_lang/lang_34">
-        <label>88. Define 3 Words [AGE UNCONFIRMED — TODO]</label>
+        <label>88. Define 3 Words</label>
         <itemset nodeset="instance('ddst_direct')/root/item">
           <value ref="name"/>
           <label ref="label"/>
@@ -1395,7 +1373,7 @@
         </itemset>
       </select1>
       <select1 ref="/data/g_lang/lang_39">
-        <label>93. Language Item 39 — row count reconciliation [AGE UNCONFIRMED] [AGE UNCONFIRMED — TODO]</label>
+        <label>93. Name 4 Colors</label>
         <itemset nodeset="instance('ddst_direct')/root/item">
           <value ref="name"/>
           <label ref="label"/>
@@ -1405,7 +1383,7 @@
     <group ref="/data/g_gm">
       <label>Gross Motor</label>
       <select1 ref="/data/g_gm/gm_01">
-        <label>94. Symmetrical Movements [AGE UNCONFIRMED — TODO]</label>
+        <label>94. Equal Movements</label>
         <itemset nodeset="instance('ddst_direct')/root/item">
           <value ref="name"/>
           <label ref="label"/>
@@ -1413,7 +1391,8 @@
       </select1>
       <select1 ref="/data/g_gm/gm_02">
         <label>95. Lift Head</label>
-        <itemset nodeset="instance('ddst_direct')/root/item">
+        <hint>Report-eligible: caregiver report may substitute for observation.</hint>
+        <itemset nodeset="instance('ddst_report')/root/item">
           <value ref="name"/>
           <label ref="label"/>
         </itemset>
@@ -1624,7 +1603,7 @@
         </itemset>
       </select1>
       <select1 ref="/data/g_gm/gm_32">
-        <label>125. Balance Each Foot, 6 sec [AGE UNCONFIRMED — TODO]</label>
+        <label>125. Balance Each Foot, 6 sec</label>
         <itemset nodeset="instance('ddst_direct')/root/item">
           <value ref="name"/>
           <label ref="label"/>

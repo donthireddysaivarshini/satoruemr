@@ -57,123 +57,121 @@ for i,(name,age,rep) in enumerate(ps_data, start=1):
     ITEMS.append((i, "ps", i, name, age, rep))
 # FM 26-54 (29 items) - CORRECTED ages (fixing ×12 bug)
 fm_data=[
- ("Follow to Midline", 1.2628, False),
- ("Follow Past Midline", 2.6571, False),
- ("Grasp Rattle", 3.6571, False),
- ("Hands Together", 4.0, False),
- ("Follow 180°", 4.5, False),
- ("Regard Raisin", 5.1971, False),
- ("Reaches", 5.5, False),
- ("Look for Yarn (dropped pompom)", 7.1971, False),
- ("Rake Raisin", 7.2628, False),
- ("Pass Cube (hand to hand)", 7.6571, False),
- ("Take 2 Cubes", 9.1643, False),
- ("Thumb-Finger Grasp", 10.1643, False),
- ("Bang 2 Cubes Held in Hand", 11.0, False),
- ("Put Block in Cup", 13.6571, False),
- ("Scribbles", 16.3285, False),
- ("Dump Raisin, Demonstrated", 19.5, False),
- ("Tower of 2 Cubes", 20.5, False),
- ("Tower of 4 Cubes", 23.6571, False),
- ("Tower of 6 Cubes", 31.5, False),
- ("Imitative Vertical Line", 36.0, False),
- ("Tower of 8 Cubes", 41.5, False),
- ("Thumb Wiggle", 43.5, False),
- ("Copy ○ (circle)", 48.0, False),
- ("Draw Person, 3 Parts", 55.5, False),
- ("Copy + (cross)", 56.5, False),
- ("Pick Longer Line", 63.0, False),
- ("Copy □ (square)", 65.5, False),
- ("Copy □, Demonstrated", 66.0, False),
- ("Draw Person, 6 Parts", 72.0, False),
+ ("Follow to Midline", 1.2628),
+ ("Follow Past Midline", 2.6571),
+ ("Grasp Rattle", 3.6571),
+ ("Hands Together", 4.0),
+ ("Follow 180°", 4.5),
+ ("Regard Raisin", 5.1971),
+ ("Reaches", 5.5),
+ ("Look for Yarn (dropped pompom)", 7.1971),
+ ("Rake Raisin", 7.2628),
+ ("Pass Cube (hand to hand)", 7.6571),
+ ("Take 2 Cubes", 9.1643),
+ ("Thumb-Finger Grasp", 10.1643),
+ ("Bang 2 Cubes Held in Hand", 11.0),
+ ("Put Block in Cup", 13.6571),
+ ("Scribbles", 16.3285),
+ ("Dump Raisin, Demonstrated", 19.5),
+ ("Tower of 2 Cubes", 20.5),
+ ("Tower of 4 Cubes", 23.6571),
+ ("Tower of 6 Cubes", 31.5),
+ ("Imitative Vertical Line", 36.0),
+ ("Tower of 8 Cubes", 41.5),
+ ("Thumb Wiggle", 43.5),
+ ("Copy ○ (circle)", 48.0),
+ ("Draw Person, 3 Parts", 55.5),
+ ("Copy + (cross)", 56.5),
+ ("Pick Longer Line", 63.0),
+ ("Copy □ (square)", 65.5),
+ ("Copy □, Demonstrated", 66.0),
+ ("Draw Person, 6 Parts", 72.0),
 ]
-for i,(name,age,rep) in enumerate(fm_data, start=1):
+for i,(name,age) in enumerate(fm_data, start=1):
+    rep = (25+i) in REPORT_ELIGIBLE_GLOBALS
     ITEMS.append((25+i, "fm", i, name, age, rep))
-# Language 55-93 (39 items) - CORRECTED some ages
+# Language 55-93 (39 items) - CORRECTED some ages (fixing ×12 bug)
 lang_data=[
- ("Responds to Bell", 0.3285, True),  # 10 days = 0.3285
- ("Vocalizes", 0.6571, True),          # 20 days = 0.6571
- ("Ooo/Aah", 2.4928, True),           # 2m 15d = 2.4928 (BUG FIX)
- ("Laughs", 3.0, True),
- ("Squeals", 4.3285, True),           # 4m 10d = 4.3285 (BUG FIX)
- ("Turn to Rattling Sound", 5.5, True),
- ("Turn to Voice", 6.5, True),
- ("Single Syllables", 7.3285, True),   # 7m 10d = 7.3285 (BUG FIX)
- ("Imitate Speech Sounds", 8.6571, True), # 8m 20d = 8.6571 (BUG FIX)
- ("Dada/Mama, Non-specific", 9.0, True),
- ("Combine Syllables", 10.0, True),
- ("Jabbers", 12.0, True),
- ("Dada/Mama, Specific", 13.5, True),
- ("One Word", 15.0, True),
- ("Two Words", 16.5, True),
- ("Three Words", 18.0, True),
- ("Six Words", 21.5, True),
- ("Point to 2 Pictures", 23.5, False),
- ("Combine Words", 24.5, True),
- ("Name 1 Picture", 25.0, True),
- ("Body Parts, 6", 28.5, False),
- ("Point to 4 Pictures", 31.0, False),
- ("Speech Half Understandable", 35.0, False),
- ("Name 4 Pictures", 35.0, True),
- ("Know 2 Actions", 37.5, False),
- ("Know 2 Adjectives", 43.0, False),
- ("Name 1 Colour", 44.0, False),
- ("Use of 2 Objects", 45.0, False),
- ("Count 1 Block", 47.0, False),
- ("Use of 3 Objects", 49.0, False),
- ("Know 4 Actions", 50.0, False),
- ("Understand 4 Prepositions", None, False),
- ("Speech Fully Understandable", None, False),
- ("Define 3 Words", None, False),
- ("Know 3 Adjectives", 40.5, False),
- ("Count 5 Blocks", 40.5, False),
- ("Opposites, 2", 44.0, False),
- ("Define 7 Words", 72.0, False),
- ("Language Item 39 — row count reconciliation [AGE UNCONFIRMED]", None, False),
+ ("Responds to Bell", 0.3285),          # 10 days
+ ("Vocalizes", 0.6571),                # 20 days
+ ("Ooo/Aah", 2.4928),                  # 2m 15d
+ ("Laughs", 3.0),
+ ("Squeals", 4.3285),                  # 4m 10d
+ ("Turn to Rattling Sound", 5.5),
+ ("Turn to Voice", 6.5),
+ ("Single Syllables", 7.3285),          # 7m 10d
+ ("Imitate Speech Sounds", 8.6571),     # 8m 20d
+ ("Dada/Mama, Non-specific", 9.0),
+ ("Combine Syllables", 10.0),
+ ("Jabbers", 12.0),
+ ("Dada/Mama, Specific", 13.5),
+ ("One Word", 15.0),
+ ("Two Words", 16.5),
+ ("Three Words", 18.0),
+ ("Six Words", 21.5),
+ ("Point to 2 Pictures", 23.5),
+ ("Combine Words", 24.5),
+ ("Name 1 Picture", 25.0),
+ ("Body Parts, 6", 28.5),
+ ("Point to 4 Pictures", 31.0),
+ ("Speech Half Understandable", 35.0),
+ ("Name 4 Pictures", 35.0),
+ ("Know 2 Actions", 37.5),
+ ("Know 2 Adjectives", 43.0),
+ ("Name 1 Colour", 44.0),
+ ("Use of 2 Objects", 45.0),
+ ("Count 1 Block", 47.0),
+ ("Use of 3 Objects", 49.0),
+ ("Know 4 Actions", 50.0),
+ ("Understand 4 Prepositions", 56.0),                  # 4y 8m
+ ("Speech Fully Understandable", 51.0),              # 4y 3m
+ ("Define 3 Words", 64.0),                           # 5y 4m
+ ("Know 3 Adjectives", 40.5),
+ ("Count 5 Blocks", 40.5),
+ ("Opposites, 2", 44.0),
+ ("Define 7 Words", 72.0),
+ ("Name 4 Colors", 62.0),                             # 5y 2m
 ]
-for i,(name,age,rep) in enumerate(lang_data, start=1):
+for i,(name,age) in enumerate(lang_data, start=1):
+    rep = (55-1+i) in REPORT_ELIGIBLE_GLOBALS
     ITEMS.append((55-1+i, "lang", i, name, age, rep if age is not None else False))
-# Fix lang rep flags explicitly per confirmed list
-# Already handled but ensure: lang items that are report-eligible are 2,3,4,5,8,9,10,11,12,13,14,15,16,17,19 => lang local 2,3,4,5,8,9,10,11,12,13,14,15,16,17,19 => globals 56,57,58,59,62,63,64,65,66,67,68,69,70,71,73
-# The loop above used REPORT_ELIGIBLE_GLOBALS correctly.
 
-# Gross Motor 94-125 (32 items) - CORRECTED some ages
+# Gross Motor 94-125 (32 items) - CORRECTED some ages (fixing ×12 bug)
 gm_data=[
- ("Symmetrical Movements", None),
- ("Lift Head", 2.4928, True),           # 2m 15d = 2.4928 (BUG FIX)
- ("Head Up 45°", 3.4928, False),        # 3m 15d = 3.4928 (BUG FIX)
- ("Head Up 90°", 4.0, False),
- ("Sit, Head Steady", 4.4928, False),    # 4m 15d = 4.4928 (BUG FIX)
- ("Bear Weight on Legs", 4.4928, False), # 4m 15d = 4.4928 (BUG FIX)
- ("Chest Up, Arm Support", 5.5, False),
- ("Roll Over", 6.0, True),
- ("Pull to Sit, No Head Lag", 6.5, False),
- ("Sit, No Support", 8.5, False),
- ("Stand, Holding On", 9.5, False),
- ("Pull to Stand", 10.0, False),
- ("Get to Sitting", 11.5, True),
- ("Stand – 2 Seconds", 13.5, False),
- ("Stand Alone", 14.5, False),
- ("Stoop and Recover", 15.0, False),
- ("Walk Well", 16.5, False),
- ("Walk Backward", 20.0, False),
- ("Runs", 21.5, False),
- ("Walks Up Steps", 23.0, False),
- ("Kicks Ball Forward", 28.5, False),
- ("Jump Up", 35.0, False),
- ("Throw Ball Overhand", 37.5, False),
- ("Broad Jump", 40.0, False),
- ("Balance Each Foot, 1 sec", 47.0, False),
- ("Balance Each Foot, 2 sec", 51.0, False),
- ("Hops", 55.5, False),
- ("Balance Each Foot, 3 sec", 61.0, False),
- ("Balance Each Foot, 4 sec", 66.0, False),
- ("Balance Each Foot, 5 sec", 68.0, False),
- ("Heel-to-Toe Walk", 72.0, False),
- ("Balance Each Foot, 6 sec", None),
+  ("Equal Movements", 0.1643, False),                   # 5 days
+  ("Lift Head", 2.4928, True),                  # 2m 15d
+  ("Head Up 45°", 3.4928, False),                # 3m 15d
+  ("Head Up 90°", 4.0, False),
+  ("Sit, Head Steady", 4.4928, False),           # 4m 15d
+  ("Bear Weight on Legs", 4.4928, False),        # 4m 15d
+  ("Chest Up, Arm Support", 5.5, False),
+  ("Roll Over", 6.0, True),
+  ("Pull to Sit, No Head Lag", 6.5, False),
+  ("Sit, No Support", 6.5, False),
+  ("Stand, Holding On", 8.5, False),
+  ("Pull to Stand", 10.0, False),
+  ("Get to Sitting", 11.5, True),
+  ("Stand – 2 Seconds", 13.5, False),
+  ("Stand Alone", 14.5, False),
+  ("Stoop and Recover", 15.0, False),
+  ("Walk Well", 16.5, False),
+  ("Walk Backward", 20.0, False),
+  ("Runs", 21.5, False),
+  ("Walks Up Steps", 23.0, False),
+  ("Kicks Ball Forward", 28.5, False),
+  ("Jump Up", 35.0, False),
+  ("Throw Ball Overhand", 37.5, False),
+  ("Broad Jump", 40.0, False),
+  ("Balance Each Foot, 1 sec", 47.0, False),
+  ("Balance Each Foot, 2 sec", 51.0, False),
+  ("Hops", 55.5, False),
+  ("Balance Each Foot, 3 sec", 61.0, False),
+  ("Balance Each Foot, 4 sec", 66.0, False),
+  ("Balance Each Foot, 5 sec", 68.0, False),
+  ("Heel-to-Toe Walk", 72.0, False),
+  ("Balance Each Foot, 6 sec", 72.0, False),           # 6 years
 ]
-for i,(name,age) in enumerate(gm_data, start=1):
-    rep = (94-1+i) in REPORT_ELIGIBLE_GLOBALS
+for i,(name,age,rep) in enumerate(gm_data, start=1):
     ITEMS.append((94-1+i, "gm", i, name, age, rep if age is not None else False))
 
 # ---------- survey ----------
