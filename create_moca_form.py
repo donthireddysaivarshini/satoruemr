@@ -150,7 +150,7 @@ rows = [
     ['calculate', 'moca_delayed_total', '', '', '', '', '', '', '', '', 'if(${delayed_face} = "yes", 1, 0) + if(${delayed_velvet} = "yes", 1, 0) + if(${delayed_church} = "yes", 1, 0) + if(${delayed_daisy} = "yes", 1, 0) + if(${delayed_red} = "yes", 1, 0)', '', ''],
     ['calculate', 'moca_orientation_total', '', '', '', '', '', '', '', '', 'if(${orientation_date} = "yes", 1, 0) + if(${orientation_month} = "yes", 1, 0) + if(${orientation_year} = "yes", 1, 0) + if(${orientation_day} = "yes", 1, 0) + if(${orientation_place} = "yes", 1, 0) + if(${orientation_city} = "yes", 1, 0)', '', ''],
     ['calculate', 'moca_raw_total', '', '', '', '', '', '', '', '', '${moca_visuospatial_total} + ${moca_naming_total} + ${moca_memory_total} + ${moca_attention_total} + ${moca_language_total} + ${moca_abstraction_total} + ${moca_orientation_total}', '', ''],
-    ['calculate', 'moca_education_adj', '', '', '', '', '', '', '', '', 'if(${patient_education} = "illiterate" or ${patient_education} = "primary", 1, 0)', '', ''],
+    ['calculate', 'moca_education_adj', '', '', '', '', '', '', '', '', 'if(${patient_education} = "illiterate" or ${patient_education} = "primary" or ${patient_education} = "8th" or ${patient_education} = "10th" or ${patient_education} = "12th", 1, 0)', '', ''],
     ['calculate', 'moca_total_score', '', '', '', '', '', '', '', '', 'min(${moca_raw_total} + ${moca_education_adj}, 30)', '', ''],
     ['calculate', 'moca_interpretation', '', '', '', '', '', '', '', '', 'if(${moca_total_score} >= 26, "normal", "impaired")', '', ''],
 

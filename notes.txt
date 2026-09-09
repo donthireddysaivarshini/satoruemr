@@ -50,3 +50,12 @@ This is a live-data change (create 1 contact + update 1 user doc). Shall I go ah
 
  DST:
  77 question dependent or independednt
+
+opencode -s ses_00a8c7c64ffeBnAzs1FjgO0BBx
+
+Run this in PowerShell to pause:
+wsl -d Ubuntu bash -lc "docker stop satoruemr-nginx-1 satoruemr-api-1 satoruemr-sentinel-1 satoruemr-haproxy-1 satoruemr-nouveau-1 satoruemr-dir-cht-upgrade-service-1 satoruemr-couchdb-1"
+Tomorrow to resume:
+wsl -d Ubuntu bash -lc "docker start satoruemr-dir-cht-upgrade-service-1 satoruemr-nouveau-1 satoruemr-couchdb-1 satoruemr-haproxy-1 satoruemr-api-1 satoruemr-sentinel-1 satoruemr-nginx-1"
+Then https://172-27-250-199.local-ip.medicmobile.org:10443/ — if data looks empty: 
+wsl -d Ubuntu bash -lc "docker restart satoruemr-couchdb-1"

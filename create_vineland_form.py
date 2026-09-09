@@ -34,13 +34,6 @@ row(type='begin group', name='user', label='User', appearance='field-list')
 row(type='hidden', name='contact_id')
 row(type='hidden', name='name')
 row(type='end group')
-row(type='begin group', name='contact', label='Select child / beneficiary',
-    appearance='field-list')
-row(type='db:person', name='_id', label='Select participant',
-    appearance='select-contact type-participant')
-row(type='hidden', name='patient_id')
-row(type='hidden', name='name')
-row(type='end group')
 row(type='end group')
 
 for n, c in [('patient_uuid', '../inputs/contact/_id'),
@@ -239,6 +232,7 @@ for band_idx, (bkey, blabel, bmax, istart, iend) in enumerate(BANDS, start=1):
 
 # ============================================ Scoring calculates (at root level, NOT inside groups)
 # Each item score: 1 if yes, 0 otherwise (no or not_assessed)
+
 for item_num in range(1, 90):
     row(type='calculate', name='item_%d_score' % item_num,
         calculation="if(${item_%d} = 'yes', 1, 0)" % item_num)
@@ -260,6 +254,7 @@ row(type='calculate', name='total_not_assessed_items', calculation=na_sum)
 # ============================================ Doll 1965 Raw Score -> Social Age (months) lookup
 # 1:1 mapping per Doll 1965 manual Appendix: raw_score 0-89 -> SA months 0-89
 # Implemented as nested if() chain for XLSForm compatibility
+
 def build_sa_lookup():
     # Build nested if from high to low
     expr = '0'
@@ -274,21 +269,29 @@ row(type='calculate', name='social_age_months', calculation=sa_expr)
 row(type='calculate', name='social_age_years', calculation='floor(${social_age_months} div 12)')
 row(type='calculate', name='social_age_remaining_months', calculation='${social_age_months} - (${social_age_years} * 12)')
 
-# ============================================ Social Quotient
-# SQ = (SA_months / CA_months) * 100
+# ============================================ Social Quotient (SQ)
+# If CA months > 0: SQ = (SA_months / CA_months) * 100
+# If CA months == 0 (or invalid age): SQ is not interpretable
 row(type='calculate', name='social_quotient_raw',
-    calculation="if(${age_valid} = 'yes' and ${ca_months_dec} > 0, ${social_age_months} div ${ca_months_dec} * 100, '')")
-row(type='calculate', name='social_quotient_rounded',
-    calculation="if(${social_quotient_raw} != '', round(${social_quotient_raw}), '')")
+    calculation="if(${age_valid} = 'yes' and ${ca_months_dec} > 0, ${social_age_months} div ${ca_months_dec} * 100, null)")
 
-# SQ Interpretation bands
-# 90-110: Average, 80-89: Low Average, 70-79: Borderline, <70: Social Developmental Delay
+row(type='calculate', name='social_quotient_rounded',
+    calculation="if(${social_quotient_raw} != null, round(${social_quotient_raw}), null)")
+
+# SQ Interpretation with proper bands and CA=0 guard
+# Bands: >=130 Very Superior (Markedly Advanced), 120-129 Superior, 110-119 High Average, 90-109 Average,
+# 80-89 Low Average, 70-79 Borderline, <70 Social Developmental Delay
+# If SQ is null (CA=0), interpretation is "Not interpretable (age = 0)"
 sq_interp = (
+    "if(${social_quotient_rounded} == null, 'Not interpretable (age = 0)', "
     "if(${score_status} != 'complete', 'Incomplete', "
+    "if(${social_quotient_rounded} >= 130, 'Very Superior (Markedly Advanced)', "
+    "if(${social_quotient_rounded} >= 120, 'Superior', "
+    "if(${social_quotient_rounded} >= 110, 'High Average', "
     "if(${social_quotient_rounded} >= 90, 'Average', "
     "if(${social_quotient_rounded} >= 80, 'Low Average', "
     "if(${social_quotient_rounded} >= 70, 'Borderline', "
-    "'Social Developmental Delay'))))"
+    "'Social Developmental Delay'))))))))"
 )
 row(type='calculate', name='sq_interpretation', calculation=sq_interp)
 
@@ -310,7 +313,7 @@ row(type='note', name='result_complete', label='✅ Assessment complete. Social 
 row(type='note', name='result_incomplete', label='⚠️ Score incomplete — clinician review required. Some items were not assessed.',
     relevant="${score_status} = 'incomplete'")
 row(type='note', name='result_invalid', label='❌ Invalid age: child must be 0–15 years for VSMS.',
-    relevant="${score_status} = 'invalid_age'")
+    relevant="${score_status} = 'invalid_age'}")
 
 # Supporting Documents / Scale Upload
 row(type='begin group', name='g_supporting_docs', label='Supporting Documents / Scale Upload')

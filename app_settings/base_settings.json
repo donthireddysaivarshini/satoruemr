@@ -11,32 +11,2325 @@
   },
   "contact_types": [
     {
-  "id": "screening_camp",
-  "name_key": "contact.type.screening_camp",
-  "group_key": "contact.type.screening_camp.plural",
-  "create_key": "contact.type.screening_camp.new",
-  "edit_key": "contact.type.place.edit",
-  "icon": "medic-clinic",
-
-  "create_form": "form:contact:screening_camp:create",
-  "edit_form": "form:contact:screening_camp:edit",
-
-  "parents": []
-},
-{
-  "id": "participant",
-  "name_key": "contact.type.participant",
-  "group_key": "contact.type.participant.plural",
-  "create_key": "contact.type.participant.new",
-  "edit_key": "contact.type.person.edit",
-  "icon": "medic-person",
-
-  "create_form": "form:contact:participant:create",
-  "edit_form": "form:contact:participant:edit",
-
-  "parents": ["screening_camp"],
-  "person": true,
-  "primary_contact": true
-}
-  ]
+      "id": "screening_camp",
+      "name_key": "contact.type.screening_camp",
+      "group_key": "contact.type.screening_camp.plural",
+      "create_key": "contact.type.screening_camp.new",
+      "edit_key": "contact.type.place.edit",
+      "icon": "medic-clinic",
+      "create_form": "form:contact:screening_camp:create",
+      "edit_form": "form:contact:screening_camp:edit",
+      "parents": []
+    },
+    {
+      "id": "participant",
+      "name_key": "contact.type.participant",
+      "group_key": "contact.type.participant.plural",
+      "create_key": "contact.type.participant.new",
+      "edit_key": "contact.type.person.edit",
+      "icon": "medic-person",
+      "create_form": "form:contact:participant:create",
+      "edit_form": "form:contact:participant:edit",
+      "parents": [
+        "screening_camp"
+      ],
+      "person": true,
+      "primary_contact": true
+    }
+  ],
+  "report_display": {
+    "ddst": {
+      "title_key": "report.ddst._title",
+      "hide_fields": [
+        "any_suspect",
+        "caution_domains",
+        "d_fm_delayed",
+        "d_gm_delayed",
+        "d_lang_delayed",
+        "d_ps_delayed",
+        "fm_01_delayed",
+        "fm_02_delayed",
+        "fm_03_delayed",
+        "fm_04_delayed",
+        "fm_05_delayed",
+        "fm_06_delayed",
+        "fm_07_delayed",
+        "fm_08_delayed",
+        "fm_09_delayed",
+        "fm_10_delayed",
+        "fm_11_delayed",
+        "fm_12_delayed",
+        "fm_13_delayed",
+        "fm_14_delayed",
+        "fm_15_delayed",
+        "fm_16_delayed",
+        "fm_17_delayed",
+        "fm_18_delayed",
+        "fm_19_delayed",
+        "fm_20_delayed",
+        "fm_21_delayed",
+        "fm_22_delayed",
+        "fm_23_delayed",
+        "fm_24_delayed",
+        "fm_25_delayed",
+        "fm_26_delayed",
+        "fm_27_delayed",
+        "fm_28_delayed",
+        "fm_29_delayed",
+        "g_meta.ca_band",
+        "g_meta.ca_months_dec",
+        "g_meta.ca_note",
+        "g_meta.show_all",
+        "gm_01_delayed",
+        "gm_02_delayed",
+        "gm_03_delayed",
+        "gm_04_delayed",
+        "gm_05_delayed",
+        "gm_06_delayed",
+        "gm_07_delayed",
+        "gm_08_delayed",
+        "gm_09_delayed",
+        "gm_10_delayed",
+        "gm_11_delayed",
+        "gm_12_delayed",
+        "gm_13_delayed",
+        "gm_14_delayed",
+        "gm_15_delayed",
+        "gm_16_delayed",
+        "gm_17_delayed",
+        "gm_18_delayed",
+        "gm_19_delayed",
+        "gm_20_delayed",
+        "gm_21_delayed",
+        "gm_22_delayed",
+        "gm_23_delayed",
+        "gm_24_delayed",
+        "gm_25_delayed",
+        "gm_26_delayed",
+        "gm_27_delayed",
+        "gm_28_delayed",
+        "gm_29_delayed",
+        "gm_30_delayed",
+        "gm_31_delayed",
+        "gm_32_delayed",
+        "lang_01_delayed",
+        "lang_02_delayed",
+        "lang_03_delayed",
+        "lang_04_delayed",
+        "lang_05_delayed",
+        "lang_06_delayed",
+        "lang_07_delayed",
+        "lang_08_delayed",
+        "lang_09_delayed",
+        "lang_10_delayed",
+        "lang_11_delayed",
+        "lang_12_delayed",
+        "lang_13_delayed",
+        "lang_14_delayed",
+        "lang_15_delayed",
+        "lang_16_delayed",
+        "lang_17_delayed",
+        "lang_18_delayed",
+        "lang_19_delayed",
+        "lang_20_delayed",
+        "lang_21_delayed",
+        "lang_22_delayed",
+        "lang_23_delayed",
+        "lang_24_delayed",
+        "lang_25_delayed",
+        "lang_26_delayed",
+        "lang_27_delayed",
+        "lang_28_delayed",
+        "lang_29_delayed",
+        "lang_30_delayed",
+        "lang_31_delayed",
+        "lang_32_delayed",
+        "lang_33_delayed",
+        "lang_34_delayed",
+        "lang_35_delayed",
+        "lang_36_delayed",
+        "lang_37_delayed",
+        "lang_38_delayed",
+        "lang_39_delayed",
+        "patient_uuid",
+        "ps_01_delayed",
+        "ps_02_delayed",
+        "ps_03_delayed",
+        "ps_04_delayed",
+        "ps_05_delayed",
+        "ps_06_delayed",
+        "ps_07_delayed",
+        "ps_08_delayed",
+        "ps_09_delayed",
+        "ps_10_delayed",
+        "ps_11_delayed",
+        "ps_12_delayed",
+        "ps_13_delayed",
+        "ps_14_delayed",
+        "ps_15_delayed",
+        "ps_16_delayed",
+        "ps_17_delayed",
+        "ps_18_delayed",
+        "ps_19_delayed",
+        "ps_20_delayed",
+        "ps_21_delayed",
+        "ps_22_delayed",
+        "ps_23_delayed",
+        "ps_24_delayed",
+        "ps_25_delayed",
+        "result_complete",
+        "result_incomplete",
+        "result_invalid",
+        "result_note",
+        "scoring_version",
+        "screened_by"
+      ],
+      "suppress_empty": true,
+      "keep_empty": [
+        "g_meta.dob_warning"
+      ],
+      "choice_map": {
+        "g_meta.show_all": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_ps.ps_01": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_02": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_03": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_04": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_ps.ps_05": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_06": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_ps.ps_07": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_08": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_ps.ps_09": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_ps.ps_10": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_11": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_12": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_13": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_ps.ps_14": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_15": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_ps.ps_16": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_17": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_18": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_19": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_20": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_21": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_22": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_ps.ps_23": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_24": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_ps.ps_25": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_fm.fm_01": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_02": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_03": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_04": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_05": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_06": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_07": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_08": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_09": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_10": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_11": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_12": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_13": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_14": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_15": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_16": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_17": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_18": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_19": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_20": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_21": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_22": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_23": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_24": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_25": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_26": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_27": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_28": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_fm.fm_29": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_01": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_02": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_03": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_04": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_05": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_06": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_07": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_08": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_09": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_10": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_11": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_12": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_13": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_14": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_15": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_16": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_17": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_18": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_19": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_lang.lang_20": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_21": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_22": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_23": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_24": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_25": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_26": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_27": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_28": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_29": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_30": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_31": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_32": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_33": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_34": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_35": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_36": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_37": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_38": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_lang.lang_39": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_01": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_02": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_gm.gm_03": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_04": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_05": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_06": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_07": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_08": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_gm.gm_09": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_10": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_11": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_12": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_13": {
+          "P": "Pass",
+          "F": "Fail",
+          "NO": "No Opportunity"
+        },
+        "g_gm.gm_14": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_15": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_16": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_17": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_18": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_19": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_20": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_21": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_22": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_23": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_24": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_25": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_26": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_27": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_28": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_29": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_30": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_31": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        },
+        "g_gm.gm_32": {
+          "P": "Pass",
+          "F": "Fail",
+          "R": "Refusal"
+        }
+      },
+      "score_fields": {},
+      "join_fields": [
+        {
+          "target": "g_meta.ca_days",
+          "format": "days_to_years_months",
+          "parts": [
+            "g_meta.ca_days"
+          ],
+          "label": "report.scale.chronological_age"
+        }
+      ],
+      "note_values": {
+        "g_meta.dob_warning": "WARNING: Child date of birth is missing or invalid. Please enter DOB before scoring. Do not guess age."
+      },
+      "date_fields": [
+        "g_meta.test_date",
+        "g_meta.child_dob"
+      ],
+      "notes_fields": [],
+      "result_fields": [
+        "d_ps_status",
+        "d_fm_status",
+        "d_lang_status",
+        "d_gm_status",
+        "overall"
+      ]
+    },
+    "dst": {
+      "title_key": "report.dst._title",
+      "hide_fields": [
+        "band_10_earned_months",
+        "band_10_failed_count",
+        "band_10_not_assessed",
+        "band_10_passed_count",
+        "band_11_earned_months",
+        "band_11_failed_count",
+        "band_11_not_assessed",
+        "band_11_passed_count",
+        "band_12_earned_months",
+        "band_12_failed_count",
+        "band_12_not_assessed",
+        "band_12_passed_count",
+        "band_13_earned_months",
+        "band_13_failed_count",
+        "band_13_not_assessed",
+        "band_13_passed_count",
+        "band_14_earned_months",
+        "band_14_failed_count",
+        "band_14_not_assessed",
+        "band_14_passed_count",
+        "band_15_earned_months",
+        "band_15_failed_count",
+        "band_15_not_assessed",
+        "band_15_passed_count",
+        "band_16_earned_months",
+        "band_16_failed_count",
+        "band_16_not_assessed",
+        "band_16_passed_count",
+        "band_17_earned_months",
+        "band_17_failed_count",
+        "band_17_not_assessed",
+        "band_17_passed_count",
+        "band_18_earned_months",
+        "band_18_failed_count",
+        "band_18_not_assessed",
+        "band_18_passed_count",
+        "band_1_earned_months",
+        "band_1_failed_count",
+        "band_1_not_assessed",
+        "band_1_passed_count",
+        "band_2_earned_months",
+        "band_2_failed_count",
+        "band_2_not_assessed",
+        "band_2_passed_count",
+        "band_3_earned_months",
+        "band_3_failed_count",
+        "band_3_not_assessed",
+        "band_3_passed_count",
+        "band_4_earned_months",
+        "band_4_failed_count",
+        "band_4_not_assessed",
+        "band_4_passed_count",
+        "band_5_earned_months",
+        "band_5_failed_count",
+        "band_5_not_assessed",
+        "band_5_passed_count",
+        "band_6_earned_months",
+        "band_6_failed_count",
+        "band_6_not_assessed",
+        "band_6_passed_count",
+        "band_7_earned_months",
+        "band_7_failed_count",
+        "band_7_not_assessed",
+        "band_7_passed_count",
+        "band_8_earned_months",
+        "band_8_failed_count",
+        "band_8_not_assessed",
+        "band_8_passed_count",
+        "band_9_earned_months",
+        "band_9_failed_count",
+        "band_9_not_assessed",
+        "band_9_passed_count",
+        "ca_band",
+        "g_child.age_valid",
+        "g_child.ca_band",
+        "g_child.ca_months_dec",
+        "g_child.show_all",
+        "patient_uuid",
+        "result_complete",
+        "result_incomplete",
+        "result_invalid",
+        "score_status",
+        "scoring_version",
+        "screened_by",
+        "show_all"
+      ],
+      "suppress_empty": true,
+      "keep_empty": [
+        "g_child.dob_warning"
+      ],
+      "choice_map": {
+        "g_intro.acknowledged": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_child.show_all": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_birth_to_3_months.item_1": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_birth_to_3_months.item_2": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_birth_to_3_months.item_3": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_birth_to_3_months.item_4": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_birth_to_3_months.item_5": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_birth_to_3_months.item_6": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_birth_to_3_months.item_7": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m3_to_6.item_8": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m3_to_6.item_9": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m3_to_6.item_10": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m3_to_6.item_11": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m3_to_6.item_12": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m3_to_6.item_13": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m6_to_9.item_14": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m6_to_9.item_15": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m6_to_9.item_16": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m6_to_9.item_17": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m9_to_12.item_18": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m9_to_12.item_19": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m9_to_12.item_20": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m9_to_12.item_21": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m12_to_18.item_22": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m12_to_18.item_23": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m12_to_18.item_24": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m12_to_18.item_25": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m18_to_24.item_26": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m18_to_24.item_27": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m18_to_24.item_28": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m18_to_24.item_29": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m24_to_36.item_30": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m24_to_36.item_31": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m24_to_36.item_32": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m24_to_36.item_33": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m24_to_36.item_34": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m24_to_36.item_35": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m36_to_48.item_36": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m36_to_48.item_37": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m36_to_48.item_38": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m36_to_48.item_39": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m36_to_48.item_40": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m48_to_60.item_41": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m48_to_60.item_42": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m48_to_60.item_43": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m48_to_60.item_44": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m48_to_60.item_45": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m48_to_60.item_46": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m60_to_72.item_47": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m60_to_72.item_48": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m60_to_72.item_49": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m60_to_72.item_50": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m60_to_72.item_51": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m72_to_84.item_52": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m72_to_84.item_53": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m72_to_84.item_54": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m72_to_84.item_55": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m72_to_84.item_56": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m84_to_96.item_57": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m84_to_96.item_58": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m84_to_96.item_59": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m84_to_96.item_60": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m96_to_108.item_61": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m96_to_108.item_62": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m96_to_108.item_63": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m96_to_108.item_64": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m96_to_108.item_65": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m96_to_108.item_66": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m108_to_120.item_67": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m108_to_120.item_68": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m108_to_120.item_69": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m108_to_120.item_70": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m108_to_120.item_71": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m120_to_132.item_72": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m120_to_132.item_73": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m120_to_132.item_74": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m120_to_132.item_75": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m132_to_144.item_76": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m132_to_144.item_77": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m132_to_144.item_78": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m144_to_156.item_79": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m144_to_156.item_80": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m144_to_156.item_81": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m144_to_156.item_82": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m144_to_156.item_83": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m156_to_180.item_84": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m156_to_180.item_85": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m156_to_180.item_86": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m156_to_180.item_87": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        },
+        "g_m156_to_180.item_88": {
+          "pass": "Pass",
+          "fail": "Fail",
+          "not_assessed": "Not assessed"
+        }
+      },
+      "score_fields": {},
+      "join_fields": [
+        {
+          "target": "g_child.ca_days",
+          "format": "days_to_years_months",
+          "parts": [
+            "g_child.ca_days"
+          ],
+          "label": "report.scale.chronological_age"
+        }
+      ],
+      "note_values": {
+        "g_intro.dst_disclaimer": "DST is a developmental screening instrument and does not provide a diagnosis. Results must be interpreted by a qualified clinician. This assessment does not diagnose developmental, intellectual, neurological or psychiatric conditions.",
+        "g_child.dob_warning": "WARNING: Child date of birth is missing or invalid. Please enter DOB before scoring. Do not guess age."
+      },
+      "date_fields": [
+        "g_child.assessment_date",
+        "g_child.child_dob"
+      ],
+      "notes_fields": [
+        "na_reason",
+        "clinical_notes"
+      ],
+      "result_fields": [
+        "total_passed_items",
+        "total_failed_items",
+        "total_not_assessed_items",
+        "developmental_age_months",
+        "developmental_age_years",
+        "developmental_age_remaining_months",
+        "developmental_quotient_raw",
+        "developmental_quotient_rounded"
+      ]
+    },
+    "moca_assessment": {
+      "title_key": "report.moca_assessment._title",
+      "hide_fields": [
+        "g_attention.attention_bwd_inst",
+        "g_attention.attention_fwd_inst",
+        "g_attention.serial7_inst",
+        "g_attention.vigilance_inst",
+        "g_delayed_recall.delayed_inst",
+        "g_language.fluency_inst",
+        "g_language.sentence1_inst",
+        "g_language.sentence2_inst",
+        "g_naming.naming_inst",
+        "g_orientation.orientation_inst",
+        "g_visuospatial.clock_inst",
+        "g_visuospatial.cube_inst",
+        "g_visuospatial.trail_making_inst",
+        "memory_words",
+        "moca_delayed_total",
+        "patient_age",
+        "patient_education",
+        "patient_phone",
+        "patient_sex",
+        "patient_uuid",
+        "result_complete",
+        "result_incomplete",
+        "result_invalid",
+        "scoring_version",
+        "screened_by"
+      ],
+      "suppress_empty": true,
+      "keep_empty": [],
+      "choice_map": {
+        "g_consent.consent_reconfirmed": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_visuospatial.trail_making": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_visuospatial.cube_copy": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_visuospatial.clock_contour": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_visuospatial.clock_numbers": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_visuospatial.clock_hands": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_naming.naming_1": {
+          "yes": "Correct",
+          "no": "Incorrect",
+          "dk": "Don't know / Not assessed"
+        },
+        "g_naming.naming_2": {
+          "yes": "Correct",
+          "no": "Incorrect",
+          "dk": "Don't know / Not assessed"
+        },
+        "g_naming.naming_3": {
+          "yes": "Correct",
+          "no": "Incorrect",
+          "dk": "Don't know / Not assessed"
+        },
+        "g_attention.digit_span_fwd": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_attention.digit_span_bwd": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_attention.vigilance": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_attention.serial_7s": {
+          "0": "0 correct subtractions (0 pts)",
+          "1": "1 correct subtraction (1 pt)",
+          "2": "2-3 correct subtractions (2 pts)",
+          "3": "4-5 correct subtractions (3 pts)"
+        },
+        "g_language.sentence_rep_1": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_language.sentence_rep_2": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_abstraction.abstraction_1": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_abstraction.abstraction_2": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_delayed_recall.delayed_face": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_delayed_recall.delayed_face_cat": {
+          "yes": "Recalled with cue",
+          "no": "Not recalled even with cue"
+        },
+        "g_delayed_recall.delayed_face_mc": {
+          "yes": "Recalled with cue",
+          "no": "Not recalled even with cue"
+        },
+        "g_delayed_recall.delayed_velvet": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_delayed_recall.delayed_velvet_cat": {
+          "yes": "Recalled with cue",
+          "no": "Not recalled even with cue"
+        },
+        "g_delayed_recall.delayed_velvet_mc": {
+          "yes": "Recalled with cue",
+          "no": "Not recalled even with cue"
+        },
+        "g_delayed_recall.delayed_church": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_delayed_recall.delayed_church_cat": {
+          "yes": "Recalled with cue",
+          "no": "Not recalled even with cue"
+        },
+        "g_delayed_recall.delayed_church_mc": {
+          "yes": "Recalled with cue",
+          "no": "Not recalled even with cue"
+        },
+        "g_delayed_recall.delayed_daisy": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_delayed_recall.delayed_daisy_cat": {
+          "yes": "Recalled with cue",
+          "no": "Not recalled even with cue"
+        },
+        "g_delayed_recall.delayed_daisy_mc": {
+          "yes": "Recalled with cue",
+          "no": "Not recalled even with cue"
+        },
+        "g_delayed_recall.delayed_red": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_delayed_recall.delayed_red_cat": {
+          "yes": "Recalled with cue",
+          "no": "Not recalled even with cue"
+        },
+        "g_delayed_recall.delayed_red_mc": {
+          "yes": "Recalled with cue",
+          "no": "Not recalled even with cue"
+        },
+        "g_orientation.orientation_date": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_orientation.orientation_month": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_orientation.orientation_year": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_orientation.orientation_day": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_orientation.orientation_place": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_orientation.orientation_city": {
+          "yes": "Yes",
+          "no": "No"
+        }
+      },
+      "score_fields": {},
+      "join_fields": [],
+      "note_values": {},
+      "date_fields": [
+        "g_admin.assessment_datetime"
+      ],
+      "notes_fields": [],
+      "result_fields": [
+        "moca_visuospatial_total",
+        "moca_naming_total",
+        "moca_memory_total",
+        "moca_attention_total",
+        "moca_language_total",
+        "moca_abstraction_total",
+        "moca_orientation_total",
+        "moca_raw_total",
+        "moca_education_adj",
+        "moca_total_score",
+        "moca_interpretation"
+      ]
+    },
+    "vineland": {
+      "title_key": "report.vineland._title",
+      "hide_fields": [
+        "ca_band",
+        "g_child.age_valid",
+        "g_child.ca_band",
+        "g_child.ca_days",
+        "g_child.ca_months_dec",
+        "g_child.ca_months_floor",
+        "g_child.ca_rem_months",
+        "g_child.ca_years_display",
+        "g_child.show_all",
+        "item_10_score",
+        "item_11_score",
+        "item_12_score",
+        "item_13_score",
+        "item_14_score",
+        "item_15_score",
+        "item_16_score",
+        "item_17_score",
+        "item_18_score",
+        "item_19_score",
+        "item_1_score",
+        "item_20_score",
+        "item_21_score",
+        "item_22_score",
+        "item_23_score",
+        "item_24_score",
+        "item_25_score",
+        "item_26_score",
+        "item_27_score",
+        "item_28_score",
+        "item_29_score",
+        "item_2_score",
+        "item_30_score",
+        "item_31_score",
+        "item_32_score",
+        "item_33_score",
+        "item_34_score",
+        "item_35_score",
+        "item_36_score",
+        "item_37_score",
+        "item_38_score",
+        "item_39_score",
+        "item_3_score",
+        "item_40_score",
+        "item_41_score",
+        "item_42_score",
+        "item_43_score",
+        "item_44_score",
+        "item_45_score",
+        "item_46_score",
+        "item_47_score",
+        "item_48_score",
+        "item_49_score",
+        "item_4_score",
+        "item_50_score",
+        "item_51_score",
+        "item_52_score",
+        "item_53_score",
+        "item_54_score",
+        "item_55_score",
+        "item_56_score",
+        "item_57_score",
+        "item_58_score",
+        "item_59_score",
+        "item_5_score",
+        "item_60_score",
+        "item_61_score",
+        "item_62_score",
+        "item_63_score",
+        "item_64_score",
+        "item_65_score",
+        "item_66_score",
+        "item_67_score",
+        "item_68_score",
+        "item_69_score",
+        "item_6_score",
+        "item_70_score",
+        "item_71_score",
+        "item_72_score",
+        "item_73_score",
+        "item_74_score",
+        "item_75_score",
+        "item_76_score",
+        "item_77_score",
+        "item_78_score",
+        "item_79_score",
+        "item_7_score",
+        "item_80_score",
+        "item_81_score",
+        "item_82_score",
+        "item_83_score",
+        "item_84_score",
+        "item_85_score",
+        "item_86_score",
+        "item_87_score",
+        "item_88_score",
+        "item_89_score",
+        "item_8_score",
+        "item_9_score",
+        "patient_uuid",
+        "result_complete",
+        "result_incomplete",
+        "result_invalid",
+        "score_status",
+        "scoring_version",
+        "screened_by",
+        "show_all"
+      ],
+      "suppress_empty": true,
+      "keep_empty": [
+        "g_child.dob_warning"
+      ],
+      "choice_map": {
+        "g_intro.acknowledged": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_child.show_all": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "g_y0_1.item_1": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_2": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_3": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_4": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_5": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_6": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_7": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_8": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_9": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_10": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_11": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_12": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_13": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_14": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_15": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_16": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y0_1.item_17": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_18": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_19": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_20": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_21": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_22": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_23": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_24": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_25": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_26": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_27": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_28": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_29": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_30": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_31": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_32": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_33": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y1_2.item_34": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y2_3.item_35": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y2_3.item_36": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y2_3.item_37": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y2_3.item_38": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y2_3.item_39": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y2_3.item_40": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y2_3.item_41": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y2_3.item_42": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y2_3.item_43": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y2_3.item_44": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y3_4.item_45": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y3_4.item_46": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y3_4.item_47": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y3_4.item_48": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y3_4.item_49": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y3_4.item_50": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y4_5.item_51": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y4_5.item_52": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y4_5.item_53": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y4_5.item_54": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y4_5.item_55": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y4_5.item_56": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y5_6.item_57": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y5_6.item_58": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y5_6.item_59": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y5_6.item_60": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y5_6.item_61": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y6_7.item_62": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y6_7.item_63": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y6_7.item_64": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y6_7.item_65": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y7_8.item_66": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y7_8.item_67": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y7_8.item_68": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y7_8.item_69": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y7_8.item_70": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y8_9.item_71": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y8_9.item_72": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y8_9.item_73": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y8_9.item_74": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y9_10.item_75": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y9_10.item_76": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y9_10.item_77": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y10_11.item_78": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y10_11.item_79": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y10_11.item_80": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y10_11.item_81": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y11_12.item_82": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y11_12.item_83": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y11_12.item_84": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y12_15.item_85": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y12_15.item_86": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y12_15.item_87": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y12_15.item_88": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        },
+        "g_y12_15.item_89": {
+          "yes": "Yes",
+          "no": "No",
+          "not_assessed": "Not Assessed"
+        }
+      },
+      "score_fields": {
+        "g_y0_1.item_1": "item_1_score",
+        "g_y0_1.item_2": "item_2_score",
+        "g_y0_1.item_3": "item_3_score",
+        "g_y0_1.item_4": "item_4_score",
+        "g_y0_1.item_5": "item_5_score",
+        "g_y0_1.item_6": "item_6_score",
+        "g_y0_1.item_7": "item_7_score",
+        "g_y0_1.item_8": "item_8_score",
+        "g_y0_1.item_9": "item_9_score",
+        "g_y0_1.item_10": "item_10_score",
+        "g_y0_1.item_11": "item_11_score",
+        "g_y0_1.item_12": "item_12_score",
+        "g_y0_1.item_13": "item_13_score",
+        "g_y0_1.item_14": "item_14_score",
+        "g_y0_1.item_15": "item_15_score",
+        "g_y0_1.item_16": "item_16_score",
+        "g_y0_1.item_17": "item_17_score",
+        "g_y1_2.item_18": "item_18_score",
+        "g_y1_2.item_19": "item_19_score",
+        "g_y1_2.item_20": "item_20_score",
+        "g_y1_2.item_21": "item_21_score",
+        "g_y1_2.item_22": "item_22_score",
+        "g_y1_2.item_23": "item_23_score",
+        "g_y1_2.item_24": "item_24_score",
+        "g_y1_2.item_25": "item_25_score",
+        "g_y1_2.item_26": "item_26_score",
+        "g_y1_2.item_27": "item_27_score",
+        "g_y1_2.item_28": "item_28_score",
+        "g_y1_2.item_29": "item_29_score",
+        "g_y1_2.item_30": "item_30_score",
+        "g_y1_2.item_31": "item_31_score",
+        "g_y1_2.item_32": "item_32_score",
+        "g_y1_2.item_33": "item_33_score",
+        "g_y1_2.item_34": "item_34_score",
+        "g_y2_3.item_35": "item_35_score",
+        "g_y2_3.item_36": "item_36_score",
+        "g_y2_3.item_37": "item_37_score",
+        "g_y2_3.item_38": "item_38_score",
+        "g_y2_3.item_39": "item_39_score",
+        "g_y2_3.item_40": "item_40_score",
+        "g_y2_3.item_41": "item_41_score",
+        "g_y2_3.item_42": "item_42_score",
+        "g_y2_3.item_43": "item_43_score",
+        "g_y2_3.item_44": "item_44_score",
+        "g_y3_4.item_45": "item_45_score",
+        "g_y3_4.item_46": "item_46_score",
+        "g_y3_4.item_47": "item_47_score",
+        "g_y3_4.item_48": "item_48_score",
+        "g_y3_4.item_49": "item_49_score",
+        "g_y3_4.item_50": "item_50_score",
+        "g_y4_5.item_51": "item_51_score",
+        "g_y4_5.item_52": "item_52_score",
+        "g_y4_5.item_53": "item_53_score",
+        "g_y4_5.item_54": "item_54_score",
+        "g_y4_5.item_55": "item_55_score",
+        "g_y4_5.item_56": "item_56_score",
+        "g_y5_6.item_57": "item_57_score",
+        "g_y5_6.item_58": "item_58_score",
+        "g_y5_6.item_59": "item_59_score",
+        "g_y5_6.item_60": "item_60_score",
+        "g_y5_6.item_61": "item_61_score",
+        "g_y6_7.item_62": "item_62_score",
+        "g_y6_7.item_63": "item_63_score",
+        "g_y6_7.item_64": "item_64_score",
+        "g_y6_7.item_65": "item_65_score",
+        "g_y7_8.item_66": "item_66_score",
+        "g_y7_8.item_67": "item_67_score",
+        "g_y7_8.item_68": "item_68_score",
+        "g_y7_8.item_69": "item_69_score",
+        "g_y7_8.item_70": "item_70_score",
+        "g_y8_9.item_71": "item_71_score",
+        "g_y8_9.item_72": "item_72_score",
+        "g_y8_9.item_73": "item_73_score",
+        "g_y8_9.item_74": "item_74_score",
+        "g_y9_10.item_75": "item_75_score",
+        "g_y9_10.item_76": "item_76_score",
+        "g_y9_10.item_77": "item_77_score",
+        "g_y10_11.item_78": "item_78_score",
+        "g_y10_11.item_79": "item_79_score",
+        "g_y10_11.item_80": "item_80_score",
+        "g_y10_11.item_81": "item_81_score",
+        "g_y11_12.item_82": "item_82_score",
+        "g_y11_12.item_83": "item_83_score",
+        "g_y11_12.item_84": "item_84_score",
+        "g_y12_15.item_85": "item_85_score",
+        "g_y12_15.item_86": "item_86_score",
+        "g_y12_15.item_87": "item_87_score",
+        "g_y12_15.item_88": "item_88_score",
+        "g_y12_15.item_89": "item_89_score"
+      },
+      "join_fields": [
+        {
+          "target": "g_child.ca_display",
+          "format": "years_months_parts",
+          "parts": [
+            "g_child.ca_years_display",
+            "g_child.ca_rem_months"
+          ],
+          "label": "report.scale.chronological_age"
+        }
+      ],
+      "note_values": {
+        "g_intro.vineland_disclaimer": "This assessment is a social maturity screening tool. It does not provide a diagnosis. Results must be interpreted by a qualified clinician.",
+        "g_child.dob_warning": "WARNING: Child date of birth is missing or invalid. Please enter DOB before scoring. Do not guess age."
+      },
+      "date_fields": [
+        "g_child.assessment_date",
+        "g_child.child_dob"
+      ],
+      "notes_fields": [
+        "na_reason",
+        "clinical_notes",
+        "scoring_notes"
+      ],
+      "result_fields": [
+        "raw_score",
+        "total_yes_items",
+        "total_no_items",
+        "total_not_assessed_items",
+        "social_age_months",
+        "social_age_years",
+        "social_age_remaining_months",
+        "social_quotient_raw",
+        "social_quotient_rounded",
+        "sq_interpretation"
+      ]
+    }
+  }
 }
