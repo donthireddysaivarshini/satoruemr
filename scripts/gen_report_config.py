@@ -39,7 +39,6 @@ COMPILED_SETTINGS_PATH = os.path.join(REPO_ROOT, 'app_settings.json')
 
 MARKER_BEGIN = '# ==== generated scale report labels (scripts/gen_report_config.py) ===='
 MARKER_END = '# ==== end generated scale report labels ===='
-CRLF = '\r\n'
 
 
 def clean_label(label):
@@ -100,13 +99,13 @@ def keys_in(content):
     return keys
 
 
-def build_generated_block(per_form_entries):
-    parts = [MARKER_BEGIN + CRLF]
+def build_generated_block(per_form_entries, newline='\n'):
+    parts = [MARKER_BEGIN + newline]
     for form in SCALES:
-        parts.append(f'# ---- {SCALES[form]["title"]} ----' + CRLF)
+        parts.append(f'# ---- {SCALES[form]["title"]} ----' + newline)
         for key, label in per_form_entries[form]:
-            parts.append(f'{key} = {label}' + CRLF)
-    parts.append(MARKER_END + CRLF)
+            parts.append(f'{key} = {label}' + newline)
+    parts.append(MARKER_END + newline)
     return ''.join(parts)
 
 
@@ -126,7 +125,8 @@ def update_messages(dry_run=False):
                    if key not in curated]
         per_form[form] = entries
         total += len(entries)
-    new_block = build_generated_block(per_form)
+    newline = '\r\n' if '\r\n' in content else '\n'
+    new_block = build_generated_block(per_form, newline)
     new_content = before + new_block + after
     if not dry_run and new_content != content:
         with open(MESSAGES_PATH, 'w', encoding='utf-8', newline='') as f:

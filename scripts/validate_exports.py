@@ -196,6 +196,45 @@ def test_camp_workbook():
 
 
 # ---------------------------------------------------------------------------
+# 1b. all-workbook scope (every participant, every camp)
+# ---------------------------------------------------------------------------
+
+def test_all_workbook():
+    print('== all-workbook scope ==')
+    docs = [SETTINGS, CAMP_1, CAMP_2, PART_A, PART_B, PART_C, SUBMITTER,
+            report('vineland', 'participant-a', VINELAND_FIELDS, 1756425600000),
+            report('ddst', 'participant-a', DDST_FIELDS, 1756425700000),
+            report('ddst', 'participant-c', dict(DDST_FIELDS, patient_name='Other'), 1756425900000)]
+    wb = export_emr.build_workbook('all-workbook', FakeDb(docs))
+
+    titles = [ws.title for ws in wb.worksheets]
+    check('all-workbook: Participants + completed scales',
+          titles == ['Participants', 'DDST-II', 'VSMS'], titles)
+
+    hdr, rows = read_only_ws(wb, 'Participants')
+    idx = {h: i for i, h in enumerate(hdr)}
+    check('all-workbook: participants from BOTH camps (3 rows)',
+          len(rows) == 3, len(rows))
+    check('all-workbook: Camp column present', 'Camp' in idx, hdr)
+    camps_seen = {r[idx['Camp']] for r in rows}
+    check('all-workbook: both camp names present',
+          camps_seen == {'NIMS', 'OtherCamp'}, camps_seen)
+    check('all-workbook: submitter not listed as participant',
+          all(r[idx['Name']] != 'Varshini' for r in rows))
+
+    hdr, rows = read_only_ws(wb, 'DDST-II')
+    idx = {h: i for i, h in enumerate(hdr)}
+    check('all-workbook: DDST rows span camps (2 rows)', len(rows) == 2, len(rows))
+    check('all-workbook: scale sheet has Camp column', 'Camp' in idx, hdr[:6])
+    check('all-workbook: header/row aligned',
+          all(len(r) == len(hdr) for r in rows),
+          [(len(hdr), len(r)) for r in rows])
+    other = next(r for r in rows if r[idx['Participant']] == 'Other')
+    check('all-workbook: cross-camp row carries its camp name',
+          other[idx['Camp']] == 'OtherCamp', other[idx['Camp']])
+
+
+# ---------------------------------------------------------------------------
 # 2. participant-report scope
 # ---------------------------------------------------------------------------
 
@@ -230,7 +269,7 @@ def test_participant_report():
     text = [tuple(r) for r in rows]
     flat_cells = [c for r in rows for c in r if c not in (None, '')]
     check('VSMS: scale title section',
-          any(isinstance(c, str) and 'VSMS' in c or 'Vineland' in c for c in flat_cells))
+          any(isinstance(c, str) and ('VSMS' in c or 'Vineland' in c) for c in flat_cells))
     check('VSMS: question row with answer + score',
           any(isinstance(r, tuple) and r[0] == '1. Cries, laughs'
               and r[1] == 'Yes' and r[2] == 1 for r in text),
@@ -289,10 +328,10 @@ def test_scale_row_alignment():
     samples['dst'] = ({
         'patient_id': 'CR001', 'patient_name': 'Kamala',
         'g_child': {'assessment_date': '2026-08-29', 'child_dob': '2025-07-17',
-                    'ca_days': 408, 'ca_months_dec': 13.4, 'ca_band': '0-1',
-                    'band_1_passed': 5, 'band_1_failed': 1,
-                    'band_1_not_assessed': 0, 'band_1_earned': 5},
-        'g_band_1': {'item_1': 'pass', 'item_2': 'fail', 'item_3': 'not_assessed'},
+                    'ca_days': 408, 'ca_months_dec': 13.4, 'ca_band': '0-1'},
+        'g_birth_to_3_months': {'item_1': 'pass', 'item_2': 'fail',
+                                'item_3': 'not_assessed'},
+        'g_m3_to_6': {'item_8': 'pass', 'item_9': 'pass'},
         'total_passed_items': 12, 'developmental_age_months': 15,
         'developmental_quotient_rounded': 100,
     }, PART_A, 'Varshini', [])
@@ -338,6 +377,7 @@ class FakeDb:
 
 def main():
     test_camp_workbook()
+    test_all_workbook()
     test_participant_report()
     test_scale_row_alignment()
     print(f'\n{CHECKS[0]} checks, {len(FAILURES)} failures')

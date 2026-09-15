@@ -1,0 +1,27 @@
+resolver 127.0.0.11 valid=10s; # 127.0.0.11 is from default /etc/resolv.conf
+set $upstream_endpoint http://${API_HOST}:${API_PORT};
+set $exports_endpoint http://exports:8095;
+
+# Satoru EMR Excel exports, served under the same host/port as CHT.
+location /exports/ {
+  proxy_pass              $exports_endpoint;
+  proxy_set_header        Host            $host;
+  proxy_set_header        X-Real-IP       $remote_addr;
+  proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header        X-Forwarded-Proto https;
+  proxy_set_header        X-Forwarded-Host $server_name;
+  proxy_read_timeout      600s;   # large workbooks take a while to build
+}
+location = /exports {
+  # $http_host (not $host) so the :PORT survives the redirect
+  return 301 https://$http_host/exports/;
+}
+
+location / {
+  proxy_pass              $upstream_endpoint;
+  proxy_set_header        Host            $host;
+  proxy_set_header        X-Real-IP       $remote_addr;
+  proxy_set_header        X-Forwarded-For $proxy_add_x_forwarded_for;
+  proxy_set_header        X-Forwarded-Proto https;
+  proxy_set_header        X-Forwarded-Host $server_name;
+}

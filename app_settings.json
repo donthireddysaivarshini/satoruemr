@@ -185,9 +185,11 @@
         "fm_27_delayed",
         "fm_28_delayed",
         "fm_29_delayed",
+        "g_child.dob_warning",
         "g_meta.ca_band",
         "g_meta.ca_months_dec",
         "g_meta.ca_note",
+        "g_meta.dob_warning",
         "g_meta.show_all",
         "gm_01_delayed",
         "gm_02_delayed",
@@ -294,9 +296,7 @@
         "screened_by"
       ],
       "suppress_empty": true,
-      "keep_empty": [
-        "g_meta.dob_warning"
-      ],
+      "keep_empty": [],
       "choice_map": {
         "g_meta.show_all": {
           "yes": "Yes",
@@ -939,9 +939,7 @@
           "label": "report.scale.chronological_age"
         }
       ],
-      "note_values": {
-        "g_meta.dob_warning": "WARNING: Child date of birth is missing or invalid. Please enter DOB before scoring. Do not guess age."
-      },
+      "note_values": {},
       "date_fields": [
         "g_meta.test_date",
         "g_meta.child_dob"
@@ -1033,8 +1031,11 @@
         "ca_band",
         "g_child.age_valid",
         "g_child.ca_band",
+        "g_child.ca_display",
         "g_child.ca_months_dec",
+        "g_child.dob_warning",
         "g_child.show_all",
+        "g_meta.dob_warning",
         "patient_uuid",
         "result_complete",
         "result_incomplete",
@@ -1045,9 +1046,7 @@
         "show_all"
       ],
       "suppress_empty": true,
-      "keep_empty": [
-        "g_child.dob_warning"
-      ],
+      "keep_empty": [],
       "choice_map": {
         "g_intro.acknowledged": {
           "yes": "Yes",
@@ -1510,8 +1509,7 @@
         }
       ],
       "note_values": {
-        "g_intro.dst_disclaimer": "DST is a developmental screening instrument and does not provide a diagnosis. Results must be interpreted by a qualified clinician. This assessment does not diagnose developmental, intellectual, neurological or psychiatric conditions.",
-        "g_child.dob_warning": "WARNING: Child date of birth is missing or invalid. Please enter DOB before scoring. Do not guess age."
+        "g_intro.dst_disclaimer": "DST is a developmental screening instrument and does not provide a diagnosis. Results must be interpreted by a qualified clinician. This assessment does not diagnose developmental, intellectual, neurological or psychiatric conditions."
       },
       "date_fields": [
         "g_child.assessment_date",
@@ -1539,10 +1537,12 @@
         "g_attention.attention_fwd_inst",
         "g_attention.serial7_inst",
         "g_attention.vigilance_inst",
+        "g_child.dob_warning",
         "g_delayed_recall.delayed_inst",
         "g_language.fluency_inst",
         "g_language.sentence1_inst",
         "g_language.sentence2_inst",
+        "g_meta.dob_warning",
         "g_naming.naming_inst",
         "g_orientation.orientation_inst",
         "g_visuospatial.clock_inst",
@@ -1754,7 +1754,9 @@
         "g_child.ca_months_floor",
         "g_child.ca_rem_months",
         "g_child.ca_years_display",
+        "g_child.dob_warning",
         "g_child.show_all",
+        "g_meta.dob_warning",
         "item_10_score",
         "item_11_score",
         "item_12_score",
@@ -1854,9 +1856,7 @@
         "show_all"
       ],
       "suppress_empty": true,
-      "keep_empty": [
-        "g_child.dob_warning"
-      ],
+      "keep_empty": [],
       "choice_map": {
         "g_intro.acknowledged": {
           "yes": "Yes",
@@ -2313,15 +2313,6 @@
         }
       },
       "score_fields": {
-        "g_y0_1.item_1": "item_1_score",
-        "g_y0_1.item_2": "item_2_score",
-        "g_y0_1.item_3": "item_3_score",
-        "g_y0_1.item_4": "item_4_score",
-        "g_y0_1.item_5": "item_5_score",
-        "g_y0_1.item_6": "item_6_score",
-        "g_y0_1.item_7": "item_7_score",
-        "g_y0_1.item_8": "item_8_score",
-        "g_y0_1.item_9": "item_9_score",
         "g_y0_1.item_10": "item_10_score",
         "g_y0_1.item_11": "item_11_score",
         "g_y0_1.item_12": "item_12_score",
@@ -2332,6 +2323,7 @@
         "g_y0_1.item_17": "item_17_score",
         "g_y1_2.item_18": "item_18_score",
         "g_y1_2.item_19": "item_19_score",
+        "g_y0_1.item_1": "item_1_score",
         "g_y1_2.item_20": "item_20_score",
         "g_y1_2.item_21": "item_21_score",
         "g_y1_2.item_22": "item_22_score",
@@ -2342,6 +2334,7 @@
         "g_y1_2.item_27": "item_27_score",
         "g_y1_2.item_28": "item_28_score",
         "g_y1_2.item_29": "item_29_score",
+        "g_y0_1.item_2": "item_2_score",
         "g_y1_2.item_30": "item_30_score",
         "g_y1_2.item_31": "item_31_score",
         "g_y1_2.item_32": "item_32_score",
@@ -2352,6 +2345,7 @@
         "g_y2_3.item_37": "item_37_score",
         "g_y2_3.item_38": "item_38_score",
         "g_y2_3.item_39": "item_39_score",
+        "g_y0_1.item_3": "item_3_score",
         "g_y2_3.item_40": "item_40_score",
         "g_y2_3.item_41": "item_41_score",
         "g_y2_3.item_42": "item_42_score",
@@ -2362,6 +2356,7 @@
         "g_y3_4.item_47": "item_47_score",
         "g_y3_4.item_48": "item_48_score",
         "g_y3_4.item_49": "item_49_score",
+        "g_y0_1.item_4": "item_4_score",
         "g_y3_4.item_50": "item_50_score",
         "g_y4_5.item_51": "item_51_score",
         "g_y4_5.item_52": "item_52_score",
@@ -2372,6 +2367,7 @@
         "g_y5_6.item_57": "item_57_score",
         "g_y5_6.item_58": "item_58_score",
         "g_y5_6.item_59": "item_59_score",
+        "g_y0_1.item_5": "item_5_score",
         "g_y5_6.item_60": "item_60_score",
         "g_y5_6.item_61": "item_61_score",
         "g_y6_7.item_62": "item_62_score",
@@ -2382,6 +2378,7 @@
         "g_y7_8.item_67": "item_67_score",
         "g_y7_8.item_68": "item_68_score",
         "g_y7_8.item_69": "item_69_score",
+        "g_y0_1.item_6": "item_6_score",
         "g_y7_8.item_70": "item_70_score",
         "g_y8_9.item_71": "item_71_score",
         "g_y8_9.item_72": "item_72_score",
@@ -2392,6 +2389,7 @@
         "g_y9_10.item_77": "item_77_score",
         "g_y10_11.item_78": "item_78_score",
         "g_y10_11.item_79": "item_79_score",
+        "g_y0_1.item_7": "item_7_score",
         "g_y10_11.item_80": "item_80_score",
         "g_y10_11.item_81": "item_81_score",
         "g_y11_12.item_82": "item_82_score",
@@ -2401,7 +2399,9 @@
         "g_y12_15.item_86": "item_86_score",
         "g_y12_15.item_87": "item_87_score",
         "g_y12_15.item_88": "item_88_score",
-        "g_y12_15.item_89": "item_89_score"
+        "g_y12_15.item_89": "item_89_score",
+        "g_y0_1.item_8": "item_8_score",
+        "g_y0_1.item_9": "item_9_score"
       },
       "join_fields": [
         {
@@ -2415,8 +2415,7 @@
         }
       ],
       "note_values": {
-        "g_intro.vineland_disclaimer": "This assessment is a social maturity screening tool. It does not provide a diagnosis. Results must be interpreted by a qualified clinician.",
-        "g_child.dob_warning": "WARNING: Child date of birth is missing or invalid. Please enter DOB before scoring. Do not guess age."
+        "g_intro.vineland_disclaimer": "This assessment is a social maturity screening tool. It does not provide a diagnosis. Results must be interpreted by a qualified clinician."
       },
       "date_fields": [
         "g_child.assessment_date",

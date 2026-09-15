@@ -1,0 +1,4 @@
+# Runtime deps for the read-only Excel exporters (scripts/export_emr.py).
+# Install:  pip install -r scripts/requirements.txt
+openpyxl>=3.1
+requests>=2.31

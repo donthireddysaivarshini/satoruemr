@@ -1,0 +1,46 @@
+# Adds the Satoru EMR Excel export UI to the CHT stack.
+#
+# Compose overlay - use it AFTER the two CHT compose files:
+#
+#   docker compose --env-file satoruemr.env \
+#     -f ~/.medic/cht-docker/satoruemr-dir/compose/cht-core.yml \
+#     -f ~/.medic/cht-docker/satoruemr-dir/compose/cht-couchdb.yml \
+#     -f <satoruemr>/deploy/cht-exports.yml up -d
+#
+# It contributes two things:
+#   1. an `exports` service (read-only CouchDB -> .xlsx)
+#   2. a replacement nginx server template so the export page is served at
+#      https://<same host>:<same port>/exports/ - one URL, one stack.
+services:
+  exports:
+    build:
+      # absolute, because compose resolves relative paths against the FIRST
+      # -f file's directory (~/.medic/...), not this file's
+      context: ${SATORU_REPO:?set SATORU_REPO to the satoruemr checkout}
+      dockerfile: deploy/Dockerfile
+    image: satoru-emr-exports:local
+    restart: always
+    depends_on:
+      - haproxy
+    environment:
+      # same in-cluster route the api/sentinel services use
+      - COUCH_URL=http://${COUCHDB_USER:-medic}:${COUCHDB_PASSWORD:?COUCHDB_PASSWORD must be set}@haproxy:${HAPROXY_PORT:-5984}/medic
+      # so export filenames carry local time, matching CLI-run exports
+      - TZ=${TZ:-Asia/Kolkata}
+    logging:
+      driver: "local"
+      options:
+        max-size: "${LOG_MAX_SIZE:-50m}"
+        max-file: "${LOG_MAX_FILES:-20}"
+    networks:
+      - cht-net
+
+  nginx:
+    depends_on:
+      - exports
+    volumes:
+      - ${SATORU_EXPORTS_NGINX_TEMPLATE:?set SATORU_EXPORTS_NGINX_TEMPLATE to deploy/nginx-server.conf.template}:/etc/nginx/templates/server.conf.template:ro
+
+networks:
+  cht-net:
+    name: ${CHT_NETWORK:-cht-net}

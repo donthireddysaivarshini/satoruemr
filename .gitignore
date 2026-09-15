@@ -1,1 +1,9 @@
 node_modules/
+__pycache__/
+*.pyc
+.venv/
+venv/
+scripts/out/
+*.xlsx.tmp
+sample_data.json
+out/

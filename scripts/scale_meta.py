@@ -139,7 +139,8 @@ def parse_form_xml(path):
     data = None
     for inst in _children(model, 'instance'):
         if not inst.get('id'):
-            data = _child(inst, 'data') or inst
+            inner = _child(inst, 'data')
+            data = inner if inner is not None else inst
             break
     if data is not None:
         walk_instance(data, '')
@@ -297,6 +298,10 @@ def _hidden_scale_fields(flat, form, parsed=None):
         'result_complete',
         'result_incomplete',
         'result_invalid',
+        # DOB warning is surfaced conditionally by the report layer, not as a
+        # generic field (see DOB_WARNING); keep it out of the raw field list.
+        'g_child.dob_warning',
+        'g_meta.dob_warning',
     }
     every = [item['path'] for item in flat if item['type'] == 'field']
     if parsed is not None:
@@ -311,6 +316,9 @@ def _hidden_scale_fields(flat, form, parsed=None):
             'show_all',
             'ca_band',
             'score_status',
+            # readonly "**y m** ( days)." display string; the joined
+            # "Chronological age" row already carries the readable value
+            'g_child.ca_display',
         }
     if form == 'vineland':
         hidden |= {
@@ -360,19 +368,33 @@ def _hidden_scale_fields(flat, form, parsed=None):
 # Static note fields: stored value is empty; the meaningful text is the
 # form label. build_report_display resolves the actual label text from the
 # parsed form so no wording is duplicated or invented here.
+#
+# DOB-warning fields are deliberately NOT here: their relevance in the form
+# is "DOB missing or age invalid", so forcing their text onto every report
+# printed a false "WARNING" on normal assessments. They are surfaced only
+# when actually triggered - see scale_export._dob_warning_active and the
+# cht-core patch's equivalent check.
 NOTE_VALUES = {
     'vineland': {
         'g_intro.vineland_disclaimer': None,
-        'g_child.dob_warning': None,
     },
     'dst': {
         'g_intro.dst_disclaimer': None,
-        'g_child.dob_warning': None,
     },
-    'ddst': {
-        'g_meta.dob_warning': None,
-    },
+    'ddst': {},
     'moca_assessment': {},
+}
+
+# Path of the DOB-warning field per form, and the condition fields that make
+# it relevant. Empty DOB or age_valid != 'yes' => the warning applies.
+DOB_WARNING = {
+    'vineland': {'field': 'g_child.dob_warning',
+                 'dob': 'g_child.child_dob', 'age_valid': 'g_child.age_valid'},
+    'dst': {'field': 'g_child.dob_warning',
+            'dob': 'g_child.child_dob', 'age_valid': 'g_child.age_valid'},
+    'ddst': {'field': 'g_meta.dob_warning',
+             'dob': 'g_meta.child_dob', 'age_valid': 'g_meta.age_valid'},
+    'moca_assessment': None,
 }
 
 # Short display labels for note-value fields (their VALUE is the full form
@@ -393,11 +415,11 @@ NOTE_LABELS = {
     'moca_assessment': {},
 }
 
-# Fields whose value must be kept even when empty (warnings).
+# Nothing is force-shown when empty any more (see DOB_WARNING note above).
 KEEP_EMPTY = {
-    'vineland': ['g_child.dob_warning'],
-    'dst': ['g_child.dob_warning'],
-    'ddst': ['g_meta.dob_warning'],
+    'vineland': [],
+    'dst': [],
+    'ddst': [],
     'moca_assessment': [],
 }
 
@@ -460,17 +482,27 @@ RESULT_FIELDS = {
     ],
 }
 
-# Question -> item score field (per-item scores joined into the answer row).
-def _score_fields(form, count):
-    return {f'item_{i}': f'item_{i}_score' for i in range(1, count + 1)}
+# Question -> item score field. Per-item scores are joined into the answer
+# row. Derived from the form itself (every `item_<n>_score` leaf that has a
+# matching `item_<n>` question), never a hard-coded count - if the form
+# gains or loses items the mapping follows automatically.
+SCORE_LEAF_RE = re.compile(r'^item_\d+_score$')
 
 
-SCORE_FIELDS = {
-    'vineland': _score_fields('vineland', 89),
-    'dst': {},
-    'ddst': {},
-    'moca_assessment': {},
-}
+def _derive_score_fields(flat, parsed):
+    if parsed is None:
+        return {}
+    leaves = set(_all_field_paths(parsed))
+    field_paths = [i['path'] for i in flat if i['type'] == 'field']
+    out = {}
+    for leaf in sorted(leaves):
+        if not SCORE_LEAF_RE.match(leaf):
+            continue
+        question = leaf[:-len('_score')]              # item_5_score -> item_5
+        match = next((p for p in field_paths
+                      if p == question or p.endswith('.' + question)), None)
+        out[match or question] = leaf
+    return out
 
 # Free-text/notes fields (kept visible, suppressed when empty).
 NOTES_FIELDS = {
@@ -499,17 +531,14 @@ def build_report_display(form, flat, choice_maps, parsed=None):
         # report does not
         return text.replace('**', '')
 
-    # score join map: question path (with group prefix) -> score field.
-    # Vineland items live in band groups but their *_score fields are
-    # top-level, so build full paths from the flat body order.
-    score_fields = {}
-    for q, s in SCORE_FIELDS[form].items():
-        matches = [item['path'] for item in flat
-                   if item['type'] == 'field' and item['path'].endswith('.' + q)]
-        if matches:
-            score_fields[matches[0]] = s
-        else:
-            score_fields[q] = s
+    # score join map: question path (with group prefix) -> score field,
+    # derived from the form (Vineland items live in band groups but their
+    # *_score leaves are top-level - _derive_score_fields resolves both).
+    score_fields = _derive_score_fields(flat, parsed)
+    # per-item score leaves are internal - hide them from the raw field list
+    for leaf in score_fields.values():
+        if leaf not in hidden:
+            hidden.append(leaf)
     # questions with score joins get an "Answer:" prefix in the report
     return {
         'title_key': f'report.{form}._title',

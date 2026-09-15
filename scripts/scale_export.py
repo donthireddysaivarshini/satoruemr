@@ -17,7 +17,25 @@ import os
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-from scale_meta import SCALES, get_scale_meta, JOIN_FIELDS, NOTE_LABELS
+from scale_meta import (SCALES, get_scale_meta, JOIN_FIELDS, NOTE_LABELS,
+                        NOTE_VALUES, DOB_WARNING)
+
+# Extra metadata fields shown in the "Assessment information" block of the
+# per-participant report (and kept out of the question columns/rows).
+META_FIELDS = {
+    'ddst': [],
+    'dst': ['g_intro.dst_disclaimer', 'g_intro.acknowledged'],
+    'vineland': ['g_intro.vineland_disclaimer', 'g_intro.acknowledged'],
+    'moca_assessment': ['g_consent.consent_reconfirmed'],
+}
+
+# Top-level groups that hold only assessment metadata (no scored questions).
+META_GROUPS = {
+    'ddst': ('g_meta',),
+    'dst': ('g_intro', 'g_child'),
+    'vineland': ('g_intro', 'g_child'),
+    'moca_assessment': ('g_admin', 'g_consent'),
+}
 
 REPO_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 MESSAGES_PATH = os.path.join(REPO_ROOT, 'translations', 'messages-en.properties')
@@ -62,6 +80,11 @@ def load_messages():
 
 def sheet_title(form):
     return SHEET_TITLES[form]
+
+
+def scale_full_title(form):
+    """Full human scale name, e.g. 'Vineland-style Social Maturity Scale (VSMS)'."""
+    return get_scale_meta(form)['title']
 
 
 def label_for(form, path, fallback=None):
@@ -124,6 +147,48 @@ def _ca_value(form, fields):
     return None
 
 
+def _dob_warning(form, fields):
+    """(label, text) for the DOB warning, only when it actually applies
+    (DOB missing / age invalid - the form's own relevance condition).
+    Returns None otherwise."""
+    spec = DOB_WARNING.get(form)
+    if not spec:
+        return None
+    dob = _lookup(fields, spec['dob'])
+    age_valid = _lookup(fields, spec['age_valid'])
+    applies = dob in (None, '') or (age_valid not in (None, '')
+                                    and age_valid != 'yes')
+    if not applies:
+        return None
+    meta = get_scale_meta(form)
+    text = meta['labels'].get(spec['field']) or 'Date of birth is missing or invalid.'
+    return (NOTE_LABELS[form].get(spec['field'], 'Date of birth warning'),
+            ' '.join(text.split()).replace('**', ''))
+
+
+def _meta_field_rows(w, fields):
+    """(label, value) rows for the extra metadata fields (disclaimer,
+    consent, trained-worker confirmation) shown in the info block."""
+    rows = []
+    for path in META_FIELDS[w.form]:
+        item = next((it for it in w.flat if it['path'] == path), None)
+        if item is None:
+            continue
+        raw = _lookup(fields, path)
+        if path in NOTE_VALUES[w.form]:
+            meta = get_scale_meta(w.form)
+            text = ' '.join((meta['labels'].get(path) or '').split()).replace('**', '')
+            if text:
+                rows.append((NOTE_LABELS[w.form].get(path, w.label(item)), text))
+            continue
+        if raw in (None, ''):
+            continue
+        cmap = w.cfg['choice_map'].get(path)
+        value = cmap.get(raw, raw) if isinstance(cmap, dict) else raw
+        rows.append((w.label(item), value))
+    return rows
+
+
 class _Walker:
     """One walk over the form's fields shared by headers() and row()."""
 
@@ -134,6 +199,9 @@ class _Walker:
         self.flat = meta['flat']
         self.hidden = set(self.cfg['hide_fields'])
         self.join_targets = {j['target'] for j in JOIN_FIELDS[form]}
+        # disclaimers / consent / warning fields - shown in the info block,
+        # never as question columns
+        self.meta_only = set(META_FIELDS[form]) | set(NOTE_VALUES[form])
 
     def is_displayable(self, path):
         if path == 'patient_uuid' or path in self.join_targets:
@@ -152,6 +220,8 @@ class _Walker:
         if path == 'patient_uuid' or path in INFO_FIELD_PATHS[self.form]:
             return False
         if path in self.join_targets:  # CA is shown as its own joined row
+            return False
+        if path in self.meta_only:     # disclaimer / consent / warning
             return False
         if path in self.hidden:
             return False
@@ -196,8 +266,12 @@ def question_items(form):
     return [item for item in w.flat if w.is_question(item)]
 
 
-def scale_headers(form):
-    """Full ordered human column list for a scale sheet (camp export)."""
+def scale_headers(form, include_camp=False):
+    """Full ordered human column list for a scale sheet (camp export).
+
+    include_camp adds a 'Camp' column after 'Participant' - used by the
+    all-camps workbook, where rows span more than one camp.
+    """
     w = _Walker(form)
     cfg = w.cfg
     cols = []
@@ -208,6 +282,8 @@ def scale_headers(form):
 
     for f in FIXED_INFO:
         add(f)
+        if include_camp and f == 'Participant':
+            add('Camp')
     for item in w.flat:
         if not w.is_question(item):
             continue
@@ -224,8 +300,12 @@ def scale_headers(form):
     return cols
 
 
-def scale_row(form, fields, participant, submitter, attachments):
-    """Values aligned 1:1 with scale_headers(form) for one report."""
+def scale_row(form, fields, participant, submitter, attachments,
+              camp_name=None):
+    """Values aligned 1:1 with scale_headers(form, camp_name is not None).
+
+    Pass camp_name to emit the extra 'Camp' column (all-camps workbook).
+    """
     w = _Walker(form)
     cfg = w.cfg
     row = {
@@ -250,7 +330,11 @@ def scale_row(form, fields, participant, submitter, attachments):
     if adate:
         row['Assessment date'] = _format_date(adate)
 
-    values = [row[f] for f in FIXED_INFO]
+    values = []
+    for f in FIXED_INFO:
+        values.append(row[f])
+        if camp_name is not None and f == 'Participant':
+            values.append(camp_name or '')
     for item in w.flat:
         if not w.is_question(item):
             continue
@@ -311,20 +395,12 @@ def scale_sections(form, fields, participant, submitter, attachments):
     if ca:
         info_rows.append((load_messages().get(CA_KEY, 'Chronological age'),
                           ca, None))
-    # remaining non-question, non-result fields with human labels
-    skip = set(cfg['result_fields']) | set(cfg['notes_fields']) | set(meta_info)
-    for item in w.flat:
-        if not w.is_question(item):
-            continue
-        path = item['path']
-        if path in (dob_path, adate_path):
-            continue
-        if path in cfg.get('note_values', {}) or path in skip:
-            continue
-        v = w.value(item, fields)
-        if v in (None, ''):
-            continue
-        info_rows.append((w.label(item), v, None))
+    warning = _dob_warning(form, fields)
+    if warning:
+        info_rows.append((warning[0], warning[1], None))
+    # disclaimer / trained-worker confirmation / consent
+    for label, value in _meta_field_rows(w, fields):
+        info_rows.append((label, value, None))
     if info_rows:
         sections.append(('Assessment information', info_rows))
 

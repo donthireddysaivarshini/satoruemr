@@ -6,6 +6,9 @@ Produces one .xlsx per run. The workbook contents depend on --scope:
   camp=<campId>            Sheets: Camp | Participants | Reports
   participants_in_camp=..  Sheets: Participants | Reports
   participant=<id>         Sheets: Participant | Reports
+  all-workbook             EVERY participant across every camp, organised by
+                           scale: Participants | DDST-II | DST | MoCA | VSMS
+                           (adds a 'Camp' column to every sheet)
   camp-workbook=<campId>   One workbook per camp, organised by scale:
                            Participants | DDST-II | DST | MoCA | VSMS
                            (only scales actually completed in that camp;
@@ -46,7 +49,10 @@ import json
 import os
 import sys
 
-import openpyxl
+try:
+    import openpyxl
+except ModuleNotFoundError:
+    sys.exit('missing dependencies - run:  pip install -r scripts/requirements.txt')
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 from emr_common import (EmrDb, attachment_names, classify_contacts, flatten,
@@ -66,14 +72,18 @@ def fixed_columns_first(columns, priority):
 
 
 def collect_report_rows(reports, participants, camps):
-    """Map each EMR report to its participant and camp by exact _id."""
+    """Map each EMR report to its participant and camp by exact _id.
+
+    The assessed participant is the report SUBJECT (fields.patient_uuid), not
+    report.contact (which is the submitter). The camp is that participant's
+    parent.
+    """
     rows = []
     for doc in reports:
-        contact = doc.get('contact') or {}
-        participant_id = contact.get('_id') if isinstance(contact, dict) else None
-        parent = contact.get('parent') or {}
-        camp_id = parent.get('_id') if isinstance(parent, dict) else None
+        participant_id = subject_id_of(doc)
         participant = participants.get(participant_id) if participant_id else None
+        camp_id = ((participant.get('parent') or {}).get('_id')
+                   if participant else None)
         camp = camps.get(camp_id) if camp_id else None
 
         fields = flatten(doc.get('fields') or {})
@@ -84,6 +94,7 @@ def collect_report_rows(reports, participants, camps):
             'reported_date': iso_datetime(doc.get('reported_date')),
             'reported_date_ms': doc.get('reported_date'),
             'from': doc.get('from'),
+            'submitted_by': submitter_label(doc),
             'participant_id': participant_id,
             'camp_id': camp_id,
             'participant_name': participant.get('name') if participant else None,
@@ -144,35 +155,69 @@ def scale_reports_by_participant(reports, participant_ids):
     return by_form
 
 
-def write_scale_sheet(wb, form, reports, participants):
-    """One row per completed assessment of `form`, human-readable columns."""
+def write_scale_sheet(wb, form, reports, participants, camps=None):
+    """One row per completed assessment of `form`, human-readable columns.
+
+    Passing `camps` adds a 'Camp' column (used by the all-camps workbook).
+    """
     ws = wb.create_sheet(scale_export.sheet_title(form))
-    ws.append(scale_export.scale_headers(form))
+    ws.append(scale_export.scale_headers(form, include_camp=camps is not None))
     for doc in reports:
         participant = participants.get(subject_id_of(doc)) or {}
+        camp_name = None
+        if camps is not None:
+            camp = camps.get((participant.get('parent') or {}).get('_id'))
+            camp_name = (camp or {}).get('name') or ''
         ws.append(scale_export.scale_row(
             form,
             doc.get('fields') or {},
             participant,
             submitter_label(doc),
             attachment_names(doc),
+            camp_name=camp_name,
         ))
+    ws.freeze_panes = 'F2'  # keep ID + name + dates visible while scrolling
     return ws
 
 
-def build_camp_workbook(wb, camp_id, camp, participants, reports):
-    """Participants sheet + one sheet per scale completed in the camp."""
+def report_submitter_ids(reports):
+    """Contact _ids that appear as a report submitter (screeners/staff) -
+    these are never screening subjects, so they are kept out of participant
+    listings even if their contact sits under the camp."""
+    ids = set()
+    for doc in reports:
+        contact = doc.get('contact')
+        if isinstance(contact, dict) and contact.get('_id'):
+            ids.add(contact['_id'])
+    return ids
+
+
+def build_camp_workbook(wb, camp_id, camp, participants, reports, camps=None):
+    """Participants sheet + one sheet per scale completed.
+
+    camp_id=None exports EVERY participant across every camp (all-workbook
+    scope) and adds a 'Camp' column so rows stay attributable.
+    """
+    all_camps = camp_id is None
+    staff = report_submitter_ids(reports)
     members = {pid: p for pid, p in participants.items()
-               if (p.get('parent') or {}).get('_id') == camp_id}
+               if pid not in staff
+               and (all_camps
+                    or (p.get('parent') or {}).get('_id') == camp_id)}
     by_form = scale_reports_by_participant(reports, set(members))
 
     rows = []
     for pid, p in members.items():
         scales_done = [scale_export.sheet_title(f) for f in SCALE_ORDER
                        if any(subject_id_of(d) == pid for d in by_form[f])]
-        rows.append({
+        row = {
             'Participant ID': p.get('cr_no'),
             'Name': p.get('name'),
+        }
+        if all_camps:
+            camp_doc = (camps or {}).get((p.get('parent') or {}).get('_id'))
+            row['Camp'] = (camp_doc or {}).get('name') or ''
+        row.update({
             'Age': p.get('age'),
             'Gender': GENDER_LABELS.get(p.get('gender'), p.get('gender')),
             'Phone': p.get('phone'),
@@ -182,12 +227,20 @@ def build_camp_workbook(wb, camp_id, camp, participants, reports):
             'Registration date': iso_datetime(p.get('registration_date')),
             'Scales completed': ', '.join(scales_done),
         })
-    rows.sort(key=lambda r: (r.get('Participant ID') or '', r.get('Name') or ''))
+        rows.append(row)
+    if all_camps:
+        rows.sort(key=lambda r: (r.get('Camp') or '',
+                                 r.get('Participant ID') or '',
+                                 r.get('Name') or ''))
+    else:
+        rows.sort(key=lambda r: (r.get('Participant ID') or '',
+                                 r.get('Name') or ''))
     write_sheet(wb, 'Participants', rows)
 
     for form in SCALE_ORDER:
         if by_form[form]:
-            write_scale_sheet(wb, form, by_form[form], participants)
+            write_scale_sheet(wb, form, by_form[form], participants,
+                              camps=camps if all_camps else None)
     return by_form
 
 
@@ -223,6 +276,11 @@ def write_participant_sheet(wb, participant, camp, scales_done):
 def write_participant_scale_sheet(wb, form, doc, participant):
     """Sectioned human-readable sheet for one participant's completed scale."""
     ws = wb.create_sheet(scale_export.sheet_title(form))
+    ws.append([scale_export.scale_full_title(form)])
+    reported = iso_datetime(doc.get('reported_date'))
+    if reported:
+        ws.append([f'Report submitted: {reported}'])
+    ws.append([])
     sections = scale_export.scale_sections(
         form,
         doc.get('fields') or {},
@@ -271,6 +329,7 @@ def write_sheet(wb, name, rows):
         ws.append([json.dumps(row.get(col), ensure_ascii=False)
                    if isinstance(row.get(col), (dict, list))
                    else row.get(col) for col in columns])
+    ws.freeze_panes = 'A2'
     return ws
 
 
@@ -329,6 +388,9 @@ def build_workbook(scope, db):
         write_sheet(wb, 'Participant', part_rows)
         write_sheet(wb, 'Reports', report_rows)
 
+    elif scope == 'all-workbook':
+        build_camp_workbook(wb, None, None, participants, reports, camps=camps)
+
     elif scope.startswith('camp-workbook='):
         camp_id = scope.split('=', 1)[1]
         camp = camps.get(camp_id)
@@ -343,7 +405,25 @@ def build_workbook(scope, db):
     else:
         raise SystemExit(f'unknown scope: {scope}')
 
+    for ws in wb.worksheets:
+        autosize_columns(ws)
     return wb
+
+
+def autosize_columns(ws, min_width=10, max_width=70):
+    """Set each column width to fit its longest cell (clamped)."""
+    from openpyxl.utils import get_column_letter
+    widths = {}
+    for row in ws.iter_rows():
+        for cell in row:
+            if cell.value is None:
+                continue
+            longest = max((len(line) for line in str(cell.value).splitlines()),
+                          default=0)
+            widths[cell.column] = max(widths.get(cell.column, 0), longest)
+    for col, width in widths.items():
+        ws.column_dimensions[get_column_letter(col)].width = \
+            max(min_width, min(max_width, width + 2))
 
 
 def default_output_name(scope, wb, db=None):
@@ -372,6 +452,8 @@ def default_output_name(scope, wb, db=None):
         name = part_sheet[2][header.index('name')].value if 'name' in header else None
         label = cr or name or scope.split('=', 1)[1]
         return f'satoru-emr-participant-{sanitize_filename(label, "participant")}-{stamp}.xlsx'
+    if scope == 'all-workbook':
+        return f'satoru-emr-all-participants-scales-{stamp}.xlsx'
     if scope.startswith('camp-workbook='):
         camp_id = scope.split('=', 1)[1]
         camp_name = None
@@ -396,7 +478,8 @@ def main():
     parser = argparse.ArgumentParser(description='Satoru EMR -> Excel exporter (read-only)')
     parser.add_argument('--url', required=True, help='CouchDB URL, e.g. https://user:pass@host:port/medic')
     parser.add_argument('--scope', default='all',
-                        help='all | camp=<campId> | participants_in_camp=<campId> | '
+                        help='all | all-workbook | camp=<campId> | '
+                             'participants_in_camp=<campId> | '
                              'participant=<participantId> | camp-workbook=<campId> | '
                              'participant-report=<participantId>')
     parser.add_argument('--out', default='.', help='output directory (default: current directory)')
