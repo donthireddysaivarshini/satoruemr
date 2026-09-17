@@ -1,4 +1,5 @@
 {
+  "intern_participant_visibility_hours": 24,
   "roles": {
     "intern": {
       "name": "usertype.intern",

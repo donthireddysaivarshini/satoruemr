@@ -7,3 +7,4 @@ scripts/out/
 *.xlsx.tmp
 sample_data.json
 out/
+HANDOVER.md

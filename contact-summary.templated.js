@@ -326,7 +326,41 @@ const context = {
     ? num(lastStage2, 'g_disposition.cognitive_flag') : 0,
   cr_no: contact.cr_no,
   has_assessment: assessments.length > 0,
-  assessment_count: assessments.length,
-};
+// ---------------------------------------------------------------------------
+// Access Gate - Interns can only view summary of their own participants; Supervisors view all
+// ---------------------------------------------------------------------------
+const isSupervisor = typeof cht !== 'undefined' && cht.v1 && (
+  cht.v1.hasPermissions('can_browse_all_participants') ||
+  cht.v1.hasPermissions('can_view_participants')
+);
+const isParticipantDoc = contact && (
+  contact.type === 'contact' ? contact.contact_type === PARTICIPANT : contact.type === PARTICIPANT
+);
+const isOwnParticipant = Boolean(
+  isParticipantDoc &&
+  typeof cht !== 'undefined' &&
+  cht.v1 &&
+  cht.v1.userContactId &&
+  contact &&
+  contact.created_by_person_uuid === cht.v1.userContactId
+);
 
-module.exports = { fields, cards, context };
+if (isParticipantDoc && !isSupervisor && !isOwnParticipant) {
+  module.exports = {
+    fields: [
+      {
+        appliesToType: PARTICIPANT,
+        label: 'contact.access_restricted',
+        value: 'contact.access_restricted_message',
+        width: 12,
+      },
+    ],
+    cards: [],
+    context: {
+      is_participant: true,
+      access_restricted: true,
+    },
+  };
+} else {
+  module.exports = { fields, cards, context };
+}
